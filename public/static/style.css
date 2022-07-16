@@ -1,0 +1,273 @@
+/* the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4%;
+    font-family: 'Varela Round', sans-serif;
+  }
+  .docking {
+    list-style: none;
+  } 
+  .header-white{
+    background-color: #FDFFF0;
+  }
+  .pro {
+    display: inline-block;
+    padding-right: 132px;
+  }
+  .pra {
+    display: inline-block;
+    padding-right: 70px;
+  }
+  .pre {
+    display: inline-block;
+    padding: 0px 45px;
+  }
+  .tic{
+    font-weight: 700;
+    /* color: #5F7161; */
+    color: #4A403A;
+    text-decoration: none;
+  }
+
+  .sz{
+    background-color: #fbf8f5;
+  }
+.icon-home{
+  width: 7%;
+}  
+.heading{
+  margin-right: auto;
+ /* font-family: 'Monoton', cursive; */
+ /* font-family: 'Knewave', cursive; */
+  font-size: 3vw;
+  color: black;
+  font-weight: 700;
+  display: block;
+} 
+/* end of header */
+
+/* keep off */
+*{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.navbar{
+  width: 100%;
+  /* height: 10%; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: white;
+  /* opacity: 90%; */
+  display: flex;
+  border-bottom: 3px solid #7D9D9C;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+}
+
+.forming{
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  /* letter-spacing: 10px; */
+  font-size: 5vw;
+}
+
+.navbar .nav_right > ul{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav_right ul li.nr_li{
+  margin-left:  25px;
+  cursor: pointer;
+  color:#fff;
+  font-size: 20px;
+  position: relative;
+} 
+
+.navbar .nav_right ul li.nr_li:hover{
+/* color: #cefffc; */
+color:#5F7161;;
+}
+
+
+.navbar .nav_right ul li .omg{
+width: 25px;
+vertical-align: middle;
+}
+.icon{
+  width:20%;
+}   
+ .navbar .nav_right ul li img{
+  width:25px;
+  vertical-align: middle;
+  }
+.navbar .dd_menu{
+  position: absolute;
+  top: 47px;
+  right:-25px;
+  display: flex;
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  border-radius: 15px;
+  display: none;
+  z-index: 2;
+
+}
+
+.navbar .dd_menu .dd_left{
+  background: rgba(0,0,0, 0.4);
+  z-index: 2;
+  /* background: #5F7161; */
+  padding: 15px 5px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+
+}
+
+.navbar .dd_menu .dd_left li{
+  color:#fff;
+}
+
+.navbar .dd_menu .dd_right{
+  padding: 15px 5px;
+  background:white;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.navbar .dd_menu li{
+  margin-bottom: 10px;
+  /* color: #868686; */
+  color: black;
+
+}
+
+.navbar .dd_menu::before{
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  border: 10px solid;
+  border-color: transparent transparent #5F7161 transparent;
+} 
+
+.navbar .nav_right ul li.li_main.active .dd_menu{
+  display: flex;
+  z-index: 3;
+}
+/* keep off */
+
+
+
+
+
+
+.link-line {text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+  color: white;}
+.link-line:hover{
+color: white;
+}
+.hid{
+  display: none;
+}
+.second-head{
+  display: none;
+}
+
+@media only screen and (max-width:1250px){
+  .pro {
+    padding-right: 90px;
+}
+.pra {
+  padding-right: 70px;
+}
+.pre{
+  padding: 0% 40px;
+}
+}
+
+@media only screen and (max-width:1085px){
+  .pro {
+    padding-right: 65px;
+}
+.pra {
+  padding-right: 55px;
+}
+.pre{
+  padding: 0% 35px;
+}
+}
+
+@media only screen and (max-width:1010px){
+  .pro {
+    padding-right: 65px;
+}
+.pra {
+  padding-right: 55px;
+}
+.pre{
+  padding: 0% 30px;
+}
+}
+
+@media only screen and (max-width:925px){
+  .pro {
+    padding-right: 65px;
+}
+.pra {
+  padding-right: 45px;
+}
+.pre{
+  padding: 0% 25px;
+}
+.heading{
+  font-size: 4vw;
+}
+}
+
+@media only screen and (max-width:850px){
+  .pro {
+    padding-right: 60px;
+}
+.pra {
+  padding-right: 40px;
+}
+.pre{
+  padding: 0% 15px;
+}
+}
+@media only screen and (max-width:780px){
+header{
+  display: none;
+}
+  .second-head{
+display: block;
+  }
+  .heading{
+font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 500px){
+.heading{
+  font-size: 7vw;
+}
+.navbar .nav_right ul li .omg{
+  width: 20px;
+}
+}
+@media only screen and (max-width: 350px){
+  .heading{
+    font-size: 8vw;
+  }
+}
