@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [
     "example",
@@ -21,5 +22,8 @@
     "jquery": "^3.6.0",
     "nodemon": "^2.0.19",
     "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
