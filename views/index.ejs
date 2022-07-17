@@ -14,20 +14,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<!-- test -->
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+<!-- test -->
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<!-- test -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 <title>Fregzy</title>
 </head>
 <body class="sz">
     <header class="header-white">
         <img class="icon-home" src="static/icon.png" alt="">
-        <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #4F0E0E;" >Fregzy</h1>
+        <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #000;" >Freg<span style="color: #4F0E0E;">zy</span></h1>
         <nav>
           <ul class="docking">
             
-            <li class="pra"><i style="font-size: 2.5vw;" class="fa fa-lightbulb-o"></i></li>
-            <li class="pra"><a class="decoration tic">About</a></li>
-            <li class="pra"><a class="decoration tic"  href="">Features</a></li>
+            <li class="pra ho"><i style="font-size: 2.5vw;" class="fa fa-lightbulb-o"></i></li>
+            <li class="pra"><a class="decoration tic ho">About</a></li>
+            <li class="pra"><a class="decoration tic ho "  href="">Features</a></li>
             <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
-            <li class="pro"><a class="decoration tic"  href="">FAQ</a></li>
+            <li class="pro"><a class="decoration tic ho "  href="">FAQ</a></li>
             <li class="pre"><a class=" tic sr" style="color: #4F0E0E;" href="/Login">Login</a></li>
             <li class="pre"><button class="btn " style="border-radius: 50px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
             
@@ -38,7 +44,7 @@
         <div class="wrapper">
           <div class="navbar">
             <div class="logo">
-              <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; text-align: center; color: #4F0E0E;" >Fregzy</h1>
+              <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; text-align: center; color: #000E;" >Freg<span style="color: #4F0E0E;">zy</span></h1>
             </div>
               <div class="nav_right">
              <ul>
@@ -46,7 +52,7 @@
             <li class="second-bulb"><i style="" class="fa fa-lightbulb-o"></i></li>
                </li>
                <li class="nr_li li_main">
-                 <img  class="omg" src="static/menu.png" alt="">
+                 <img style="padding: 3px;"  class="omg og" src="static/menu.png" alt="">
                  <div class="dd_menu">
                    <div class="dd_left">
                      <ul>
@@ -57,8 +63,8 @@
                    </div>
                    <div class="dd_right">
                      <ul>
-                       <li><a class="init" href="/Signup"> Signup</a></li>
-                       <li><a class="init" href="/Login"> Login</a></li>
+                       <li><a class="init link-line" style="color: #4F0E0E; font-weight: 700;" href="/Signup"> Signup</a></li><hr style="color: #4F0E0E; border: 1px solid;">
+                       <li><a class="init link-line" style="color: #4F0E0E; font-weight: 700;" href="/Login"> Login</a></li>
                      </ul>
          
                    </div>
@@ -70,7 +76,21 @@
            </div>
           </div>
       </div>
-      <footer style="position: fixed; bottom: 0;">
+
+      <div class="setting">
+        <h1 class="set-text">Experience quality educational services</h1>
+        <!-- <ul class="docking">
+        <li class="pre"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
+        <li class="pre"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/Signup">Learn More</a></button></li>
+      </ul> -->
+        <!-- at the touch of a button -->
+        <ul class="docking">
+          <li style="display: inline-block;">
+            <img style="width: 75%; margin-left: 31%; margin-bottom: 10%;" src="static/student.png" alt="">
+          </li>
+        </ul>
+      </div>
+      <footer>
         <div class= "bottom" ><h5 class="copyright">Copyright © Fregzy <%= day%></h5></div>
         <ul class="social">
           <li class="ve">
@@ -87,5 +107,27 @@
           </li>
       </ul>
        </footer>
+       <script>
+        var li_main=document.querySelector(".li_main");
+    
+    li_main.addEventListener("click", function(){
+      this.classList.toggle("active");
+    })
+
+    var cod= document.querySelector(".omg");
+    cod.addEventListener("click", function(){
+
+// cod.style.backgroundColor="#A23131";
+if(cod.className.includes("og")){
+  cod.classList.remove("og")
+  cod.style.backgroundColor="#A23131";
+}
+else{
+  cod.classList.add("og")
+  cod.style.backgroundColor="#FDFFF0";
+}
+    })
+
+       </script>
 </body>
 </html>

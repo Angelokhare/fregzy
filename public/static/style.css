@@ -46,8 +46,31 @@ header {
   font-weight: 700;
   display: block;
 } 
+.ho:hover{
+  color: #4F0E0E;
+}
 /* end of header */
+/* setting */
 
+.setting{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12%;
+  font-family: 'Varela Round', sans-serif;
+  padding-top: 2%;
+}
+.set-text{
+  padding-bottom: 15%;
+  font-size: 5.5vw;
+  font-family: 'Merienda One', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  /* font-family: 'Archivo Black', sans-serif; */
+  font-weight: 700;
+  /* padding-right: 20%; */
+
+}
 /* keep off */
 *{
   margin: 0;
@@ -139,7 +162,7 @@ vertical-align: middle;
 
 .navbar .dd_menu .dd_right{
   padding: 15px 5px;
-  background:white;
+  background:#FEF9EF;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -157,7 +180,7 @@ vertical-align: middle;
   top: -20px;
   right: 30px;
   border: 10px solid;
-  border-color: transparent transparent #5F7161 transparent;
+  border-color: transparent transparent #000 transparent;
 } 
 
 .navbar .nav_right ul li.li_main.active .dd_menu{
@@ -279,6 +302,9 @@ display: block;
   }
   .heading{
 font-size: 5vw;
+  }
+  .setting{
+padding-top: 10%;
   }
 }
 
