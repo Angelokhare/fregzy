@@ -11,8 +11,11 @@ app.use(express.static("public"))
 
 
 app.get("/", (request, response)=>{
-    day= new Date().toLocaleDateString()
-    response.render("index"), {day:day}})
+    day=new Date().getFullYear()
+    // day= new Date().toLocaleDateString()
+    console.log(day)
+    response.render("index"), {fan:day}
+})
 app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 
 
@@ -20,3 +23,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit2
 // commit3
 // commit4
+// commit5

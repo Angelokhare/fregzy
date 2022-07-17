@@ -183,7 +183,31 @@ color: white;
 .second-head{
   display: none;
 }
-
+.second-bulb{
+  font-size: 25px; 
+}
+footer {
+  width:100%;
+  color: white;
+  padding-top: 2%;
+  /* margin-top: 20%; */
+  padding-bottom: 2%;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  /* height:600px;   Height of the footer */
+  /* background: #92B4EC; */
+  background-color: #4F0E0E;
+/* background: #92B4EC; */
+}
+.copyright{
+  font-size: 70%;
+}
+.ve{
+  display: inline-block;
+  padding: 2px 25px;
+}
 @media only screen and (max-width:1250px){
   .pro {
     padding-right: 90px;
@@ -274,5 +298,14 @@ font-size: 5vw;
 @media only screen and (max-width: 350px){
   .heading{
     font-size: 12vw;
+  }
+}
+
+@media only screen and (max-width: 290px){
+  .navbar .nav_right ul li .omg{
+    width: 15px;
+  }
+  .second-bulb{
+    font-size: 20px; 
   }
 }
