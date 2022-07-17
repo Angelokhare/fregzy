@@ -14,3 +14,9 @@ app.get("/", (request, response)=>{
     day= new Date().toLocaleDateString()
     response.render("index"), {day:day}})
 app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
+
+
+// comimt1
+// commit2
+// commit3
+// commit4
