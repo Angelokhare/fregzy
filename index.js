@@ -63,6 +63,10 @@ app.get("/", (request, response)=>{
     console.log(day)
     response.render("index"), {fan:day}
 })
+
+app.post("/home", (request, response)=>{
+    response.redirect("/")
+})
 app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 
 

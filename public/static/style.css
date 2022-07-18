@@ -207,7 +207,7 @@ vertical-align: middle;
 }
 .pri {
   display: inline-block;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
 /* keep off */
 
@@ -248,7 +248,8 @@ footer {
 /* background: #92B4EC; */
 }
 .copyright{
-  font-size: 70%;
+  font-size: 1.1vw;
+  margin-right: 80%;
 }
 .ve{
   display: inline-block;
@@ -262,16 +263,36 @@ footer {
   font-weight: 700;
   /* color: #5F7161; */
   color: #fff;
+  font-size: 1vw;
   text-decoration: none;
 }
 .pic:hover{
   color: #fff;
 }
+.pru {
+  display: inline-block;
+  padding: 0px 45px;
+}
+.wr{
+  font-size: 20px;
+}
+.footer-heading{
+  margin-right: auto;
+ /* font-family: 'Monoton', cursive; */
+ /* font-family: 'Knewave', cursive; */
+  font-size: 3vw;
+  color: black;
+  font-weight: 700;
+  display: block;
+} 
+.suggest{
+  font-size: 1vw;
+}
 .form-group {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
+  /* display: -webkit-flex; */
+  /* -webkit-flex-wrap: wrap; */
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 1rem;
   /* margin-right: 20%; */
   /* margin-left: 20%; */
@@ -303,6 +324,15 @@ footer {
 }
 }
 
+@media only screen and (max-width:1100px){
+  .pru{
+    padding: 0% 0px;
+  }
+  .pic{
+    font-size: 1.2vw;
+  }
+  }
+
 @media only screen and (max-width:1085px){
   .pro {
     padding-right: 65px;
@@ -318,6 +348,18 @@ footer {
 }
 }
 
+@media only screen and (max-width:1040px){
+.pride{
+  padding-right: 90px;
+}
+.footer-heading{
+font-size: 3.5vw;
+}
+.suggest{
+  font-size: 1.2vw;
+}
+}
+
 @media only screen and (max-width:1010px){
   .pro {
     padding-right: 63px;
@@ -330,6 +372,14 @@ footer {
 }
 }
 
+/* @media only screen and (max-width:935px){
+  .pride{
+    padding-right: 50px;
+  }
+  .footer-heading{
+font-size: 4vw;
+  }
+  } */
 @media only screen and (max-width:925px){
   .pro {
     padding-right: 60px;
@@ -343,8 +393,15 @@ footer {
 .heading{
   font-size: 4vw;
 }
+.suggest{
+  font-size: 1.3vw;
 }
-
+}
+@media only screen and (max-width:855px){
+  .pride{
+    padding-right: 70px;
+  }
+  }
 @media only screen and (max-width:850px){
   .pro {
     padding-right: 60px;
@@ -358,6 +415,14 @@ footer {
 .heading{
   font-size: 4.5vw;
     }
+}
+@media only screen and (max-width:791px){
+  .pride{
+    padding-right: 50px;
+  }
+  .pic{
+    font-size: 1.5vw;
+  }
 }
 @media only screen and (max-width:780px){
 header{
@@ -373,7 +438,51 @@ font-size: 5vw;
 padding-top: 10%;
   }
 }
-
+@media only screen and (max-width:769px){
+  .pride{
+padding-right: 40px;
+  }
+}
+@media only screen and (max-width:735px){
+.footer-heading{
+  /* margin-top: -15%; */
+  font-size: 5vw;
+}
+.pride{
+  padding-right: 33%;
+  /* padding-left: 25px; */
+}
+.pic{
+  font-size: 1.6vw;
+}
+.pru{
+  padding-top: 10%;
+  padding-right: 30%;
+}
+.suggest{
+  font-size: 1.7vw;
+}
+.ve{
+padding: 0 15px;
+}
+.bid{
+  display: none;
+}
+}
+@media only screen and (max-width:600px){
+  .suggest{
+    font-size: 2vw;
+  }
+  .copyright{
+    font-size: 1.6vw;
+    margin-right: 70%;
+  }
+}
+@media only screen and (max-width: 550px){
+  .ve{
+    padding: 0 12px;
+    }
+}
 @media only screen and (max-width: 500px){
 .heading{
   font-size: 7vw;
@@ -381,7 +490,26 @@ padding-top: 10%;
 .navbar .nav_right ul li .omg{
   width: 20px;
 }
+
 }
+@media only screen and (max-width: 492px){
+  .ve{
+    padding: 0 10px;
+    }
+
+  .pic{
+      font-size: 2vw;
+    }   
+
+  .pride{
+      padding-right: 30%;
+      /* padding-left: 25px; */
+    }  
+    .wr{
+      font-size: 15px;
+    }   
+}
+
 @media only screen and (max-width: 400px){
   .heading{
     font-size: 10vw;
@@ -389,11 +517,30 @@ padding-top: 10%;
   .second-bulb{
 margin-top: 2%;
   }
+  .wr{
+    font-size: 12px;
+  } 
+  .ve{
+    padding: 0 5px;
+    } 
+    .copyright{
+      font-size: 2vw;
+      margin-right: 70%;
+    }  
+    .pic{
+      font-size: 2.5vw;
+    } 
+    .pride{
+      padding-right: 25%;
+    }
 }
 @media only screen and (max-width: 350px){
   .heading{
     font-size: 12vw;
   }
+  /* ve{
+    padding: 0 2px;
+    }  */
 }
 
 @media only screen and (max-width: 290px){
@@ -403,4 +550,12 @@ margin-top: 2%;
   .second-bulb{
     font-size: 20px; 
   }
+}
+@media only screen and (max-width: 285px){
+  .navbar {
+padding: 0 40px;
+  }
+.ve{
+  padding: 0 2px;
+}  
 }
