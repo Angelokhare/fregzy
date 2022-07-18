@@ -49,8 +49,8 @@ header {
 .ho:hover{
   color: #4F0E0E;
 }
-/* end of header */
-/* setting */
+/* end of header iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+/* setting lllllllllllllllllllllllllllllllllllllllllll */
 
 .setting{
   
@@ -71,7 +71,15 @@ header {
   /* padding-right: 20%; */
 
 }
-/* keep off */
+
+.dover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4%;
+  font-family: 'Varela Round', sans-serif;
+}
+/* keep off fffffffffffffffffffffffffffffffffffffffffffffff*/
 *{
   margin: 0;
   list-style: none;
@@ -112,14 +120,14 @@ header {
 .navbar .nav_right ul li.nr_li{
   margin-left:  25px;
   cursor: pointer;
-  color:#fff;
+  /* color:#fff; */
   font-size: 20px;
   position: relative;
 } 
 
 .navbar .nav_right ul li.nr_li:hover{
 /* color: #cefffc; */
-color:#5F7161;;
+/* color:#5F7161; */
 }
 
 
@@ -136,8 +144,8 @@ vertical-align: middle;
   }
 .navbar .dd_menu{
   position: absolute;
-  top: 47px;
-  right:-25px;
+  top: 70px;
+  right:-30px;
   display: flex;
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
   border-radius: 15px;
@@ -187,6 +195,20 @@ vertical-align: middle;
   display: flex;
   z-index: 3;
 }
+.seen{
+  border: 1.5px solid #4F0E0E; 
+  padding: 11%; 
+}
+.first-top{
+  margin-top: 35%;
+}
+.second-top{
+  margin-top: 15%;
+}
+.pri {
+  display: inline-block;
+  padding: 0px 20px;
+}
 /* keep off */
 
 
@@ -209,6 +231,7 @@ color: white;
 .second-bulb{
   font-size: 25px; 
 }
+/* footer jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
 footer {
   width:100%;
   color: white;
@@ -230,6 +253,43 @@ footer {
 .ve{
   display: inline-block;
   padding: 2px 25px;
+}
+.pride {
+  display: inline-block;
+  padding-right: 130px;
+}
+.pic{
+  font-weight: 700;
+  /* color: #5F7161; */
+  color: #fff;
+  text-decoration: none;
+}
+.pic:hover{
+  color: #fff;
+}
+.form-group {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  /* margin-right: 20%; */
+  /* margin-left: 20%; */
+}
+
+.inside{
+  flex: 1 1 auto;
+  font-weight: 400;
+  height: calc(1.5em + 1rem + 2px);
+  padding: .5rem 1rem;
+  /* font-size: 1.25rem; */
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  /* border-radius: .3rem 0 0 .3rem; */
+  outline: 0;
+  width: 75%;
 }
 @media only screen and (max-width:1250px){
   .pro {
@@ -253,11 +313,14 @@ footer {
 .pre{
   padding: 0% 35px;
 }
+.heading{
+  font-size: 3.5vw;
+}
 }
 
 @media only screen and (max-width:1010px){
   .pro {
-    padding-right: 65px;
+    padding-right: 63px;
 }
 .pra {
   padding-right: 55px;
@@ -269,7 +332,7 @@ footer {
 
 @media only screen and (max-width:925px){
   .pro {
-    padding-right: 65px;
+    padding-right: 60px;
 }
 .pra {
   padding-right: 45px;
@@ -292,6 +355,9 @@ footer {
 .pre{
   padding: 0% 15px;
 }
+.heading{
+  font-size: 4.5vw;
+    }
 }
 @media only screen and (max-width:780px){
 header{

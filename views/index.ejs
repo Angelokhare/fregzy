@@ -49,15 +49,19 @@
               <div class="nav_right">
              <ul>
                <li class="nr_li">
-            <li class="second-bulb"><i style="" class="fa fa-lightbulb-o"></i></li>
+            <li class="second-bulb"><i class="fa fa-lightbulb-o"></i></li>
                </li>
                <li class="nr_li li_main">
-                 <img style="padding: 3px;"  class="omg og" src="static/menu.png" alt="">
+                 <!-- <img style="padding: 3px;"  class="omg og" src="static/menu.png" alt=""> -->
+                 <!-- <li class="second-bulb"><i class="oy fa fa-bars"></i></li> -->
+                 <i style=" border-radius: 10%;" class="oy first-top second-bulb fa fa-bars"></i>
+
+               <!-- </li> -->
                  <div class="dd_menu">
                    <div class="dd_left">
                      <ul>
-                      <li><a href="/signup"><img class="icon" src="static/register.png" alt=""></a></li>
-                      <li><a href="/login"><img class="icon" src="static/key.png" alt=""></a></li>
+                      <li><a href="/signup"><i style="color: #fff;" class=" fa fa-sign-in"></i></a></li><hr style="color: #4F0E0E; border: 1px solid;">
+                      <li><a href="/login"><i style="color: #fff;" class=" fa fa-user"></i></a></li>
                      </ul>
          
                    </div>
@@ -90,8 +94,55 @@
           </li>
         </ul>
       </div>
+      <p style="margin-top: -14%; font-size: 1.5vw;margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E;">Fregzy</span> helps you to enhance your educational skills <br> and assessment flexibility.</p>
+      <ul class="docking" style="margin-top: 0%; margin-left: 7%; margin-bottom: 40%;">
+        <li class="pri"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
+        <li class="pri"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
+      </ul>
+
+      <div style="background-color: #4F0E0E;">
+      <div class="dover">
+           <img class="icon-home" src="static/footer.png" alt="">
+        <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #694E4E;">zy</span></h1>
+        <nav>
+          <ul class="docking">
+            
+            <li class="pride"><a class="pic">Company <br> <br> Vision <br> <br> Mission <br> <br> Focus</a></li>
+            <li class="pride"><a class="pic">Blogs <br> <br> FAQ <br> <br> Terms of use <br> <br> Privacy Policy</a></li>
+            <li class="pre" style="padding-bottom: -2%;"> 
+              <h1 style="font-size: 1vw; color: #fff;">Search for more Activities and Daily updates.</h1>
+              <form action="/exchange" method="post" class="">
+              <div class="form-group">
+                <input class="inside" style="border-radius: 0%; text-transform: capitalize;" name="current" type="search" placeholder="Your Email" required>
+                <button type="submit" class="btn btn-success"><i style="color: #fff" class="fa fa-search"></i></button>
+              </div>
+            </form>
+            <ul class="social">
+              <li class="ve">
+                  <i class=" fa fa-instagram" style="font-size:20px;color:white"></i>
+              </li>
+              <li class="ve">
+                  <i class=" fa fa-twitter-square" style="font-size:20px;color:white"></i>
+              </li>
+              <li class="ve">
+                  <i class=" fa fa-linkedin-square" style="font-size:20px;color:white"></i></a>
+              </li>
+              <li class="ve">
+                  <i class=" fa fa-github" style="font-size:20px;color:white"></i>
+              </li>
+          </ul>
+          </li>
+            <!-- <li class="pre"><button class="btn " style="border-radius: 50px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li> -->
+            
+          </ul>
+        </nav>
+      </div>
+      <h5 style="color: #fff; margin-right: 40%; padding-left: 3%; margin-top: -1%; font-family: 'Varela Round', sans-serif; font-size: 1.1vw;" class="copyright">Copyright © <%= day%> <span style="font-weight: 700;">Fregzy</span> </h5>
+      </div>
+
       <footer>
-        <div class= "bottom" ><h5 class="copyright">Copyright © Fregzy <%= day%></h5></div>
+        <img src="static/footer.png" alt="">
+        <div class= "bottom" ><h5 class="copyright">Copyright © <%= day%> Fregzy </h5></div>
         <ul class="social">
           <li class="ve">
               <i class=" fa fa-instagram" style="font-size:20px;color:white"></i>
@@ -112,6 +163,16 @@
     
     li_main.addEventListener("click", function(){
       this.classList.toggle("active");
+      if(document.querySelector(".oy").className.includes("seen")){
+        document.querySelector(".oy").classList.remove("seen")
+        document.querySelector(".oy").classList.add("first-top")
+        document.querySelector(".oy").classList.remove("second-top")
+      }
+      else{
+      document.querySelector(".oy").classList.add("seen")
+      document.querySelector(".oy").classList.add("second-top")
+      document.querySelector(".oy").classList.remove("first-top")
+      }
     })
 
     var cod= document.querySelector(".omg");
