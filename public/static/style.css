@@ -79,6 +79,9 @@ header {
   padding: 0px 4%;
   font-family: 'Varela Round', sans-serif;
 }
+.firm{
+  margin-left: 8.5%;
+}
 /* keep off fffffffffffffffffffffffffffffffffffffffffffffff*/
 *{
   margin: 0;
@@ -370,6 +373,9 @@ font-size: 3.5vw;
 .pre{
   padding: 0% 30px;
 }
+.firm{
+  margin-left: 7.5%;
+}
 }
 
 /* @media only screen and (max-width:935px){
@@ -400,6 +406,9 @@ font-size: 4vw;
 @media only screen and (max-width:855px){
   .pride{
     padding-right: 70px;
+  }
+  .firm{
+    margin-left: 6.5%;
   }
   }
 @media only screen and (max-width:850px){
@@ -472,6 +481,9 @@ padding: 0 15px;
 margin-left: -30%;
 margin-right: -30%;
 }
+.setting{
+  padding-top: 12%;
+    }
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -481,6 +493,12 @@ margin-right: -30%;
     font-size: 1.6vw;
     margin-right: 70%;
   }
+  .firm{
+    margin-left: 5.5%;
+  }
+  .setting{
+    padding-top: 15%;
+      }
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -494,7 +512,9 @@ margin-right: -30%;
 .navbar .nav_right ul li .omg{
   width: 20px;
 }
-
+.firm{
+  margin-left: 5.5%;
+}  
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -511,7 +531,8 @@ margin-right: -30%;
     }  
     .wr{
       font-size: 15px;
-    }   
+    }
+  
 }
 
 @media only screen and (max-width: 400px){
@@ -535,7 +556,7 @@ margin-top: 2%;
       font-size: 2vw;
     } 
     .pride{
-      padding-right: 29%;
+      padding-right: 25%;
     }
     .suggest{
       font-size: 1.8vw;
