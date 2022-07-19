@@ -468,6 +468,10 @@ padding: 0 15px;
 .bid{
   display: none;
 }
+.form-group {
+margin-left: -30%;
+margin-right: -30%;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -518,20 +522,23 @@ padding: 0 15px;
 margin-top: 2%;
   }
   .wr{
-    font-size: 12px;
+    font-size: 10px;
   } 
   .ve{
-    padding: 0 5px;
+    padding: 0 4px;
     } 
     .copyright{
-      font-size: 2vw;
+      font-size: 1.7vw;
       margin-right: 70%;
     }  
     .pic{
-      font-size: 2.3vw;
+      font-size: 2vw;
     } 
     .pride{
-      padding-right: 23%;
+      padding-right: 29%;
+    }
+    .suggest{
+      font-size: 1.8vw;
     }
 }
 @media only screen and (max-width: 350px){
