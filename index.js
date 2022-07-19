@@ -15,6 +15,16 @@ app.use(express.static("public"))
 // ART
 var art=["creative arts", "English", "French", "Russian", "History and Strategic Studies", "linguistics Igbo/Yoruba", "Chinese", "philosophy", "Christian religious studies", "Islamic religious studies"]
 
+// merit
+var art_merit=[67.05, 68.175, 66.55, 67.65, 68.6, 61.175, 66.7, 67.4, 61.625, 60.225]
+
+// catchment
+var art_ekiti=[61.45, 62.275, 59.65, "NIL", 64.325, "NIL", 58.25, 65.875, "NIL", "NIL"]
+var art_lagos=[65.7, 66.7, 65.05, 66.075, 66.95, 54.975, 63.175, 60.275, "NIL", "NIL"]
+var art_ogun=[64.2, 67.65, 63.075, 61.025, 68.175, 55.3, 66.375, 66.2, "NIL", "NIL"]
+var art_ondo=[61, 63.25, 56.125, "NIL", 64.35, 52.25, 63.6, 62.4, 57.325, "NIL"]
+var art_osun=[64.975, 65.55, 63.4, 57.8, 64.775, 57.625, "NIL", 63.825, "NIL", "NIL"]
+var art_oyo=[64.525, 66.475, 64.5, 62.325, 66.525, 56.275, "NIL", 63.025, 54.7, 58.375]
 
 
 // Management Sciences
@@ -55,6 +65,8 @@ var engineering_ondo=[73.675, 74.7, 61, 77.275, 74.575, 71.6, 71.625, 69.925, 65
 var engineering_osun=[71.275, 65.575, 72.375, 73.25, 72.9, 74.625, 72.375, 69.35, 66.9, 72.5]
 
 var engineering_oyo=[73.225, 72.175, 70.625, 78.125, 74.275, 75.725, 70.7, 70.425, 67.4, 73.275]
+
+
 
 // Environmental Science 
 var environmental=["Architecture", "building", "estate management", "quantity surveying", "urban & regional planning"]
@@ -103,10 +115,33 @@ var pharmacy_oyo=[73.275]
 // Medicine 
 var medicine=["dentistry", "medical laboratory science", "medicine and surgery", "Nursing Science", "pharmacology", "physiology", "physiotherapy", "radiography"]
 
+// merit
+[77.4, 74.675, 80.8, 70.875, 72.625, 71.55, 73.75, 72.525]
+
+// catchment
+var medicine_ekiti=[71.325, 69.875, 75.625, 63.5, 69.475, 69.75, 68.875, 68.4]
+var medicine_lagos=[76.125, 74.25, 79.425, 70.8, 72.175, 67.55, 73.6, 72.325]
+var medicine_ogun=[76.575, 73.375, 78.925, 67.25, 70.775, 66.55, 73.175, 71.3]
+var medicine_ondo=["NIL", 73.9, 77.25, 65, 68.825, 68.475, 71.675, 71.375]
+var medicine_osun=[74.525, 73.125, 80.275, 70.025, "NIL", 69.825, 73.475, 70.025]
+var medicine_oyo=[76.55, 72.7, 79.75, 61.975, 71.85, 71.5, 72.725, 70.35]
 
 
 // Science 
 var science=["biochemistry", "botany", "cell biology & genetics", "chemistry", "computer science", "geology", "geophysics", "Marine biology", "fisheries", "mathematics", "industrial mathematics", "statistics", "microbiology", "physics", "zoology"]
+
+// merit
+var science_merit=[71.625, 63.35, 70.15, 67.775, 77.875, 68.675, 67.875, 66.1, 55.375, 69.925, 69.075, 69.475, 69.55, 66.1, 62.725]
+
+// catchment
+var science_ekiti=["NIL", 56.1, 62.625, 58.225, 73.775, 60.05, "NIL", "NIL", "NIL", 65, "NIL", 65.025, 60.975, 62.4, "NIL"]
+var science_lagos=[65.875, 61.575, 67.175, 61.975, 75.525, 58.925, 64.975, 63.15, "NIL", 66.875, 68.875, 69.275, 66.825, 61.9, 62.7]
+var science_ogun=[67.15, 61.625, 69.15, 67.7, 74.825, 65.175, 67.85, 65.25, "NIL", 67.9, 68.5, 69.325, 64.25, 63.25, 60.1]
+var science_ondo=[67.3, 58.275, 65.625, 65.075, 74.3, "NIL", 67.65, 61.15, "NIL", 64.65, 61.65, 57.3, 66.675, 63.475, 59.025]
+var science_osun=[66.95, 62.825, 63.2, 63.75, 75.2, 62.675, 62.95, 64.95, "NIL", 65.925, 64.225, "NIL", 64.75, 65.6, 55.75]
+var science_oyo=[69.725, 58.425, 64.625, 59.9, 73.725, 57.775, 66.4, 61.275, "NIL", 61.875, 63.55, 68.15, 67.45, 64.45, 57.825]
+
+
 
 
 
@@ -174,3 +209,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit13
 // commit14
 // commit15
+// commit16

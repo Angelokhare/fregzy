@@ -82,7 +82,7 @@
       </div>
 
       <div class="setting">
-        <h1 class="set-text">Experience quality educational services</h1>
+        <h1 class="set-text">Experience quality <span style="color: #4F0E0E;">educational</span> services</h1>
         <!-- <ul class="docking">
         <li class="pre"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
         <li class="pre"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/Signup">Learn More</a></button></li>
@@ -95,12 +95,34 @@
         </ul>
       </div>
       <p style="margin-top: -14%; font-size: 1.5vw;margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E;">Fregzy</span> helps you to enhance your educational skills <br> and assessment flexibility.</p>
-      <ul class="docking firm" style="margin-top: 0%; margin-bottom: 40%;">
+      <ul class="docking firm" style="margin-top: 0%; margin-bottom: 10%;">
         <li class="pri" style="padding-right: 3%;"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
         <li class="pri"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
       </ul>
 
-      
+
+      <div  style="background-color:#EEEEEE; margin-bottom: 40%;">
+      <img style="width: 10%; margin-left: 65%; margin-bottom: -14%;" src="static/award.png" alt="">
+      <div class="second-setting">
+        <img style="width: 35%;" src="static/boy-book.png" alt="">
+        <ul class="docking">
+          <li style="display: inline-block;">
+            <h1 class="set-text" style="color: #414141; padding-left: 8%; font-size: 4vw;">Highly rated for <span style="color: #4F0E0E;">social integration</span>, using <span style="color: #4F0E0E;">Algorithms </span></h1>
+          </li>
+        </ul>
+      </div>
+      <img style="width: 10%; margin-left: 65%; margin-top: -15.5%; display: block; padding-bottom: 7%;" src="static/udemy.png" alt="">
+      </div>
+
+      <div class="hid bw vain ki" style="margin-bottom: 0%; background-color: #EEEEEE;">
+        <img class="rap" src="static/connection.png" alt="">
+        <h1 class="wer">No Network</h1>
+        <ul class="docking">
+      <li class="lap">
+      <h1 style="font-weight:500;" class="clear"> Dismiss</h1>
+      </li>
+      </ul>
+      </div>
       <footer>
       <!-- <div class="dover">
         <img class="icon-home" style="margin-right: 1%;" src="static/footer.png" alt="">
@@ -194,19 +216,51 @@
       }
     })
 
-    var cod= document.querySelector(".omg");
-    cod.addEventListener("click", function(){
+//     var cod= document.querySelector(".omg");
+//     cod.addEventListener("click", function(){
 
-// cod.style.backgroundColor="#A23131";
-if(cod.className.includes("og")){
-  cod.classList.remove("og")
-  cod.style.backgroundColor="#A23131";
+// // cod.style.backgroundColor="#A23131";
+// if(cod.className.includes("og")){
+//   cod.classList.remove("og")
+//   cod.style.backgroundColor="#A23131";
+// }
+// else{
+//   cod.classList.add("og")
+//   cod.style.backgroundColor="#FDFFF0";
+// }
+//     })
+
+var hi= document.querySelector(".lap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+            })
+
+    function hasNetwork(onLine){
+  const vak = document.querySelector(".bw");
+  if (onLine){
+    vak.classList.remove("hij");
+    vak.classList.add("hid");
+  }
+  else {
+    vak.classList.add("hij");
+    vak.classList.remove("hid");
+  }
 }
-else{
-  cod.classList.add("og")
-  cod.style.backgroundColor="#FDFFF0";
-}
-    })
+window.addEventListener("load", () => {
+  hasNetwork(navigator.onLine);
+
+
+window.addEventListener("online", () => {
+  hasNetwork(true);
+});
+
+window.addEventListener("offline", () => {
+  hasNetwork(false);
+
+});
+
+});
 
        </script>
 </body>

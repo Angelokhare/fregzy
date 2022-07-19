@@ -84,46 +84,19 @@
       </div>
 
 <img class="see" src="static/confirm.png" alt="">
-<h1 class="rew" style="font-family: 'Varela Round', sans-serif; text-align: center; color: #D4F6CC; font-weight: 700;">Email recieved!</h1>
-      
-      <footer class="error-footer">
-      <!-- <div class="dover">
-        <img class="icon-home" style="margin-right: 1%;" src="static/footer.png" alt="">
-     <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #694E4E;">zy</span></h1>
-     <nav>
-       <ul class="docking">
-         
-         <li class="pride"><a class="pic">Company <br> <br> Vision <br> <br> Mission <br> <br> Focus</a></li>
-         <li class="pride"><a class="pic">Blogs <br> <br> FAQ <br> <br> Terms of use <br> <br> Privacy Policy</a></li>
-         <li class="pre" style="padding-bottom: -2%;"> 
-           <h1 style="font-size: 1vw; color: #fff;">Search for more Activities and Daily updates.</h1>
-           <form action="/exchange" method="post" class="">
-           <div class="form-group">
-             <input class="inside" style="border-radius: 0%; text-transform: capitalize;" name="current" type="search" placeholder="Your Email" required>
-             <button type="submit" class="btn btn-success"><i style="color: #fff" class="fa fa-search"></i></button>
-           </div>
-         </form>
-         <ul class="social">
-           <li class="ve">
-               <i class=" fa fa-instagram" style="font-size:20px;color:white"></i>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-twitter-square" style="font-size:20px;color:white"></i>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-linkedin-square" style="font-size:20px;color:white"></i></a>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-github" style="font-size:20px;color:white"></i>
-           </li>
-       </ul>
-       </li>
-         
-       </ul>
-     </nav>
-   </div>
-   <h5 style="color: #fff; margin-right: 80%; margin-top: -1%; font-family: 'Varela Round', sans-serif; font-size: 1.1vw;" class="copyright">Copyright © <%= day%> <span style="font-weight: 700;">Fregzy</span> </h5> -->
-       
+<h1 class="rew" style="font-family: 'Varela Round', sans-serif; text-align: center; color: #3CCF4E; font-weight: 700; padding-top: 2%;">Email recieved!</h1>
+
+<div class="error-footer">
+<div class="hid bw vain ki" style="margin-bottom: 0%; background-color: #EEEEEE;">
+  <img class="rap" src="static/connection.png" alt="">
+  <h1 class="wer">No Network</h1>
+  <ul class="docking">
+<li class="lap">
+<h1 style="font-weight:500;" class="clear"> Dismiss</h1>
+</li>
+</ul>
+</div>
+      <footer> 
    <div class="dover">
     <img class="icon-home" style="margin-right: 1%;" src="static/footer.webp" alt="">
  <h1 class="footer-heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #694E4E;">zy</span></h1>
@@ -162,6 +135,7 @@
 </div>
 <h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © <%= day%> <span style="font-weight: 700;">Fregzy</span> </h5>
   </footer>
+</div>
        <script>
         var li_main=document.querySelector(".li_main");
     
@@ -179,19 +153,51 @@
       }
     })
 
-    var cod= document.querySelector(".omg");
-    cod.addEventListener("click", function(){
+//     var cod= document.querySelector(".omg");
+//     cod.addEventListener("click", function(){
 
-// cod.style.backgroundColor="#A23131";
-if(cod.className.includes("og")){
-  cod.classList.remove("og")
-  cod.style.backgroundColor="#A23131";
+// // cod.style.backgroundColor="#A23131";
+// if(cod.className.includes("og")){
+//   cod.classList.remove("og")
+//   cod.style.backgroundColor="#A23131";
+// }
+// else{
+//   cod.classList.add("og")
+//   cod.style.backgroundColor="#FDFFF0";
+// }
+//     })
+
+var hi= document.querySelector(".lap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+            })
+
+    function hasNetwork(onLine){
+  const vak = document.querySelector(".bw");
+  if (onLine){
+    vak.classList.remove("hij");
+    vak.classList.add("hid");
+  }
+  else {
+    vak.classList.add("hij");
+    vak.classList.remove("hid");
+  }
 }
-else{
-  cod.classList.add("og")
-  cod.style.backgroundColor="#FDFFF0";
-}
-    })
+window.addEventListener("load", () => {
+  hasNetwork(navigator.onLine);
+
+
+window.addEventListener("online", () => {
+  hasNetwork(true);
+});
+
+window.addEventListener("offline", () => {
+  hasNetwork(false);
+
+});
+
+});
 
        </script>
 </body>

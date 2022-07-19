@@ -71,6 +71,15 @@ header {
   /* padding-right: 20%; */
 
 }
+.second-setting{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 9%;
+  font-family: 'Varela Round', sans-serif;
+  padding-top: 2%;
+}
 
 .dover {
   display: flex;
@@ -245,12 +254,52 @@ color: white;
 .hid{
   display: none;
 }
+.hij{
+  display: flex;
+}
 .second-head{
   display: none;
 }
 .second-bulb{
   font-size: 25px; 
 }
+.rap{
+  width: 8%;
+  /* margin-left: 2%; */
+}
+.lap{
+  display: inline-block;
+  padding-top: 10%;
+  /* padding: 0% 20px; */
+  font-size: 2vw;
+
+}
+.bw{
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #000;
+  /* border-radius: 20px; */
+}
+.wer{
+  margin-right: auto;
+  /* font-family: 'Monoton', cursive; */
+  /* font-family: 'Knewave', cursive; */
+  text-transform: uppercase;
+   font-size: 3vw;
+   color: #000;
+   text-transform: uppercase;
+   padding-left: 2%;
+   font-weight: 700;
+   display: block;
+ }  
+ .clear{
+  font-size: 2vw;
+  color: #4F0E0E;
+ }
 /* footer jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
 footer {
   width:100%;
@@ -261,7 +310,7 @@ footer {
   font-family: 'Varela Round', sans-serif;
   text-align: center;
   /* border-top-left-radius: 50px; */
-  border-top-right-radius: 50px;
+  border-top-right-radius: 100px;
   /* height:600px;   Height of the footer */
   /* background: #92B4EC; */
   background-color: #4F0E0E;
@@ -419,6 +468,10 @@ font-size: 4vw;
 .suggest{
   font-size: 1.3vw;
 }
+.rap{
+  width: 10%;
+  /* margin-left: 2%; */
+}
 }
 @media only screen and (max-width:855px){
   .pride{
@@ -462,6 +515,12 @@ font-size: 4vw;
   padding-top: 20%;
 }
 }
+@media only screen and (min-height:800px) and (max-width:320px){
+  .error-footer{
+    position: fixed;
+    bottom: 0;
+  }
+}
 
 @media only screen and (max-width:791px){
   .pride{
@@ -470,6 +529,9 @@ font-size: 4vw;
   .pic{
     font-size: 1.5vw;
   }
+  .bw{
+    padding-top: 2%;
+          }
 }
 @media only screen and (max-width:780px){
 header{
@@ -540,6 +602,13 @@ margin-right: -30%;
   .setting{
     padding-top: 15%;
       }
+      .rap{
+        width: 12%;
+        /* margin-left: 2%; */
+      }
+.clear{
+  font-size: 2.5vw;
+}
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -562,6 +631,10 @@ margin-right: -30%;
 .rew{
   font-size: 8vw;
   margin-bottom: 60%;
+}
+.rap{
+  width: 14%;
+  /* margin-left: 2%; */
 }
 
 }
@@ -617,6 +690,10 @@ margin-top: 2%;
     .see{
       padding-top: 35%;
     }
+    .rap{
+      width: 16%;
+      /* margin-left: 2%; */
+    }
 }
 @media only screen and (max-width: 350px){
   .heading{
@@ -625,6 +702,10 @@ margin-top: 2%;
   /* ve{
     padding: 0 2px;
     }  */
+    .rap{
+      width: 18%;
+      /* margin-left: 2%; */
+    }
 }
 
 @media only screen and (max-width: 290px){
