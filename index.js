@@ -132,8 +132,29 @@ app.get("/", (request, response)=>{
     response.render("index"), {fan:day}
 })
 
+app.get("/confirm", (request, response)=>{
+    day=new Date().getFullYear()
+    // day= new Date().toLocaleDateString()
+    console.log(day)
+    response.render("confirm"), {fan:day}
+})
+
 app.post("/home", (request, response)=>{
-    response.redirect("/")
+    response.redirect("/confirm")
+})
+
+
+
+
+
+
+
+
+app.get("*", (request, response)=>{
+    day=new Date().getFullYear()
+    // day= new Date().toLocaleDateString()
+    console.log(day)
+    response.render("error"), {fan:day}
 })
 app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 
@@ -152,3 +173,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit12
 // commit13
 // commit14
+// commit15

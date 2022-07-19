@@ -82,6 +82,23 @@ header {
 .firm{
   margin-left: 8.5%;
 }
+/* error rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+.see{
+  width: 65%; 
+  margin-left: auto;
+   margin-right: auto; 
+  display: block; 
+}
+
+.rew{
+  font-size: 6vw;
+  margin-top: -4%;
+  margin-bottom: 20%;
+}
+
+
+
+
 /* keep off fffffffffffffffffffffffffffffffffffffffffffffff*/
 *{
   margin: 0;
@@ -424,7 +441,28 @@ font-size: 4vw;
 .heading{
   font-size: 4.5vw;
     }
+    .see{
+      width: 80%; 
+    }
+    .rew{
+      margin-bottom: 40%;
+    }
 }
+
+@media only screen and (min-height:900px){
+/* .rew{
+  font-size: 8vw;
+  margin-bottom: 60%;
+} */
+.error-footer{
+  position: fixed;
+  bottom: 0;
+}
+.see{
+  padding-top: 20%;
+}
+}
+
 @media only screen and (max-width:791px){
   .pride{
     padding-right: 50px;
@@ -445,6 +483,9 @@ font-size: 5vw;
   }
   .setting{
 padding-top: 10%;
+  }
+  .see{
+    padding-top: 8%;
   }
 }
 @media only screen and (max-width:769px){
@@ -515,6 +556,14 @@ margin-right: -30%;
 .firm{
   margin-left: 5.5%;
 }  
+.see{
+  padding-top: 20%;
+}
+.rew{
+  font-size: 8vw;
+  margin-bottom: 60%;
+}
+
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -534,7 +583,11 @@ margin-right: -30%;
     }
   
 }
-
+@media only screen and (max-width: 450px){
+.see{
+  padding-top: 25%;
+}
+}
 @media only screen and (max-width: 400px){
   .heading{
     font-size: 10vw;
@@ -560,6 +613,9 @@ margin-top: 2%;
     }
     .suggest{
       font-size: 1.8vw;
+    }
+    .see{
+      padding-top: 35%;
     }
 }
 @media only screen and (max-width: 350px){
