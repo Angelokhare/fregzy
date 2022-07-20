@@ -106,6 +106,9 @@ header {
   margin-bottom: -96%;
   margin-left: -8.5%;
 }
+.rotate{
+transform: rotate(-12deg);
+}
 /* error rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .see{
   width: 65%; 
@@ -596,6 +599,9 @@ padding-top: 10%;
   }
   .see{
     padding-top: 8%;
+  }
+  .rotate{
+  transform: inherit;
   }
 }
 @media only screen and (max-width:769px){
