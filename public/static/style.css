@@ -739,6 +739,11 @@ margin-top: 2%;
     }
 }
 @media only screen and (max-width: 350px){
+  .header-wer{
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (max-width: 350px){
   .heading{
     font-size: 12vw;
   }
@@ -752,9 +757,7 @@ margin-top: 2%;
     .header-bw{
       padding-top: 18%;
     }
-    .header-wer{
-      font-size: 3.5vw;
-    }
+  
 }
 
 @media only screen and (max-width: 290px){
