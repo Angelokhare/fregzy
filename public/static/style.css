@@ -130,6 +130,29 @@ header {
   padding: 0 50px;
   position: fixed;
 }
+.header-bw{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4%;
+  padding-top: 8%;
+  width: 100%;
+  margin-bottom: 2%;
+  color: #000;
+  /* border-radius: 20px; */
+}
+.header-wer{
+  margin-right: auto;
+  /* font-family: 'Monoton', cursive; */
+  /* font-family: 'Knewave', cursive; */
+  /* text-transform: uppercase; */
+   font-size: 3.5vw;
+   color: #000;
+   /* text-transform: uppercase; */
+   padding-left: 2%;
+   font-weight: 700;
+   display: block;
+ }  
 
 .forming{
   display: block;
@@ -588,6 +611,11 @@ margin-right: -30%;
   padding-top: 12%;
     }
 }
+@media only screen and (max-width:700px){
+.header-bw{
+  padding-top: 10%;
+}
+}
 @media only screen and (max-width:600px){
   .suggest{
     font-size: 2vw;
@@ -614,6 +642,9 @@ margin-right: -30%;
   .ve{
     padding: 0 12px;
     }
+    .header-bw{
+      padding-top: 12%;
+    }
 }
 @media only screen and (max-width: 500px){
 .heading{
@@ -635,6 +666,9 @@ margin-right: -30%;
 .rap{
   width: 14%;
   /* margin-left: 2%; */
+}
+.header-wer{
+  font-size: 4vw;
 }
 
 }
@@ -659,6 +693,9 @@ margin-right: -30%;
 @media only screen and (max-width: 450px){
 .see{
   padding-top: 25%;
+}
+.header-bw{
+  padding-top: 14%;
 }
 }
 @media only screen and (max-width: 400px){
@@ -694,6 +731,12 @@ margin-top: 2%;
       width: 16%;
       /* margin-left: 2%; */
     }
+    .header-bw{
+      padding-top: 17%;
+    }
+    .header-wer{
+      font-size: 3.8vw;
+    }
 }
 @media only screen and (max-width: 350px){
   .heading{
@@ -706,6 +749,9 @@ margin-top: 2%;
       width: 18%;
       /* margin-left: 2%; */
     }
+    .header-bw{
+      padding-top: 18%;
+    }
 }
 
 @media only screen and (max-width: 290px){
@@ -715,6 +761,9 @@ margin-top: 2%;
   .second-bulb{
     font-size: 20px; 
   }
+  .header-bw{
+    padding-top: 20%;
+  }
 }
 @media only screen and (max-width: 285px){
   .navbar {
@@ -723,4 +772,7 @@ padding: 0 40px;
 .ve{
   padding: 0 2px;
 }  
+.header-wer{
+  font-size: 3.5vw;
+}
 }
