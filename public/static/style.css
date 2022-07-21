@@ -63,6 +63,7 @@ header {
 }
 .student{
 width: 75%;
+margin-left: 31%;
 }
 .first-param{
   margin-top: -14%; 
@@ -555,6 +556,7 @@ padding-left: 5%;
 }       */
 .student{
 width: 100%;
+margin-left: 28%;
 
 }
 .first-param{
@@ -890,6 +892,7 @@ margin-top: 2%;
   }      
   .student{
     width: 110%;
+    margin-left: 20%;
 
   }
   .first-param{
