@@ -66,6 +66,7 @@ width: 75%;
 }
 .first-param{
   margin-top: -14%; 
+  font-size: 1.5vw; 
 }
 .set-text{
   padding-bottom: 15%;
@@ -715,6 +716,9 @@ margin-right: -30%;
 .first-back{
   padding-top: 12%;
     }
+    .first-param{
+      margin-top: -22%; 
+      }
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -890,6 +894,7 @@ margin-top: 2%;
   }
   .first-param{
     margin-top: -30%; 
+    font-size: 2vw;
   }
 }
 
