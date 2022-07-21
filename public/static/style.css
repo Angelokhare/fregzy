@@ -61,7 +61,23 @@ header {
   font-family: 'Varela Round', sans-serif;
   padding-top: 2%;
 }
+.student{
+width: 75%;
+}
+.first-param{
+  margin-top: -14%; 
+}
 .set-text{
+  padding-bottom: 15%;
+  font-size: 5.5vw;
+  font-family: 'Merienda One', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  /* font-family: 'Archivo Black', sans-serif; */
+  font-weight: 700;
+  /* padding-right: 20%; */
+
+}
+.full-text{
   padding-bottom: 15%;
   font-size: 5.5vw;
   font-family: 'Merienda One', cursive;
@@ -528,6 +544,22 @@ font-size: 3.5vw;
 .firm{
   margin-left: 7.5%;
 }
+.full-text{
+  padding-bottom: 20%;
+  font-size: 5.5vw;
+
+}
+/* .firm{
+padding-left: 5%;
+}       */
+.student{
+width: 100%;
+
+}
+.first-param{
+margin-top: -24%; 
+}
+
 }
 
 
@@ -636,7 +668,7 @@ display: block;
   .heading{
 font-size: 5vw;
   }
-  .setting{
+  .first-back{
 padding-top: 10%;
   }
   .see{
@@ -680,7 +712,7 @@ padding: 0 15px;
 margin-left: -30%;
 margin-right: -30%;
 }
-.setting{
+.first-back{
   padding-top: 12%;
     }
 }
@@ -700,7 +732,7 @@ margin-right: -30%;
   .firm{
     margin-left: 5.5%;
   }
-  .setting{
+  .first-back{
     padding-top: 15%;
       }
       .rap{
@@ -836,6 +868,29 @@ margin-top: 2%;
     .tablet{
       margin-bottom: -18%;
      }
+     .first-back{
+      padding-top: 20%;
+        }
+        .full-text{
+          padding-bottom: 28%;
+          font-size: 5vw;
+          font-family: 'Merienda One', cursive;
+          /* font-family: 'Abril Fatface', cursive; */
+          /* font-family: 'Archivo Black', sans-serif; */
+          font-weight: 700;
+          /* padding-right: 20%; */
+        
+        }
+  .firm{
+    padding-left: 5%;
+  }      
+  .student{
+    width: 110%;
+
+  }
+  .first-param{
+    margin-top: -30%; 
+  }
 }
 
 @media only screen and (max-width: 350px){

@@ -94,7 +94,7 @@
           </div>
 
       <div class="setting">
-        <h1 class="set-text">Experience quality <span style="color: #4F0E0E;">educational</span> services</h1>
+        <h1 class="full-text">Experience quality <span style="color: #4F0E0E;">educational</span> services</h1>
         <!-- <ul class="docking">
         <li class="pre"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
         <li class="pre"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/Signup">Learn More</a></button></li>
@@ -102,11 +102,11 @@
         <!-- at the touch of a button -->
         <ul class="docking">
           <li style="display: inline-block;">
-            <img style="width: 75%; margin-left: 31%; margin-bottom: 10%;" src="static/student.webp" alt="">
+            <img class="student" style="margin-left: 31%; margin-bottom: 10%;" src="static/student.webp" alt="">
           </li>
         </ul>
       </div>
-      <p style="margin-top: -14%; font-size: 1.5vw;margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 3vw;">Fregzy</span> helps you to enhance your educational skills <br> and assessment flexibility.</p>
+      <p class="first-param" style="font-size: 1.5vw; margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 3vw;">Fregzy</span> helps you to enhance your educational skills <br> and assessment flexibility.</p>
       <ul class="docking firm" style="margin-top: 0%; margin-bottom: 10%;">
         <li class="pri" style="padding-right: 3%;"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
         <li class="pri"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
@@ -322,6 +322,7 @@ window.addEventListener("offline", () => {
 var ho= document.querySelector(".erase")
             ho.addEventListener("click", ()=>{
               document.querySelector(".header-bw").classList.add("hid")
+              document.querySelector(".setting").classList.add("first-back")
             })
 
 
