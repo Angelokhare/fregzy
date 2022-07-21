@@ -108,6 +108,12 @@ header {
  .tablet{
   margin-bottom: -28%;
  }
+ .app{
+  font-size: 2.5vw;
+ }
+ .experience{
+  font-size: 2vw;
+ }
 .dover {
   display: flex;
   justify-content: space-between;
@@ -616,6 +622,9 @@ font-size: 4vw;
   .bw{
     padding-top: 2%;
           }
+          .app{
+            font-size: 2.5vw;
+          }
 }
 @media only screen and (max-width:780px){
 header{
@@ -704,6 +713,7 @@ margin-right: -30%;
 .tablet{
   margin-bottom: -22%;
  }
+
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -766,7 +776,12 @@ margin-right: -30%;
     .tablet{
       margin-bottom: -19%;
      }
-  
+     .app{
+      font-size: 3vw;
+     }
+     .experience{
+      font-size: 2.5vw;
+     }
 }
 @media only screen and (max-width: 450px){
 .see{
