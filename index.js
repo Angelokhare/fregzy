@@ -178,7 +178,14 @@ app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
 
-
+app.get("/login", (request, response)=>{ 
+    day=new Date().getFullYear()
+    response.render("login", {fan:day})
+})
+app.get("/signup", (request, response)=>{
+    day=new Date().getFullYear()
+response.render("signup", {fan:day})
+})
 
 
 
@@ -226,3 +233,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit30
 // commit31
 // commit32
+// commit33
