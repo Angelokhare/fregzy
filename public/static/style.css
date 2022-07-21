@@ -366,6 +366,9 @@ color: white;
   font-size: 2vw;
 
 }
+.kat{
+  display: none;
+}
 .bw{
   /* display: flex; */
   justify-content: space-between;
@@ -884,8 +887,12 @@ margin-top: 2%;
           /* font-family: 'Abril Fatface', cursive; */
           /* font-family: 'Archivo Black', sans-serif; */
           font-weight: 700;
-          /* padding-right: 20%; */
-        
+          /* padding-right: 20%; */}
+        .kit{
+          display: none;
+        }
+        .kat{
+          display: block;
         }
   .firm{
     padding-left: 5%;
