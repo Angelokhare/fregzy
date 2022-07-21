@@ -729,6 +729,9 @@ margin-right: -30%;
 .header-bw{
   padding-top: 10%;
 }
+.navbar{
+  padding: 0 40px;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -898,8 +901,8 @@ margin-top: 2%;
     padding-left: 5%;
   }      
   .student{
-    width: 110%;
-    margin-left: 20%;
+    width: 108%;
+    margin-left: 23%;
 
   }
   .first-param{
