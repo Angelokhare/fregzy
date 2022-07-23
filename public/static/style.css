@@ -121,6 +121,9 @@ margin-left: 31%;
   /* padding-right: 20%; */
 
 }
+.checks{
+  color: #395B64;
+}
 .full-text{
   padding-bottom: 15%;
   font-size: 5.5vw;
@@ -240,13 +243,14 @@ transform: rotate(-12deg);
   align-items: center;
   padding: 0 50px;
   position: fixed;
+  border-bottom: 3px solid #4F0E0E;
 }
-.nav-border{
+/* .nav-border{
 border-bottom: 3px solid #4F0E0E;
 }
 .nav-border{
   border-bottom: 3px solid #4F0E0E;
-  }
+  } */
 
 .header-bw{
   display: flex;

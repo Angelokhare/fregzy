@@ -112,8 +112,8 @@
       <p class="first-param kit" style="margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 3vw;">Fregzy</span> helps you to enhance your educational <br> skills and assessment flexibility.</p>
       <p class="first-param kat" style="margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 3vw;">Fregzy</span> helps you to enhance your <br> educational skills and assessment flexibility.</p>
       <ul class="docking firm" style="margin-top: 0%; margin-bottom: 10%;">
-        <li class="pri" style="padding-right: 3%;"><button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" href="/Signup">Get Started</a></button></li>
-        <li class="pri"><button class="btn" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
+        <li class="pri" style="padding-right: 3%;"><button class="btn button1" style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line started" href="/Signup">Get Started</a></button></li>
+        <li class="pri"><button class="btn button2" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line learn" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
       </ul>
 
 
@@ -137,9 +137,9 @@
         <img style="width: 8%;" class="check-icon2" src="static/check.png" alt="">
         <img style="width: 8%;" class="check-icon3" src="static/check.png" alt="">
 
-      <p style="font-size: 3vw;margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 4.5vw;">Fregzy</span> helps in:</p>
+      <p style="font-size: 3vw;margin-bottom: 2%;  margin-left: 11%; font-weight: 600; font-family: 'Varela Round', sans-serif;"><span class="freg" style="color: #4F0E0E; font-family: 'Cookie', cursive; font-weight: 700; font-size: 4.5vw;">Fregzy</span> helps in:</p>
         <div class="second-setting">
-          <h1 class="set-text" style="color: #414141; padding-left: 8%; font-size: 4vw; padding-right: 5%;"><span style="color: #395B64;">Transmission of Culture</span> <br><br><span style="color: #395B64;">social integration</span><br><br><span style="color: #a71b11;">Cost fee</span><br><br><span style="color: #395B64;">Rational Thinking</span></h1>
+          <h1 class="set-text checks" style=" padding-left: 8%; font-size: 4vw; padding-right: 5%;"><span style="">Transmission of Culture</span> <br><br><span style="">social integration</span><br><br><span style="color: #a71b11;">Cost fee</span><br><br><span style="">Rational Thinking</span></h1>
           <ul class="docking">
             <li style="display: inline-block;">
           <img style="width: 100%; margin-top: -59%;" src="static/girl-book.png" alt="">
@@ -225,7 +225,7 @@
        
    <div class="dover">
     <img class="icon-home" style="margin-right: 1%;" src="static/footer.webp" alt="">
- <h1 class="footer-heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #694E4E;">zy</span></h1>
+ <h1 class="footer-heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #97BFB4;">zy</span></h1>
  <nav>
    <ul class="docking">
      
@@ -302,6 +302,16 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector("header").classList.remove("header-white")
   document.querySelector(".navbar").classList.add("header-black")
   document.querySelector(".navbar").classList.remove("header-white")
+  document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
+  document.querySelector(".button1").style.backgroundColor="#fff"
+  document.querySelector(".button2").style.borderColor= "#FFF"
+  document.querySelector(".learn").style.color="#FFF";
+  document.querySelector(".started").style.color="#1d2a35";
+  document.querySelectorAll(".first-param span")[0].style.color="#FF869E"
+  document.querySelectorAll(".first-param span")[1].style.color="#FF869E"
+  document.querySelector(".full-text span").style.color="#FF869E"
+  document.querySelector(".freg").style.color="#FF869E"
+  document.querySelector(".checks").style.color="#7d9d9c"
   document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.add("body-color-black")
@@ -351,6 +361,16 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector("header").classList.add("header-white")
   document.querySelector(".navbar").classList.remove("header-black")
   document.querySelector(".navbar").classList.add("header-white")
+  document.querySelector(".navbar").style.borderColor= "#4F0E0E"
+  document.querySelector(".button1").style.backgroundColor="#4F0E0E"
+  document.querySelector(".button2").style.borderColor= "#4F0E0E"
+  document.querySelector(".learn").style.color="#4F0E0E";
+  document.querySelector(".started").style.color="#FFF";
+  document.querySelector(".checks").style.color="#395B64"
+  document.querySelectorAll(".first-param span")[0].style.color="#4F0E0E"
+  document.querySelectorAll(".first-param span")[1].style.color="#4F0E0E"
+  document.querySelector(".full-text span").style.color="#4F0E0E"
+  document.querySelector(".freg").style.color="#4F0E0E"
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-black")
