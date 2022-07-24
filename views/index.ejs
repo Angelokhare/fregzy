@@ -84,9 +84,9 @@
             </div>
           </div>
            </div>
-           <div class=" header-bw vain ki" style="margin-bottom: 0%; background-color: #EEEEEE; font-family: 'Varela Round', sans-serif;">
-            <i style="margin-right: 1%; margin-top: -1%;" class=" erase fa fa-times"></i>
-            <h1 class="header-wer"><span style="font-family: 'Cookie', cursive; font-weight: 700; color: #4F0E0E; font-size: 5vw;">Fregzy</span> works best on our app!</h1>
+           <div class=" header-bw vain ki body-color body-color-white" style="margin-bottom: 0%; font-family: 'Varela Round', sans-serif;">
+            <i style="margin-right: 1%; margin-top: -1%;" class=" x erase fa fa-times"></i>
+            <h1 class="header-wer"><span class="fregy" style="font-family: 'Cookie', cursive; font-weight: 700; color: #4F0E0E; font-size: 5vw;">Fregzy</span> works best on our app!</h1>
             <ul class="docking">
           <li class="">
           <!-- <h1 style="font-weight:500;" class="clear"> Dismiss</h1> -->
@@ -175,7 +175,7 @@
 </div>
 
 
-      <div class="hid bw vain ki" style="margin-bottom: 0%; background-color: #EEEEEE;">
+      <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
         <img class="rap" src="static/connection.png" alt="">
         <h1 class="wer">No Network</h1>
         <ul class="docking">
@@ -311,12 +311,20 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".first-param span")[1].style.color="#FF869E"
   document.querySelector(".full-text span").style.color="#FF869E"
   document.querySelector(".freg").style.color="#FF869E"
+  document.querySelector(".fregy").style.color="#7D1935"
   document.querySelector(".checks").style.color="#7d9d9c"
   document.querySelector(".boy-book").style.color="#142F43"
+  document.querySelector(".header-wer").style.color="#FFF"
+  document.querySelector(".wer").style.color="#FFF"
+  document.querySelector(".x").style.color="#990000"
   document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-white")
+  document.querySelectorAll(".body-color")[2].classList.add("body-color-black")
+  document.querySelectorAll(".body-color")[2].classList.remove("body-color-white")
+  document.querySelectorAll(".body-color")[3].classList.add("body-color-black")
+  document.querySelectorAll(".body-color")[3].classList.remove("body-color-white")
   document.querySelector(".icon1").classList.add("hid")
   document.querySelector(".icon2").classList.remove("hid")
   document.querySelectorAll(".heading")[0].classList.add("heading-white")
@@ -340,6 +348,8 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".header-other")[0].classList.remove("other-red")
   document.querySelectorAll(".header-other")[1].classList.add("other-blue")
   document.querySelectorAll(".header-other")[1].classList.remove("other-red")
+  // document.querySelectorAll(".header-other")[2].classList.add("other-blue")
+  // document.querySelectorAll(".header-other")[2].classList.remove("other-red")
 
   }
 //   for(let r=0; r<3; r++){
@@ -368,15 +378,23 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".learn").style.color="#4F0E0E";
   document.querySelector(".started").style.color="#FFF";
   document.querySelector(".checks").style.color="#395B64"
+  document.querySelector(".wer").style.color="#000"
   document.querySelectorAll(".first-param span")[0].style.color="#4F0E0E"
   document.querySelectorAll(".first-param span")[1].style.color="#4F0E0E"
   document.querySelector(".full-text span").style.color="#4F0E0E"
   document.querySelector(".freg").style.color="#4F0E0E"
   document.querySelector(".boy-book").style.color="#414141"
+  document.querySelector(".header-wer").style.color="#000"
+  document.querySelector(".fregy").style.color="#4F0E0E"
+  document.querySelector(".x").style.color="#000"
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-black")
   document.querySelectorAll(".body-color")[1].classList.add("body-color-white")
+  document.querySelectorAll(".body-color")[2].classList.remove("body-color-black")
+  document.querySelectorAll(".body-color")[2].classList.add("body-color-white")
+  document.querySelectorAll(".body-color")[3].classList.remove("body-color-black")
+  document.querySelectorAll(".body-color")[3].classList.add("body-color-white")
   document.querySelector(".icon1").classList.remove("hid")
   document.querySelector(".icon2").classList.add("hid")
   document.querySelectorAll(".heading")[0].classList.remove("heading-white")
