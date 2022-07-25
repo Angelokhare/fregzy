@@ -80,6 +80,14 @@ header {
   background-color: #fbf8f5;
   color: #4F0E0E;
 }
+.all-button-red:hover{
+  background-color: #4F0E0E;
+  color:#fbf8f5 ;
+}
+.all-button-white:hover{
+  background-color: #fbf8f5;
+  color: #4F0E0E;
+}
 .red{
   color:#4F0E0E;
   text-decoration: none;
