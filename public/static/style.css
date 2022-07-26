@@ -578,6 +578,7 @@ footer {
 }
 .google-but{
   padding: 0.5rem 5.5rem;
+  margin-left: 1%;
 }
 
 .login-user{
@@ -1338,6 +1339,17 @@ margin-top: 2%;
   .namef{
     display: none;
   }
+  .enter-details{
+    font-size: 3vw;
+   }
+   .google-but{
+    padding: 0.3rem 3rem;
+    margin-left: -7%;
+    margin-right: 17%;
+   }
+   .google-log{
+    font-size: 3.5vw;
+   }
   }
   
 @media only screen and (max-width: 350px){
@@ -1356,6 +1368,11 @@ margin-top: 2%;
     }
     .tablet{
       margin-bottom: -16%;
+     }
+     .google-but{
+      padding: 0.3rem 2rem;
+      /* margin-left: -7%;
+      margin-right: 21%; */
      }
 }
 
