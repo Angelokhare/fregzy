@@ -583,6 +583,36 @@ footer {
 .login-user{
   padding: 1rem 10.5rem;
 }
+.login-profile{
+  margin-top: -65%;
+   margin-left:60%; 
+   margin-bottom: 26%; 
+}
+.enter-details{
+  font-size: 1.5vw;;
+        }
+.please-sign{
+   font-size:1.2vw; 
+    margin-left: 5%; 
+     font-family: 'Varela Round', sans-serif;
+   font-weight: 500; 
+     margin-top: 5%;
+                }
+.sign-link{
+ font-size: 1.7vw;
+        }       
+        .login-icon{
+          margin-left: 19%;
+          width: 20%; 
+          display:block;
+           margin-right: 30%;
+        }              
+        .eye-log{
+          margin-left: -9%;
+         }        
+ .welcoming{
+  font-size: 5vw;
+ }        
 /* entertainmentfffffffffffffffffffffffff */
 .enter-display{
   width: 50%;
@@ -631,9 +661,7 @@ footer {
 /* 895px */
 
 /* login llllllllllllllllllllllllllllllllll */
-@media only screen and (min-width:900px){
 
-}
 @media only screen and (max-width:1250px){
   .pro {
     padding-right: 90px;
@@ -665,6 +693,15 @@ footer {
   .pic{
     font-size: 1.2vw;
   }
+  .enter-display{
+  padding-top: 5%;
+}
+.login-profile{
+  margin-top: -75%;
+}
+.enter-details{
+  font-size: 1.8vw;;
+        }
   }
 
 @media only screen and (max-width:1085px){
@@ -727,12 +764,18 @@ margin-left: 28%;
 margin-top: -24%; 
 }
 .google-but{
-  padding: 0.5rem 3.5rem;
+  padding: 0.5rem 3rem;
 }
 
 .login-user{
   padding: 1rem 9.5rem;
 }
+.login-profile{
+  margin-top: -65%;
+   margin-left:60%; 
+   margin-bottom: 26%; 
+}
+
 }
 
 
@@ -773,6 +816,12 @@ font-size: 4vw;
 .login-user{
   padding: 1rem 8.5rem;
 }
+.google-but{
+  padding: 0.5rem 2rem;
+}
+.enter-details{
+  font-size: 1.8vw;;
+        }
 }
 
 @media only screen and (max-width:895px){
@@ -789,7 +838,7 @@ font-size: 4vw;
   padding-right: 5;
 }
 .vid2{
-  width: 50%; 
+  width: 52%; 
   padding-bottom: 2%; 
   margin-top: -39.5%;
    margin-left: 50%; 
@@ -810,13 +859,19 @@ font-size: 4vw;
     border-bottom-left-radius: 150px;
 }
 .img3{
-  width: 54%;
+  width: 56%;
    padding-bottom: 2%; 
-   margin-top: -43.5%;
+   margin-top: -42.5%;
     margin-left: 50%;
      padding-right: 5%;
       border-bottom-right-radius: 150px;
 }
+.please-sign{
+  font-size:1.8vw; 
+        }
+.sign-link{
+  font-size: 2.7vw;
+} 
 }
 
 @media only screen and (max-width:855px){
@@ -827,11 +882,14 @@ font-size: 4vw;
     margin-left: 6.5%;
   }
   .google-but{
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1.5rem;
   }
   .login-user{
     padding: 1rem 7.5rem;
   }
+  .enter-details{
+    font-size: 1.8vw;;
+          }
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -854,6 +912,9 @@ font-size: 4vw;
     }
     .img-pass{
       width: 40%;
+    }
+    .login-profile{
+      margin-left: 55%;
     }
 }
 /* heightjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
@@ -891,6 +952,9 @@ font-size: 4vw;
           .app{
             font-size: 2.5vw;
           }
+          .enter-details{
+            font-size: 2vw;;
+                  }
 }
 @media only screen and (max-width:780px){
 header{
@@ -911,6 +975,7 @@ padding-top: 10%;
   .rotate{
   transform: inherit;
   }
+
 }
 @media only screen and (max-width:769px){
   .pride{
@@ -918,6 +983,18 @@ padding-right: 40px;
   }
   .login-user{
     padding: 1rem 6.5rem;
+  }
+  .vid1{
+    width: 101%; 
+  }
+  .img1{
+     margin-top: -40.5%; 
+  }
+  .img2{
+     margin-top: -71%;
+  }
+  .img3{ 
+     margin-top: -45.5%;
   }
 }
 @media only screen and (max-width:735px){
@@ -955,6 +1032,12 @@ margin-right: -30%;
     .first-param{
       margin-top: -22%; 
       }
+.welcoming{
+  margin-left: 16%;
+}
+.login-icon{
+  margin-left: 28%;
+}
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -968,6 +1051,12 @@ margin-right: -30%;
 @media only screen and (max-width:670px){
 .login-user{
   padding: 0.5rem 6.5rem;
+}
+.login-profile {
+  margin-top: -70%;
+}
+.enter-display{
+  padding-top: 9%;
 }
 }
 @media only screen and (max-width:600px){
@@ -994,7 +1083,24 @@ margin-right: -30%;
 .tablet{
   margin-bottom: -22%;
  }
-
+ .vid1{
+  width: 101%; 
+}
+.img1{
+   margin-top: -44.5%; 
+}
+.img2{
+   margin-top: -73%;
+}
+.img3{ 
+   margin-top: -47.5%;
+}
+.vid2{
+  margin-top: -42.5%;
+}
+.login-user{
+  padding: 0.5rem 5.5rem;
+}
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -1003,6 +1109,35 @@ margin-right: -30%;
     .header-bw{
       padding-top: 12%;
     }
+}
+@media only screen and (max-width: 530px){
+.enter-display{
+ width: 35%; 
+ padding-top: 18%;
+}
+.img1{
+   margin-top: -46.5%; 
+}
+.img2{
+   margin-top: -73%;
+}
+.img3{ 
+   margin-top: -51.5%;
+}
+.vid2{
+  margin-top: -45.5%;
+  border-bottom-right-radius: 24px; 
+}
+.login-profile{
+  margin-top: -75%;
+  margin-left: 45%;
+}
+.google-but{
+  padding: 0.2rem 0.5rem;
+}
+.google-log{
+  font-size: 2.5vw;
+} 
 }
 @media only screen and (max-width: 500px){
 .heading{
@@ -1037,6 +1172,18 @@ margin-right: -30%;
 .check-icon3{
   margin-left: -9%;
 }
+.img1{
+  margin-top: -50.5%; 
+}
+.img2{
+  margin-top: -73%;
+}
+.img3{ 
+  margin-top: -51.5%;
+}
+.vid2{
+ margin-top: -47.5%;
+}
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -1063,6 +1210,7 @@ margin-right: -30%;
      .experience{
       font-size: 2.5vw;
      }
+    
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -1074,7 +1222,39 @@ margin-right: -30%;
 .tablet{
   margin-bottom: -20%;
  }
+ .login-user{
+  padding: 0.5rem 4.5rem;
+ }
+ .eye-log{
+  margin-left: -12%
+ }
+ .google-but{
+  padding: 0.2rem 1.5rem;
+ }
+ .enter-details{
+  font-size: 2.5vw;
+ }
 }
+@media only screen and (max-width: 384px){
+.enter-display{
+  display: none;
+}
+.login-profile{
+  margin-top: 18%;
+  margin-left: 25%;
+}
+.login-icon{
+  display: block;
+  margin-left: 19%;
+  margin-right: 25%;
+  width: 30%;
+}
+.welcoming{
+  font-size: 10vw;
+  margin-left: 6%;
+}
+}
+
 @media only screen and (max-width: 400px){
   .heading{
     font-size: 10vw;
@@ -1127,7 +1307,8 @@ margin-top: 2%;
           /* font-family: 'Abril Fatface', cursive; */
           /* font-family: 'Archivo Black', sans-serif; */
           font-weight: 700;
-          /* padding-right: 20%; */}
+          /* padding-right: 20%; */
+        }
         .kit{
           display: none;
         }
@@ -1146,6 +1327,12 @@ margin-top: 2%;
     margin-top: -28%; 
     font-size: 2vw;
   }
+  .google-but{
+    padding: 0.2rem 1rem;
+   }
+   .google-log{
+    font-size: 3vw;
+   }
 }
 
 @media only screen and (max-width: 350px){
