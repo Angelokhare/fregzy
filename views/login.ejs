@@ -118,8 +118,9 @@
 <div style="" class="login-profile">
   <img class="login-icon" style=" " src="static/icon.webp" alt="">
   <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
-<h1 class="welcoming" style=" font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
-<h1 class="enter-details" style="font-family: 'Edu VIC WA NT Beginner', cursive; font-weight: 500;">Welcome back, please enter your details.</h1>
+<h1 class="welcoming namef" style="font-size: 5vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add1" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
+<h1 class="welcoming names" style="font-size: 10vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add2" style="font-family: 'Varela Round', sans-serif; font-size: 10vw; color: #4F0E0E;">!</span></h1>
+<h1 class="enter-details" style=" font-family: 'Varela Round', sans-serif;">Welcome back, please enter your details.</h1>
 <button class="btn google-but" style="border-radius: 50px; text-decoration: none; font-weight: 700; border-color: #4F0E0E; border-radius: 10px; margin-left: 1%; margin-top: 5%;" type="submit"><a  style="font-weight: 700; color: #000; font-family: 'Varela Round', sans-serif;" class="white sign-button google-log"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/google-logo.png"/> Login with Google</a></button>
 <br>
 <h1 style="font-size: 2vw; font-weight:400; margin-left: 30%; margin-top:5%; font-family: 'Cookie', cursive;">Or</h1>
@@ -363,46 +364,35 @@ var ho= document.querySelector(".erase")
             ini.addEventListener("change", function(){
                 var gh=ini.value
            if(gh.length>12){
-            if(window.innerWidth>384){
-    document.querySelector(".welcoming").style.fontSize="5vw"
-    document.querySelector(".addition").style.fontSize="5vw"
-    document.querySelector(".addition").innerHTML="!"
-            }
-            else if(window.innerWidth<=384){
-    document.querySelector(".welcoming").style.fontSize="10vw"
-    document.querySelector(".addition").style.fontSize="5vw"
-    document.querySelector(".addition").innerHTML="!"
-            }
+    document.querySelector(".namef").style.fontSize="5vw"
+    document.querySelector(".add1").style.fontSize="5vw"
+    document.querySelector(".add1").innerHTML="!"
+    document.querySelector(".names").style.fontSize="10vw"
+    document.querySelector(".add2").style.fontSize="10vw"
+    document.querySelector(".add2").innerHTML="!"
                     }
                 else if(gh.length==0){
-                  if(window.innerWidth>384){
-    document.querySelector(".welcoming").style.fontSize="5vw"
-    document.querySelector(".addition").style.fontSize="5vw"
-    document.querySelector(".addition").innerHTML="!"
-                  }
-                  else if(window.innerWidth<=384){
-    document.querySelector(".welcoming").style.fontSize="10vw"
-    document.querySelector(".addition").style.fontSize="5vw"
-    document.querySelector(".addition").innerHTML="!"
-            }
-                }                
+    document.querySelector(".namef").style.fontSize="5vw"
+    document.querySelector(".add1").style.fontSize="5vw"
+    document.querySelector(".add1").innerHTML="!"
+    document.querySelector(".names").style.fontSize="10vw"
+    document.querySelector(".add2").style.fontSize="10vw"
+    document.querySelector(".add2").innerHTML="!"   
+         }                
                     else{
-                      if(window.innerWidth>384){
-    document.querySelector(".welcoming").style.fontSize="4.4vw"
-    document.querySelector(".addition").style.fontSize="2.4vw"
+    document.querySelector(".namef").style.fontSize="4.4vw"
+    document.querySelector(".add1").style.fontSize="2.4vw"
                   var jj=gh[0].toUpperCase()
                    var kk= gh.replace(gh[0], jj)
-                    document.querySelector(".addition").innerHTML=", "+ kk + "!"
-                      }
-                      else if(window.innerWidth<=384){
-    document.querySelector(".welcoming").style.fontSize="8vw"
-    document.querySelector(".addition").style.fontSize="5vw"
+                    document.querySelector(".add1").innerHTML=", "+ kk + "!"
+  
+    document.querySelector(".names").style.fontSize="7vw"
+    document.querySelector(".add2").style.fontSize="4vw"
                   var jj=gh[0].toUpperCase()
                    var kk= gh.replace(gh[0], jj)
-                    document.querySelector(".addition").innerHTML=", "+ kk + "!"
+                    document.querySelector(".add2").innerHTML=", "+ kk + "!"
                       }
 
-                 }  
             })
 
             document.querySelector(".vis").addEventListener("click", function(){
