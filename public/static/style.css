@@ -622,6 +622,9 @@ footer {
   .names{
     display: none;
   }       
+  .on-top{
+    padding-top: 10%;
+  }
 /* entertainmentfffffffffffffffffffffffff */
 .enter-display{
   width: 50%;
@@ -1383,6 +1386,9 @@ margin-top: 2%;
   .login-word{
     font-size: 5vw;
   }
+.on-top{
+  padding-top: 18%;
+}  
   }
   
 @media only screen and (max-width: 350px){
@@ -1412,6 +1418,9 @@ margin-top: 2%;
 .login-user{
   margin-left: -15%;
 }
+.google-log{
+  font-size: 4.1vw;
+ }
 }
 @media only screen and (max-width: 290px){
   .navbar .nav_right ul li .omg{
@@ -1426,7 +1435,10 @@ margin-top: 2%;
   .tablet{
     margin-bottom: -14%;
    }
- 
+ .eye-log{
+  margin-left: -16%;
+ }
+
 }
 @media only screen and (max-width: 285px){
   .navbar {
@@ -1438,4 +1450,13 @@ padding: 0 40px;
 .header-wer{
   font-size: 3.5vw;
 }
+.eye-log{
+  margin-left: -16%;
+ }
+ .login-user{
+  margin-left: -21%;
+ }
+ .google-log{
+  font-size: 4.1vw;
+ }
 }
