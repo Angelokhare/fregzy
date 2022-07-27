@@ -123,7 +123,7 @@
 <h1 class="welcoming namef" style="font-size: 5vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add1" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
 <h1 class="welcoming names" style="font-size: 10vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add2" style="font-family: 'Varela Round', sans-serif; font-size: 10vw; color: #4F0E0E;">!</span></h1>
 <h1 class="enter-details" style=" font-family: 'Varela Round', sans-serif;">Welcome back, please enter your details.</h1>
-<button class="btn google-but" style="border-radius: 50px; text-decoration: none; font-weight: 700; border-color: #4F0E0E; border-radius: 10px; margin-top: 5%;" type="submit"><a  style="font-weight: 700; color: #000; font-family: 'Varela Round', sans-serif;" class="white sign-button google-log"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/google-logo.png"/> Login with Google</a></button>
+<button class="btn google-but" style="border-radius: 50px; text-decoration: none; font-weight: 700; border-color: #4F0E0E; border-radius: 10px; margin-top: 5%; background-color: #fff;" type="submit"><a  style="font-weight: 700; color: #000; font-family: 'Varela Round', sans-serif;" class="white sign-button google-log"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/google-logo.png"/> Login with Google</a></button>
 <br>
 <h1 style="font-size: 2vw; font-weight:400; margin-left: 30%; margin-top:5%; font-family: 'Varela Round', sans-serif;">Or</h1>
 <form action="/login" method="post" class="">
@@ -252,12 +252,17 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector(".x").style.color="#990000"
   document.querySelectorAll(".login-inside")[0].style.backgroundColor="#1d2a35"
   document.querySelectorAll(".login-inside")[1].style.backgroundColor="#1d2a35"
+  document.querySelectorAll(".login-inside")[0].style.color="#fff"
+  document.querySelectorAll(".login-inside")[1].style.color="#fff"
   document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-white")
   document.querySelector(".icon1").classList.add("hid")
   document.querySelector(".icon2").classList.remove("hid")
+  document.querySelector(".add1").style.color="#FF869E"
+  document.querySelector(".add2").style.color="#FF869E"
+  document.querySelector(".sign-link").style.color="#FF869E"
   // document.querySelector(".vis-white").classList.remove("hid")
   // document.querySelector(".vis").classList.add("hid")
   // document.querySelector(".invis-white").classList.remove("hid")
@@ -324,10 +329,15 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".navbar").classList.add("header-white")
   document.querySelector(".navbar").style.borderColor= "#4F0E0E"
   document.querySelector(".wer").style.color="#000"
+  document.querySelector(".add1").style.color="#4F0E0E"
+  document.querySelector(".add2").style.color="#4F0E0E"
+  document.querySelector(".sign-link").style.color="#4F0E0E"
   document.querySelector(".header-wer").style.color="#000"
   document.querySelector(".x").style.color="#000"
   document.querySelectorAll(".login-inside")[0].style.backgroundColor="#fbf8f5"
   document.querySelectorAll(".login-inside")[1].style.backgroundColor="#fbf8f5"
+  document.querySelectorAll(".login-inside")[0].style.color="#495057"
+  document.querySelectorAll(".login-inside")[1].style.color="#495057"
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-black")
