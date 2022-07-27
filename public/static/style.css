@@ -1249,6 +1249,18 @@ margin-right: -30%;
  .enter-details{
   font-size: 2.5vw;
  }
+ .img1{
+  margin-top: -56.5%; 
+}
+.img2{
+  margin-top: -78%;
+}
+.img3{ 
+  margin-top: -59.5%;
+}
+.vid2{
+ margin-top: -51.5%;
+}
 }
 
 @media only screen and (max-width: 400px){
@@ -1329,6 +1341,7 @@ margin-top: 2%;
    .google-log{
     font-size: 3vw;
    }
+
 }
 @media only screen and (max-width: 384px){
   .enter-display{
@@ -1389,6 +1402,9 @@ margin-top: 2%;
 .on-top{
   padding-top: 18%;
 }  
+/* .eye-log{
+  margin-left: -9%;
+} */
   }
   
 @media only screen and (max-width: 350px){
@@ -1421,6 +1437,9 @@ margin-top: 2%;
 .google-log{
   font-size: 4.1vw;
  }
+ /* .eye-log{
+  margin-left: -12%;
+} */
 }
 @media only screen and (max-width: 290px){
   .navbar .nav_right ul li .omg{
