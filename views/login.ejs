@@ -116,8 +116,8 @@
 
 
 <div style="" class="login-profile">
-  <img class="login-icon" style=" " src="static/icon.webp" alt="">
-  <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
+  <img class="log-icon1 login-icon" style=" " src="static/icon.webp" alt="">
+  <img class="log-icon2 login-icon2 hid" style="" src="static/footer.webp" alt="">
 <h1 class="welcoming namef" style="font-size: 5vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add1" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
 <h1 class="welcoming names" style="font-size: 10vw; font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add2" style="font-family: 'Varela Round', sans-serif; font-size: 10vw; color: #4F0E0E;">!</span></h1>
 <h1 class="enter-details" style=" font-family: 'Varela Round', sans-serif;">Welcome back, please enter your details.</h1>
@@ -125,11 +125,14 @@
 <br>
 <h1 style="font-size: 2vw; font-weight:400; margin-left: 30%; margin-top:5%; font-family: 'Varela Round', sans-serif;">Or</h1>
 <form action="/login" method="post" class="">
-  <input class="inside username" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; margin-bottom: 10%; font-family: 'Varela Round', sans-serif;" name="username" type="text" placeholder="Username or Email" required><br>
+  <input class="login-inside username" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; margin-bottom: 10%; font-family: 'Varela Round', sans-serif;" name="username" type="text" placeholder="Username or Email" required><br>
   <div class="login-form-group">
-    <input class="login-inside pass-login" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; font-family: 'Varela Round', sans-serif;" name="password" type="password" placeholder="Password" required>
+    <input class="login-inside pass-login" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; font-family: 'Varela Round', sans-serif;" name="password" type="password" placeholder="Password" required>
     <button class="btn vis eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png"/></button>
-    <button class="btn invis hid eye-log type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
+    <button class="btn invis hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
+    <button class="btn vis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
+    <button class="btn invis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button>
+   
   </div>
   <ul>
     <li>
@@ -139,7 +142,7 @@
 
     </li>
   </ul>
-<button class="btn but1 login-user" style="border-radius: 50px; text-decoration: none; font-weight: 700; background-color: #4F0E0E; border-radius: 10px; margin-left: 1%; margin-top: 5%;" type="submit"><a style="font-weight: 700; color: #fff; font-family: 'Varela Round', sans-serif;" class="white sign-button">Log in</a></button>
+<button class="btn but1 login-user" style="border-radius: 50px; text-decoration: none; font-weight: 700; background-color: #4F0E0E; border-radius: 10px; margin-top: 5%;" type="submit"><a style="font-weight: 700; color: #fff; font-family: 'Varela Round', sans-serif;" class="white sign-button login-word">Log in</a></button>
 </form>
 <h1 class="please-sign">Don't have an account? <a style="color: #4F0E0E; text-decoration: none; font-family: 'Cookie', cursive; font-weight: 700;" class="sign-link" href="/signup">Sign up for Free</a></h1>
 </div>
@@ -237,18 +240,26 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector("body").classList.remove("sz")
   document.querySelector("header").classList.add("header-black")
   document.querySelector("header").classList.remove("header-white")
+  document.querySelector(".log-icon1").classList.add("hid")
+  document.querySelector(".log-icon2").classList.remove("hid")
   document.querySelector(".navbar").classList.add("header-black")
   document.querySelector(".navbar").classList.remove("header-white")
   document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
   document.querySelector(".header-wer").style.color="#FFF"
   document.querySelector(".wer").style.color="#FFF"
   document.querySelector(".x").style.color="#990000"
+  document.querySelectorAll(".login-inside")[0].style.backgroundColor="#1d2a35"
+  document.querySelectorAll(".login-inside")[1].style.backgroundColor="#1d2a35"
   document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.add("body-color-black")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-white")
   document.querySelector(".icon1").classList.add("hid")
   document.querySelector(".icon2").classList.remove("hid")
+  // document.querySelector(".vis-white").classList.remove("hid")
+  // document.querySelector(".vis").classList.add("hid")
+  // document.querySelector(".invis-white").classList.remove("hid")
+  // document.querySelector(".invis").classList.add("hid")
   document.querySelectorAll(".heading")[0].classList.add("heading-white")
   document.querySelectorAll(".heading")[0].classList.remove("heading-black")
   document.querySelectorAll(".heading")[1].classList.add("heading-white")
@@ -267,10 +278,29 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".header-other")[1].classList.add("other-blue")
   document.querySelectorAll(".header-other")[1].classList.remove("other-red")
   }
+  if(document.querySelector(".vis").classList.contains("hid")!=true){
+    document.querySelector(".invis-white").classList.add("hid")
+    document.querySelector(".vis").classList.add("hid")
+    document.querySelector(".vis-white").classList.remove("hid")
+    document.querySelector(".invis").classList.add("hid")
+    // document.querySelector(".vis-white").classList.remove("hid")
+  }
+  else if(document.querySelector(".vis").classList.contains("hid")==true){
+    document.querySelector(".invis-white").classList.remove("hid")
+    document.querySelector(".vis").classList.add("hid")
+    document.querySelector(".invis").classList.add("hid")
+    document.querySelector(".vis-white").classList.add("hid")
+    // document.querySelector(".vis-white").classList.remove("hid")
+  }
+  // else if(document.querySelector(".vis").classList.contains("hid")){
+  //   // document.querySelector(".vis-white").classList.add("hid")
+  //   document.querySelector(".invis-white").classList.remove("hid")
+  // }
 //   for(let r=0; r<3; r++){
 //   document.querySelectorAll(".heading-left")[r].classList.add("white")
 //   document.querySelectorAll(".heading-left")[r].classList.remove("tic")
 // }
+
 
 })
 
@@ -286,12 +316,16 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".bar-black").classList.remove("hid")
   document.querySelector("header").classList.remove("header-black")
   document.querySelector("header").classList.add("header-white")
+  document.querySelector(".log-icon1").classList.remove("hid")
+  document.querySelector(".log-icon2").classList.add("hid")
   document.querySelector(".navbar").classList.remove("header-black")
   document.querySelector(".navbar").classList.add("header-white")
   document.querySelector(".navbar").style.borderColor= "#4F0E0E"
   document.querySelector(".wer").style.color="#000"
   document.querySelector(".header-wer").style.color="#000"
   document.querySelector(".x").style.color="#000"
+  document.querySelectorAll(".login-inside")[0].style.backgroundColor="#fbf8f5"
+  document.querySelectorAll(".login-inside")[1].style.backgroundColor="#fbf8f5"
   document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
   document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
   document.querySelectorAll(".body-color")[1].classList.remove("body-color-black")
@@ -315,6 +349,20 @@ lo_icon[i].addEventListener("click", ()=>{
 for(let j=0; j<2; j++){
   document.querySelectorAll(".header-other")[j].classList.remove("other-blue")
   document.querySelectorAll(".header-other")[j].classList.add("other-red")
+  }
+  if(document.querySelector(".vis-white").classList.contains("hid")!=true){
+    document.querySelector(".invis-white").classList.add("hid")
+    document.querySelector(".vis").classList.remove("hid")
+    document.querySelector(".vis-white").classList.add("hid")
+    document.querySelector(".invis").classList.add("hid")
+    // document.querySelector(".vis-white").classList.remove("hid")
+  }
+  else if(document.querySelector(".vis-white").classList.contains("hid")==true){
+    document.querySelector(".invis-white").classList.add("hid")
+    document.querySelector(".vis").classList.add("hid")
+    document.querySelector(".invis").classList.remove("hid")
+    document.querySelector(".vis-white").classList.add("hid")
+    // document.querySelector(".vis-white").classList.remove("hid")
   }
 })
     }
@@ -438,6 +486,16 @@ var ho= document.querySelector(".erase")
               document.querySelector(".pass-login").setAttribute("type", "password");
             })
 
+            document.querySelector(".vis-white").addEventListener("click", function(){
+              document.querySelector(".vis-white").classList.add("hid")
+              document.querySelector(".invis-white").classList.remove("hid")
+              document.querySelector(".pass-login").setAttribute("type", "text");
+            })
+            document.querySelector(".invis-white").addEventListener("click", function(){
+              document.querySelector(".vis-white").classList.remove("hid")
+              document.querySelector(".invis-white").classList.add("hid")
+              document.querySelector(".pass-login").setAttribute("type", "password");
+            })
        </script>
 </body>
 </html>
