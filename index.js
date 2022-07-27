@@ -177,7 +177,9 @@ app.get("/confirm", (request, response)=>{
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
-
+app.post("/login", (request, response)=>{
+    response.redirect("/login")
+})
 app.get("/login", (request, response)=>{ 
     day=new Date().getFullYear()
     response.render("login", {fan:day})
