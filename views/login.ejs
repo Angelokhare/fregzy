@@ -420,6 +420,9 @@ var ho= document.querySelector(".erase")
     document.querySelector(".names").style.marginLeft="6%"
     document.querySelector(".add2").style.fontSize="10vw"
     document.querySelector(".add2").innerHTML="!" 
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
          }
          else if(gh.includes("@yahoo.com")){
               document.querySelector(".namef").style.fontSize="5vw"
@@ -429,6 +432,9 @@ var ho= document.querySelector(".erase")
     document.querySelector(".names").style.marginLeft="6%"
     document.querySelector(".add2").style.fontSize="10vw"
     document.querySelector(".add2").innerHTML="!" 
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
          }
          else if(gh.includes("@hotmail.com")){
               document.querySelector(".namef").style.fontSize="5vw"
@@ -438,6 +444,9 @@ var ho= document.querySelector(".erase")
     document.querySelector(".names").style.marginLeft="6%"
     document.querySelector(".add2").style.fontSize="10vw"
     document.querySelector(".add2").innerHTML="!" 
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
          }
 
           else if(gh.length>12){
@@ -448,6 +457,9 @@ var ho= document.querySelector(".erase")
     document.querySelector(".names").style.marginLeft="6%"
     document.querySelector(".add2").style.fontSize="10vw"
     document.querySelector(".add2").innerHTML="!"
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
                     }
                 else if(gh.length==0){
     document.querySelector(".namef").style.fontSize="5vw"
@@ -457,10 +469,34 @@ var ho= document.querySelector(".erase")
     document.querySelector(".names").style.marginLeft="6%"
     document.querySelector(".add2").style.fontSize="10vw"
     document.querySelector(".add2").innerHTML="!"   
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
          }        
-                    else{
+                    else if(gh.length>=8){
     document.querySelector(".namef").style.fontSize="4vw"
     document.querySelector(".add1").style.fontSize="2.4vw"
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="12%"
+    }
+                  var jj=gh[0].toUpperCase()
+                   var kk= gh.replace(gh[0], jj)
+                    document.querySelector(".add1").innerHTML=", "+ kk + "!"
+  
+    document.querySelector(".names").style.fontSize="8vw"
+    document.querySelector(".add2").style.fontSize="5vw"
+    document.querySelector(".names").style.marginLeft="-9%"
+                  var jj=gh[0].toUpperCase()
+                   var kk= gh.replace(gh[0], jj)
+                    document.querySelector(".add2").innerHTML=", "+ kk + "!"
+                      }
+
+                      else{
+    document.querySelector(".namef").style.fontSize="4vw"
+    document.querySelector(".add1").style.fontSize="2.4vw"
+    if(window.innerWidth<= 735){
+      document.querySelector(".welcoming").style.marginLeft="16%"
+    }
                   var jj=gh[0].toUpperCase()
                    var kk= gh.replace(gh[0], jj)
                     document.querySelector(".add1").innerHTML=", "+ kk + "!"

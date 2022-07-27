@@ -1332,7 +1332,7 @@ margin-top: 2%;
     display: none;
   }
   .login-profile{
-    margin-top: 18%;
+    margin-top: 0%;
     margin-left: 25%;
   }
   .login-icon{
@@ -1359,7 +1359,7 @@ margin-top: 2%;
     margin-right: 17%;
    }
    .google-log{
-    font-size: 3.5vw;
+    font-size: 3.1vw;
    }
    .please-sign{
     font-size:2.8vw; 
