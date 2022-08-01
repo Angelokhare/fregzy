@@ -177,12 +177,41 @@ app.get("/confirm", (request, response)=>{
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
+var username= ""
 app.post("/login", (request, response)=>{
-    response.redirect("/login")
+    username= request.body.username
+
+    response.redirect("/dashboard")
 })
 app.get("/login", (request, response)=>{ 
     day=new Date().getFullYear()
     response.render("login", {fan:day})
+
+})
+
+    app.get("/dashboard", (request, response)=>{ 
+        day=new Date().getFullYear()
+        var greet= ''
+        var time= new Date().getHours()
+        console.log(time)
+        if(time<12){
+            greet="Good Morning"
+            console.log(greet)
+        }
+        else if(time>=12 && time<18){
+            greet="Good Afternoon"
+            console.log(greet)
+        }
+        else if(time>=18 && time<21){
+            greet="Good Evening"
+            console.log(greet)
+        }
+        else{
+            greet="Good Night"
+            console.log(greet)
+        }
+console.log(greet)
+        response.render("dashboard", {fan:day, username: username, greet:greet})
 })
 app.get("/signup", (request, response)=>{
     day=new Date().getFullYear()
@@ -264,3 +293,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit59
 // commit60
 // commit61
+// commit62
