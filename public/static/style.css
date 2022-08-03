@@ -711,6 +711,31 @@ footer {
   /* margin-bottom: 2%; */
   position: fixed;
 }
+.phone-story{
+    display: flex;
+  min-width: 10%;
+  overflow-x: auto;
+  /* height: 100vh; */
+  /* width: 20%; */
+  /* background-color: #fff; */
+  /* border-bottom-right-radius: 10px;  */
+  /* border-top-right-radius: 10px; */
+   /* border-right: 3px solid #f1f1f1 ; */
+  /* background-color: #395B64; */
+  /* line-height: 110px; */
+  /* text-align: center; */
+  /* background-color: #ddd; */
+  /* margin-right: 2%; */
+  /* border-radius: 50px; */
+  /* margin-bottom: 2%; */
+  /* position: fixed; */
+}
+.phone-story::-webkit-scrollbar{
+  width: 0;
+ }
+.sec{
+  min-width: 15%;
+}
 
 .phone2{
   /* padding-top: 2%; */
@@ -766,7 +791,7 @@ footer {
   /* min-width: 10%; */
   height: 100vh;
   width: 20%;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-bottom-right-radius: 10px; 
   border-top-right-radius: 10px;
   overflow-x: auto;
@@ -780,6 +805,7 @@ footer {
   /* margin-bottom: 2%; */
   /* position: fixed; */
   /* margin-top: -5%; */
+  background-image: url("tree1.jpg");
 }
 .dash-aim{
   display: inline-block;
@@ -814,7 +840,7 @@ footer {
   margin-bottom: -109%;
 }
 .google-but{
-  padding: 0.5rem 4.5rem;
+  padding: 0.5rem 5.5rem;
 }
 }
 @media only screen and (max-width:1100px){
@@ -895,7 +921,7 @@ margin-left: 28%;
 margin-top: -24%; 
 }
 .google-but{
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 4rem;
 }
 
 .login-user{
@@ -948,7 +974,7 @@ font-size: 4vw;
   padding: 1rem 8.5rem;
 }
 .google-but{
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
 }
 .enter-details{
   font-size: 1.8vw;;
@@ -1013,7 +1039,7 @@ font-size: 4vw;
     margin-left: 6.5%;
   }
   .google-but{
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
   }
   .login-user{
     padding: 1rem 7.5rem;
@@ -1192,6 +1218,9 @@ margin-right: -30%;
 .enter-display{
   padding-top: 9%;
 }
+.google-but{
+  padding: 0.2rem 1.5rem;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1267,7 +1296,7 @@ margin-right: -30%;
   margin-left: 45%;
 }
 .google-but{
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 1.5rem;
 }
 .google-log{
   font-size: 2.5vw;

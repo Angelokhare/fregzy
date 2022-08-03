@@ -166,6 +166,13 @@ app.get("/", (request, response)=>{
     console.log(day)
     response.render("index"), {fan:day}
 })
+app.get("/home", (request, response)=>{
+    day=new Date().getFullYear()
+    // day= new Date().toLocaleDateString()
+    console.log(day)
+    // response.render("index"), {fan:day}
+    response.redirect("/")
+})
 
 app.get("/confirm", (request, response)=>{
     day=new Date().getFullYear()
@@ -188,7 +195,18 @@ app.get("/login", (request, response)=>{
     response.render("login", {fan:day})
 
 })
+app.get("/home/:hgy", (request, response)=>{ 
 
+    response.redirect("/")
+})
+app.get("/login/:hgy", (request, response)=>{ 
+
+    response.redirect("/login")
+})
+app.get("/dashboard/:hgy", (request, response)=>{ 
+
+    response.redirect("/dashboard")
+})
     app.get("/dashboard", (request, response)=>{ 
         day=new Date().getFullYear()
         var greet= ''
@@ -294,3 +312,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit60
 // commit61
 // commit62
+// commit63
