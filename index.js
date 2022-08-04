@@ -184,12 +184,7 @@ app.get("/confirm", (request, response)=>{
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
-var username= ""
-app.post("/login", (request, response)=>{
-    username= request.body.username
-
-    response.redirect("/dashboard")
-})
+var userprof= ""
 app.get("/login", (request, response)=>{ 
     day=new Date().getFullYear()
     response.render("login", {fan:day})
@@ -203,34 +198,50 @@ app.get("/login/:hgy", (request, response)=>{
 
     response.redirect("/login")
 })
-app.get("/dashboard/:hgy", (request, response)=>{ 
 
-    response.redirect("/dashboard")
-})
-    app.get("/dashboard", (request, response)=>{ 
-        day=new Date().getFullYear()
-        var greet= ''
-        var time= new Date().getHours()
-        console.log(time)
-        if(time<12){
-            greet="Good Morning"
-            console.log(greet)
-        }
-        else if(time>=12 && time<18){
-            greet="Good Afternoon"
-            console.log(greet)
-        }
-        else if(time>=18 && time<21){
-            greet="Good Evening"
-            console.log(greet)
-        }
-        else{
-            greet="Good Night"
-            console.log(greet)
-        }
+app.get("/:hgy", (request, response)=>{ 
+    var user_route= userprof +"-dashboard"
+    var user_profile= userprof +"-profile"
+console.log(userprof)
+console.log(user_route)
+if (request.params.hgy==user_route){
+    day=new Date().getFullYear()
+    var greet= ''
+    var time= new Date().getHours()
+    console.log(time)
+    if(time<12){
+        greet="Good Morning"
+        console.log(greet)
+    }
+    else if(time>=12 && time<18){
+        greet="Good Afternoon"
+        console.log(greet)
+    }
+    else if(time>=18 && time<21){
+        greet="Good Evening"
+        console.log(greet)
+    }
+    else{
+        greet="Good Night"
+        console.log(greet)
+    }
 console.log(greet)
-        response.render("dashboard", {fan:day, username: username, greet:greet})
+    response.render("dashboard", {fan:day, username: userprof, greet:greet})
+}
+else if (request.params.hgy==user_profile){
+response.render("profile")
+}
+    else{
+    response.redirect("/login")
+}
 })
+app.post("/login", (request, response)=>{
+    var usern= request.body.username.toLowerCase()
+     userprof=usern
+    //  console.log(userprof)
+    var user_route= userprof +"-dashboard"
+     response.redirect("/"+user_route)
+ })
 app.get("/signup", (request, response)=>{
     day=new Date().getFullYear()
 response.render("signup", {fan:day})
@@ -313,3 +324,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit61
 // commit62
 // commit63
+// commit64

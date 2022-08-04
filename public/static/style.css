@@ -736,7 +736,9 @@ footer {
 .sec{
   min-width: 15%;
 }
-
+.ic:hover{
+  color: #4F0E0E;
+}
 .phone2{
   /* padding-top: 2%; */
   /* padding-right: 20%; */
@@ -1246,6 +1248,7 @@ margin-right: -30%;
 .tablet{
   margin-bottom: -22%;
  }
+
  .vid1{
   width: 101%; 
 }
