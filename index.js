@@ -166,13 +166,25 @@ app.get("/", (request, response)=>{
     console.log(day)
     response.render("index"), {fan:day}
 })
-app.get("/home", (request, response)=>{
-    day=new Date().getFullYear()
-    // day= new Date().toLocaleDateString()
-    console.log(day)
-    // response.render("index"), {fan:day}
-    response.redirect("/")
+app.get("/:jbk", (request, response)=>{
+
+    if(request.params.jbk=="login"){
+        day=new Date().getFullYear()
+        response.render("login", {fan:day})
+    }
+    else if(request.params.jbk=="Login"){
+        day=new Date().getFullYear()
+        response.render("login", {fan:day})
+    }
+    else if(request.params.jbk=="LOGIN"){
+        day=new Date().getFullYear()
+        response.render("login", {fan:day})
+    }
+    else{
+response.redirect("/")
+    }
 })
+
 
 app.get("/confirm", (request, response)=>{
     day=new Date().getFullYear()
@@ -185,15 +197,7 @@ app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
 var userprof= ""
-app.get("/login", (request, response)=>{ 
-    day=new Date().getFullYear()
-    response.render("login", {fan:day})
 
-})
-app.get("/home/:hgy", (request, response)=>{ 
-
-    response.redirect("/")
-})
 app.get("/login/:hgy", (request, response)=>{ 
 
     response.redirect("/login")
@@ -325,3 +329,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit62
 // commit63
 // commit64
+// commit65

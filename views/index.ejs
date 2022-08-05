@@ -241,16 +241,18 @@
      </form>
      <ul class="social">
        <li class="ve">
-           <i class="wr fa fa-instagram" style="color:white;"></i>
+           <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
        </li>
        <li class="ve">
-           <i class="wr fa fa-twitter-square" style="color:white;"></i>
+        <i class="wr fa fa-twitter-square twit" style="border-radius: 3px;"></i></a>
        </li>
        <li class="ve">
-           <i class="wr fa fa-linkedin-square" style="color:white;"></i></a>
-       </li>
+        <i class="wr fa fa-linkedin-square linkl"></i>
+        <!-- <i class="wr fa fa-linkedin linkl" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i></a> -->
+    </li>
+      
        <li class="ve">
-           <i class="wr fa fa-github" style="color:white;"></i>
+           <i class="wr fa fa-github git"style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
        </li>
    </ul>
    </li>
@@ -430,8 +432,10 @@ for(let j=0; j<2; j++){
 //   cod.style.backgroundColor="#FDFFF0";
 // }
 //     })
-
-
+document.querySelector(".not1").addEventListener("mouseover", ()=>{
+  document.querySelector(".not1").classList.add("hid")
+  document.querySelector(".not2").classList.remove("hid") 
+})
 var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{
               document.querySelector(".bw").classList.remove("hij")

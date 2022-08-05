@@ -482,6 +482,40 @@ footer {
   background-color: #4F0E0E;
 /* background: #92B4EC; */
 }
+.insta{
+  color:white;
+}
+.insta:hover{
+  color: #fb3958;
+  font-weight: 700;
+  background-color: #fff;
+}
+.twit{
+  /* color: #4F0E0E; */
+  color: #fff;
+}
+.twit:hover{
+  background-color: #fff;
+  color: #0078AA;
+}
+.linkl{
+  /* color: #4F0E0E; */
+  color: #fff;
+  /* background-color: #fff; */
+}
+.linkl:hover{
+  background-color: #fff;
+  color: #0078AA;
+   border-radius: 3px;
+  /* background-color: #fff; */
+}
+.git{
+  color: #fff;
+}
+.git:hover{
+  color: #000;
+  background-color: #fff;
+}
 .copyright{
   font-size: 1.1vw;
   margin-right: 80%;
@@ -1276,7 +1310,7 @@ margin-right: -30%;
       padding-top: 12%;
     }
 }
-@media only screen and (max-width: 530px){
+@media only screen and (max-width: 539px){
 .enter-display{
  width: 35%; 
  padding-top: 18%;
