@@ -167,48 +167,24 @@ app.get("/", (request, response)=>{
     response.render("index"), {fan:day}
 })
 app.get("/:jbk", (request, response)=>{
-
-    if(request.params.jbk=="login"){
-        day=new Date().getFullYear()
-        response.render("login", {fan:day})
-    }
-    else if(request.params.jbk=="Login"){
-        day=new Date().getFullYear()
-        response.render("login", {fan:day})
-    }
-    else if(request.params.jbk=="LOGIN"){
-        day=new Date().getFullYear()
-        response.render("login", {fan:day})
-    }
-    else{
-response.redirect("/")
-    }
-})
-
-
-app.get("/confirm", (request, response)=>{
-    day=new Date().getFullYear()
-    // day= new Date().toLocaleDateString()
-    console.log(day)
-    response.render("confirm"), {fan:day}
-})
-
-app.post("/home", (request, response)=>{
-    response.redirect("/confirm")
-})
-var userprof= ""
-
-app.get("/login/:hgy", (request, response)=>{ 
-
-    response.redirect("/login")
-})
-
-app.get("/:hgy", (request, response)=>{ 
     var user_route= userprof +"-dashboard"
     var user_profile= userprof +"-profile"
 console.log(userprof)
 console.log(user_route)
-if (request.params.hgy==user_route){
+    if(request.params.jbk.toLowerCase()=="login"){
+        day=new Date().getFullYear()
+        response.render("login", {fan:day})
+    }
+    else if(request.params.jbk.toLowerCase()=="signup"){
+        day=new Date().getFullYear()
+    response.render("signup", {fan:day})
+    }
+    else if(request.params.jbk.toLowerCase()=="confirm"){
+        day=new Date().getFullYear()
+    response.render("confirm", {fan:day})
+    }
+
+    else if (request.params.jbk.toLowerCase()==user_route){
     day=new Date().getFullYear()
     var greet= ''
     var time= new Date().getHours()
@@ -232,13 +208,65 @@ if (request.params.hgy==user_route){
 console.log(greet)
     response.render("dashboard", {fan:day, username: userprof, greet:greet})
 }
-else if (request.params.hgy==user_profile){
-response.render("profile")
+else if (request.params.jbk.toLowerCase()==user_profile){
+response.render("profile", {username: userprof})
 }
     else{
-    response.redirect("/login")
-}
+response.redirect("/")
+    }
 })
+
+app.post("/home", (request, response)=>{
+    response.redirect("/confirm")
+})
+var userprof= ""
+
+app.get("/login/:hgy", (request, response)=>{ 
+
+    response.redirect("/login")
+})
+
+app.get("/signup/:hgy", (request, response)=>{ 
+
+    response.redirect("/signup")
+})
+
+// app.get("/:hgy", (request, response)=>{ 
+//     var user_route= userprof +"-dashboard"
+//     var user_profile= userprof +"-profile"
+// console.log(userprof)
+// console.log(user_route)
+// if (request.params.hgy==user_route){
+//     day=new Date().getFullYear()
+//     var greet= ''
+//     var time= new Date().getHours()
+//     console.log(time)
+//     if(time<12){
+//         greet="Good Morning"
+//         console.log(greet)
+//     }
+//     else if(time>=12 && time<18){
+//         greet="Good Afternoon"
+//         console.log(greet)
+//     }
+//     else if(time>=18 && time<21){
+//         greet="Good Evening"
+//         console.log(greet)
+//     }
+//     else{
+//         greet="Good Night"
+//         console.log(greet)
+//     }
+// console.log(greet)
+//     response.render("dashboard", {fan:day, username: userprof, greet:greet})
+// }
+// else if (request.params.hgy==user_profile){
+// response.render("profile")
+// }
+    // else{
+    // response.redirect("/login")
+// }
+// })
 app.post("/login", (request, response)=>{
     var usern= request.body.username.toLowerCase()
      userprof=usern
@@ -246,11 +274,6 @@ app.post("/login", (request, response)=>{
     var user_route= userprof +"-dashboard"
      response.redirect("/"+user_route)
  })
-app.get("/signup", (request, response)=>{
-    day=new Date().getFullYear()
-response.render("signup", {fan:day})
-})
-
 
 
 
@@ -333,3 +356,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit66
 // commit67
 // commit68
+// commit69

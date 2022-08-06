@@ -566,6 +566,15 @@ footer {
   /* margin-right: 20%; */
   /* margin-left: 20%; */
 }
+.profile-group {
+  /* display: -webkit-flex; */
+  /* -webkit-flex-wrap: wrap; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-bottom: 1rem;
+  /* margin-right: 20%; */
+  /* margin-left: 20%; */
+}
 
 .inside{
   flex: 1 1 auto;
@@ -580,8 +589,23 @@ footer {
   /* border-radius: .3rem 0 0 .3rem; */
   outline: 0;
   width: 75%;
+  font-family: 'Varela Round', sans-serif;
 }
-
+.profile-inside{
+  flex: 1 1 auto;
+  font-weight: 400;
+  /* height: calc(1.5em + 1rem + 2px); */
+  padding: .5rem 1rem;
+  /* font-size: 1.25rem; */
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fbf8f5;
+  border: 1px solid #ced4da;
+  /* border-radius: .3rem 0 0 .3rem; */
+  outline: 0;
+  width: 75%;
+  font-family: 'Varela Round', sans-serif;
+}
 /* login kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk */
 
 
@@ -749,6 +773,16 @@ footer {
   /* margin-bottom: 2%; */
   position: fixed;
 }
+.pencil{
+  font-size: 2vw;
+  padding-left: 56%;
+}
+.changing-button{
+  font-size: 1vw;
+}
+.name1{
+  font-size: 1.5vw;
+}
 .phone-story{
     display: flex;
   min-width: 10%;
@@ -807,7 +841,6 @@ footer {
   /* min-width: 10%; */
   height: 100vh;
   /* width: 20%; */
-  width: 55%;
   background-color: #fff;
   border-bottom-right-radius: 10px; 
   border-top-right-radius: 10px;
@@ -821,9 +854,22 @@ footer {
   /* border-radius: 50px; */
   /* margin-bottom: 2%; */
   position: fixed;
-  margin-left:19.8%;
   /* margin-top: -5%; */
   /* border-bottom-left-radius: 100%; */
+}
+.profile-adjustment1{
+  margin-left:19.8%;
+  width: 55%;
+}
+.profile-adjustment2{
+  margin-left:7.8%;
+  width: 67%;
+}
+.sliding{
+  margin-left:16.5%;
+}
+.sliding2{
+  margin-left:4.7%;
 }
 .third-phone{
   /* padding-top: 2%; */
@@ -853,10 +899,27 @@ footer {
 }
 .noti{
   display: inline-block;
-  padding-left: 18%;
+  padding-left: 11%;
 }
 /* dashboard ggggggggggggggggggg */
-
+/*profile jvbhjkjjjjj*/
+.details-name{
+  display: inline-block;
+  padding: 0 11px;
+}
+.user-details{
+  font-size: 1.3vw;
+}
+.user-title{
+  font-size: 1.5vw; 
+}
+.user-picture{
+  width: 13vw;
+}
+.user-nick{
+  font-size: 2.2vw;
+}
+/*profile jbvbhjhffhhff*/
 
 
 @media only screen and (max-width:1250px){
@@ -1025,6 +1088,42 @@ font-size: 4vw;
 .enter-details{
   font-size: 1.8vw;;
         }
+.third-phone{
+      display: none;
+   }
+  .profile-adjustment1{
+    margin-left:26.7%;
+    width: 73%;
+  }
+  .profile-adjustment2{
+    margin-left:10.7%;
+    width: 89.5%;
+  }
+  .phone{
+    width:27%;
+  }
+  .sliding{
+    margin-left: 23.4%;
+  }
+  .changing-button{
+    font-size: 1.5vw;
+  }
+  .name1{
+    font-size: 2vw;
+  }
+  .phone2{
+    width: 11%;
+  }
+  .sliding2{
+    margin-left:7.6%;
+  }
+  .pencil{
+    font-size: 3.5vw;
+    padding-left: 55%;
+  }
+  .user-picture{
+    width: 20vw;
+  }
 }
 
 @media only screen and (max-width:895px){
@@ -1096,6 +1195,16 @@ font-size: 4vw;
   .enter-details{
     font-size: 1.8vw;;
           }
+          .phone2{
+            width: 15%;
+          }
+          .profile-adjustment2{
+            margin-left:14.7%;
+            width: 85.5%;
+          }
+          .sliding2{
+            margin-left:11.6%;
+          }    
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -1247,6 +1356,12 @@ margin-right: -30%;
 .login-icon2{
   margin-left: 36%;
 }
+.user-details{
+  font-size: 1.8vw;
+}
+.user-title{
+  font-size: 2vw; 
+}
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -1254,6 +1369,16 @@ margin-right: -30%;
 }
 .navbar{
   padding: 0 40px;
+}
+.pencil{
+  font-size: 5vw;
+  padding-left: 55%;
+}
+.user-picture{
+  width: 25vw;
+}
+.user-nick{
+  font-size: 4vw;
 }
 }
 
@@ -1317,6 +1442,9 @@ margin-right: -30%;
 .login-user{
   padding: 0.5rem 5.5rem;
 }
+.changing-button{
+  font-size: 1.7vw;
+ }  
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -1354,6 +1482,19 @@ margin-right: -30%;
 .google-log{
   font-size: 2.5vw;
 } 
+.profile-adjustment2{
+  margin-left:19.5%;
+  width: 80%;
+}
+.sliding2{
+  margin-left:16.2%;
+}
+.phone2{
+  width: 20%;
+} 
+.user-details{
+  font-size: 2vw;
+}
 }
 @media only screen and (max-width: 500px){
 .heading{
@@ -1426,7 +1567,26 @@ margin-right: -30%;
      .experience{
       font-size: 2.5vw;
      }
-    
+    .phone{
+      display: none;
+    }
+    .phone2{
+      display: none;
+    }
+    .sec-phone{
+      width: 100%;
+      margin-left: 0%;
+    }
+    .user-picture{
+      width: 35vw;
+    }
+    .user-nick{
+      font-size: 5.5vw;
+    }   
+ .pencil{
+  font-size: 7vw;
+  padding-left: 55%;
+ }   
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -1461,6 +1621,12 @@ margin-right: -30%;
 }
 .vid2{
  margin-top: -51.5%;
+}
+.user-details{
+  font-size: 2.5vw;
+}
+.user-title{
+  font-size: 2.5vw; 
 }
 }
 

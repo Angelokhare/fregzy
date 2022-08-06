@@ -124,7 +124,7 @@
   <!-- </div> -->
   <!-- #fdfeff -->
     <!-- <div class="rapper bbb" style=""> -->
-    <div class="sec-phone" style=" background-color: #fff;">
+    <div class="sec-phone profile-adjustment1" style=" background-color: #fff;">
       <div style=" background-color: #fdfeff;">
       <div class="story phone-story" style="position:fixed; margin-top:-12%; background-color: #F2F2F2; width: 55%; padding-bottom: 2%;">
         <img style=" width: 6.5%; border-radius: 100%; margin-left: 4%; margin-top: 4%;" src="static/icon-image.jpg"/>
@@ -1191,8 +1191,8 @@ document.querySelector(".setis0").addEventListener("click", ()=>{
 document.querySelector(".fa-angle-double-left").addEventListener("click", function(){
   document.querySelector(".phone").classList.add("hid")
   document.querySelector(".phone2").classList.remove("hid")
-  document.querySelector(".sec-phone").style.width="67%"
-  document.querySelector(".sec-phone").style.marginLeft="7.8%"
+  document.querySelector(".sec-phone").classList.add("profile-adjustment2")
+      document.querySelector(".sec-phone").classList.remove("profile-adjustment1")
   document.querySelector(".story").style.width="67%"
   document.querySelector(".story").style.marginTop="-14%"
   document.querySelector(".greeting").style.marginTop="-14%"
@@ -1202,8 +1202,8 @@ document.querySelector(".fa-angle-double-left").addEventListener("click", functi
 document.querySelector(".fa-angle-double-right").addEventListener("click", function(){
   document.querySelector(".phone").classList.remove("hid")
   document.querySelector(".phone2").classList.add("hid")
-  document.querySelector(".sec-phone").style.width="55%"
-  document.querySelector(".sec-phone").style.marginLeft="19.8%"
+  document.querySelector(".sec-phone").classList.remove("profile-adjustment2")
+      document.querySelector(".sec-phone").classList.add("profile-adjustment1")
   document.querySelector(".story").style.width="55%"
   document.querySelector(".story").style.marginTop="-12%"
   document.querySelector(".greeting").style.marginTop="-2%"
