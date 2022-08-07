@@ -4,6 +4,11 @@ var ejs = require("ejs")
 const path= require("path")
 const { request, response } = require("express")
 var app = express()
+// const country = require("countries-list")
+let Country = require('country-state-city').Country;
+let State = require('country-state-city').State;
+
+
 
 app.use(body.urlencoded({extended:true}))
 app.set("view engine", "ejs")
@@ -158,8 +163,22 @@ var social_ogun=[69.875, 58.525, 70.95, 65.725, 68.475, 65.45, 66.35]
 var social_ondo=[67.275, 58.025, 65.5, 59.2, 60.375, "NIL", 56.175]
 var social_osun=[64.1, 57.125, 70.8, 57.5, 66.225, 56.475, 64.3]
 var social_oyo=[67.65, 53.825, 70.025, 65.35, 66.025, 67.575, 66.925]
+// dataffffffffffffffffffffffffffffffffffffffff
 
-
+var country_data=[]
+var country_code=[]
+var edit_country=Country.getAllCountries()
+for(let i=0; i<250; i++){
+    var new_country=edit_country[i].name
+    country_data.push(new_country)
+    }
+    for(let i=0; i<250; i++){
+        var new_code=edit_country[i].isoCode
+        country_code.push(new_code)
+        }
+console.log(country_data)
+console.log(new_code)
+console.log(country_code)
 app.get("/", (request, response)=>{
     day=new Date().getFullYear()
     // day= new Date().toLocaleDateString()
@@ -209,7 +228,9 @@ console.log(greet)
     response.render("dashboard", {fan:day, username: userprof, greet:greet})
 }
 else if (request.params.jbk.toLowerCase()==user_profile){
-response.render("profile", {username: userprof})
+    var edit_country=Country.getAllCountries()
+    // console.log(edit_country)
+response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
 }
     else{
 response.redirect("/")
@@ -359,3 +380,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit69
 // commit70
 // commit71
+// commit72

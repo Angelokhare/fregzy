@@ -404,7 +404,9 @@ vertical-align: middle;
 
 
 
-
+.visi{
+  visibility: hidden;
+}
 .link-line {text-decoration: none;
   font-family: 'Varela Round', sans-serif;
   color: white;}
@@ -598,8 +600,8 @@ footer {
   padding: .5rem 1rem;
   /* font-size: 1.25rem; */
   line-height: 1.5;
-  color: #495057;
-  background-color: #fbf8f5;
+  color: #000;
+  background-color: #fff;
   border: 1px solid #ced4da;
   /* border-radius: .3rem 0 0 .3rem; */
   outline: 0;
@@ -918,6 +920,9 @@ footer {
 }
 .user-nick{
   font-size: 2.2vw;
+}
+.notification-below{
+display: none;
 }
 /*profile jbvbhjhffhhff*/
 
@@ -1587,6 +1592,9 @@ margin-right: -30%;
   font-size: 7vw;
   padding-left: 55%;
  }   
+ .notification-below{
+  display: block;
+  }
 }
 @media only screen and (max-width: 450px){
 .see{
