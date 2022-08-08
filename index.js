@@ -185,6 +185,7 @@ app.get("/", (request, response)=>{
     console.log(day)
     response.render("index"), {fan:day}
 })
+var user_profile= userprof +"-profile"
 app.get("/:jbk", (request, response)=>{
     var user_route= userprof +"-dashboard"
     var user_profile= userprof +"-profile"
@@ -236,6 +237,7 @@ response.render("profile", {username: userprof, country:edit_country, countrt_fa
 response.redirect("/")
     }
 })
+
 
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
@@ -296,7 +298,11 @@ app.post("/login", (request, response)=>{
      response.redirect("/"+user_route)
  })
 
-
+ app.post("/profile-adjestment", (request, response)=>{
+    response.redirect("/"+ userprof + "-profile")
+    console.log(userprof)
+    console.log(user_profile)
+})
 
 
 
@@ -382,3 +388,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit71
 // commit72
 // commit73
+// commit74

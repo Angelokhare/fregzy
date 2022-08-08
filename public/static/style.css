@@ -667,6 +667,9 @@ footer {
    font-weight: 500; 
      margin-top: 5%;
                 }
+ .save-profile{
+  font-size: 1.5vw;
+ }               
 .sign-link{
  font-size: 1.7vw;
         }       
@@ -937,6 +940,9 @@ display: none;
 .pre{
   padding: 0% 40px;
 }
+.save-profile{
+  font-size: 2vw;
+ }
 }
 @media only screen and (max-width:1174px){
 .cancel-icon{margin-bottom: -87%;
@@ -996,7 +1002,7 @@ font-size: 3.5vw;
 }
 .tablet{
   margin-bottom: -27%;
- }
+ } 
 }
 
 @media only screen and (max-width:1010px){
@@ -1129,6 +1135,9 @@ font-size: 4vw;
   .user-picture{
     width: 20vw;
   }
+  .save-profile{
+    font-size: 2vw;
+   } 
 }
 
 @media only screen and (max-width:895px){
@@ -1316,6 +1325,9 @@ padding-right: 40px;
   .img3{ 
      margin-top: -45.5%;
   }
+  .save-profile{
+    font-size: 2.5vw;
+   } 
 }
 @media only screen and (max-width:735px){
 .footer-heading{
@@ -1403,6 +1415,9 @@ margin-right: -30%;
 .lop{
   padding: 0.2rem 1rem;
 }
+.save-profile{
+  font-size: 3vw;
+ } 
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1458,6 +1473,7 @@ margin-right: -30%;
     .header-bw{
       padding-top: 12%;
     }
+
 }
 @media only screen and (max-width: 539px){
 .enter-display{
@@ -1546,6 +1562,9 @@ margin-right: -30%;
 .vid2{
  margin-top: -47.5%;
 }
+.save-profile{
+  font-size: 3.5vw;
+ } 
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -1595,6 +1614,9 @@ margin-right: -30%;
  .notification-below{
   display: block;
   }
+  .save-profile{
+    font-size: 5.5vw;
+   } 
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -1636,6 +1658,9 @@ margin-right: -30%;
 .user-title{
   font-size: 2.5vw; 
 }
+.save-profile{
+  font-size: 6vw;
+ } 
 }
 
 @media only screen and (max-width: 400px){
