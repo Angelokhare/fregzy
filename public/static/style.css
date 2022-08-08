@@ -920,6 +920,7 @@ footer {
 }
 .user-picture{
   width: 13vw;
+  height: 13vw;
 }
 .user-nick{
   font-size: 2.2vw;
@@ -1137,6 +1138,7 @@ font-size: 4vw;
   }
   .user-picture{
     width: 20vw;
+    height:20vw;
   }
   .save-profile{
     font-size: 2vw;
@@ -1399,6 +1401,7 @@ margin-right: -30%;
 }
 .user-picture{
   width: 25vw;
+  height: 25vw;
 }
 .user-nick{
   font-size: 4vw;
@@ -1609,6 +1612,7 @@ margin-right: -30%;
     }
     .user-picture{
       width: 35vw;
+      height: 35vw;
     }
     .user-nick{
       font-size: 5.5vw;
