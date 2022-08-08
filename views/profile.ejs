@@ -129,8 +129,8 @@
     <!-- <div class="rapper bbb" style=""> -->
     <div class="sec-phone profile-adjustment1" style=" background-color: #fdfeff;">
       <div class="profile-top vain ki body-color" style="margin-bottom: 0%; margin-top: -1%; background-color: #fff; width: 100%; position: fixed;">
-        <img class="" style="width: 25%;" src="static/icon.webp" alt="">
-        <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
+        <img class="dp1" style="width: 25%;" src="static/icon.webp" alt="">
+        <img class="dp2 hid" style="width: 15.4%; margin-left:6.7%; margin-top: 5.5%; margin-bottom: 6.7%; margin-right: 3.4%;" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; font-size: 9vw; margin-left: -3%;" >Freg<span class="header-other other-red">zy</span></h1>
         <ul class="docking">
           <li class="pra ho light" style="padding-right: 20px;"><i style="font-size: 9vw;" class="fa fa-lightbulb-o"></i></li>
@@ -143,7 +143,7 @@
 <img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-top:5%; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
 <input class="hid file-pic" type="file" accept="image/png, image/jpeg, image/webp" onchange="loadFile(event)">
 <i style=" color: #000; text-align: center; border-radius: 100%;" class="pencil fa fa-pencil"></i>
-<h1 class="user-nick" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700; margin-top: 3%; text-transform: capitalize;"> <span style="color: #4F0E0E;">@</span><%=username%></h1>
+<h1 class="user-nick" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700; margin-top: 3%; text-transform: capitalize;"> <span class="tag" style="color: #4F0E0E;">@</span><%=username%></h1>
 <form action="/profile-adjestment" method="post">
   <h1  class="user-title" style="font-family: 'Merienda One', cursive; font-weight: 700; margin-left:16%; margin-top: 15%;">Full Name</h1>
     <div class="profile-group" style="margin-left: 15%; margin-right: 15%;">
@@ -1211,25 +1211,37 @@ document.querySelector(".fa-angle-double-right").addEventListener("click", funct
   document.querySelector(".greeting").style.marginTop="-2%"
 })
 
-
-document.querySelector(".light").addEventListener('click', ()=>{
-  document.querySelector(".light").classList.add("hid")
-  document.querySelector(".light").classList.remove("noti")
-  document.querySelector(".dark").classList.remove("hid")
-  document.querySelector(".dark").classList.add("noti")
+for(i=0; i<2; i++){
+document.querySelectorAll(".light")[i].addEventListener('click', ()=>{
+  document.querySelectorAll(".light")[0].classList.add("hid")
+  document.querySelectorAll(".dark")[0].classList.remove("hid")
+  document.querySelectorAll(".light")[1].classList.add("hid")
+  document.querySelectorAll(".light")[1].classList.remove("noti")
+  document.querySelectorAll(".dark")[1].classList.remove("hid")
+  document.querySelectorAll(".dark")[1].classList.add("noti")
   document.querySelector(".phone").style.backgroundColor="#000"
   document.querySelector(".phone2").style.backgroundColor="#000"
+  document.querySelector(".sec-phone").style.backgroundColor="#1b2430"
+  document.querySelector(".dp1").classList.add("hid")
+  document.querySelector(".dp2").classList.remove("hid")
+  document.querySelector(".profile-top").style.backgroundColor="#000"
   document.querySelector(".below-phone").style.backgroundColor="#000"
   document.querySelector(".below-phone2").style.backgroundColor="#000"
   document.querySelector(".dash-header").style.color="#fff"
-  document.querySelector(".header-other").style.color="#FF869E"
+  document.querySelector(".heading").style.color="#fff"
+  document.querySelector(".user-nick").style.color="#fff"
+  document.querySelector(".fa-pencil").style.color="#fff"
+  document.querySelector(".tag").style.color="#FF869E"
+  document.querySelectorAll(".header-other")[0].style.color="#FF869E"
+  document.querySelectorAll(".header-other")[1].style.color="#FF869E"
   document.querySelector(".name2").style.color="#FF869E"
   document.querySelector(".name1").style.color="#fff"
   document.querySelector(".slog2").style.color="#FF869E"
   document.querySelector(".slog1").style.color="#fff"
   document.querySelector(".fa-comments-o").style.color="#fff"
   document.querySelector(".fa-video-camera").style.color="#fff"
-  document.querySelector(".fa-bell").style.color="#fff"
+  document.querySelectorAll(".fa-bell")[0].style.color="#fff"
+  document.querySelectorAll(".fa-bell")[1].style.color="#fff"
   document.querySelectorAll(".icon2")[0].classList.remove("hid")
   document.querySelectorAll(".icon1")[0].classList.add("hid")
   document.querySelectorAll(".icon2")[1].classList.remove("hid")
@@ -1349,20 +1361,32 @@ document.querySelector(".light").addEventListener('click', ()=>{
   }
 })
 
-document.querySelector(".dark").addEventListener('click', ()=>{
-  document.querySelector(".light").classList.remove("hid")
-  document.querySelector(".light").classList.add("noti")
-  document.querySelector(".dark").classList.add("hid")
-  document.querySelector(".dark").classList.remove("noti")
+document.querySelectorAll(".dark")[i].addEventListener('click', ()=>{
+  document.querySelectorAll(".light")[0].classList.remove("hid")
+  document.querySelectorAll(".dark")[0].classList.add("hid")
+  document.querySelectorAll(".light")[1].classList.remove("hid")
+  document.querySelectorAll(".light")[1].classList.add("noti")
+  document.querySelectorAll(".dark")[1].classList.add("hid")
+  document.querySelectorAll(".dark")[1].classList.remove("noti")
+  document.querySelector(".dp1").classList.remove("hid")
+  document.querySelector(".dp2").classList.add("hid")
   document.querySelector(".phone").style.backgroundColor="#fff"
   document.querySelector(".phone2").style.backgroundColor="#fff"
+  document.querySelector(".profile-top").style.backgroundColor="#fff"
   document.querySelector(".below-phone").style.backgroundColor="#fff"
   document.querySelector(".below-phone2").style.backgroundColor="#fff"
+  document.querySelector(".sec-phone").style.backgroundColor="#fdfeff"
   document.querySelector(".dash-header").style.color="#000"
-  document.querySelector(".header-other").style.color="#4f0e0e"
+  document.querySelector(".fa-pencil").style.color="#000"
+  document.querySelector(".tag").style.color="#4f0e0e"
+  document.querySelectorAll(".header-other")[1].style.color="#4f0e0e"
+  document.querySelector(".heading").style.color="#000"
+  document.querySelector(".user-nick").style.color="#000"
+  document.querySelectorAll(".header-other")[0].style.color="#4f0e0e"
   document.querySelector(".fa-comments-o").style.color="#4f0e0e"
   document.querySelector(".fa-video-camera").style.color="#4f0e0e"
-  document.querySelector(".fa-bell").style.color="#4f0e0e"
+  document.querySelectorAll(".fa-bell")[0].style.color="#4f0e0e"
+  document.querySelectorAll(".fa-bell")[1].style.color="#4f0e0e"
   document.querySelectorAll(".icon2")[0].classList.add("hid")
   document.querySelectorAll(".icon1")[0].classList.remove("hid")
   document.querySelectorAll(".icon2")[1].classList.add("hid")
@@ -1480,6 +1504,7 @@ document.querySelector(".dark").addEventListener('click', ()=>{
     document.querySelector(".set-1").classList.remove("hid")
   }
 })
+}
 document.querySelector(".vis").addEventListener("click", function(){
               document.querySelector(".vis").classList.add("hid")
               document.querySelector(".invis").classList.remove("hid")

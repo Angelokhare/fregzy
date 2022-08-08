@@ -926,7 +926,7 @@ footer {
   height: 13vw;
 }
 .user-nick{
-  font-size: 2.2vw;
+  font-size: 2.5vw;
 }
 .notification-below{
 display: none;
@@ -998,6 +998,9 @@ display: none;
 }
 .heading{
   font-size: 3.5vw;
+}
+.user-nick{
+  font-size: 3vw;
 }
 }
 
@@ -1153,6 +1156,9 @@ font-size: 4vw;
   .user-details{
     font-size: 2.5vw;
   } 
+ .user-nick{
+  font-size: 3.5vw;
+ } 
 }
 
 @media only screen and (max-width:895px){
@@ -1481,6 +1487,9 @@ margin-right: -30%;
 .changing-button{
   font-size: 1.7vw;
  }  
+ .user-nick{
+  font-size: 5vw;
+}
 }
 @media only screen and (max-width: 550px){
   .ve{
@@ -1774,6 +1783,9 @@ margin-top: 2%;
    .google-log{
     font-size: 3vw;
    }
+   .user-nick{
+    font-size: 6.5vw;
+  }  
 
 }
 @media only screen and (max-width: 384px){
@@ -1883,6 +1895,9 @@ margin-top: 2%;
  /* .eye-log{
   margin-left: -12%;
 } */
+.user-nick{
+  font-size: 7vw;
+}  
 }
 @media only screen and (max-width: 290px){
   .navbar .nav_right ul li .omg{
