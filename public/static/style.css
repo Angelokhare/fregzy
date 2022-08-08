@@ -452,6 +452,9 @@ color: white;
   color: #000;
   /* border-radius: 20px; */
 }
+.profile-top{
+  display: none;
+}
 .wer{
   margin-right: auto;
   /* font-family: 'Monoton', cursive; */
@@ -928,6 +931,10 @@ footer {
 .notification-below{
 display: none;
 }
+.separating-profile{
+  display: none;
+}
+
 /*profile jbvbhjhffhhff*/
 
 
@@ -1630,6 +1637,19 @@ margin-right: -30%;
    .user-details{
     font-size: 4vw;
    } 
+   .profile-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #000;
+    /* border-radius: 20px; */
+  }
+  .separating-profile{
+    display: block;
+  }
 }
 @media only screen and (max-width: 450px){
 .see{

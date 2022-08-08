@@ -2,6 +2,8 @@ var express= require("express")
 var body= require("body-parser")
 var ejs = require("ejs")
 const path= require("path")
+const cropper= require("cropperjs")
+const croppie= require("croppie")
 const { request, response } = require("express")
 var app = express()
 // const country = require("countries-list")
@@ -305,7 +307,6 @@ app.post("/login", (request, response)=>{
 })
 
 
-
 app.get("*", (request, response)=>{
     day=new Date().getFullYear()
     // day= new Date().toLocaleDateString()
@@ -395,3 +396,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit78
 // commit79
 // commit80
+// commit81
