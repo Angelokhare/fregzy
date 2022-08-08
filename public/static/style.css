@@ -597,7 +597,7 @@ footer {
   flex: 1 1 auto;
   font-weight: 400;
   /* height: calc(1.5em + 1rem + 2px); */
-  padding: .5rem 1rem;
+  padding: 0rem 1rem;
   /* font-size: 1.25rem; */
   line-height: 1.5;
   color: #000;
@@ -913,7 +913,7 @@ footer {
   padding: 0 11px;
 }
 .user-details{
-  font-size: 1.3vw;
+  font-size: 1.5vw;
 }
 .user-title{
   font-size: 1.5vw; 
@@ -973,6 +973,9 @@ display: none;
 .enter-details{
   font-size: 1.8vw;;
         }
+        .user-details{
+          font-size: 2vw;
+        } 
   }
 
 @media only screen and (max-width:1085px){
@@ -1138,6 +1141,9 @@ font-size: 4vw;
   .save-profile{
     font-size: 2vw;
    } 
+  .user-details{
+    font-size: 2.5vw;
+  } 
 }
 
 @media only screen and (max-width:895px){
@@ -1374,7 +1380,7 @@ margin-right: -30%;
   margin-left: 36%;
 }
 .user-details{
-  font-size: 1.8vw;
+  font-size: 3vw;
 }
 .user-title{
   font-size: 2vw; 
@@ -1514,7 +1520,7 @@ margin-right: -30%;
   width: 20%;
 } 
 .user-details{
-  font-size: 2vw;
+  font-size: 3vw;
 }
 }
 @media only screen and (max-width: 500px){
@@ -1616,6 +1622,9 @@ margin-right: -30%;
   }
   .save-profile{
     font-size: 5.5vw;
+   }
+   .user-details{
+    font-size: 4vw;
    } 
 }
 @media only screen and (max-width: 450px){
@@ -1653,7 +1662,7 @@ margin-right: -30%;
  margin-top: -51.5%;
 }
 .user-details{
-  font-size: 2.5vw;
+  font-size: 4vw;
 }
 .user-title{
   font-size: 2.5vw; 
