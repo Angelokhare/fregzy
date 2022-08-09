@@ -35,9 +35,9 @@
       <div class="dover" style="padding: 0 20%; padding-top: 20px; background-color: #FEFBF3; padding-bottom: 30%;">
         <img class="icon1" style="width: 75%; margin-left: -40%;" src="static/icon.webp" alt="">
         <img class="icon2 hid" style="width: 48.4%; margin-left:-21.3%; margin-top: 14.7%; margin-bottom: 21.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
-        <h1 class="dash-header" style="font-family: 'Cookie', cursive; font-weight: 700; font-size: 2.5vw; margin-right: 23%; margin-top: -15%;" >Freg<span class="header-other other-red">zy</span></h1>      
+        <h1 class="dash-header" style="font-family: 'Cookie', cursive; font-weight: 700; margin-top: -15%;" >Freg<span class="header-other other-red">zy</span></h1>      
         </div>
-      <h5 class="slog1" style="font-size: 1vw; font-family: 'Varela Round', sans-serif; margin-left: 41%; font-weight: 700; margin-top: -53%; padding-bottom: 50%;">Educational <span class="slog2"  style="color: #4F0E0E"> Integration</span></h5
+      <h5 class="slog1" style="font-family: 'Varela Round', sans-serif; font-weight: 700; margin-top: -53%; padding-bottom: 50%;">Educational <span class="slog2"  style="color: #4F0E0E"> Integration</span></h5
   <i style="padding: 1% 3.2%; padding-right: 5%; color: #fff; background-color:#4F0E0E; font-size: 1.5vw; margin-left:93%; border-bottom-left-radius: 100%; border-top-left-radius: 100%;" class="fa fa-angle-double-left"> </i>
   <i style="padding: 0.5% 1%; padding-right: 1.3%; color: #fff; background-color:#4F0E0E; font-size: 1.5vw; border-bottom-left-radius: 100%; border-top-left-radius: 100%; position: fixed;" class=" sliding fa fa-angle-double-left"> </i>
   
@@ -116,6 +116,13 @@
         <img class="setis0 hid" style="width: 30%; margin-left: auto; margin-right: auto;" src="https://img.icons8.com/ios-glyphs/30/787A91/settings--v1.png"/>
       </div>
       <hr style="width: 75%; margin-left: 10%; margin-right: 10%; border: 1px solid #787A91">
+      <div class="service">
+
+      <i style="font-size: 185%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-comments-o"></i>
+    <i style="font-size: 185%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-video-camera"></i>
+     <i style="font-size: 185%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-bell"></i>
+      <hr style="width: 75%; margin-left: 10%; margin-right: 10%; border: 1px solid #787A91">
+    </div>
       <div class="set1" style="margin-bottom: 60%;">
         <img style="width: 30%; margin-left: auto; margin-right: auto; display: block;" src="https://img.icons8.com/ios-glyphs/30/000000/ratings.png"/> 
       </div>
@@ -139,6 +146,10 @@
       </ul>
       </div>
       <div class="separating-profile" style="margin-top: 35%;"></div>
+      <div class="profile-tog">
+      <i style="margin-top: 2%; margin-left: 90%;" class=" light fa fa-lightbulb-o"></i>
+      <i style="color: #fff; margin-top: 2%; margin-left: 90%;" class="dark hid fa fa-moon-o"></i>
+    </div>
       <!-- <div style=" background-color: #fdfeff;"> -->
 <img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-top:5%; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
 <input class="hid file-pic" type="file" accept="image/png, image/jpeg, image/webp" onchange="loadFile(event)">
@@ -1211,14 +1222,16 @@ document.querySelector(".fa-angle-double-right").addEventListener("click", funct
   document.querySelector(".greeting").style.marginTop="-2%"
 })
 
-for(i=0; i<2; i++){
+for(i=0; i<3; i++){
 document.querySelectorAll(".light")[i].addEventListener('click', ()=>{
   document.querySelectorAll(".light")[0].classList.add("hid")
   document.querySelectorAll(".dark")[0].classList.remove("hid")
   document.querySelectorAll(".light")[1].classList.add("hid")
-  document.querySelectorAll(".light")[1].classList.remove("noti")
   document.querySelectorAll(".dark")[1].classList.remove("hid")
-  document.querySelectorAll(".dark")[1].classList.add("noti")
+  document.querySelectorAll(".light")[2].classList.add("hid")
+  document.querySelectorAll(".light")[2].classList.remove("noti")
+  document.querySelectorAll(".dark")[2].classList.remove("hid")
+  document.querySelectorAll(".dark")[2].classList.add("noti")
   document.querySelector(".phone").style.backgroundColor="#000"
   document.querySelector(".phone2").style.backgroundColor="#000"
   document.querySelector(".sec-phone").style.backgroundColor="#1b2430"
@@ -1370,9 +1383,11 @@ document.querySelectorAll(".dark")[i].addEventListener('click', ()=>{
   document.querySelectorAll(".light")[0].classList.remove("hid")
   document.querySelectorAll(".dark")[0].classList.add("hid")
   document.querySelectorAll(".light")[1].classList.remove("hid")
-  document.querySelectorAll(".light")[1].classList.add("noti")
   document.querySelectorAll(".dark")[1].classList.add("hid")
-  document.querySelectorAll(".dark")[1].classList.remove("noti")
+  document.querySelectorAll(".light")[2].classList.remove("hid")
+  document.querySelectorAll(".light")[2].classList.add("noti")
+  document.querySelectorAll(".dark")[2].classList.add("hid")
+  document.querySelectorAll(".dark")[2].classList.remove("noti")
   document.querySelector(".dp1").classList.remove("hid")
   document.querySelector(".dp2").classList.add("hid")
   document.querySelector(".phone").style.backgroundColor="#fff"

@@ -27,6 +27,14 @@ header {
   .heading-white{
     color: #fff;
   }
+  .dash-header{
+    font-size: 2.5vw;
+     margin-right: 23%;
+  }
+  .slog1{
+    font-size: 1vw; 
+    margin-left: 41%;
+  }
   .pro {
     display: inline-block;
     padding-right: 132px;
@@ -852,8 +860,8 @@ footer {
   height: 100vh;
   /* width: 20%; */
   background-color: #fff;
-  border-bottom-right-radius: 10px; 
-  border-top-right-radius: 10px;
+  /* border-bottom-right-radius: 10px;  */
+  /* border-top-right-radius: 10px; */
   overflow-x: auto;
    /* border-right: 3px solid #f1f1f1 ; */
   /* background-color: #395B64; */
@@ -936,7 +944,12 @@ display: none;
 .separating-profile{
   display: none;
 }
-
+.service{
+  display: none;
+} 
+.profile-tog{
+  display: none;
+}
 /*profile jbvbhjhffhhff*/
 
 
@@ -1133,7 +1146,7 @@ font-size: 4vw;
     margin-left: 23.4%;
   }
   .changing-button{
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .name1{
     font-size: 2vw;
@@ -1162,6 +1175,21 @@ font-size: 4vw;
  .user-nick{
   font-size: 3.5vw;
  } 
+.service{
+  display: block;
+} 
+.profile-tog{
+  display: block;
+  font-size: 4vw;
+}
+.dash-header{
+  font-size: 3.5vw;
+   margin-right: 23%;
+}
+.slog1{
+  font-size: 1.5vw; 
+  margin-left: 35%;
+}
 }
 
 @media only screen and (max-width:895px){
@@ -1443,9 +1471,9 @@ margin-right: -30%;
 .save-profile{
   font-size: 3vw;
  }
- .fq{
+ .changing-button{
   font-size: 1.7vw;
- } 
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1494,6 +1522,9 @@ margin-right: -30%;
   font-size: 2vw;
  }   */
  .user-nick{
+  font-size: 5vw;
+}
+.profile-tog{
   font-size: 5vw;
 }
 }
@@ -1547,6 +1578,12 @@ margin-right: -30%;
 .user-details{
   font-size: 3vw;
 }
+.changing-button{
+  font-size: 2vw;
+}
+ .fq{
+  font-size: 1.7vw;
+ } 
 }
 @media only screen and (max-width: 500px){
 .heading{
@@ -1666,6 +1703,9 @@ margin-right: -30%;
   }
   .separating-profile{
     display: block;
+  }
+  .profile-tog{
+display: none;
   }
 }
 @media only screen and (max-width: 450px){
