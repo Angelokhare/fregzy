@@ -783,7 +783,9 @@ footer {
 }
 .pencil{
   font-size: 2vw;
-  padding-left: 56%;
+  margin-left: 56%;
+  margin-top: -6%;
+  padding: 1.5%;
 }
 .changing-button{
   font-size: 1vw;
@@ -1131,7 +1133,7 @@ font-size: 4vw;
     margin-left: 23.4%;
   }
   .changing-button{
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
   .name1{
     font-size: 2vw;
@@ -1144,7 +1146,8 @@ font-size: 4vw;
   }
   .pencil{
     font-size: 3.5vw;
-    padding-left: 55%;
+    margin-left: 55%;
+    padding: 2.5%;
   }
   .user-picture{
     width: 20vw;
@@ -1410,7 +1413,7 @@ margin-right: -30%;
 }
 .pencil{
   font-size: 5vw;
-  padding-left: 55%;
+  /* padding-left: 55%; */
 }
 .user-picture{
   width: 25vw;
@@ -1439,6 +1442,9 @@ margin-right: -30%;
 }
 .save-profile{
   font-size: 3vw;
+ }
+ .fq{
+  font-size: 1.7vw;
  } 
 }
 @media only screen and (max-width:600px){
@@ -1484,9 +1490,9 @@ margin-right: -30%;
 .login-user{
   padding: 0.5rem 5.5rem;
 }
-.changing-button{
-  font-size: 1.7vw;
- }  
+/* .changing-button{
+  font-size: 2vw;
+ }   */
  .user-nick{
   font-size: 5vw;
 }
@@ -1635,7 +1641,9 @@ margin-right: -30%;
     }   
  .pencil{
   font-size: 7vw;
-  padding-left: 55%;
+  margin-left: 55%;
+  padding: 3.5%;
+  margin-top: -6%;
  }   
  .notification-below{
   display: block;
