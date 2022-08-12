@@ -923,6 +923,10 @@ footer {
   display: inline-block;
   padding-left: 11%;
 }
+.bottom-noti{
+  display: inline-block;
+  padding-left: 3%;
+}
 /* dashboard ggggggggggggggggggg */
 /*profile jvbhjkjjjjj*/
 .details-name{
@@ -953,6 +957,9 @@ display: none;
 } 
 .profile-tog{
   display: none;
+}
+.ontop-toggle{
+  padding: 1.5%;
 }
 /*profile jbvbhjhffhhff*/
 
@@ -1482,6 +1489,9 @@ margin-right: -30%;
  .changing-button{
   font-size: 1.7vw;
 }
+.ontop-toggle{
+  padding: 2.5%;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1842,6 +1852,9 @@ margin-top: 2%;
    .user-nick{
     font-size: 6.5vw;
   }  
+  .pencil{
+    padding: 2.5%;
+   }  
 
 }
 @media only screen and (max-width: 384px){
