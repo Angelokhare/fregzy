@@ -1735,11 +1735,15 @@ margin-right: -30%;
   .profile-tog{
 display: none;
   }
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 17px;
+  }
 }
 @media only screen and (max-width: 464px){
 .bottom-noti{
   /* display: inline-block; */
-  padding:0 21px;
+  padding:0 17px;
 }
 }
 @media only screen and (max-width: 450px){
@@ -1967,6 +1971,10 @@ margin-top: 2%;
     padding:0 18px;
     width: 18%;
   }
+  .save-profile{
+    font-size: 5.5vw;
+    margin-bottom: 40%;
+   }
   }
 
 
