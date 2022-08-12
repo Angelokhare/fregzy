@@ -430,6 +430,9 @@ color: white;
 .hig{
   display: block;
 }
+.hiv{
+  display: inline-block;
+}
 .second-head{
   display: none;
 }
@@ -924,8 +927,8 @@ footer {
   padding-left: 11%;
 }
 .bottom-noti{
-  display: inline-block;
-  padding-left: 3%;
+  /* display: inline-block; */
+  padding:0 23px;
 }
 /* dashboard ggggggggggggggggggg */
 /*profile jvbhjkjjjjj*/
@@ -960,6 +963,9 @@ display: none;
 }
 .ontop-toggle{
   padding: 1.5%;
+}
+.save-profile{
+  margin-bottom: 5%;
 }
 /*profile jbvbhjhffhhff*/
 
@@ -1204,6 +1210,9 @@ font-size: 4vw;
 .slog1{
   font-size: 1.5vw; 
   margin-left: 32%;
+}
+.save-profile{
+  margin-bottom: 15%;
 }
 }
 
@@ -1705,6 +1714,7 @@ margin-right: -30%;
   }
   .save-profile{
     font-size: 5.5vw;
+    margin-bottom: 30%;
    }
    .user-details{
     font-size: 4vw;
@@ -1725,6 +1735,12 @@ margin-right: -30%;
   .profile-tog{
 display: none;
   }
+}
+@media only screen and (max-width: 464px){
+.bottom-noti{
+  /* display: inline-block; */
+  padding:0 21px;
+}
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -1768,8 +1784,27 @@ display: none;
 }
 .save-profile{
   font-size: 6vw;
+    margin-bottom: 30%;
  } 
 }
+@media only screen and (max-width: 444px){
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 19px;
+  }
+  }
+  @media only screen and (max-width: 424px){
+    .bottom-noti{
+      /* display: inline-block; */
+      padding:0 17px;
+    }
+    }
+    @media only screen and (max-width: 404px){
+      .bottom-noti{
+        /* display: inline-block; */
+        padding:0 15px;
+      }
+      }  
 
 @media only screen and (max-width: 400px){
   .heading{
@@ -1857,6 +1892,8 @@ margin-top: 2%;
    }  
 
 }
+
+
 @media only screen and (max-width: 384px){
   .enter-display{
     display: none;
@@ -1924,6 +1961,18 @@ margin-top: 2%;
 /* .eye-log{
   margin-left: -9%;
 } */
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 13px;
+  }
+  }
+
+
+  @media only screen and (max-width: 364px){
+    .bottom-noti{
+      /* display: inline-block; */
+      padding:0 11px;
+    }
   }
   
 @media only screen and (max-width: 350px){
@@ -1954,6 +2003,21 @@ margin-top: 2%;
       margin-right: 21%; */
      }
 }
+
+
+@media only screen and (max-width: 344px){
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 9px;
+  }
+}
+@media only screen and (max-width: 324px){
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 6px;
+  }
+}
+
 @media only screen and (max-width: 320px){
 .login-user{
   margin-left: -15%;
