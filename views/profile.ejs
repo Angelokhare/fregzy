@@ -242,7 +242,17 @@
         </div>
         <button style="background-color: #4F0E0E; color:#fff; font-family: 'Varela Round', sans-serif; border-radius: 10px;padding: 1rem 40%; font-weight: 700; margin-left: auto; margin-right: auto; display: block;" type="sumbit" class="save-profile"> Save</button>
 </form> 
-<div class="notification-below" style=" background-color: #F2F2F2; position: fixed; width: 100%; bottom: -1px;  margin-top: 8%; border-top-left-radius: 20px; border-top-right-radius: 20px; margin-bottom: -5%;">
+<div class="notification-below" style=" position: fixed; width: 100%; bottom: -1px;  margin-top: 8%; border-top-left-radius: 20px; border-top-right-radius: 20px; margin-bottom: -5%; padding-top: 0%;">
+  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: -1%;">
+    <img class="rap" src="static/connection.png" alt="">
+    <h1 style="font-size: 4vw;" class="wer">No Network</h1>
+    <ul class="docking">
+  <li class="lap">
+  <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
+  </li>
+  </ul>
+  </div>
+  <div style=" background-color: #F2F2F2;">
   <ul class="docking" style="padding-top: 2%;">
         <li class="left-noti dashis-1 hid"><a href="/<%=username%>-dashboard" style="text-decoration: none;"><img class="" style="width: 6vw;" src="https://img.icons8.com/metro/26/4F0E0E/home.png"/></a></li>
         <li class="left-noti dashis-2 hiv"><a href="/<%=username%>-dashboard" style="text-decoration: none;"><img class="" style="width: 6vw;" src="https://img.icons8.com/metro/26/787A91/home.png"/></a></li>
@@ -268,6 +278,7 @@
         <li class="right-noti profisw hid"><img class="" style="width: 7vw;" src="https://img.icons8.com/glyph-neue/36/FF869E/gender-neutral-user.png"/></li>
         <li class="right-noti profis0 hid" ><img class="" style="width: 7vw;" src="https://img.icons8.com/glyph-neue/36/787A91/gender-neutral-user.png"/></li>
   </ul>
+  </div>
 </div>
     </div>
   <div class="third-phone" style=" width: 25%; margin-left:74.8%; border-left: 3px solid #DFDFDE ;">
@@ -351,6 +362,42 @@ document.querySelector(".fa-pencil").addEventListener("click", ()=>{
 
 };
 
+
+var hi= document.querySelector(".lap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+              document.querySelector(".save-profile").style.marginBottom="40%"
+            })
+
+    function hasNetwork(onLine){
+  const vak = document.querySelector(".bw");
+  if (onLine){
+    vak.classList.remove("hij");
+    vak.classList.add("hid");
+    document.querySelector(".save-profile").style.marginBottom="40%"
+  }
+  else {
+    vak.classList.add("hij");
+    vak.classList.remove("hid");
+    document.querySelector(".save-profile").style.marginBottom="60%"
+
+  }
+}
+window.addEventListener("load", () => {
+  hasNetwork(navigator.onLine);
+
+
+window.addEventListener("online", () => {
+  hasNetwork(true);
+});
+
+window.addEventListener("offline", () => {
+  hasNetwork(false);
+
+});
+
+});
 document.querySelector(".prof-1").addEventListener("click", ()=>{
   document.querySelector(".prof-1").classList.add("hid")
   document.querySelector(".prof-2").classList.remove("hid")
