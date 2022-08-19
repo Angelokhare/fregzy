@@ -76,6 +76,7 @@
     <div style="margin-bottom: 30%;" class="fav2 hid">
       <img style="margin-left: 10%;" src="https://img.icons8.com/ios-glyphs/30/FF869E/ratings.png"/> <span class="changing-button fq" style="font-family: 'Varela Round', sans-serif; font-weight:700; margin-left: 3%; color: #fff">Frequently used: <span>0</span></span>
     </div>
+    <button class="btn button-dis" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%; margin-left: auto; margin-right: auto;"><a style="color: #fff; text-decoration:none; font-family: 'Varela Round', sans-serif; font-size: 1.5vw; margin-bottom: 10%;" href="/login">Log out</a></button>
     </div>
     </div>
 
@@ -139,16 +140,21 @@
         <img class="dp1" style="width: 15%; margin-right: 1.5%;" src="static/icon.webp" alt="">
         <img class="dp2 hid" style="width: 9.4%; margin-left:2.7%; margin-top: 4.5%; margin-bottom: 6.7%; margin-right: 3.4%;" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; font-size: 7vw; margin-left: -3%;" >Freg<span class="header-other other-red">zy</span></h1>
-        <ul class="docking">
+        <ul class="docking" style="padding-top: 5%;">
           <li class="pra ho light" style="padding-right: 20px;"><i style="font-size: 6.5vw;" class="fa fa-lightbulb-o"></i></li>
           <li class="pra ho dark hid" style="padding-right: 20px;"><i style="font-size: 6.5vw; color: #fff;" class="fa fa-moon-o"></i></li>
           <li class="pra" style="padding-right: 20px;"><i style="font-size: 6.5vw; color: #4F0E0E;" class="fa fa-bell"></i></li>
+          <li class="pra" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; font-size:3vw; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-family: 'Varela Round', sans-serif;" href="/login">Log out</a></button></li>
       </ul>
       </div>
       <div class="separating-profile" style="margin-top: 35%;"></div>
       <div class="profile-tog">
-      <i style="margin-top: 2%; margin-left: 87%; background-color: #fefbf3; border-radius: 15px;" class="ontop-toggle light fa fa-lightbulb-o"></i>
-      <i style="color: #fff; margin-top: 2%; margin-left: 87%; background-color: #000; border-radius: 15px;" class="ontop-toggle dark hid fa fa-moon-o"></i>
+        <ul class="docking gather-2size" style="padding-top: 2%;">
+      <li class="pra lightbulb-o" style="padding-right: 10px;"><i style="margin-top: 2%; background-color: #fefbf3; border-radius: 15px;" class="ontop-toggle light fa fa-lightbulb-o"></i></li>
+      <li class="hid moon-o" style="padding-right: 10px;"><i style="color: #fff; margin-top: 2%; background-color: #000; border-radius: 15px;" class="ontop-toggle dark fa fa-moon-o"></i></li>
+      <!-- <li class="pra" style="padding-right: 10px;"><i style="margin-top: 2%; background-color: #000; border-radius: 15px; color: #fff;" class="ontop-toggle light fa fa-moon-o"></i></li> -->
+      <li class="pra button-2size" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-family: 'Varela Round', sans-serif;" href="/login">Log out</a></button></li>
+        </ul>
     </div>
       <!-- <div style=" background-color: #fdfeff;"> -->
 <img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-top:5%; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
@@ -243,17 +249,17 @@
         <button style="background-color: #4F0E0E; color:#fff; font-family: 'Varela Round', sans-serif; border-radius: 10px;padding: 1rem 40%; font-weight: 700; margin-left: auto; margin-right: auto; display: block;" type="sumbit" class="save-profile"> Save</button>
 </form> 
 <div class="notification-below" style=" position: fixed; width: 100%; bottom: -1px;  margin-top: 8%; border-top-left-radius: 20px; border-top-right-radius: 20px; margin-bottom: -5%; padding-top: 0%;">
-  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: -1%;">
+  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: -1%; padding-top: 0%;">
     <img class="rap" src="static/connection.png" alt="">
     <h1 style="font-size: 4vw;" class="wer">No Network</h1>
     <ul class="docking">
   <li class="lap">
-  <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
+  <button class="btn " style="border-radius: 10px; padding: 0.3rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
   </li>
   </ul>
   </div>
   <div style=" background-color: #F2F2F2;">
-  <ul class="docking" style="padding-top: 2%;">
+  <ul class="docking" style="margin-bottom: 5%;">
         <li class="left-noti dashis-1 hid"><a href="/<%=username%>-dashboard" style="text-decoration: none;"><img class="" style="width: 6vw;" src="https://img.icons8.com/metro/26/4F0E0E/home.png"/></a></li>
         <li class="left-noti dashis-2 hiv"><a href="/<%=username%>-dashboard" style="text-decoration: none;"><img class="" style="width: 6vw;" src="https://img.icons8.com/metro/26/787A91/home.png"/></a></li>
         <li class="left-noti dashisw hid"><a href="/<%=username%>-dashboard" style="text-decoration: none;"><img class="" style="width: 6vw;" src="https://img.icons8.com/metro/26/FF869E/home.png"/></a></li>
@@ -1305,6 +1311,11 @@ document.querySelectorAll(".light")[i].addEventListener('click', ()=>{
   document.querySelector(".sec-phone").style.backgroundColor="#1b2430"
   document.querySelector(".dp1").classList.add("hid")
   document.querySelector(".dp2").classList.remove("hid")
+  
+  document.querySelector(".lightbulb-o").classList.add("hid")
+  document.querySelector(".lightbulb-o").classList.remove("pra")
+  document.querySelector(".moon-o").classList.add("pra")
+  document.querySelector(".moon-o").classList.remove("hid")
   document.querySelector(".save-profile").style.borderColor="#fff"
   document.querySelector(".profile-top").style.backgroundColor="#000"
   document.querySelector(".below-phone").style.backgroundColor="#000"
@@ -1467,6 +1478,10 @@ document.querySelectorAll(".dark")[i].addEventListener('click', ()=>{
   document.querySelector(".below-phone").style.backgroundColor="#fff"
   document.querySelector(".below-phone2").style.backgroundColor="#fff"
   document.querySelector(".sec-phone").style.backgroundColor="#fdfeff"
+  document.querySelector(".lightbulb-o").classList.add("pra")
+  document.querySelector(".lightbulb-o").classList.remove("hid")
+  document.querySelector(".moon-o").classList.add("hid")
+  document.querySelector(".moon-o").classList.remove("pra")
   document.querySelector(".dash-header").style.color="#000"
   document.querySelector(".fa-pencil").style.color="#000"
   document.querySelector(".fa-pencil").style.backgroundColor="#fff"

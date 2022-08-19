@@ -979,6 +979,15 @@ display: none;
 .save-profile{
   margin-bottom: 5%;
 }
+.button-2size{
+  font-size:2vw;
+}
+.gather-2size{
+  margin-left: 68%;
+}
+.button-dis{
+  display: block;
+}
 /*profile jbvbhjhffhhff*/
 
 
@@ -1226,6 +1235,9 @@ font-size: 4vw;
 .save-profile{
   margin-bottom: 15%;
 }
+.button-dis{
+  display: none;
+}
 }
 
 @media only screen and (max-width:895px){
@@ -1372,6 +1384,9 @@ font-size: 4vw;
           .enter-details{
             font-size: 2vw;;
                   }
+    .gather-2size{
+     margin-left: 64%;
+          }                
 }
 @media only screen and (max-width:780px){
 header{
@@ -1525,6 +1540,12 @@ margin-left: 10.6%;
 .ontop-toggle{
   padding: 2.5%;
 }
+.gather-2size{
+  margin-left: 58%;
+}
+.gather-2size{
+  padding-bottom: 5%;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1579,6 +1600,12 @@ margin-left: 10.6%;
   font-size: 5vw;
 }
 }
+@media only screen and (max-width: 588px){
+  .gather-2size{
+    margin-left: 52%;
+  }
+
+    }
 @media only screen and (max-width: 550px){
   .ve{
     padding: 0 12px;
