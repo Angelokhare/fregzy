@@ -1,9 +1,13 @@
+require("dotenv").config()
 var express= require("express")
 var body= require("body-parser")
 var ejs = require("ejs")
 const path= require("path")
 const cropper= require("cropperjs")
 const croppie= require("croppie")
+const jwt= require("jsonwebtoken")
+const nmail= require("nodemailer")
+const userip= require("request-ip")
 const { request, response } = require("express")
 var app = express()
 // const country = require("countries-list")
@@ -256,49 +260,94 @@ app.get("/signup/:hgy", (request, response)=>{
     response.redirect("/signup")
 })
 
-// app.get("/:hgy", (request, response)=>{ 
-//     var user_route= userprof +"-dashboard"
-//     var user_profile= userprof +"-profile"
-// console.log(userprof)
-// console.log(user_route)
-// if (request.params.hgy==user_route){
-//     day=new Date().getFullYear()
-//     var greet= ''
-//     var time= new Date().getHours()
-//     console.log(time)
-//     if(time<12){
-//         greet="Good Morning"
-//         console.log(greet)
-//     }
-//     else if(time>=12 && time<18){
-//         greet="Good Afternoon"
-//         console.log(greet)
-//     }
-//     else if(time>=18 && time<21){
-//         greet="Good Evening"
-//         console.log(greet)
-//     }
-//     else{
-//         greet="Good Night"
-//         console.log(greet)
-//     }
-// console.log(greet)
-//     response.render("dashboard", {fan:day, username: userprof, greet:greet})
-// }
-// else if (request.params.hgy==user_profile){
-// response.render("profile")
-// }
-    // else{
-    // response.redirect("/login")
-// }
-// })
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+if(new Date().getHours()<12){
+    var ut= "am"
+   }
+   else if(new Date().getHours()>=12){
+    var ut= "pm"
+   }
+var eday= weekday[new Date().getDay()]
+const evar= eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut
 app.post("/login", (request, response)=>{
     var usern= request.body.username.toLowerCase()
      userprof=usern
     //  console.log(userprof)
-    var user_route= userprof +"-dashboard"
-     response.redirect("/"+user_route)
+    var user_route= userprof +"-profile"
+// console.log(    request.headers['x-forwarded-for'].split(',').shift() || request.socket.remoteAddress)
+var usert = userip.getClientIp(request); // on localhost > 127.0.0.1
+console.log(usert)
+
+var transporter = nmail.createTransport({
+  service: 'gmail',
+  auth: {
+         user: process.env.USER_GMAIL,
+         pass: process.env.GMAIL_PASSWORD
+     }
+ });
+ const mailOptions = {
+  from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+  to: 'pinocchio794@gmail.com', // list of receivers
+  subject: 'New Login detect!', // Subject line
+  html: `
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+  .ve{
+      display: inline-block;
+      padding: 2px 25px;
+    }
+    .docking {
+      list-style: none;
+    } 
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <img class="icon1 hig" style="width: 120%; margin-left: auto; margin-right: auto;" src="icon1.png" alt="">
+  <p style="font-weight: 700;  font-family: 'DynaPuff', cursive; font-size:16px; color: #000" >Hi <span style="color: #4f0e0e">${usern}</span>,</p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >Your <span style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
+  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000; margin-top: -1%;" >${evar}</p>
+  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000" >IP Address: ${userip.getClientIp(request)}</p><br><br>
+
+
+
+
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">We wont notify you about logins from this device again.</span></p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">Please reset your password</a></p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000"  >We also strngly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically imprves your account security.</p><br><br>
+  <p style="font-weight: 700; font-family: 'Varela Round', sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">support</span></p>
+  <hr>
+  <ul style=" list-style: none; ">
+  <li style="display: inline-block; padding: 2px 10px;">
+    <img src="https://img.icons8.com/fluency/30/000000/twitter.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 10px;">
+<img src="https://img.icons8.com/fluency/30/000000/instagram-new.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 10px;">
+   <img src="https://img.icons8.com/color/30/000000/linkedin-circled--v1.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 10px;">
+<img src="https://img.icons8.com/windows/30/000000/github.png"/>
+</li>
+</ul><br>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+  `,// plain text body
+ 
+ 
+ }
+ transporter.sendMail(mailOptions, function (err, info) {
+    if(err)
+      console.log(err)
+    else
+      console.log(info);
+ });       
+    response.redirect("/"+user_route)
  })
+      
+    
 
  app.post("/profile-adjestment", (request, response)=>{
     response.redirect("/"+ userprof + "-profile")
@@ -410,3 +459,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit93
 // commit94
 // commit95
+// commit96
