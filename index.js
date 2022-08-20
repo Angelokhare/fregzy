@@ -295,7 +295,7 @@ var transporter = nmail.createTransport({
   @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
   .ve{
       display: inline-block;
       padding: 2px 25px;
@@ -305,32 +305,30 @@ var transporter = nmail.createTransport({
     } 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <img class="icon1 hig" style="width: 120%; margin-left: auto; margin-right: auto;" src="icon1.png" alt="">
-  <p style="font-weight: 700;  font-family: 'DynaPuff', cursive; font-size:16px; color: #000" >Hi <span style="color: #4f0e0e">${usern}</span>,</p>
-  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >Your <span style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
-  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000; margin-top: -1%;" >${evar}</p>
-  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000" >IP Address: ${userip.getClientIp(request)}</p><br><br>
+  <img src="icon1.png" alt="">
+  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #4f0e0e; text-transform: capitalize;">${usern}</span>,</p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >Your <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
+  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000; margin-top: -1%;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
+  <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000" >IP Address: ${request.ip}</p><br><br>
 
 
-
-
-  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">We wont notify you about logins from this device again.</span></p>
-  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">Please reset your password</a></p>
-  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000"  >We also strngly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: 'Pacifico', cursive; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically imprves your account security.</p><br><br>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">We wont notify you about logins from this device again.</span></p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">Please reset your password</a></p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically imprves your account security.</p><br><br>
   <p style="font-weight: 700; font-family: 'Varela Round', sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">support</span></p>
   <hr>
   <ul style=" list-style: none; ">
-  <li style="display: inline-block; padding: 2px 10px;">
-    <img src="https://img.icons8.com/fluency/30/000000/twitter.png"/>
+  <li style="display: inline-block; padding: 2px 1px;">
+    <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
 </li>
-<li style="display: inline-block; padding: 2px 10px;">
-<img src="https://img.icons8.com/fluency/30/000000/instagram-new.png"/>
+<li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
 </li>
-<li style="display: inline-block; padding: 2px 10px;">
-   <img src="https://img.icons8.com/color/30/000000/linkedin-circled--v1.png"/>
+<li style="display: inline-block; margin-left:-10px">
+   <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
 </li>
-<li style="display: inline-block; padding: 2px 10px;">
-<img src="https://img.icons8.com/windows/30/000000/github.png"/>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
 </li>
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
@@ -460,3 +458,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit94
 // commit95
 // commit96
+// commit97
