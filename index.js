@@ -279,6 +279,15 @@ app.post("/login", (request, response)=>{
 var usert = userip.getClientIp(request); // on localhost > 127.0.0.1
 console.log(usert)
 
+const parseIp = (request) =>
+request.headers['x-forwarded-for']?.split(',').shift()
+|| request.socket?.remoteAddress
+
+console.log(parseIp(request))
+var clientIp = userip.getClientIp(request);
+console.log(clientIp)
+
+
 var transporter = nmail.createTransport({
   service: 'gmail',
   auth: {
@@ -310,12 +319,12 @@ var transporter = nmail.createTransport({
   <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >Your <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
   <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000; margin-top: -1%;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
   <p style="font-weight: 700;  font-family: 'Varela Round', sans-serif; font-size:14px; color: #000" >IP Address: ${request.ip}</p><br><br>
-
-
+  ${parseIp(request)}
+  ${clientIp}
   <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">We wont notify you about logins from this device again.</span></p>
   <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">Please reset your password</a></p>
-  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically imprves your account security.</p><br><br>
-  <p style="font-weight: 700; font-family: 'Varela Round', sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">support</span></p>
+  <p style="font-weight: 600;  font-family: 'Varela Round', sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+  <p style="font-weight: 700; font-family: 'Varela Round', sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
   <hr>
   <ul style=" list-style: none; ">
   <li style="display: inline-block; padding: 2px 1px;">
@@ -459,3 +468,5 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit95
 // commit96
 // commit97
+// commit98
+// commit99
