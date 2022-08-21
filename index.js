@@ -302,7 +302,6 @@ axios.request(options).then(function (response) {
 	console.log(response.data);
     var gat= response.data
 
-
 var transporter = nmail.createTransport({
   service: 'gmail',
   auth: {
@@ -310,9 +309,10 @@ var transporter = nmail.createTransport({
          pass: process.env.GMAIL_PASSWORD
      }
  });
+
  const mailOptions = {
   from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-  to: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+  bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
   subject: 'New Login detect!', // Subject line
   html: `
   <style>
@@ -335,7 +335,7 @@ var transporter = nmail.createTransport({
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >IP Address: ${parseIp(request)}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Location: ${gat.city},${gat.country}[${gat.countryISO2}]</p>
-  <img style="width:3%" src="${gat.flag}" alt="">
+  <img style="width:18px" src="${gat.flag}" alt="">
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Greenwich Mean Time: ${gat.gmt}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Latitude: ${gat.latitude}°</p><br><br>
   <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
@@ -367,11 +367,13 @@ var transporter = nmail.createTransport({
       console.log(err)
     else
       console.log(info);
- });       
+ });  
+
 
 }).catch(function (error) {
 	console.error(error);
 });
+
     response.redirect("/"+user_route)
  })
       
@@ -492,3 +494,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit98
 // commit99
 // commit100
+// commit101
