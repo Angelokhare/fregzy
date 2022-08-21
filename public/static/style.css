@@ -958,6 +958,9 @@ footer {
   width: 13vw;
   height: 13vw;
 }
+.or{
+  font-size: 2vw;
+}
 .user-nick{
   font-size: 2.5vw;
 }
@@ -1714,6 +1717,9 @@ margin-left: 10.6%;
 .slog1{
   margin-left: 35%;
 } 
+.or{
+  font-size: 3vw;
+}
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -2030,6 +2036,9 @@ margin-top: 2%;
    .rap{
     width: 20%;
    }
+   .or{
+    font-size: 4vw;
+  }
   }
 
 
@@ -2096,6 +2105,14 @@ margin-top: 2%;
 .user-nick{
   font-size: 7vw;
 }  
+}
+@media only screen and (max-width: 305px){
+.lop{
+  padding: 0.3rem 1.5rem;
+}
+.google-but{
+  padding: 0.3rem 1.5rem;
+}
 }
 @media only screen and (max-width: 300px){
   .bottom-noti{
