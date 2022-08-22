@@ -991,6 +991,9 @@ display: none;
 .button-dis{
   display: block;
 }
+.on-mobile{
+  display: none;
+}
 /*profile jbvbhjhffhhff*/
 
 
@@ -1799,6 +1802,9 @@ display: none;
     /* display: inline-block; */
     padding:0 55px;
   }
+  .on-mobile{
+    display: block;
+  }
 }
 @media only screen and (max-width: 464px){
 .bottom-noti{
@@ -2138,6 +2144,7 @@ margin-top: 2%;
  }
 
 }
+
 @media only screen and (max-width: 285px){
   .navbar {
 padding: 0 40px;
@@ -2157,4 +2164,14 @@ padding: 0 40px;
  .google-log{
   font-size: 4.1vw;
  }
+}
+
+@media only screen and (max-width: 350px) and (min-height: 950px){
+.maxi-height{
+position: fixed;
+bottom: 0;
+}
+.login-profile{
+  margin-bottom: 130%;
+}
 }
