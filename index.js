@@ -9,6 +9,7 @@ const jwt= require("jsonwebtoken")
 const nmail= require("nodemailer")
 const userip= require("request-ip")
 const axios = require("axios");
+const {v4:uuid}=require("uuid")
 const { request, response } = require("express")
 var app = express()
 // const country = require("countries-list")
@@ -240,11 +241,22 @@ else if (request.params.jbk.toLowerCase()==user_profile){
     // console.log(edit_country)
 response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
 }
+else if (request.params.jbk.toLowerCase()=="user-authenticate"){
+    console.log(typeof request.query)
+    if(typeof(request.query)===undefined){
+        response.render("error", {fan:day})
+    }
+    else(
+    response.render("authenticate")
+    )
+}
     else{
 response.redirect("/")
     }
 })
-
+app.post("/authenticate", (request, response)=>{
+response.redirect("/"+user_route)
+})
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
@@ -329,14 +341,12 @@ var transporter = nmail.createTransport({
     } 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <img style="width: 10px; margin-left: auto; margin-right: auto; display: block; background-color: #fff;" src="https://fregzyapp.herokuapp.com/static/icon.webp" alt="">
   <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${usern}</span>,</p>
   <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >IP Address: ${parseIp(request)}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Location: ${gat.city},${gat.country}[${gat.countryISO2}]</p>
   <img style="width:18px" src="${gat.flag}" alt="">
-  <img style="width: 20px;" src="https://fregzyapp.herokuapp.com/static/icon.webp" alt="">
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Greenwich Mean Time: ${gat.gmt}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Latitude: ${gat.latitude}°</p><br><br>
   <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
@@ -391,7 +401,7 @@ app.get("*", (request, response)=>{
     day=new Date().getFullYear()
     // day= new Date().toLocaleDateString()
     console.log(day)
-    response.render("error"), {fan:day}
+    response.render("error", {fan:day})
 })
 app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 
@@ -500,3 +510,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit103
 // commit104
 // commit105
+// commit106

@@ -996,6 +996,14 @@ display: none;
 }
 /*profile jbvbhjhffhhff*/
 
+/* authentication */
+.authicon{
+  font-size: 2.5vw;
+}
+.input-auth{
+  margin-top: 2%;
+}
+/* authentication */
 
 @media only screen and (max-width:1250px){
   .pro {
@@ -1060,6 +1068,9 @@ display: none;
 }
 .user-nick{
   font-size: 3vw;
+}
+.input-auth{
+  margin-top: 5%;
 }
 }
 
@@ -1244,6 +1255,7 @@ font-size: 4vw;
 .button-dis{
   display: none;
 }
+
 }
 
 @media only screen and (max-width:895px){
@@ -1392,11 +1404,20 @@ font-size: 4vw;
                   }
     .gather-2size{
      margin-left: 64%;
-          }                
+          }           
+          .authicon{
+            font-size: 3.5vw;
+          }             
+          .icon-home{
+            width: 10%;
+          }          
 }
 @media only screen and (max-width:780px){
 header{
   display: none;
+}
+header .sep{
+  display: block;
 }
   .second-head{
 display: block;
@@ -1519,6 +1540,9 @@ padding-right: 1.5%;
 font-size: 3vw;
 margin-left: 10.6%;
 }
+.authicon{
+  font-size: 4.5vw;
+}
 }
 
 @media only screen and (max-width:670px){
@@ -1551,6 +1575,9 @@ margin-left: 10.6%;
 }
 .gather-2size{
   padding-bottom: 5%;
+}
+.input-auth{
+  margin-top: 10%;
 }
 }
 @media only screen and (max-width:600px){
@@ -1805,6 +1832,14 @@ display: none;
   .on-mobile{
     display: block;
   }
+  .icon-home{
+    width: 15%;
+  }  
+  .authicon{
+    font-size: 5.5vw;
+    padding-top: 80%;
+
+  }  
 }
 @media only screen and (max-width: 464px){
 .bottom-noti{
@@ -1959,7 +1994,10 @@ margin-top: 2%;
   .pencil{
     padding: 2.5%;
    }  
-
+   .authicon{
+    font-size: 8.5vw;
+    padding-top: 80%;
+  }
 }
 
 
@@ -2045,6 +2083,9 @@ margin-top: 2%;
    .or{
     font-size: 4vw;
   }
+  .icon-home{
+    width: 20%;
+  }  
   }
 
 
