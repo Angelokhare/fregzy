@@ -242,25 +242,205 @@ else if (request.params.jbk.toLowerCase()==user_profile){
 response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
 }
 else if (request.params.jbk.toLowerCase()=="user-authenticate"){
-    console.log(typeof request.query)
-    if(typeof(request.query)===undefined){
-        response.render("error", {fan:day})
-    }
-    else(
-    response.render("authenticate")
-    )
+    day=new Date().getFullYear()
+    // console.log(typeof request.query)
+    // if(typeof(request.query)===undefined){
+    //     response.render("error", {fan:day})
+    // }
+    // else(
+        var code_user=userprof
+  var transporter = nmail.createTransport({
+    service: 'gmail',
+    auth: {
+           user: process.env.USER_GMAIL,
+           pass: process.env.GMAIL_PASSWORD
+       }
+   });
+  
+   const mailOptions = {
+    from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+    subject: 'Your Authentication Code!', // Subject line
+    html: `
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    .ve{
+        display: inline-block;
+        padding: 2px 25px;
+      }
+      .docking {
+        list-style: none;
+      } 
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
+    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
+    <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >5d8t</p>
+
+    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+    <hr>
+    <ul style=" list-style: none; ">
+    <li style="display: inline-block; padding: 2px 1px;">
+      <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+  </li>
+  <li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+  <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+  </li>
+  <li style="display: inline-block; margin-left:-10px">
+     <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+  </li>
+  <li style="display: inline-block; margin-left:-10px">
+  <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+  </li>
+  </ul><br>
+  <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+    `,// plain text body
+   
+   
+   }
+   transporter.sendMail(mailOptions, function (err, info) {
+      if(err)
+        console.log(err)
+      else
+        console.log(info);
+   }); 
+    response.render("authenticate", {fan:day})
+    // )
 }
     else{
 response.redirect("/")
     }
 })
+
+
+
+
+
+
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+if(new Date().getHours()<12){
+    var ut= "am"
+   }
+   else if(new Date().getHours()>=12){
+    var ut= "pm"
+   }
+   var eday= weekday[new Date().getDay()]
+   const evar= eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut
+var userprof= ""
 app.post("/authenticate", (request, response)=>{
-response.redirect("/"+user_route)
-})
+    ght= userprof + "-profile"
+    
+const parseIp = (request) =>
+request.headers['x-forwarded-for']?.split(',').shift()
+|| request.socket?.remoteAddress
+
+console.log(parseIp(request))
+var clientIp = userip.getClientIp(request);
+console.log(clientIp)
+
+
+const options = {
+  method: 'GET',
+  url: 'https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/iplocation',
+  params: {ip: parseIp(request), apikey: '873dbe322aea47f89dcf729dcc8f60e8'},
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+    var gat= response.data
+
+var transporter = nmail.createTransport({
+  service: 'gmail',
+  auth: {
+         user: process.env.USER_GMAIL,
+         pass: process.env.GMAIL_PASSWORD
+     }
+ });
+
+ const mailOptions = {
+  from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+  bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+  subject: 'New Login detect!', // Subject line
+  html: `
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  .ve{
+      display: inline-block;
+      padding: 2px 25px;
+    }
+    .docking {
+      list-style: none;
+    } 
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${userprof}</span>,</p>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
+  <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
+  <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >IP Address: ${parseIp(request)}</p>
+  <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Location: ${gat.city},${gat.country}[${gat.countryISO2}]</p>
+  <img style="width:18px" src="${gat.flag}" alt="">
+  <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Greenwich Mean Time: ${gat.gmt}</p>
+  <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Latitude: ${gat.latitude}°</p><br><br>
+  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
+  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+  <hr>
+  <ul style=" list-style: none; ">
+  <li style="display: inline-block; padding: 2px 1px;">
+    <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+   <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+</li>
+</ul><br>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+  `,// plain text body
+ 
+ 
+ }
+ transporter.sendMail(mailOptions, function (err, info) {
+    if(err)
+      console.log(err)
+    else
+      console.log(info);
+ });  
+
+
+}).catch(function (error) {
+	console.error(error);
+});
+
+    response.redirect("/"+ght)
+    })
+
+
+
+
 app.post("/home", (request, response)=>{
     response.redirect("/confirm")
 })
-var userprof= ""
+
 
 app.get("/login/:hgy", (request, response)=>{ 
 
@@ -272,16 +452,8 @@ app.get("/signup/:hgy", (request, response)=>{
     response.redirect("/signup")
 })
 
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-if(new Date().getHours()<12){
-    var ut= "am"
-   }
-   else if(new Date().getHours()>=12){
-    var ut= "pm"
-   }
-var eday= weekday[new Date().getDay()]
-const evar= eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut
+
+
 app.post("/login", (request, response)=>{
     var usern= request.body.username.toLowerCase()
      userprof=usern
@@ -385,7 +557,8 @@ var transporter = nmail.createTransport({
 	console.error(error);
 });
 
-    response.redirect("/"+user_route)
+    // response.redirect("/"+user_route)
+    response.redirect("/user-authenticate")
  })
       
     

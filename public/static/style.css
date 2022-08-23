@@ -1002,6 +1002,27 @@ display: none;
 }
 .input-auth{
   margin-top: 2%;
+  width: 30%;
+  height: 4vw;
+  font-size: 2vw;
+}
+.icon-auth{
+  width: 7%;
+} 
+.auth-head{
+  font-size: 5vw;
+}
+.auth-sec{
+  font-size: 2.5vw;
+}
+
+.button-auth{
+font-size: 3vw;
+margin-top: 2%;
+  border-radius: 20px;
+  margin-top: 5%;
+  padding: 0.5rem 25%;
+  margin-bottom: 10%;
 }
 /* authentication */
 
@@ -1018,6 +1039,9 @@ display: none;
 .save-profile{
   font-size: 2vw;
  }
+ .input-auth{
+  height: 6vw;
+}
 }
 @media only screen and (max-width:1174px){
 .cancel-icon{margin-bottom: -87%;
@@ -1133,7 +1157,9 @@ margin-top: -24%;
    margin-left:60%; 
    margin-bottom: 26%; 
 }
-
+.input-auth{
+  font-size: 3vw;
+}
 }
 
 
@@ -1255,7 +1281,9 @@ font-size: 4vw;
 .button-dis{
   display: none;
 }
-
+.button-auth{
+  font-size: 5vw;
+  }
 }
 
 @media only screen and (max-width:895px){
@@ -1337,6 +1365,9 @@ font-size: 4vw;
           .sliding2{
             margin-left:11.6%;
           }    
+          .auth-sec{
+            font-size: 3.5vw;
+          }      
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -1377,6 +1408,7 @@ font-size: 4vw;
 .see{
   padding-top: 20%;
 }
+
 }
 
 @media only screen and (min-height:800px) and (max-width:320px){
@@ -1408,9 +1440,12 @@ font-size: 4vw;
           .authicon{
             font-size: 3.5vw;
           }             
-          .icon-home{
+          .icon-auth{
             width: 10%;
-          }          
+          }    
+          .button-auth{
+           margin-bottom: 20%; 
+          }
 }
 @media only screen and (max-width:780px){
 header{
@@ -1435,6 +1470,16 @@ padding-top: 10%;
   transform: inherit;
   }
 
+.input-auth{
+  height: 10vw;
+}
+}
+@media only screen and (max-width:1050px) and (min-height: 1000px){
+.auth-height{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 }
 @media only screen and (max-width:769px){
   .pride{
@@ -1509,6 +1554,13 @@ margin-right: -30%;
 .user-title{
   font-size: 2vw; 
 }
+.button-auth{
+margin-top: 10%;
+font-size: 5vw;
+}
+.input-auth{
+  font-size: 3.5vw;
+}
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -1543,6 +1595,12 @@ margin-left: 10.6%;
 .authicon{
   font-size: 4.5vw;
 }
+.auth-head{
+  font-size: 7vw;
+}
+.input-auth{
+  width: 50%;
+} 
 }
 
 @media only screen and (max-width:670px){
@@ -1632,6 +1690,13 @@ margin-left: 10.6%;
 .profile-tog{
   font-size: 5vw;
 }
+.auth-sec{
+  font-size: 4.5vw;
+}
+.input-auth{
+width: 60%;
+font-size: 5vw;
+}
 }
 @media only screen and (max-width: 588px){
   .gather-2size{
@@ -1646,7 +1711,9 @@ margin-left: 10.6%;
     .header-bw{
       padding-top: 12%;
     }
-
+    .input-auth{
+      height: 12vw;
+    }
 }
 @media only screen and (max-width: 539px){
 .enter-display{
@@ -1750,6 +1817,9 @@ margin-left: 10.6%;
 .or{
   font-size: 3vw;
 }
+.input-auth{
+  font-size: 6vw;
+}
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -1832,7 +1902,7 @@ display: none;
   .on-mobile{
     display: block;
   }
-  .icon-home{
+  .icon-auth{
     width: 15%;
   }  
   .authicon{
@@ -1891,6 +1961,10 @@ display: none;
   font-size: 6vw;
     margin-bottom: 30%;
  } 
+ .button-auth{
+border-radius: 10px;
+margin-bottom: 40%;
+  }
 }
 @media only screen and (max-width: 444px){
   .bottom-noti{
@@ -1998,6 +2072,9 @@ margin-top: 2%;
     font-size: 8.5vw;
     padding-top: 80%;
   }
+  .input-auth{
+    height: 15vw;
+  }
 }
 
 
@@ -2083,8 +2160,10 @@ margin-top: 2%;
    .or{
     font-size: 4vw;
   }
-  .icon-home{
+  .icon-auth{
     width: 20%;
+    margin-bottom: -2%;
+
   }  
   }
 

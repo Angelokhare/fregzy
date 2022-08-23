@@ -30,7 +30,7 @@
 </head>
 <body class="sz">
     <header class="header-white sep" style="display: flex;">
-        <img class="icon-home icon1" src="static/icon.webp" alt="">
+        <img class="icon-auth icon1" src="static/icon.webp" alt="">
         <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700;" >Freg<span class="header-other other-red">zy</span></h1>
         <nav>
@@ -41,14 +41,113 @@
           </ul>
         </nav>
     </header>
-    <h1 style="text-align: center; margin-top: 10%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
-    <h1 style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Authentication Code</h1>
-    <h5 style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your verification code, please check your Gmail.</h5>
+    <h1 class="auth-head" style="text-align: center; margin-top: 10%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
+    <h1 class="auth-head" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Authentication Code</h1>
+    <h5 class="auth-sec" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your four(4) verification code, please check your Gmail.</h5>
 
     <form action="/authenticate" method="post">
-        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; display: block;" type="number" maxlength="4" required>
-        <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Get</a></button>
+        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center;  font-family: 'Varela Round', sans-serif; font-weight: 700; color: #4F0E0E;" type="text" placeholder="Enter Code!" minlength="4" maxlength="4" name="code"  required>
+        <button class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
     </form>
 
+
+
+<div class="auth-height">
+  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
+    <img class="rap" src="static/connection.png" alt="">
+    <h1 class="wer">No Network</h1>
+    <ul class="docking">
+  <li class="lap">
+  <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
+  </li>
+  </ul>
+  </div>
+  <footer >
+<div class="dover">
+<img class="icon-home" style="margin-right: 1%;" src="static/footer.webp" alt="">
+<h1 class="footer-heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #97BFB4;">zy</span></h1>
+<nav>
+<ul class="docking">
+ 
+ <li class="pride"><a class="pic">Company <br class="bid"> <br> Vision<span style="visibility:hidden;">hh</span><br class="bid"> <br> Mission<span style="visibility:hidden;">h</span><br class="bid"> <br> Focus<span style="visibility:hidden;">hhii</span></a></li>
+ <li class="pride"><a class="pic">Blogs<span style="visibility:hidden;">hhyuii</span> <br class="bid"> <br> FAQ<span style="visibility:hidden;">hoooiih</span> <br class="bid"> <br> Terms of use <br class="bid"> <br> Privacy Policy</a></li>
+ <li class="pru" style="padding-bottom: -2%;"> 
+   <h1 class="suggest" style="color: #fff;">Subscribe to our Newsletter for Daily updates.</h1>
+   <form action="/home" method="post" class="">
+   <div class="form-group">
+     <input class="inside" style="border-radius: 0%; text-transform: capitalize; border-right: none;" name="current" type="email" placeholder="Your Email" required>
+     <button type="submit" class="btn btn-success" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none;"><i style="color: #fff;" class="fa fa-hand-pointer-o"></i></button>
+   </div>
+ </form>
+ <ul class="social">
+  <li class="ve">
+    <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
+</li>
+<li class="ve">
+ <i class="wr fa fa-twitter-square twit" style="border-radius: 3px; padding: 15%; font-size: 18px;"></i></a>
+</li>
+<li class="ve">
+ <i class="wr fa fa-linkedin-square linkl" style="border-radius: 3px; padding: 15%; font-size: 18px;"></i>
+ <!-- <i class="wr fa fa-linkedin linkl" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i></a> -->
+</li>
+
+<li class="ve">
+    <i class="wr fa fa-github git"style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
+</li>
+</ul>
+</li>
+ <!-- <li class="pre"><button class="btn " style="border-radius: 50px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li> -->
+ 
+</ul>
+</nav>
+</div>
+<h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- <%= day%> <span style="font-weight: 700;">Fregzy</span> </h5>
+</footer>
+</div>
+    <script>
+      document.querySelector(".input-auth").addEventListener("change", ()=>{
+      var inputset=document.querySelector(".input-auth")
+      var setin =inputset.value
+      var gser= setin.trim()
+if(gser.length==4){
+  document.querySelector(".gt").innerHTML=setin
+  document.querySelector(".button-auth").click()
+}
+})
+
+var hi= document.querySelector(".lap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+            })
+
+    function hasNetwork(onLine){
+  const vak = document.querySelector(".bw");
+  if (onLine){
+    vak.classList.remove("hij");
+    vak.classList.add("hid");
+  }
+  else {
+    vak.classList.add("hij");
+    vak.classList.remove("hid");
+  }
+}
+window.addEventListener("load", () => {
+  hasNetwork(navigator.onLine);
+
+
+window.addEventListener("online", () => {
+  hasNetwork(true);
+});
+
+window.addEventListener("offline", () => {
+  hasNetwork(false);
+
+});
+
+});
+
+// .lenth
+    </script>
 </body>
 </html>
