@@ -184,6 +184,8 @@ for(let i=0; i<250; i++){
         var new_code=edit_country[i].isoCode
         country_code.push(new_code)
         }
+      var gencode=""  
+      var global_error_code=""
 console.log(country_data)
 console.log(new_code)
 console.log(country_code)
@@ -241,6 +243,11 @@ else if (request.params.jbk.toLowerCase()==user_profile){
     // console.log(edit_country)
 response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
 }
+else if (request.params.jbk.toLowerCase()=="resend-code"){
+    global_error_code= ""
+    response.redirect("/user-authenticate")
+
+}
 else if (request.params.jbk.toLowerCase()=="user-authenticate"){
     day=new Date().getFullYear()
     // console.log(typeof request.query)
@@ -248,6 +255,11 @@ else if (request.params.jbk.toLowerCase()=="user-authenticate"){
     //     response.render("error", {fan:day})
     // }
     // else(
+        var ty= uuid()
+        var ui=ty.replaceAll("-", "e")
+        var bt= ui.slice(15, 20)
+        gencode=bt
+        console.log(bt)
         var code_user=userprof
   var transporter = nmail.createTransport({
     service: 'gmail',
@@ -279,7 +291,7 @@ else if (request.params.jbk.toLowerCase()=="user-authenticate"){
     <p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
     <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
-    <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >5d8t</p>
+    <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
 
     <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
     <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
@@ -310,7 +322,7 @@ else if (request.params.jbk.toLowerCase()=="user-authenticate"){
       else
         console.log(info);
    }); 
-    response.render("authenticate", {fan:day})
+    response.render("authenticate", {fan:day, global: global_error_code})
     // )
 }
     else{
@@ -335,6 +347,8 @@ if(new Date().getHours()<12){
    const evar= eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut
 var userprof= ""
 app.post("/authenticate", (request, response)=>{
+var inputcode= request.body.code
+    if(inputcode==gencode){
     ght= userprof + "-profile"
     
 const parseIp = (request) =>
@@ -432,6 +446,12 @@ var transporter = nmail.createTransport({
 });
 
     response.redirect("/"+ght)
+}
+else{
+    var error_code= "Invalid code!"
+    global_error_code= error_code
+    response.redirect("/user-authenticate")
+}
     })
 
 

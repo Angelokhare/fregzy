@@ -43,14 +43,14 @@
     </header>
     <h1 class="auth-head" style="text-align: center; margin-top: 10%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
     <h1 class="auth-head" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Authentication Code</h1>
-    <h5 class="auth-sec" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your four(4) verification code, please check your Gmail.</h5>
+    <h5 class="auth-sec" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your verification code, please check your Gmail.</h5>
+    <h5 class="invalide-code" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= global %> </h5>
 
     <form action="/authenticate" method="post">
-        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center;  font-family: 'Varela Round', sans-serif; font-weight: 700; color: #4F0E0E;" type="text" placeholder="Enter Code!" minlength="4" maxlength="4" name="code"  required>
+        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center;  font-family: 'Varela Round', sans-serif; font-weight: 700; color: #4F0E0E; border-color: #4F0E0E; background-color: #fff;" type="text" placeholder="Enter Code!" minlength="5" maxlength="5" name="code"  required>
         <button class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
     </form>
-
-
+<h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif;">Didn't get a code? <a style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/resend-code" >Click to resend</a></h5>
 
 <div class="auth-height">
   <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
@@ -109,10 +109,9 @@
       var inputset=document.querySelector(".input-auth")
       var setin =inputset.value
       var gser= setin.trim()
-if(gser.length==4){
   document.querySelector(".gt").innerHTML=setin
   document.querySelector(".button-auth").click()
-}
+
 })
 
 var hi= document.querySelector(".lap")
