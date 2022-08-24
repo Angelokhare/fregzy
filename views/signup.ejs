@@ -106,8 +106,8 @@
       <!-- <label for="">Full Nmae</label> -->
       <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
       <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-      <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff;"><i style="color: #4F0E0E; font-size: 1.5vw;" class="fa fa-user-circle-o"></i></button>
-      <input class="profile-inside user-details user-input" style="border-radius: 0%; text-transform: capitalize; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; border-right: none; padding: 0.5% 0;" name="current" type="text" value="" required>
+      <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff; padding-right:2%;"><i style="color: #4F0E0E; font-size: 1.5vw;" class="fa fa-user-circle-o"></i></button>
+      <input class="profile-inside user-details user-input" style="border-radius: 0%; text-transform: capitalize; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; border-right: none; padding: 0.5% 0;" name="current" type="text" value="" placeholder="Enter your username" required>
       <button type="button" class="btn user-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none; background-color: #fff; border-color: #d4b194;"></button>
 
   </div>
@@ -117,8 +117,8 @@
     <!-- <label for="">Full Nmae</label> -->
     <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
     <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff;"><i style="color: #4F0E0E;" class="fa fa-user-circle-o"></i></button>
-    <input class="profile-inside user-details user-input" style="border-radius: 0%; text-transform: capitalize; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; border-right: none; padding: 0.5% 0;" name="current" type="email" value="" required>
+    <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff; padding-right:2%;"><i style="color: #4F0E0E; font-size: 1.5vw;" class="fa fa-user-circle-o"></i></button>
+    <input class="profile-inside user-details user-input" style="border-radius: 0%; text-transform: capitalize; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; border-right: none; padding: 0.5% 0;" name="current" type="email" placeholder="Enter your Email" value="" required>
     <button type="button" class="btn user-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none; background-color: #fff; border-color: #d4b194;"></button>
 
 </div>
@@ -142,13 +142,36 @@
       <!-- <label for="">Full Nmae</label> -->
 </div>
   
+
+
+
+
+<h1  class="user-sign country_name" style="font-family: 'Varela Round', sans-serif; font-weight: 700; margin-left:16%; margin-top: 4%; color: #1d2a35;">Country</h1>
+<div class="profile-group" style="margin-left: 15%; margin-right: 15%;">
+    <!-- <label for="">Full Nmae</label> -->
+    <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
+    <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
+    <!-- <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #4F0E0E;  background-color: #fff;"><img class="flag" src="https://flagcdn.com/20x15/<%= country[30].name %>.png"></button> -->
+    <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff; padding-right:2%;"><i style="color: #4F0E0E; font-size: 1.5vw;" class="fa fa-male" aria-hidden="true"></i></button>
+    <select class="profile-inside user-details country_select country-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700;" aria-valuetext="Nigeria" name="country" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Custom">Custom</option>
+    <!-- <option selected="selected">3</option> -->
+
+    </select>
+    <button type="button" class="btn user-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none; background-color: #fff; border-color: #d4b194;"></button>
+     
+      <!-- <label for="">Full Nmae</label> -->
+</div>
+
 <h1  class="user-sign" style="font-family: 'Varela Round', sans-serif; font-weight: 700; margin-left:16%; margin-top: 4%; color: #1d2a35;">Password</h1>
 <div class="profile-group" style="margin-left: 15%; margin-right: 15%; margin-bottom: 4%;">
     <!-- <label for="">Full Nmae</label> -->
     <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
     <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff;"><i style="color: #4F0E0E;" class="fa fa-key"></i></button>
-    <input class="profile-inside user-details pass-login pass-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; padding-right: 11%;" name="current" value="password123" type="password" required>
+    <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #d4b194;  background-color: #fff; padding-right:2%;"><i style="color: #4F0E0E; font-size: 1.5vw;" class="fa fa-key"></i></button>
+    <input class="profile-inside user-details pass-login pass-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fff; border-color: #d4b194; font-weight: 700; padding-right: 11%;" name="current" value="" placeholder="" type="password" required>
     <button class="btn vis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
 <button class="btn invis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button> 
     <!-- <button type="button" class="btn pass-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #D8B6A4;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
@@ -174,6 +197,8 @@
     
           <!-- <label for="">Full Nmae</label> -->
         </div>
+
+        <button class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Create Account</button>
 
  </form>
 </div>
@@ -252,9 +277,6 @@
       <li class="ve">
         <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
     </li>
-    <li class="ve">
-      <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
-  </li>
   <li class="ve">
    <i class="wr fa fa-twitter-square twit" style="border-radius: 3px; padding: 15%; font-size: 18px;"></i></a>
   </li>
