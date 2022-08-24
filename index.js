@@ -345,7 +345,7 @@ transporter.sendMail(mailOptions, function (err, info) {
 
 }
 
-else if(request.params.jbk.toLowerCase()=="account_recovery"){
+else if(request.params.jbk.toLowerCase()=="account-recovery"){
   response.render("accountrecovery", {fan:day, det: emailcheck})
 }
     else{
@@ -836,3 +836,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit106
 // commit107
 // commit108
+// commit109
