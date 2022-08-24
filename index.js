@@ -11,6 +11,7 @@ const userip= require("request-ip")
 const axios = require("axios");
 const {v4:uuid}=require("uuid")
 const { request, response } = require("express")
+const { verify } = require("crypto")
 var app = express()
 // const country = require("countries-list")
 let Country = require('country-state-city').Country;
@@ -186,17 +187,43 @@ for(let i=0; i<250; i++){
         }
       var gencode=""  
       var global_error_code=""
+      var jwtcode=""
 console.log(country_data)
 console.log(new_code)
 console.log(country_code)
+
+
+
+  app.get("/user-authenticate", vetty, (request, response)=>{
+jwt.verify(request.token, "angelo", (err, authuser)=>{
+if(err){
+  response.send("sorry")
+}
+else{
+    var day=new Date().getFullYear()
+    // console.log(typeof request.query)
+    // if(typeof(request.query)===undefined){
+    //     response.render("error", {fan:day})
+    // }
+    // else(
+
+    response.render("authenticate", {fan:day, global: global_error_code})
+    // )
+  }
+  })
+})
+
+   var day=new Date().getFullYear()
 app.get("/", (request, response)=>{
-    day=new Date().getFullYear()
+   var day=new Date().getFullYear()
     // day= new Date().toLocaleDateString()
     console.log(day)
-    response.render("index"), {fan:day}
+    response.render("index", {fan:day})
 })
+var emailcheck=""
 var user_profile= userprof +"-profile"
 app.get("/:jbk", (request, response)=>{
+  var day=new Date().getFullYear()
     var user_route= userprof +"-dashboard"
     var user_profile= userprof +"-profile"
 console.log(userprof)
@@ -206,8 +233,9 @@ console.log(user_route)
         response.render("login", {fan:day})
     }
     else if(request.params.jbk.toLowerCase()=="signup"){
+      var edit_country=Country.getAllCountries()
         day=new Date().getFullYear()
-    response.render("signup", {fan:day})
+    response.render("signup", {fan:day, country:edit_country})
     }
     else if(request.params.jbk.toLowerCase()=="confirm"){
         day=new Date().getFullYear()
@@ -245,92 +273,97 @@ response.render("profile", {username: userprof, country:edit_country, countrt_fa
 }
 else if (request.params.jbk.toLowerCase()=="resend-code"){
     global_error_code= ""
+    var ty= uuid()
+    var ui=ty.replaceAll("-", "e")
+    var bt= ui.slice(15, 20)
+    gencode=bt
+    console.log(bt)
+    var code_user=userprof
+var transporter = nmail.createTransport({
+service: 'gmail',
+auth: {
+       user: process.env.USER_GMAIL,
+       pass: process.env.GMAIL_PASSWORD
+   }
+});
+
+const mailOptions = {
+from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+subject: 'Your Authentication Code!', // Subject line
+html: `
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.ve{
+    display: inline-block;
+    padding: 2px 25px;
+  }
+  .docking {
+    list-style: none;
+  } 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
+<p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
+
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+<hr>
+<ul style=" list-style: none; ">
+<li style="display: inline-block; padding: 2px 1px;">
+  <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+ <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+</li>
+</ul><br>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+`,// plain text body
+
+
+}
+transporter.sendMail(mailOptions, function (err, info) {
+  if(err)
+    console.log(err)
+  else{
+    console.log(info);
+  }
+}); 
     response.redirect("/user-authenticate")
 
 }
-else if (request.params.jbk.toLowerCase()=="user-authenticate"){
-    day=new Date().getFullYear()
-    // console.log(typeof request.query)
-    // if(typeof(request.query)===undefined){
-    //     response.render("error", {fan:day})
-    // }
-    // else(
-        var ty= uuid()
-        var ui=ty.replaceAll("-", "e")
-        var bt= ui.slice(15, 20)
-        gencode=bt
-        console.log(bt)
-        var code_user=userprof
-  var transporter = nmail.createTransport({
-    service: 'gmail',
-    auth: {
-           user: process.env.USER_GMAIL,
-           pass: process.env.GMAIL_PASSWORD
-       }
-   });
-  
-   const mailOptions = {
-    from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
-    subject: 'Your Authentication Code!', // Subject line
-    html: `
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
-    .ve{
-        display: inline-block;
-        padding: 2px 25px;
-      }
-      .docking {
-        list-style: none;
-      } 
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
-    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
-    <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
 
-    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
-    <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
-    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
-    <hr>
-    <ul style=" list-style: none; ">
-    <li style="display: inline-block; padding: 2px 1px;">
-      <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
-  </li>
-  <li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
-  <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
-  </li>
-  <li style="display: inline-block; margin-left:-10px">
-     <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
-  </li>
-  <li style="display: inline-block; margin-left:-10px">
-  <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
-  </li>
-  </ul><br>
-  <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
-    `,// plain text body
-   
-   
-   }
-   transporter.sendMail(mailOptions, function (err, info) {
-      if(err)
-        console.log(err)
-      else
-        console.log(info);
-   }); 
-    response.render("authenticate", {fan:day, global: global_error_code})
-    // )
+else if(request.params.jbk.toLowerCase()=="account_recovery"){
+  response.render("accountrecovery", {fan:day, det: emailcheck})
 }
     else{
 response.redirect("/")
     }
 })
 
-
+app.post("/accountrecovery", (request, response)=>{
+var checkgmail= request.body.auth_gmail
+if(checkgmail !="angela@example.com"){
+  emailcheck="Sorry, this email is not available in our database!"
+  response.redirect("/account_recovery")
+}
+else if(checkgmail =="angela@example.com"){
+  emailcheck=""
+response.redirect("/")
+}
+})
 
 
 
@@ -577,11 +610,108 @@ var transporter = nmail.createTransport({
 	console.error(error);
 });
 
+
+
+var ty= uuid()
+var ui=ty.replaceAll("-", "e")
+var bt= ui.slice(15, 20)
+gencode=bt
+console.log(bt)
+var code_user=userprof
+var transporter = nmail.createTransport({
+service: 'gmail',
+auth: {
+   user: process.env.USER_GMAIL,
+   pass: process.env.GMAIL_PASSWORD
+}
+});
+
+const mailOptions = {
+from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+subject: 'Your Authentication Code!', // Subject line
+html: `
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.ve{
+display: inline-block;
+padding: 2px 25px;
+}
+.docking {
+list-style: none;
+} 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
+<p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
+
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+<hr>
+<ul style=" list-style: none; ">
+<li style="display: inline-block; padding: 2px 1px;">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+</li>
+</ul><br>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+`,// plain text body
+
+
+}
+transporter.sendMail(mailOptions, function (err, info) {
+if(err)
+console.log(err)
+else{
+console.log(info);
+}
+}); 
+
+
+const namein={
+  name: usern,
+  gmail:"angelobeckan794@gmail.com",
+  job: "engineer"
+}
+jwt.sign({namein}, "angelo" , {expiresIn: "5m"},(err, tokeni)=>{
+  tokeni
+  console.log(tokeni)
+})
+console.log(jwtcode)
     // response.redirect("/"+user_route)
     response.redirect("/user-authenticate")
  })
       
-    
+function vetty(request, response, next){
+const jve= request.headers['authorization']
+console.log(jve)
+if(typeof jve !== "undefined"){
+const slittoken = jve.split(" ")[1]
+request.tokeni= slittoken
+console.log(request.tokeni)
+// const slit= sliceTken[1]
+next()
+}
+else{
+  // day=new Date().getFullYear()
+  response.redirect("/")
+}
+}    
+
 
  app.post("/profile-adjestment", (request, response)=>{
     response.redirect("/"+ userprof + "-profile")
@@ -705,3 +835,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit105
 // commit106
 // commit107
+// commit108

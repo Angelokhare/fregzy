@@ -1006,6 +1006,14 @@ display: none;
   height: 4vw;
   font-size: 2vw;
 }
+.input-ver{
+  margin-top: 2%;
+  width: 62%;
+  height: 4vw;
+  font-size: 2vw;
+   padding: 3% 3%;
+}
+
 .icon-auth{
   width: 7%;
 } 
@@ -1021,7 +1029,7 @@ font-size: 3vw;
 margin-top: 2%;
   border-radius: 20px;
   margin-top: 5%;
-  padding: 0.5rem 25%;
+  padding: 1.5rem 25%;
   margin-bottom: 5%;
 }
 .notcode{
@@ -1032,6 +1040,11 @@ margin-top: 2%;
   font-size: 1.5vw;
 }
 /* authentication */
+
+/* sign up */
+.user-sign{
+  font-size: 1vw;
+}
 
 @media only screen and (max-width:1250px){
   .pro {
@@ -1299,6 +1312,10 @@ font-size: 4vw;
   }
   .invalide-code{
     font-size: 2.5vw;
+  }
+  .input-ver{
+font-size: 3vw;
+padding: 5% 5%;
   }
 }
 
@@ -1719,6 +1736,9 @@ margin-left: 10.6%;
 width: 60%;
 font-size: 5vw;
 }
+.input-ver{
+  width: 75%;
+}
 }
 @media only screen and (max-width: 588px){
   .gather-2size{
@@ -1844,6 +1864,12 @@ font-size: 5vw;
 }
 .input-auth{
   font-size: 6vw;
+}
+.button-auth{
+    padding: 1rem 25%;
+}
+.input-ver{
+font-size: 4.5vw;
 }
 }
 @media only screen and (max-width: 492px){
@@ -2107,6 +2133,9 @@ margin-top: 2%;
   .invalide-code{
     font-size: 5vw;
   }
+  .input-ver{
+    width: 80%;
+    }
 }
 
 
