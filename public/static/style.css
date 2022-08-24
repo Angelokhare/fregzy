@@ -1016,7 +1016,15 @@ display: none;
 
 .icon-auth{
   width: 7%;
-} 
+}
+ .icon-auth2{
+  width: 4.4%; 
+  margin-left:1.7%;
+   margin-top: 1.7%;
+    margin-bottom: 1.7%;
+     margin-right: 0.4%;
+ }
+
 .auth-head{
   font-size: 5vw;
 }
@@ -1475,6 +1483,9 @@ padding: 5% 5%;
           }             
           .icon-auth{
             width: 10%;
+          }    
+          .icon-auth2{
+            width: 7.4%;
           }    
           .notcode{
            margin-bottom: 20%; 
@@ -1955,7 +1966,10 @@ display: none;
   }
   .icon-auth{
     width: 15%;
-  }  
+  } 
+  .icon-auth2{
+    width: 10%;
+  }   
   .authicon{
     font-size: 5.5vw;
     padding-top: 80%;
@@ -2224,6 +2238,10 @@ margin-top: 2%;
   .icon-auth{
     width: 20%;
     margin-bottom: -2%;
+
+  }  
+  .icon-auth2{
+    width: 13%;
 
   }  
   .notcode{

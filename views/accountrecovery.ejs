@@ -31,7 +31,7 @@
 <body class="sz">
     <header class="header-white sep" style="display: flex;">
         <img class="icon-auth icon1" src="static/icon.webp" alt="">
-        <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
+        <img class="icon-auth2 icon2 hid" style="" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700;" >Freg<span class="header-other other-red">zy</span></h1>
         <nav>
           <ul class="docking">
@@ -106,6 +106,34 @@
 </footer>
 </div>
     <script>
+      document.querySelector(".light").addEventListener("click", ()=>{
+  document.querySelector(".light").classList.add("hid")
+  document.querySelector(".dark").classList.remove("hid")
+  document.querySelector("body").classList.add("fz")
+  document.querySelector("body").classList.remove("sz")
+  document.querySelector("header").classList.add("header-black")
+  document.querySelector("header").classList.remove("header-white")
+  document.querySelector(".button-auth").style.borderColor="#fff"
+  document.querySelector(".icon1").classList.add("hid")
+  document.querySelector(".icon2").classList.remove("hid")
+  document.querySelector(".header-other").classList.add("other-blue")
+  document.querySelector(".header-other").classList.remove("other-red")
+
+})
+document.querySelector(".dark").addEventListener("click", ()=>{
+  document.querySelector(".dark").classList.add("hid")
+  document.querySelector(".light").classList.remove("hid")
+  document.querySelector("body").classList.add("sz")
+  document.querySelector("body").classList.remove("fz")
+  document.querySelector("header").classList.remove("header-black")
+  document.querySelector("header").classList.add("header-white")
+  document.querySelector(".button-auth").style.borderColor="#4f0e0e"
+  document.querySelector(".icon2").classList.add("hid")
+  document.querySelector(".icon1").classList.remove("hid")
+  document.querySelector(".header-other").classList.remove("other-blue")
+  document.querySelector(".header-other").classList.add("other-red")
+
+})
       document.querySelector(".input-auth").addEventListener("change", ()=>{
       var inputset=document.querySelector(".input-auth")
       var setin =inputset.value
@@ -148,6 +176,7 @@ window.addEventListener("offline", () => {
 });
 
 // .lenth
+
     </script>
 </body>
 </html>

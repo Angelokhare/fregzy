@@ -329,7 +329,7 @@ html: `
 <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
 </li>
 </ul><br>
-<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 `,// plain text body
 
 
@@ -357,10 +357,76 @@ app.post("/accountrecovery", (request, response)=>{
 var checkgmail= request.body.auth_gmail
 if(checkgmail !="angela@example.com"){
   emailcheck="Sorry, this email is not available in our database!"
-  response.redirect("/account_recovery")
+  response.redirect("/account-recovery")
 }
 else if(checkgmail =="angela@example.com"){
   emailcheck=""
+var searchedemail= "angela@example.com"
+var gmailowner= "Angelokhare"
+  var transporter = nmail.createTransport({
+    service: 'gmail',
+    auth: {
+           user: process.env.USER_GMAIL,
+           pass: process.env.GMAIL_PASSWORD
+       }
+    });
+    
+    const mailOptions = {
+    from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+    subject: 'Password Recovery!', // Subject line
+    html: `
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    .ve{
+        display: inline-block;
+        padding: 2px 25px;
+      }
+      .docking {
+        list-style: none;
+      } 
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${gmailowner}</span>,</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >You can reset your password by clicking the link below:</p>
+    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 0.5rem 25%" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:20px; color:#fff" href="www.fregzyapp.herokuapp.com">Reset your password </a></button>
+    
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+    <hr>
+    <ul style=" list-style: none; ">
+    <li style="display: inline-block; padding: 2px 1px;">
+      <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+    </li>
+    <li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+    <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+    </li>
+    <li style="display: inline-block; margin-left:-10px">
+     <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+    </li>
+    <li style="display: inline-block; margin-left:-10px">
+    <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+    </li>
+    </ul><br>
+    <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+    `,// plain text body
+    
+    
+    }
+    transporter.sendMail(mailOptions, function (err, info) {
+      if(err)
+        console.log(err)
+      else{
+        console.log(info);
+      }
+    }); 
+
+
 response.redirect("/")
 }
 })
@@ -442,9 +508,9 @@ var transporter = nmail.createTransport({
   <img style="width:18px" src="${gat.flag}" alt="">
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Greenwich Mean Time: ${gat.gmt}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Latitude: ${gat.latitude}°</p><br><br>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
   <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
   <hr>
   <ul style=" list-style: none; ">
@@ -461,7 +527,7 @@ var transporter = nmail.createTransport({
 <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
 </li>
 </ul><br>
-<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
   `,// plain text body
  
  
@@ -574,9 +640,9 @@ var transporter = nmail.createTransport({
   <img style="width:18px" src="${gat.flag}" alt="">
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Greenwich Mean Time: ${gat.gmt}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Latitude: ${gat.latitude}°</p><br><br>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
-  <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If this was you, carry on. <span style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">We wont notify you about logins from this device again.</span></p>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+  <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
   <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
   <hr>
   <ul style=" list-style: none; ">
@@ -593,7 +659,7 @@ var transporter = nmail.createTransport({
 <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
 </li>
 </ul><br>
-<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
   `,// plain text body
  
  
@@ -647,11 +713,11 @@ list-style: none;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
 <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
-<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
 
-<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
-<p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
 <hr>
 <ul style=" list-style: none; ">
@@ -668,7 +734,7 @@ list-style: none;
 <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
 </li>
 </ul><br>
-<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 `,// plain text body
 
 
@@ -838,3 +904,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit108
 // commit109
 // commit110
+// commit111
