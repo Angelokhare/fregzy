@@ -241,7 +241,11 @@ console.log(user_route)
         day=new Date().getFullYear()
     response.render("confirm", {fan:day})
     }
+    else if(request.params.jbk.toLowerCase()=="password-recovery"){
+      day=new Date().getFullYear()
+  response.render("passwordrecovery", {fan:day})
 
+  }
     else if (request.params.jbk.toLowerCase()==user_route){
     day=new Date().getFullYear()
     var greet= ''
@@ -306,7 +310,7 @@ html: `
   } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
+<p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${code_user}</a>,</p>
 <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
 <p style="font-weight: 500;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${bt}</p>
@@ -390,10 +394,11 @@ var gmailowner= "Angelokhare"
       } 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${gmailowner}</span>,</p>
+    <img style="width:70px; padding: 0 45%; display:block; background-color:#fff" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${gmailowner}</a>,</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >You can reset your password by clicking the link below:</p>
-    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 0.5rem 25%" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:20px; color:#fff" href="www.fregzyapp.herokuapp.com">Reset your password </a></button>
+    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 25%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="www.fregzyapp.herokuapp.com">Reset your password </a></button>
     
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
@@ -500,7 +505,8 @@ var transporter = nmail.createTransport({
     } 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${userprof}</span>,</p>
+  <img style="width:70px; padding: 0 45%; display:block; background-color:#fff" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${userprof}</a>,</p>
   <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >IP Address: ${parseIp(request)}</p>
@@ -632,7 +638,8 @@ var transporter = nmail.createTransport({
     } 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${usern}</span>,</p>
+  <img style="width:70px; padding: 0 45%; display:block; background-color:#fff" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+  <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${usern}</a>,</p>
   <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account was just Logged into with a new Device.</p><br>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >${eday + "," + " "+ month[new Date().getMonth()] + " " + new Date().getDate() + "th, " + new Date().getFullYear() + " at " + new Date().getHours() + ":" + new Date().getMinutes() + ut}</p>
   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >IP Address: ${parseIp(request)}</p>
@@ -711,6 +718,7 @@ list-style: none;
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<img style="width:70px; padding: 0 45%; display:block; background-color:#fff" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
 <p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${code_user}</span>,</p>
 <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Someone tried to log in to your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account with a new Device.</p>
 <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
@@ -905,3 +913,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit109
 // commit110
 // commit111
+// commit112

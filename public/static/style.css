@@ -1053,7 +1053,22 @@ margin-top: 2%;
 .user-sign{
   font-size: 1vw;
 }
-
+.auto-big{
+  display: block;
+}
+.auto-small{
+  display: none;
+}
+.resultpassword{
+  font-size: 1vw;
+  margin-left: 80%
+}
+.display-ic{
+  font-size: 1.5vw;
+}
+.first-pass{
+  margin-top: 8%;
+}
 @media only screen and (max-width:1250px){
   .pro {
     padding-right: 90px;
@@ -1072,6 +1087,10 @@ margin-top: 2%;
 }
 .invalide-code{
   font-size: 2vw;
+}
+.resultpassword{
+  font-size: 1vw;
+  margin-left: 80%
 }
 }
 @media only screen and (max-width:1174px){
@@ -1106,6 +1125,9 @@ margin-top: 2%;
         .user-details{
           font-size: 2vw;
         } 
+        .display-ic{
+          font-size: 2vw;
+        }     
   }
 
 @media only screen and (max-width:1085px){
@@ -1193,6 +1215,10 @@ margin-top: -24%;
 }
 .notcode{
   font-size: 2.5vw;
+}
+.resultpassword{
+  font-size: 1.5vw;
+  margin-left: 76%
 }
 }
 
@@ -1325,6 +1351,9 @@ font-size: 4vw;
 font-size: 3vw;
 padding: 5% 5%;
   }
+  .user-sign{
+    font-size: 1.5vw;
+  }
 }
 
 @media only screen and (max-width:895px){
@@ -1409,6 +1438,9 @@ padding: 5% 5%;
           .auth-sec{
             font-size: 3.5vw;
           }      
+          .display-ic{
+            font-size: 2.5vw;
+          }           
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -1547,6 +1579,9 @@ padding-right: 40px;
   .save-profile{
     font-size: 2.5vw;
    } 
+   .first-pass{
+    margin-top: 12%;
+  } 
 }
 @media only screen and (max-width:735px){
 .footer-heading{
@@ -1687,6 +1722,16 @@ margin-left: 10.6%;
 .input-auth{
   margin-top: 10%;
 }
+.resultpassword{
+  font-size: 2vw;
+  margin-left: 72%
+}
+.user-sign{
+  font-size: 2vw;
+}
+.display-ic{
+  font-size: 3vw;
+}     
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1750,6 +1795,7 @@ font-size: 5vw;
 .input-ver{
   width: 75%;
 }
+
 }
 @media only screen and (max-width: 588px){
   .gather-2size{
@@ -1818,6 +1864,9 @@ font-size: 5vw;
  .fq{
   font-size: 1.7vw;
  } 
+ .display-ic{
+  font-size: 3.5vw;
+}      
 }
 @media only screen and (max-width: 500px){
 .heading{
@@ -1882,6 +1931,10 @@ font-size: 5vw;
 .input-ver{
 font-size: 4.5vw;
 }
+.resultpassword{
+  font-size: 2.5vw;
+  margin-left: 70%
+} 
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -1981,6 +2034,9 @@ display: none;
   /* display: inline-block; */
   padding:0 50px;
 }
+.user-sign{
+  font-size: 2.5vw;
+}
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -2034,6 +2090,14 @@ border-radius: 10px;
       font-size: 3.5vw;
     margin-bottom: 40%;
   }
+
+  .auto-big{
+    display: none;
+  }
+  .auto-small{
+    display: block;
+  }
+
 }
 @media only screen and (max-width: 444px){
   .bottom-noti{
@@ -2041,6 +2105,9 @@ border-radius: 10px;
     padding:0 45px;
     /* width: 18%; */
   }
+  .display-ic{
+    font-size: 4vw;
+  }     
   }
   @media only screen and (max-width: 424px){
     .bottom-noti{
@@ -2247,6 +2314,16 @@ margin-top: 2%;
   .notcode{
   font-size: 4vw;
   }
+  .resultpassword{
+    font-size: 3vw;
+    margin-left: 67%
+  } 
+  .user-sign{
+    font-size: 3vw;
+  }
+  .display-ic{
+    font-size: 4.5vw;
+  }     
   }
 
 

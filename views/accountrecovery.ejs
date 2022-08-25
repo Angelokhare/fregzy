@@ -42,9 +42,12 @@
         </nav>
     </header>
     <img style="display: block; margin-left:auto; margin-right:auto; width: 20vw; margin-top: 10%;" src="static/padlock.png" alt="">
-    <h1 class="auth-head" style="text-align: center; margin-top: 2%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
-    <h1 class="auth-head" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">GMAIL</h1>
-    <h5 class="auth-sec" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will send your verification link to the Gmail you registered with.</h5>
+    <h1 class="auth-head auto-big" style="text-align: center; margin-top: 2%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Forgot</h1>
+    <h1 class="auth-head auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Password?</h1>
+    <p class="auth-head auto-small" style=" margin-top: 7%; margin-left: 7%; font-size: 12vw;font-family: 'Merienda One', cursive; font-weight: 700;">Forgot</p>
+    <p class="auth-head auto-small" style="font-family: 'Merienda One', cursive; margin-left: 7%; font-size: 12vw; font-weight: 700;">Password?</p>
+    <h5 class="auth-sec auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%; font-weight: 700;">We will send your verification link to the Gmail you registered with.</h5>
+    <p class="auth-sec auto-small" style="margin-left: 5%; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%; font-weight: 700;">We will send your verification link to the Gmail you registered with.</p>
     <h5 class="invalide-code" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= det %> </h5>
 
     <form action="/accountrecovery" method="post">
@@ -54,12 +57,12 @@
 <h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif; visibility: hidden;">Didn't get a code? <span style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" >Click to resend</span></h5>
 
 <div class="auth-height">
-  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
+  <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: -1%; padding-top: 0%;">
     <img class="rap" src="static/connection.png" alt="">
-    <h1 class="wer">No Network</h1>
+    <h1 style="font-size: 4vw; margin-top: 4%;" class="wer">No Network</h1>
     <ul class="docking">
   <li class="lap">
-  <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
+  <button class="btn " style="border-radius: 10px; padding: 0.3rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
   </li>
   </ul>
   </div>
@@ -106,6 +109,8 @@
 </footer>
 </div>
     <script>
+
+
       document.querySelector(".light").addEventListener("click", ()=>{
   document.querySelector(".light").classList.add("hid")
   document.querySelector(".dark").classList.remove("hid")
@@ -134,14 +139,7 @@ document.querySelector(".dark").addEventListener("click", ()=>{
   document.querySelector(".header-other").classList.add("other-red")
 
 })
-      document.querySelector(".input-auth").addEventListener("change", ()=>{
-      var inputset=document.querySelector(".input-auth")
-      var setin =inputset.value
-      var gser= setin.trim()
-  document.querySelector(".gt").innerHTML=setin
-  document.querySelector(".button-auth").click()
 
-})
 
 var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{
@@ -174,6 +172,15 @@ window.addEventListener("offline", () => {
 });
 
 });
+
+document.querySelector(".input-auth").addEventListener("change", ()=>{
+      var inputset=document.querySelector(".input-auth")
+      var setin =inputset.value
+      var gser= setin.trim()
+  document.querySelector(".gt").innerHTML=setin
+  document.querySelector(".button-auth").click()
+
+})
 
 // .lenth
 
