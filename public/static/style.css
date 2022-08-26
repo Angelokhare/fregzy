@@ -411,7 +411,6 @@ vertical-align: middle;
   visibility: hidden;
 }
 .link-line {text-decoration: none;
-  font-family: 'Varela Round', sans-serif;
   color: white;}
 .link-line:hover{
 color: white;
