@@ -41,20 +41,15 @@
           </ul>
         </nav>
     </header>
-    <img class="auth-icon-dis" style="display: block; margin-left:auto; margin-right:auto; margin-top: 10%;" src="static/padlock.png" alt="">
-    <h1 class="auth-head auto-big" style="text-align: center; margin-top: 2%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
-    <h1 class="auth-head auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Authentication Code</h1>
-    <p class="auth-head auto-small" style="margin-left: 7%; margin-top: 7%; font-size: 12vw;  font-family: 'Merienda One', cursive; font-weight: 700;">Enter your</p>
-    <p class="auth-head auto-small" style="margin-left: 7%; font-size: 12vw; font-family: 'Merienda One', cursive; font-weight: 700;">Authentication Code</p>
-    <h5 class="auth-sec auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your verification code, please check your Gmail.</h5>
-    <p class="auth-sec auto-small sap" style="margin-left: 5%;; margin-top: 5%; padding: 0 2%; font-weight: 700;">We will text you your verification code, please check your Gmail.</p>
-    <h5 class="invalide-code" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= global %> </h5>
+    <img class="auth-icon-dis" style="display: block; margin-left:auto; margin-right:auto; margin-top: 10%;" src="static/confirmemail.png" alt="">
+    <h1 class="auth-head auto-big" style="text-align: center; margin-top: 2%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Email</h1>
+    <h1 class="auth-head auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Sent!</h1>
+    <p class="auth-head auto-small" style="margin-left: 7%; margin-top: 7%; font-size: 12vw;  font-family: 'Merienda One', cursive; font-weight: 700;">Email</p>
+    <p class="auth-head auto-small" style="margin-left: 7%; font-size: 12vw; font-family: 'Merienda One', cursive; font-weight: 700;">Sent!</p>
+    <h5 class="auth-sec auto-big sap" style="text-align: center; margin-top: 5%; padding: 0 2%; font-weight: 700;">The link to reset your password has been sent, please check your email!</h5>
+    <p class="auth-sec auto-small sap" style="margin-left: 5%;; margin-top: 5%; padding: 0 2%; font-weight: 700;">The link to reset your password has been sent, please check your email!</p>
 
-    <form action="/authenticate" method="post">
-        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center;  font-family: 'Varela Round', sans-serif; font-weight: 700; color: #4F0E0E; border-color: #4F0E0E; background-color: #fff;" type="text" placeholder="Enter Code!" minlength="5" maxlength="5" name="code"  required>
-        <button class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
-    </form>
-<h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif;">Didn't get a code? <a class="didn" style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/resend-code" >Click to resend</a></h5>
+<h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif; visibility: hidden;">Didn't get a code? <span style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" >Click to resend</span></h5>
 
 <div class="auth-height">
   <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
@@ -117,8 +112,6 @@
   document.querySelector("body").classList.remove("sz")
   document.querySelector("header").classList.add("header-black")
   document.querySelector("header").classList.remove("header-white")
-  document.querySelector(".button-auth").style.borderColor="#fff"
-  document.querySelector(".didn").style.borderColor="#fd859d"
   document.querySelector(".icon1").classList.add("hid")
   document.querySelector(".icon2").classList.remove("hid")
   document.querySelector(".header-other").classList.add("other-blue")
@@ -132,8 +125,6 @@ document.querySelector(".dark").addEventListener("click", ()=>{
   document.querySelector("body").classList.remove("fz")
   document.querySelector("header").classList.remove("header-black")
   document.querySelector("header").classList.add("header-white")
-  document.querySelector(".button-auth").style.borderColor="#4f0e0e"
-  document.querySelector(".didn").style.borderColor="#4F0E0E"
   document.querySelector(".icon2").classList.add("hid")
   document.querySelector(".icon1").classList.remove("hid")
   document.querySelector(".header-other").classList.remove("other-blue")

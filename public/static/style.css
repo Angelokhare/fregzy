@@ -1069,13 +1069,15 @@ margin-top: 2%;
 .first-pass{
   margin-top: 8%;
 }
-
+.auth-icon-dis{
+  width: 20vw;
+}
 .sap{
   font-family: 'Varela Round', sans-serif;
 }
-@supports(-webkit-touch-callout: none;){
+@supports(-webkit-touch-callout: none){
   .sap{
-
+    font-family: 'Roboto', sans-serif;
   }
 }
 @media only screen and (max-width:1250px){
@@ -2106,7 +2108,9 @@ border-radius: 10px;
   .auto-small{
     display: block;
   }
-
+  .auth-icon-dis{
+    width: 50vw;
+  }
 }
 @media only screen and (max-width: 444px){
   .bottom-noti{

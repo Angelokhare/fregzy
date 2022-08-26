@@ -118,9 +118,6 @@
        </div>
      </form>
      <ul class="social">
-      <li class="ve">
-        <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
-    </li>
     <li class="ve">
       <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
   </li>
@@ -142,7 +139,7 @@
    </ul>
  </nav>
 </div>
-<h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022-<%= day%> <span style="font-weight: 700;">Fregzy</span> </h5>
+<h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022-<%= fan%> <span style="font-weight: 700;">Fregzy</span> </h5>
   </footer>
 </div>
        <script>
@@ -168,6 +165,9 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".dark")[1].classList.remove("hid")
   document.querySelectorAll(".light")[0].classList.add("hid")
   document.querySelectorAll(".dark")[0].classList.remove("hid")
+  // document.querySelector("body").classList.add("fz")
+  // document.querySelector("body").classList.remove("sz")
+  
 })
 var lo_icon=document.querySelectorAll(".dark");
 lo_icon[i].addEventListener("click", ()=>{
