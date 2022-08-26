@@ -1069,6 +1069,15 @@ margin-top: 2%;
 .first-pass{
   margin-top: 8%;
 }
+
+.sap{
+  font-family: 'Varela Round', sans-serif;
+}
+@supports(-webkit-touch-callout: none;){
+  .sap{
+
+  }
+}
 @media only screen and (max-width:1250px){
   .pro {
     padding-right: 90px;
