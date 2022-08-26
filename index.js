@@ -378,7 +378,7 @@ app.post("/passwordrecovery", (request, response)=>{
     const mailOptions = {
     from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
     bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
-    subject: 'Password Recovery!', // Subject line
+    subject: 'Change of Password!', // Subject line
     html: `
     <style>
     @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
@@ -482,7 +482,7 @@ var gmailowner= "Angelokhare"
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${gmailowner}</a>,</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >You can reset your password by clicking the link below:</p>
-    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 25%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="www.fregzyapp.herokuapp.com/account-recovery">Reset your password </a></button>
+    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 25%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/account-recovery">Reset your password </a></button>
     
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
@@ -1006,3 +1006,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit111
 // commit112
 // commit113
+// commit114

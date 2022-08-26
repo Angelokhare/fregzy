@@ -4,7 +4,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0px 4%;
-    font-family: 'Varela Round', sans-serif;
   }
   .docking {
     list-style: none;
@@ -116,7 +115,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 12%;
-  font-family: 'Varela Round', sans-serif;
   padding-top: 2%;
 }
 .student{
@@ -159,7 +157,6 @@ margin-left: 31%;
   justify-content: space-between;
   align-items: center;
   padding: 0px 9%;
-  font-family: 'Varela Round', sans-serif;
   padding-top: 2%;
 }
 .third-setting{
@@ -168,7 +165,6 @@ margin-left: 31%;
   justify-content: space-between;
   align-items: center;
   padding: 0px 4%;
-  font-family: 'Varela Round', sans-serif;
   padding-top: 2%;
 }
 .second-par{
@@ -201,7 +197,6 @@ margin-left: 31%;
   justify-content: space-between;
   align-items: center;
   padding: 0px 4%;
-  font-family: 'Varela Round', sans-serif;
 }
 .firm{
   margin-left: 8.5%;
@@ -489,7 +484,6 @@ footer {
   padding-top: 2%;
   /* margin-top: 20%; */
   padding-bottom: 2%;
-  font-family: 'Varela Round', sans-serif;
   text-align: center;
   /* border-top-left-radius: 50px; */
   border-top-right-radius: 100px;
