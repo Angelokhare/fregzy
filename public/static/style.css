@@ -1070,7 +1070,8 @@ margin-top: 2%;
 }
 @supports(-webkit-touch-callout: none){
   .sap{
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Comfortaa', cursive;
   }
 }
 @media only screen and (max-width:1250px){
