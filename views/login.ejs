@@ -120,9 +120,9 @@
 <div style="" class="login-profile">
   <img class="log-icon1 login-icon" style=" " src="static/icon.webp" alt="">
   <img class="log-icon2 login-icon2 hid" style="" src="static/footer.webp" alt="">
-<h1 class="welcoming namef" style= "font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add1" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
+<h1 class="welcoming namef" style= "font-family: 'Cookie', cursive; font-weight: 700; margin-top: -5%; font-size: 6vw;">Welcome back<span class=" addition add1" style="font-family: 'Varela Round', sans-serif; font-size: 5vw; color: #4F0E0E;">!</span></h1>
 <h1 class="welcoming names" style="font-family: 'Cookie', cursive; font-size: 10vw; font-weight: 700; margin-top: -5%;">Welcome back<span class=" addition add2" style="font-family: 'Varela Round', sans-serif; font-size: 10vw; color: #4F0E0E;">!</span></h1>
-<h1 class="enter-details" style=" font-weight: 700; font-family: 'Comfortaa', cursive;">Welcome back, please enter your details.</h1>
+<h1 class="enter-details bap" style=" font-weight: 700; ">Welcome back, please enter your details.</h1>
 <button class="btn google-but sap" style="border-radius: 50px; text-decoration: none; font-weight: 700; border-color: #4F0E0E; border-radius: 10px; margin-top: 5%; background-color: #fff;" type="submit"><a  style="font-weight: 700; color: #000;" class="white sign-button google-log"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/google-logo.png"/> Login with Google</a></button>
 <button class="btn google-but lop sap" style="border-radius: 50px; text-decoration: none; font-weight: 700; border-color: #4F0E0E; border-radius: 10px; margin-top: 5%; background-color: #fff;" type="submit"><a  style="font-weight: 700; color: #000;" class="white sign-button google-log"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/> Login with Facebook</a></button>
 <br>
@@ -131,11 +131,11 @@
 <div style="width: 27%; margin-left: 41%; margin-top: 15%; margin-bottom: -8%; height: 3px; background-color:  #757575;"></div>
 <h1 class="or" style=" font-weight:400; margin-left: 33%; margin-top:4.5%; margin-bottom: 15%;">Or</h1>
 <form action="/login" method="post" class="">
-  <input class="login-inside username" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; margin-bottom: 10%; font-weight: 700; font-family: 'Comfortaa', cursive;" name="username" type="text" placeholder="Username or Email" required><br>
+  <input class="login-inside username bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; margin-bottom: 10%; font-weight: 700;" name="username" type="text" placeholder="Username or Email" required><br>
   <div class="login-form-group">
-    <input class="login-inside pass-login" style="border-radius: 0%; border-right: none; border-left: none; border-top: none; padding-right: 2.5rem; font-weight: 700; font-family: 'Comfortaa', cursive;" name="password" type="password" placeholder="Password" required>    
-    <button class="btn vis eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #fbf8f5;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png"/></button>
-    <button class="btn invis hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #fbf8f5;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
+    <input class="login-inside pass-login bap" style="border-radius: 0%; border-right: none; border-left: none; border-top: none; padding-right: 2.5rem; font-weight: 700;" name="password" type="password" placeholder="Password" required>    
+    <button class="btn vis hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #fbf8f5;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png"/></button>
+    <button class="btn invis eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #fbf8f5;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
     <button class="btn vis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #1d2a35;"><img class="img-pass" style="margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
     <button class="btn invis-white hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; border-top: none; border-bottom: none; background-color: #1d2a35;"><img class="img-pass" style=" margin-left:-60%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button>
   </div>
@@ -538,23 +538,23 @@ var ho= document.querySelector(".erase")
             document.querySelector(".vis").addEventListener("click", function(){
               document.querySelector(".vis").classList.add("hid")
               document.querySelector(".invis").classList.remove("hid")
-              document.querySelector(".pass-login").setAttribute("type", "text");
+              document.querySelector(".pass-login").setAttribute("type", "password");
             })
             document.querySelector(".invis").addEventListener("click", function(){
               document.querySelector(".vis").classList.remove("hid")
               document.querySelector(".invis").classList.add("hid")
-              document.querySelector(".pass-login").setAttribute("type", "password");
+              document.querySelector(".pass-login").setAttribute("type", "text");
             })
 
             document.querySelector(".vis-white").addEventListener("click", function(){
               document.querySelector(".vis-white").classList.add("hid")
               document.querySelector(".invis-white").classList.remove("hid")
-              document.querySelector(".pass-login").setAttribute("type", "text");
+              document.querySelector(".pass-login").setAttribute("type", "password");
             })
             document.querySelector(".invis-white").addEventListener("click", function(){
               document.querySelector(".vis-white").classList.remove("hid")
               document.querySelector(".invis-white").classList.add("hid")
-              document.querySelector(".pass-login").setAttribute("type", "password");
+              document.querySelector(".pass-login").setAttribute("type", "text");
             })
        </script>
 </body>

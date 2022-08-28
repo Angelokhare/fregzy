@@ -53,6 +53,11 @@ header {
     text-decoration: none;
   }
 
+  .sign-sz{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #fbf8f5 50%, #d6e6d5 50%);
+    color: #000;
+  }
   .sz{
     background-color: #fbf8f5;
     color: #000;
@@ -1065,6 +1070,39 @@ margin-top: 2%;
 .auth-icon-dis{
   width: 20vw;
 }
+.input-sign{
+  font-size: 1.2vw;
+}
+.button-signup{
+  padding: 1rem 35%;
+  font-size: 1.5vw;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.google-signup{
+  font-size: 1.2vw;
+  padding: 1.3rem 32%;
+  margin-top: -4%;
+}
+.sign-dis-girl{
+  width: 20%; 
+  margin-left: 65%;
+   margin-bottom: -80%;
+    margin-top: 8%;
+}
+.create-sign{
+  font-size: 5vw;
+}
+.bap{
+  font-family: 'Varela Round', sans-serif;
+}
+@supports(-webkit-touch-callout: none){
+  .bap{
+    font-family: 'Comfortaa', cursive;
+    
+  }
+}
+
 .sap{
   font-family: 'Varela Round', sans-serif;
 }
@@ -1359,6 +1397,9 @@ padding: 5% 5%;
   .user-sign{
     font-size: 1.5vw;
   }
+  .create-sign{
+    font-size: 6vw;
+  }
 }
 
 @media only screen and (max-width:895px){
@@ -1409,6 +1450,12 @@ padding: 5% 5%;
 .sign-link{
   font-size: 2.7vw;
 } 
+.sign-dis-girl{
+  width: 27%; 
+  margin-left: 65%;
+   margin-bottom: -116%;
+    margin-top: 8%;
+}
 }
 
 @media only screen and (max-width:855px){
@@ -1555,13 +1602,23 @@ padding-top: 10%;
   height: 10vw;
 }
 }
+@media only screen and (max-width:1200px) and (min-height: 1000px){
+  .sign-dis-girl{
+    width: 30%; 
+    margin-left: 65%;
+     margin-bottom: -116%;
+      margin-top: 8%;
+  }
+}
 @media only screen and (max-width:1050px) and (min-height: 1000px){
 .auth-height{
   position: fixed;
   bottom: 0;
   width: 100%;
 }
+
 }
+
 @media only screen and (max-width:769px){
   .pride{
 padding-right: 40px;
@@ -1647,6 +1704,14 @@ font-size: 5vw;
 }
 .notcode{
 font-size: 3vw;
+}
+.sign-dis-girl{
+  width: 35%;
+  margin-left: 57%;
+ margin-bottom: -132%; 
+}
+.create-sign{
+  font-size: 7vw;
 }
 }
 @media only screen and (max-width:700px){

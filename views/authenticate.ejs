@@ -144,14 +144,14 @@ document.querySelector(".dark").addEventListener("click", ()=>{
 document.querySelector(".input-auth").addEventListener("keydown", (e)=>{
   document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
   var userpa= document.querySelector(".tq").innerHTML
-  if(userpa.length==4){
+  if(userpa.length==5){
     document.querySelector(".button-auth").click()
   }
 })
 document.querySelector(".input-auth").addEventListener("keyup", (e)=>{
   document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
   var userpb= document.querySelector(".tq").innerHTML
-  if(userpb.length==4){
+  if(userpb.length==5){
     document.querySelector(".button-auth").click()
   }
 

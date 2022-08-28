@@ -49,7 +49,10 @@
     <h5 class="auth-sec auto-big sap" style="text-align: center; margin-top: 5%; padding: 0 2%; font-weight: 700;">The link to reset your password has been sent, please check your email!</h5>
     <p class="auth-sec auto-small sap" style="margin-left: 5%;; margin-top: 5%; padding: 0 2%; font-weight: 700;">The link to reset your password has been sent, please check your email!</p>
 
-<h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif; visibility: hidden;">Didn't get a code? <span style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" >Click to resend</span></h5>
+    <h1 class="sap notcode" style="text-align: center; font-weight: 700; margin-top: 15%;">This page will be redirected in <span style="color: #4F0E0E; margin-top: 10%;" class="rr">5 </span>seconds</h1>
+
+
+<!-- <h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif; visibility: hidden;">Didn't get a code? <span style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" >Click to resend</span></h5> -->
 
 <div class="auth-height">
   <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
@@ -131,22 +134,16 @@ document.querySelector(".dark").addEventListener("click", ()=>{
   document.querySelector(".header-other").classList.add("other-red")
 
 })
-
-document.querySelector(".input-auth").addEventListener("keydown", (e)=>{
-  document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
-  var userpa= document.querySelector(".tq").innerHTML
-  if(userpa.length==4){
-    document.querySelector(".button-auth").click()
+var sec= 5
+var tu= setInterval(()=>{
+  sec--
+  document.querySelector(".rr").innerHTML=sec
+  if(sec==0){
+    clearInterval(tu)
+    window.location=("/")
   }
-})
-document.querySelector(".input-auth").addEventListener("keyup", (e)=>{
-  document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
-  var userpb= document.querySelector(".tq").innerHTML
-  if(userpb.length==4){
-    document.querySelector(".button-auth").click()
-  }
+}, 1000)
 
-})
 
 var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{
@@ -179,6 +176,8 @@ window.addEventListener("offline", () => {
 });
 
 });
+
+
 
 // .lenth
     </script>
