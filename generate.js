@@ -1,577 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head >
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name= "viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- JavaScript Bundle with Popper -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-   <!-- CSS only -->
-    <link rel="stylesheet" href="static/style.css">
-    <!-- <link rel="icon" href="static/icon1.webp"> -->
-    <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="static/favicon-16x16.png" sizes="16x16" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-<!-- test -->
-<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-<!-- test -->
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-<!-- test -->
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-
-<title>Fregzy</title>
-</head>
-<body class="sign-sz sign-sa sap">
-    <header class="header-white">
-        <img class="icon-home icon1" src="static/icon.webp" alt="">
-        <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
-        <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 900;" >Freg<span class="header-other other-red">zy</span></h1>
-        <nav>
-          <ul class="docking sap">
-            
-            <li class="pra ho light"><i style="font-size: 2.5vw;" class="fa fa-lightbulb-o"></i></li>
-            <li class="pra ho dark hid"><i style="font-size: 2.5vw; color: #fff;" class="fa fa-moon-o"></i></li>
-            <li class="pra"><a class="heading-left decoration tic ho" style="font-weight: 700;">About</a></li>
-            <li class="pra"><a class="heading-left decoration tic ho " style="font-weight: 700;" href="">Features</a></li>
-            <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
-            <li class="pro"><a class="heading-left decoration tic ho" style="font-weight: 700;" href="">FAQ</a></li>
-            <li class="pre"><a class="red sr" style="font-weight: 700;" href="/">Home</a></li>
-            <li class="pre"><button class="btn but1 all-button-red" style="border-radius: 50px; padding: 0.5rem 1rem; text-decoration: none; font-weight: 700;" type="submit"><a style="font-weight: 700;" class="white sign-button" href="/login">Login</a></button></li>
-            
-          </ul>
-        </nav>
-      </header>
-      <div class="second-head">
-        <div class="wrapper">
-          <div class="navbar header-white">
-            <div class="logo">
-              <h1 class="heading heading-black" style="font-family: 'Cookie', cursive; font-weight: 700; text-align: center;" >Freg<span class="header-other other-red">zy</span></h1>
-            </div>
-              <div class="nav_right">
-             <ul>
-               <li class="nr_li">
-            <li class="second-bulb light"><i class="fa fa-lightbulb-o"></i></li>
-            <li class="second-bulb dark hid" style="color: #fff;"><i class="fa fa-moon-o"></i></li>
-               <li class="nr_li li_main">
-                 <!-- <img style="padding: 3px;"  class="omg og" src="static/menu.png" alt=""> -->
-                 <!-- <li class="second-bulb"><i class="oy fa fa-bars"></i></li> -->
-                 <i style=" border-radius: 10%;" class="oy bar-black first-top second-bulb fa fa-bars"></i>
-                 <i style=" border-radius: 10%; color: #fff;" class="hid bar-white oy first-top second-bulb fa fa-bars"></i>
-
-               <!-- </li> -->
-                 <div class="dd_menu">
-                   <div class="dd_left">
-                     <ul>
-                      <li><a href="/login"><i style="color: #fff;" class=" fa fa-home"></i></a></li><hr style="color: #4F0E0E; border: 1px solid;">
-                      <li><a href="/login"><i style="color: #fff;" class=" fa fa-user"></i></a></li>
-                     </ul>
-         
-                   </div>
-                   <div class="dd_right">
-                     <ul>
-                      <li><a class="init link-line" style="color: #4F0E0E; font-weight: 700;" href="/"> Home</a></li><hr style="color: #4F0E0E; border: 1px solid;">
-                       <li><a class="init link-line" style="color: #4F0E0E; font-weight: 700;" href="/Login"> Login</a></li>
-                     </ul>
-         
-                   </div>
-                 </div>
-               </li>
-             </ul>
-            </div>
-          </div>
-           </div>
-           <div class=" header-bw vain ki body-color body-color-white" style="margin-bottom: 0%; font-family: 'Varela Round', sans-serif;">
-            <i style="margin-right: 1%; margin-top: -1%;" class=" x erase fa fa-times"></i>
-            <h1 class="header-wer sap"><span class="fregy" style="font-family: 'Cookie', cursive; font-weight: 700; color: #4F0E0E; font-size: 5vw;">Fregzy</span> works best on our app!</h1>
-            <ul class="docking">
-          <li class="">
-          <!-- <h1 style="font-weight:500;" class="clear"> Dismiss</h1> -->
-        <button class="btn sap" style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Get</a></button>
-          </li>
-          </ul>
-          </div>
-          </div>
-
-    
-          <img class="sign-dis-girl" style="" src="static/girl-grad.png" alt="">
-          <img class="sign-dis-girl hid" style="" src="static/group-friends.png" alt="">
 
 
-<div class="sign-body">
- <h1 class="create-sign" style=" font-family: 'Cookie', cursive; font-weight:bolder; text-align:center; margin-top: 15%;">Create an Account<span style="color: #4F0E0E;">!</span></h1> 
- <h1 class="bap sign-community" style="text-align: center; font-weight: 700;">Let's get you connected to the right <span style="color: #4F0E0E;">community</span></h1>
- <form action="/signup" method="post">
-  <h1  class="user-sign first-pass sap" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Full name</h1>
-  <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
-      <!-- <label for="">Full Nmae</label> -->
-      <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-      <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-      <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-user display-ic"></i></button>
-      <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-user display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="Enter name"  type="text" required>
-
-  </div>
-  <h1  class="user-sign first-pass sap oo" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Username</h1>
-  <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
-      <!-- <label for="">Full Nmae</label> -->
-      <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-      <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-      <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-user-circle-o display-ic"></i></button>
-      <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-user-circle-o display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap username-input" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="username"  type="text" required>
-      <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700;">@</h1></button>
-
-  </div>
-  <h5 class="user-sign pock" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"></h5>
-
-
-  <h1  class="user-sign first-pass sap jp" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Email</h1>
-  <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
-      <button  type="button" class="btn key1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-envelope display-ic"></i></button>
-      <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-envelope display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="Enter Email"  type="email" required>
-      <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700;">@</h1></button>
-
-  </div>
-
-  <h1  class="user-sign first-pass sap" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Country</h1>
-<div class="profile-group" style="margin-left: 10%; margin-right: 10%;">
-    <!-- <label for="">Full Nmae</label> -->
-    <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-    <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <!-- <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #4F0E0E;  background-color: #fff;"><img class="flag" src="https://flagcdn.com/20x15/<%= country[30].name %>.png"></button> -->
-    <button  type="button" class="btn" style=" border-radius: 0%; border-left: none; border-top: none; border-bottom: none; border-right: none; border-color: #d4b194;  background-color: #fbf8f5;"><img class="flag" src="static/imgicon/<%= country[30].name %>.png"></button>
-    <select class="profile-inside country_select country-input input-sign bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194; font-weight: 700; padding-left: 1%;" aria-valuetext="Nigeria" name="country" required>
-      <% for(let i=0; i<250; i++){ %>
-      <option value="<%= country[i].name %>"><%= country[i].name %></option>
-      <% }%>
-    <!-- <option selected="selected">3</option> -->
-
-    </select>
-    <!-- <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700; visibility: hidden;"></h1></button> -->
-      <!-- <label for="">Full Nmae</label> -->
-</div>
-  
-
-
-
-
-<h1  class="user-sign first-pass sap" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Gender</h1>
-<div class="profile-group" style="margin-left: 10%; margin-right: 10%;">
-    <!-- <label for="">Full Nmae</label> -->
-    <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-    <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <!-- <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #4F0E0E;  background-color: #fff;"><img class="flag" src="https://flagcdn.com/20x15/<%= country[30].name %>.png"></button> -->
-    <button  type="button" class="btn boy" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-male display-ic"></i></button>
-    <button  type="button" class="btn girl hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-female display-ic"></i></button>
-    <button  type="button" class="btn custom hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-intersex display-ic"></i></button>
-
-    <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-malee display-ic"></i></button>
-    <select class="profile-inside input-sign bap gender_select country-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fbf8f5; border-color: #d4b194; font-weight: 700; border-top: none;" aria-valuetext="Nigeria" name="country" required>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Custom">Custom</option>
-    <!-- <option selected="selected">3</option> -->
-
-    </select>
-     
-      <!-- <label for="">Full Nmae</label> -->
-</div>
-
-<h1  class="user-sign first-pass sap" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Password</h1>
-<div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
-    <!-- <label for="">Full Nmae</label> -->
-    <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-    <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-lock display-ic"></i></button>
-    <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-lock display-ic"></i></button>
-    <input class="profile-inside input-sign pass-login2 pass-input bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="password" minlength="8" value="" placeholder="New Password"  type="password" required>
-    <button class="btn vis-white hid eye-log" type="button" style="border-radius: 0%; border-left: none; border-right: none;  border-top: none; background-color: #1d2a35;  border-color: #d4b194;"><img class="img-pass" style="margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
-    <button class="btn invis-white hid eye-log" type="button" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none;  border-right: none;  border-top: none; background-color: #1d2a35;  border-color: #d4b194; border-radius: 0%;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button> 
-    <!-- <button type="button" class="btn pass-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #D8B6A4;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-    <button type="button" class="btn pass-but vis hid" style="border-radius: 0%; border-left: none; border-right: none;  border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png"/></button>
-    <button type="button" class="btn pass-but invis" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none;  border-right: none;  border-top: none; background-color: #fbf8f5; border-color: #d4b194; border-radius: 0%;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
-
-    </div>
-    <h5 class=" resultpassword red1 hid sap" style="color: red;; font-weight: 700; margin-top: 2%; margin-bottom: 2%;">Very Weak <i class="fa fa-warning" style="font-size:20px; color: red;"></i></h5>
-    <h5 class=" resultpassword hid yellow1 sap" style="color: #FBDF07; margin-left: 80%; font-weight: 700; margin-top: 2%; margin-bottom: 2%;">Fair <i class="fa fa-warning" style="font-size:20px; color: #FBDF07;"></i></h5>
-    <h5 class=" resultpassword hid blue1 sap" style="color: #0078AA; margin-left: 80%; font-weight: 700; margin-top: 2%; margin-bottom: 2%;">Good <i class="fa fa-warning" style="font-size:20px; color: #0078AA;"></i></h5>
-    <h5 class="resultpassword hid green1 sap" style="color: green; margin-left: 80%; font-weight: 700; margin-top: 2%; margin-bottom: 2%;">Strong <i class="fa fa-warning" style="font-size:20px; color: green;"></i></h5>
-    <h5 class="resultpassword moj sap" style="color: green; margin-left: 80%; font-weight: 700; margin-top: 2%; margin-bottom: 2%; visibility: hidden;">Strong <i class="fa fa-warning" style="font-size:20px; color: green;"></i></h5>
-
-
-    <h1  class="user-sign sap" style="font-weight: 700; margin-left:19%; margin-bottom: 2%; margin-top: 6%; color: #1d2a35;">Confirm Password</h1>
-    <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
-        <!-- <label for="">Full Nmae</label> -->
-        <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
-        <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-        <button  type="button" class="btn key1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-key display-ic"></i></button>
-        <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-key display-ic"></i></button>
-        <input class="profile-inside input-sign pass-login1 pass-input bap" style="border-radius: 0%; border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="Confirmpassword" minlength="8" value="" placeholder="New Password" type="password" required>
-        <button class="btn vis-white1 hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35; border-color: #d4b194; border-top: none;"><img class="img-pass" style="margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
-    <button class="btn invis-white1 hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35; border-radius: 0%; border-color: #d4b194; border-top: none;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button> 
-        <!-- <button type="button" class="btn pass-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #D8B6A4;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-        <button type="button" class="btn pass-but vis1 hid" style="border-radius: 0%; border-left: none; border-right: none;  border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png"/></button>
-        <button type="button" class="btn pass-but invis1" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none;  border-right: none;  border-top: none; background-color: #fbf8f5; border-color: #d4b194; border-radius: 0%;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
-    
-        </div>
-        <h5 class="user-sign pack" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"></h5>
-
-        <button class="btn button-signup sap" style="background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Create Account     <i style="color: #fff;" class="fa fa-arrow-right" aria-hidden="true"></i></button>
-      <h1 class="please-sign bap already-have" style="text-align: center; font-weight:700; margin-top: -7%; margin-bottom: 10%;">Already have an account? <a style="color: #4F0E0E; text-decoration: none; font-family: 'Cookie', cursive; font-weight: 700; text-align: center;" class="sign-link" href="/login">Login</a></h1>
-        <button class="btn google-signup sap" style=" color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;background-color: #fff; border-color: #4F0E0E;" type="button"><a  style="font-weight: 700; color: #000;"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>Signup with Google</a></button>
-        <button class="btn facebook-signup sap" style=" color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;background-color: #fff; border-color: #4F0E0E;" type="button"><a  style="font-weight: 700; color: #000;"><img style="width: 15%;" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>Signup with Facebook</a></button>
-        <h5 class="hid spo"></h5>
-
- </form>
-
-</div>
-
-       
-    
-
-      <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
-        <img class="rap" src="static/connection.png" alt="">
-        <h1 class="wer" style=" font-family: 'Roboto', sans-serif;">No Network</h1>
-        <ul class="docking">
-      <li class="lap">
-      <!-- <h1 style="font-weight:500;" class="clear"> Dismiss</h1> -->
-      <button class="btn " style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Dismiss</a></button>
-      </li>
-      </ul>
-      </div>
-      <footer class="sap">
-      <!-- <div class="dover">
-        <img class="icon-home" style="margin-right: 1%;" src="static/footer.png" alt="">
-     <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #694E4E;">zy</span></h1>
-     <nav>
-       <ul class="docking">
-         
-         <li class="pride"><a class="pic">Company <br> <br> Vision <br> <br> Mission <br> <br> Focus</a></li>
-         <li class="pride"><a class="pic">Blogs <br> <br> FAQ <br> <br> Terms of use <br> <br> Privacy Policy</a></li>
-         <li class="pre" style="padding-bottom: -2%;"> 
-           <h1 style="font-size: 1vw; color: #fff;">Search for more Activities and Daily updates.</h1>
-           <form action="/exchange" method="post" class="">
-           <div class="form-group">
-             <input class="inside" style="border-radius: 0%; text-transform: capitalize;" name="current" type="search" placeholder="Your Email" required>
-             <button type="submit" class="btn btn-success"><i style="color: #fff" class="fa fa-search"></i></button>
-           </div>
-         </form>
-         <ul class="social">
-           <li class="ve">
-               <i class=" fa fa-instagram" style="font-size:20px;color:white"></i>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-twitter-square" style="font-size:20px;color:white"></i>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-linkedin-square" style="font-size:20px;color:white"></i></a>
-           </li>
-           <li class="ve">
-               <i class=" fa fa-github" style="font-size:20px;color:white"></i>
-           </li>
-       </ul>
-       </li>
-         
-       </ul>
-     </nav>
-   </div>
- -->
-       
-   <div class="dover">
-    <img class="icon-home" style="margin-right: 1%;" src="static/footer.webp" alt="">
- <h1 class="footer-heading" style="font-family: 'Cookie', cursive; font-weight: 700; color: #fff;" >Freg<span style="color: #97BFB4;">zy</span></h1>
- <nav>
-   <ul class="docking">
-     
-     <li class="pride"><a class="pic">Company <br class="bid"> <br> Vision<span style="visibility:hidden;">hh</span><br class="bid"> <br> Mission<span style="visibility:hidden;">h</span><br class="bid"> <br> Focus<span style="visibility:hidden;">hhii</span></a></li>
-     <li class="pride"><a class="pic">Blogs<span style="visibility:hidden;">hhyuii</span> <br class="bid"> <br> FAQ<span style="visibility:hidden;">hoooiih</span> <br class="bid"> <br> <a style="text-decoration: none; color:#fff; font-weight:700;" class="pic" href="/suggestion">Suggestions</a><span style="visibility:hidden;">h</span> <br class="bid"> <br> <a style="text-decoration: none; color:#fff; font-weight:700;" class="pic" href=""> Privacy Policy</a></a></li>    
-     <li class="pru" style="padding-bottom: -2%;"> 
-       <h1 class="suggest" style="color: #fff;">Subscribe to our Newsletter for Daily updates.</h1>
-       <form action="/home" method="post" class="">
-       <div class="form-group">
-         <input class="inside" style="border-radius: 0%; text-transform: capitalize; border-right: none;" name="current" type="email" placeholder="Your Email" required>
-         <button type="submit" class="btn btn-success" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none;"><i style="color: #fff;" class="fa fa-hand-pointer-o"></i></button>
-       </div>
-     </form>
-     <ul class="social">
-      <li class="ve">
-        <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
-    </li>
-  <li class="ve">
-   <i class="wr fa fa-twitter-square twit" style="border-radius: 3px; padding: 15%; font-size: 18px;"></i></a>
-  </li>
-  <li class="ve">
-   <i class="wr fa fa-linkedin-square linkl" style="border-radius: 3px; padding: 15%; font-size: 18px;"></i>
-   <!-- <i class="wr fa fa-linkedin linkl" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i></a> -->
-</li>
- 
-  <li class="ve">
-      <i class="wr fa fa-github git"style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
-  </li>
- </ul>
- </li>
-   <!-- <li class="pre"><button class="btn " style="border-radius: 50px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none;" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li> -->
-   
- </ul>
- </nav>
-</div>
-<h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022-<%= fan%> <span style="font-weight: 700;">Fregzy</span> </h5>
-  </footer>
-       <script>
-   var li_main=document.querySelector(".li_main");
-    
-    li_main.addEventListener("click", function(){
-      this.classList.toggle("active");
-      if(document.querySelector(".bar-black").className.includes("seen")){
-        document.querySelector(".bar-black").classList.remove("seen")
-        document.querySelector(".bar-black").classList.add("first-top")
-        document.querySelector(".bar-black").classList.remove("second-top")
-      }
-      else{
-      document.querySelector(".bar-black").classList.add("seen")
-      document.querySelector(".bar-black").classList.add("second-top")
-      document.querySelector(".bar-black").classList.remove("first-top")
-      }
-      if(document.querySelector(".bar-white").className.includes("soon")){
-        document.querySelector(".bar-white").classList.remove("soon")
-        document.querySelector(".bar-white").classList.add("first-top")
-        document.querySelector(".bar-white").classList.remove("second-top")
-      }
-      else{
-      document.querySelector(".bar-white").classList.add("soon")
-      document.querySelector(".bar-white").classList.add("second-top")
-      document.querySelector(".bar-white").classList.remove("first-top")
-      }
-    })       
-
-    document.querySelector(".vis").addEventListener("click", function(){
-              document.querySelector(".vis").classList.add("hid")   
-              document.querySelector(".invis").classList.remove("hid")
-              document.querySelector(".pass-login2").setAttribute("type", "password");
-            })
-            document.querySelector(".invis").addEventListener("click", function(){
-              document.querySelector(".vis").classList.remove("hid")
-              document.querySelector(".invis").classList.add("hid")
-              document.querySelector(".pass-login2").setAttribute("type", "text");
-            })
-
-            document.querySelector(".vis-white").addEventListener("click", function(){
-              document.querySelector(".vis-white").classList.add("hid")
-              document.querySelector(".invis-white").classList.remove("hid")
-              document.querySelector(".pass-login2").setAttribute("type", "password");
-            })
-            document.querySelector(".invis-white").addEventListener("click", function(){
-              document.querySelector(".vis-white").classList.remove("hid")
-              document.querySelector(".invis-white").classList.add("hid")
-              document.querySelector(".pass-login2").setAttribute("type", "text");
-            })
-
-    for(let i=0; i<2; i++){
-    var li_icon=document.querySelectorAll(".light");
-li_icon[i].addEventListener("click", ()=>{
-  document.querySelectorAll(".light")[1].classList.add("hid")
-  document.querySelectorAll(".dark")[1].classList.remove("hid")
-  document.querySelectorAll(".light")[0].classList.add("hid")
-  document.querySelectorAll(".dark")[0].classList.remove("hid")
-  document.querySelector(".bar-white").classList.remove("hid")
-  document.querySelector(".bar-black").classList.add("hid")
-  document.querySelector("body").classList.add("fz")
-  document.querySelector("body").classList.remove("sz")
-  document.querySelector("header").classList.add("header-black")
-  document.querySelector("header").classList.remove("header-white")
-  document.querySelector(".navbar").classList.add("header-black")
-  document.querySelector(".navbar").classList.remove("header-white")
-  document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
-  document.querySelector(".header-wer").style.color="#FFF"
-  document.querySelector(".wer").style.color="#FFF"
-  document.querySelector(".x").style.color="#990000"
-  document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
-  document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
-  document.querySelector(".icon1").classList.add("hid")
-  document.querySelector(".icon2").classList.remove("hid")
-  document.querySelectorAll(".heading")[0].classList.add("heading-white")
-  document.querySelectorAll(".heading")[0].classList.remove("heading-black")
-  document.querySelectorAll(".heading")[1].classList.add("heading-white")
-  document.querySelectorAll(".heading")[1].classList.remove("heading-black")
-  document.querySelector(".but1").classList.remove("all-button-red")
-  document.querySelector(".but1").classList.add("all-button-white")
-  document.querySelector(".sign-button").classList.add("red")
-  document.querySelector(".sign-button").classList.remove("white")
-  document.querySelector(".sr").classList.remove("red")
-  document.querySelector(".sr").classList.add("white")
-  for(let j=0; j<3; j++){
-    document.querySelectorAll(".heading-left")[j].classList.add("white")
-  document.querySelectorAll(".heading-left")[j].classList.remove("tic")
-  document.querySelectorAll(".header-other")[0].classList.add("other-blue")
-  document.querySelectorAll(".header-other")[0].classList.remove("other-red")
-  document.querySelectorAll(".header-other")[1].classList.add("other-blue")
-  document.querySelectorAll(".header-other")[1].classList.remove("other-red")
-  }
-//   for(let r=0; r<3; r++){
-//   document.querySelectorAll(".heading-left")[r].classList.add("white")
-//   document.querySelectorAll(".heading-left")[r].classList.remove("tic")
-// }
-if(document.querySelector(".vis").classList.contains("hid")!=true){
-    document.querySelector(".invis-white").classList.add("hid")
-    document.querySelector(".vis").classList.add("hid")
-    document.querySelector(".vis-white").classList.remove("hid")
-    document.querySelector(".invis").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis").classList.contains("hid")==true){
-    document.querySelector(".invis-white").classList.remove("hid")
-    document.querySelector(".vis").classList.add("hid")
-    document.querySelector(".invis").classList.add("hid")
-    document.querySelector(".vis-white").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  if(document.querySelector(".vis1").classList.contains("hid")!=true){
-    document.querySelector(".invis-white1").classList.add("hid")
-    document.querySelector(".vis1").classList.add("hid")
-    document.querySelector(".vis-white1").classList.remove("hid")
-    document.querySelector(".invis1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis1").classList.contains("hid")==true){
-    document.querySelector(".invis-white1").classList.remove("hid")
-    document.querySelector(".vis1").classList.add("hid")
-    document.querySelector(".invis1").classList.add("hid")
-    document.querySelector(".vis-white1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-
-})
-
-var lo_icon=document.querySelectorAll(".dark");
-lo_icon[i].addEventListener("click", ()=>{
-  document.querySelectorAll(".light")[1].classList.remove("hid")
-  document.querySelectorAll(".dark")[1].classList.add("hid")
-  document.querySelectorAll(".light")[0].classList.remove("hid")
-  document.querySelectorAll(".dark")[0].classList.add("hid")
-  document.querySelector("body").classList.remove("fz")
-  document.querySelector("body").classList.add("sz")
-  document.querySelector(".bar-white").classList.add("hid")
-  document.querySelector(".bar-black").classList.remove("hid")
-  document.querySelector("header").classList.remove("header-black")
-  document.querySelector("header").classList.add("header-white")
-  document.querySelector(".navbar").classList.remove("header-black")
-  document.querySelector(".navbar").classList.add("header-white")
-  document.querySelector(".navbar").style.borderColor= "#4F0E0E"
-  document.querySelector(".wer").style.color="#000"
-  document.querySelector(".header-wer").style.color="#000"
-  document.querySelector(".x").style.color="#000"
-  document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
-  document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
-  document.querySelector(".icon1").classList.remove("hid")
-  document.querySelector(".icon2").classList.add("hid")
-  document.querySelectorAll(".heading")[0].classList.remove("heading-white")
-  document.querySelectorAll(".heading")[0].classList.add("heading-black")
-  document.querySelectorAll(".heading")[1].classList.remove("heading-white")
-  document.querySelectorAll(".heading")[1].classList.add("heading-black")
-  document.querySelector(".but1").classList.add("all-button-red")
-  document.querySelector(".but1").classList.remove("all-button-white")
-  document.querySelector(".sign-button").classList.remove("red")
-  document.querySelector(".sign-button").classList.add("white")
-  document.querySelector(".sr").classList.add("red")
-  document.querySelector(".sr").classList.remove("white")
-  for(let r=0; r<3; r++){
-  document.querySelectorAll(".heading-left")[r].classList.remove("white")
-  document.querySelectorAll(".heading-left")[r].classList.add("tic")
-}
-for(let j=0; j<2; j++){
-  document.querySelectorAll(".header-other")[j].classList.remove("other-blue")
-  document.querySelectorAll(".header-other")[j].classList.add("other-red")
-  }
-})
-    }
-
-    var hi= document.querySelector(".lap")
-            hi.addEventListener("click", ()=>{
-              document.querySelector(".bw").classList.remove("hij")
-              document.querySelector(".bw").classList.add("hid")
-            })
-
-    function hasNetwork(onLine){
-  const vak = document.querySelector(".bw");
-  if (onLine){
-    vak.classList.remove("hij");
-    vak.classList.add("hid");
-  }
-  else {
-    vak.classList.add("hij");
-    vak.classList.remove("hid");
-  }
-}
-window.addEventListener("load", () => {
-  hasNetwork(navigator.onLine);
-
-
-window.addEventListener("online", () => {
-  hasNetwork(true);
-});
-
-window.addEventListener("offline", () => {
-  hasNetwork(false);
-
-});
-
-});
-var ho= document.querySelector(".erase")
-            ho.addEventListener("click", ()=>{
-              document.querySelector(".header-bw").classList.add("hid")
-              document.querySelector(".setting").classList.add("first-back")
-            })
-
-                       var mycountryname= ["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua And Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas The", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo The Democratic Republic Of The", "Cook Islands", "Costa Rica", "Cote D'Ivoire (Ivory Coast)", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji Islands", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia The", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey and Alderney", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Honduras", "Hong Kong S.A.R.", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau S.A.R.", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Man (Isle of)", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Bonaire, Sint Eustatius and Saba", "Netherlands The", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Palestinian Territory Occupied", "Panama", "Papua new Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn Island", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Helena", "Saint Kitts And Nevis", "Saint Lucia", "Saint Pierre and Miquelon", "Saint Vincent And The Grenadines", "Saint-Barthelemy", "Saint-Martin (French part)", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Svalbard And Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks And Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City State (Holy See)", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (US)", "Wallis And Futuna Islands", "Western Sahara", "Yemen", "Zambia", "Zimbabwe", "Kosovo", "Curaçao", "Sint Maarten (Dutch part)"]
-            var mycountrycode= ["AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BA", "BW", "BV", "BR", "IO", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "IM", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "BQ", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MP", "NO", "OM", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "SH", "KN", "LC", "PM", "VC", "BL", "MF", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "GB", "US", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "VG", "VI", "WF", "EH", "YE", "ZM", "ZW", "XK", "CW", "SX"]
-            var select =document.querySelector(".country_select");
-            for(let i=0; i<250; i++){
-              var option = select.options[i].value;
-              if(option.toLocaleLowerCase()=="nigeria"){
-                var bat = option
-                var checkingname=mycountryname.indexOf(bat)
-                var checkingcode = mycountrycode[checkingname].toLocaleLowerCase()
-        document.querySelector(".flag").setAttribute("src", "https://flagcdn.com/24x18/"+checkingcode+".png")
-              }
-            }
-            document.querySelector(".country_select").value="Nigeria"
-           select.addEventListener("change", ()=>{
-              var docselect = select.value;
-              // document.querySelector(".country_name").innerHTML=docselect
-                var checkingselectname=mycountryname.indexOf(docselect)
-                var checkingselectcode = mycountrycode[checkingselectname].toLocaleLowerCase()
-                document.querySelector(".flag").setAttribute("src", "https://flagcdn.com/24x18/"+checkingselectcode+".png")
-            })
-
-            var selectg =document.querySelector(".gender_select");
-             selectg.addEventListener("change", ()=>{
-              var optiong= selectg.value;
-              if(optiong.toLocaleLowerCase()=="male"){
-                document.querySelector(".boy").classList.remove("hid")
-                document.querySelector(".girl").classList.add("hid")
-                document.querySelector(".custom").classList.add("hid")
-              }
-              else if(optiong.toLocaleLowerCase()=="female"){
-                document.querySelector(".boy").classList.add("hid")
-                document.querySelector(".girl").classList.remove("hid")
-                document.querySelector(".custom").classList.add("hid")
-              }
-              else if(optiong.toLocaleLowerCase()=="custom"){
-                document.querySelector(".boy").classList.add("hid")
-                document.querySelector(".girl").classList.add("hid")
-                document.querySelector(".custom").classList.remove("hid")
-              }
-            })
-            
-  
-  
             document.querySelector(".pass-login2").addEventListener("keydown", (e)=>{
                 document.querySelector(".spo").innerHTML=document.querySelector(".pass-login2").value
                 var userpa=   document.querySelector(".spo").innerHTML
@@ -695,7 +123,6 @@ var ho= document.querySelector(".erase")
               }
               
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
               if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
@@ -812,7 +239,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
               })
               
               
@@ -939,7 +365,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
               if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
@@ -1056,7 +481,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
               })
               
               
@@ -1077,7 +501,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
               if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
@@ -1194,7 +617,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
               })
               
               
@@ -1212,11 +634,8 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pack").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-
-            
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
-                if(verify_username.includes(" ")){
+              if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
               }
@@ -1332,7 +751,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
               })
               
               
@@ -1458,25 +876,15 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-              if(t1.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              var t1=document.querySelector(".spo").innerHTML
+              var t2= document.querySelector(".pass-login1").value
+              if(t1!=t2){
+                document.querySelector(".pack").innerHTML="Password doesn't match!"
+                document.querySelector(".button-signup").setAttribute("type", "button");
               }
-              else if(t2.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              else if(t1==t2){
+                document.querySelector(".pack").innerHTML=""
+                document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               })
               
@@ -1605,25 +1013,13 @@ var ho= document.querySelector(".erase")
               
               var t1=document.querySelector(".spo").innerHTML
               var t2= document.querySelector(".pass-login1").value
-              if(t1.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              if(t1!=t2){
+                document.querySelector(".pack").innerHTML="Password doesn't match!"
+                document.querySelector(".button-signup").setAttribute("type", "button");
               }
-              else if(t2.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              else if(t1==t2){
+                document.querySelector(".pack").innerHTML=""
+                document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               })
               
@@ -1749,25 +1145,13 @@ var ho= document.querySelector(".erase")
               }
               var t1=document.querySelector(".spo").innerHTML
               var t2= document.querySelector(".pass-login1").value
-              if(t1.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              if(t1!=t2){
+                document.querySelector(".pack").innerHTML="Password doesn't match!"
+                document.querySelector(".button-signup").setAttribute("type", "button");
               }
-              else if(t2.length > 0){
-                if(t1!=t2){
-                  document.querySelector(".pack").innerHTML="Password doesn't match!"
-                  document.querySelector(".button-signup").setAttribute("type", "button");
-                }
-                else if(t1==t2){
-                  document.querySelector(".pack").innerHTML=""
-                  document.querySelector(".button-signup").setAttribute("type", "submit");
-                }
+              else if(t1==t2){
+                document.querySelector(".pack").innerHTML=""
+                document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               })
               
@@ -1785,7 +1169,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
               if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
@@ -1902,7 +1285,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
               })
               
               document.querySelector(".pass-login2").addEventListener("change", (e)=>{
@@ -2004,7 +1386,6 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               var verify_username= document.querySelector(".username-input").value
-              if(verify_username .length > 0){
               if(verify_username.includes(" ")){
                 document.querySelector(".pock").innerHTML="Space and Special characters not allowed!"
                 document.querySelector(".button-signup").setAttribute("type", "button");
@@ -2121,32 +1502,4 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".pock").innerHTML=""
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
-            }
-              })            
-
-
-document.querySelector(".vis1").addEventListener("click", function(){
-              document.querySelector(".vis1").classList.add("hid")    
-              document.querySelector(".invis1").classList.remove("hid")
-              document.querySelector(".pass-login1").setAttribute("type", "password");
-            })
-            document.querySelector(".invis1").addEventListener("click", function(){
-              document.querySelector(".vis1").classList.remove("hid")
-              document.querySelector(".invis1").classList.add("hid")
-              document.querySelector(".pass-login1").setAttribute("type", "text");
-            })
-            document.querySelector(".vis-white1").addEventListener("click", function(){
-              document.querySelector(".vis-white1").classList.add("hid")
-              document.querySelector(".invis-white1").classList.remove("hid")
-              document.querySelector(".pass-login1").setAttribute("type", "password");
-            })
-            document.querySelector(".invis-white1").addEventListener("click", function(){
-              document.querySelector(".vis-white1").classList.remove("hid")
-              document.querySelector(".invis-white1").classList.add("hid")
-              document.querySelector(".pass-login1").setAttribute("type", "text");
-            })
- 
-
-   </script>
-</body>
-</html>
+              })
