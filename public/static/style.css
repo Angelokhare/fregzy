@@ -603,7 +603,7 @@ footer {
   /* border-radius: .3rem 0 0 .3rem; */
   outline: 0;
   width: 75%;
-  font-family: 'Varela Round', sans-serif;
+  /* font-family: 'Varela Round', sans-serif; */
 }
 .profile-inside{
   flex: 1 1 auto;
@@ -675,7 +675,7 @@ footer {
 .please-sign{
    font-size:1.2vw; 
     margin-left: 5%; 
-     font-family: 'Varela Round', sans-serif;
+     /* font-family: 'Varela Round', sans-serif; */
    font-weight: 500; 
      margin-top: 5%;
                 }
@@ -1081,8 +1081,14 @@ margin-top: 2%;
 }
 .google-signup{
   font-size: 1.2vw;
-  padding: 1.3rem 32%;
+  padding: 1rem 30%;
   margin-top: -4%;
+}
+.facebook-signup{
+  font-size: 1.2vw;
+  padding: 1rem 29%;
+  margin-top: 5%;
+   margin-bottom: 10%;
 }
 .sign-dis-girl{
   width: 20%; 
@@ -1092,6 +1098,12 @@ margin-top: 2%;
 }
 .create-sign{
   font-size: 5vw;
+}
+.sign-body{
+  width: 50%;
+}
+.sign-community{
+  font-size: 1.5vw; 
 }
 .bap{
   font-family: 'Varela Round', sans-serif;
@@ -1263,6 +1275,17 @@ margin-top: -24%;
   font-size: 1.5vw;
   margin-left: 76%
 }
+.google-signup{
+  font-size: 1.5vw;
+  padding: 1rem 28%;
+
+}
+.facebook-signup{
+  font-size: 1.5vw;
+  padding: 1rem 26%;
+  margin-top: 5%;
+   margin-bottom: 10%;
+}
 }
 
 
@@ -1399,6 +1422,13 @@ padding: 5% 5%;
   }
   .create-sign{
     font-size: 6vw;
+  }
+  .input-sign{
+    font-size: 1.5vw;
+  }
+  .button-signup{
+    padding: 1rem 30%;
+    font-size: 2vw;
   }
 }
 
@@ -1601,6 +1631,15 @@ padding-top: 10%;
 .input-auth{
   height: 10vw;
 }
+.google-signup{
+  font-size: 2vw;
+  padding: 1rem 24%;
+
+}
+.facebook-signup{
+  font-size: 2vw;
+  padding: 1rem 22%;
+}
 }
 @media only screen and (max-width:1200px) and (min-height: 1000px){
   .sign-dis-girl{
@@ -1756,6 +1795,16 @@ margin-left: 10.6%;
 .invalide-code{
   font-size: 3vw;
 }
+.sign-community{
+  font-size: 2vw; 
+}
+.google-signup{
+  padding: 1rem 21%;
+
+}
+.facebook-signup{
+  padding: 1rem 19%;
+}
 }
 
 @media only screen and (max-width:670px){
@@ -1802,6 +1851,10 @@ margin-left: 10.6%;
 .display-ic{
   font-size: 3vw;
 }     
+.input-sign{
+  font-size: 2vw;
+}
+
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -1871,7 +1924,37 @@ font-size: 5vw;
   .gather-2size{
     margin-left: 52%;
   }
-
+  .sign-body{
+    width: 100%;
+  }
+  .sign-dis-girl{
+    display: none;
+  }
+  .sign-sz{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #fbf8f5 50%, #fbf8f5 50%);    
+    display: block;
+  }
+  .create-sign{
+    font-size: 11vw;
+  }
+  .sign-community{
+    font-size: 3vw; 
+  }
+  .button-signup{
+    font-size: 3.5vw;
+  }
+  .already-have{
+    font-size: 2.5vw;
+  }
+  .google-signup{
+    padding: 1rem 29%;
+    font-size: 2.5vw;
+  }
+  .facebook-signup{
+    font-size: 2.5vw;
+    padding: 1rem 27%;
+  }
     }
 @media only screen and (max-width: 550px){
   .ve{
@@ -2005,6 +2088,14 @@ font-size: 4.5vw;
   font-size: 2.5vw;
   margin-left: 70%
 } 
+.google-signup{
+  padding: 1rem 25%;
+  font-size: 3vw;
+}
+.facebook-signup{
+  font-size: 3vw;
+  padding: 1rem 24%;
+}
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -2098,6 +2189,7 @@ display: none;
     padding-top: 80%;
 
   }  
+
 }
 @media only screen and (max-width: 464px){
 .bottom-noti{
@@ -2106,6 +2198,9 @@ display: none;
 }
 .user-sign{
   font-size: 2.5vw;
+}
+.input-sign{
+  font-size: 2.2vw;
 }
 }
 @media only screen and (max-width: 450px){
@@ -2396,6 +2491,17 @@ margin-top: 2%;
   .display-ic{
     font-size: 4.5vw;
   }     
+  .input-sign{
+    font-size: 2.5vw;
+  } 
+  .google-signup{
+    padding: 1rem 22%;
+    font-size: 3.5vw;
+  }
+  .facebook-signup{
+    font-size: 3.5vw;
+    padding: 1rem 20%;
+  }
   }
 
 
