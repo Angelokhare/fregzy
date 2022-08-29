@@ -618,7 +618,7 @@ footer {
   /* border-radius: .3rem 0 0 .3rem; */
   outline: 0;
   width: 75%;
-  font-family: 'Varela Round', sans-serif;
+  /* font-family: 'Varela Round', sans-serif; */
 }
 /* login kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk */
 
@@ -1111,7 +1111,7 @@ margin-top: 2%;
 @supports(-webkit-touch-callout: none){
   .bap{
     font-family: 'Comfortaa', cursive;
-    
+    font-weight: 700;
   }
 }
 
@@ -1121,7 +1121,7 @@ margin-top: 2%;
 @supports(-webkit-touch-callout: none){
   .sap{
     font-family: 'Roboto', sans-serif;
-    
+    font-weight: 700;
   }
 }
 @media only screen and (max-width:1250px){
@@ -1852,7 +1852,7 @@ margin-left: 10.6%;
   font-size: 3vw;
 }     
 .input-sign{
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 }
@@ -2200,7 +2200,7 @@ display: none;
   font-size: 2.5vw;
 }
 .input-sign{
-  font-size: 2.2vw;
+  font-size: 3.2vw;
 }
 }
 @media only screen and (max-width: 450px){
@@ -2492,7 +2492,7 @@ margin-top: 2%;
     font-size: 4.5vw;
   }     
   .input-sign{
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   } 
   .google-signup{
     padding: 1rem 22%;
