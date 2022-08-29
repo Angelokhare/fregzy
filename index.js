@@ -212,7 +212,8 @@ else{
   }
   })
 })
-
+var siginverify=""
+var emailsigncode=""
    var day=new Date().getFullYear()
 app.get("/", (request, response)=>{
    var day=new Date().getFullYear()
@@ -235,7 +236,8 @@ console.log(user_route)
     else if(request.params.jbk.toLowerCase()=="signup"){
       var edit_country=Country.getAllCountries()
         day=new Date().getFullYear()
-    response.render("signup", {fan:day, country:edit_country})
+        var bn=""
+  response.render("signup", {fullname:bn, username:bn, date:bn, gender:bn, email:bn, country:bn, password: bn, confirm:bn, character:bn, fan:day, country:edit_country, pas:bn})
     }
     else if(request.params.jbk.toLowerCase()=="confirm"){
         day=new Date().getFullYear()
@@ -249,6 +251,11 @@ console.log(user_route)
   else if(request.params.jbk.toLowerCase()=="suggestion"){
     day=new Date().getFullYear()
 response.render("suggestion", {fan:day})
+
+}
+else if(request.params.jbk.toLowerCase()=="verifyemail"){
+  day=new Date().getFullYear()
+    response.render("verifyemail", {fan: day, global:emailsigncode})
 
 }
     else if (request.params.jbk.toLowerCase()==user_route){
@@ -359,11 +366,173 @@ transporter.sendMail(mailOptions, function (err, info) {
 }
 
 else if(request.params.jbk.toLowerCase()=="account-recovery"){
-  response.render("accountrecovery", {fan:day, det: emailcheck})
+  response.render("accountrecovery", {fan:day, det:emailcheck})
 }
     else{
 response.redirect("/")
     }
+})
+
+
+app.post("/verifyemail", (request, response)=>{
+
+  if(siginverify != request.body.code){
+    emailsigncode="Invalide code"
+    response.redirect("/verifyemail")
+  }
+  else{
+    emailsigncode=""
+    day=new Date().getFullYear()
+    response.render("signemailver", {fan:day})
+  }
+})
+
+app.post("/signup", (request, response)=>{
+  var signfullname= request.body.fullname
+  var signusername= request.body.username
+  console.log(signusername)
+  var signdate= request.body.date
+  var signgender= request.body.gender
+  var signemail= request.body.email
+  var signcountry= request.body.country
+  var signpassword= request.body.password
+  var signconfirm= request.body.confirm
+
+  if(signusername.includes(" ") && signpassword != signconfirm){
+    day=new Date().getFullYear()
+    var edit_country=Country.getAllCountries()
+    var newsignfullname= signfullname
+    var newsignusername= signusername
+    var newsigndate= signdate
+    var newsigngender= signgender
+    var newsignemail= signemail
+    var newsigncountry= signcountry
+    var newsignpassword= signpassword
+    var newsignconfirm= signconfirm
+    var chs="Space and Special characters not allowed!"
+    var fh="Password doesn't match!"
+  
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+  }
+
+
+else if(signusername.includes(" ")){
+  day=new Date().getFullYear()
+  var edit_country=Country.getAllCountries()
+  var newsignfullname= signfullname
+  var newsignusername= signusername
+  var newsigndate= signdate
+  var newsigngender= signgender
+  var newsignemail= signemail
+  var newsigncountry= signcountry
+  var newsignpassword= signpassword
+  var newsignconfirm= signconfirm
+  var chs="Space and Special characters not allowed!"
+  var fh=""
+
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+}
+else if(signpassword != signconfirm){
+ var day=new Date().getFullYear()
+  var edit_country=Country.getAllCountries()
+  var newsignfullname= signfullname
+  var newsignusername= signusername
+  var newsigndate= signdate
+  var newsigngender= signgender
+  var newsignemail= signemail
+  var newsigncountry= signcountry
+  var newsignpassword= signpassword
+  var newsignconfirm= signconfirm
+  var chs=""
+  var fh="Password doesn't match!"
+
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+}
+else{
+  // var day=new Date().getFullYear()
+  day=new Date().getFullYear()
+  
+  var ty= uuid()
+  var ui=ty.replaceAll("-", "e")
+  var sed= ui.slice(15, 20)
+  siginverify= sed
+  console.log(sed)
+
+var transporter = nmail.createTransport({
+service: 'gmail',
+auth: {
+   user: process.env.USER_GMAIL,
+   pass: process.env.GMAIL_PASSWORD
+}
+});
+
+const mailOptions = {
+from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+bcc: signemail, // list of receivers
+subject: 'Email verification', // Subject line
+html: `
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.ve{
+display: inline-block;
+padding: 2px 25px;
+}
+.docking {
+list-style: none;
+} 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<img style="width:70px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="fregzy icon">
+<h1 style="color:#1C3879; text-align:center; font-size: 20px; font-weight:700;">Fregzyapp</h1>
+<p style="font-weight: 600; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
+<img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/celebrate.png" alt="celebration">
+<div style="margin: 0 20px;">
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
+
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If this was you, Please use the following code to log in:</p>
+<p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:20px; color: #1C3879" >${siginverify}</p>
+
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000" >If you don't recognize this activity, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please reset your password</a></p>
+<p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:12px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
+<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+<hr>
+<ul style=" list-style: none; ">
+<li style="display: inline-block; padding: 2px 1px;">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+</li>
+<li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+<img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+</li>
+<li style="display: inline-block; margin-left:-10px">
+<img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+</li>
+</ul><br>
+<h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+</div>
+`,// plain text body
+
+
+}
+transporter.sendMail(mailOptions, function (err, info) {
+if(err)
+console.log(err)
+else{
+console.log(info);
+}
+}); 
+
+
+  response.redirect("/verifyemail")
+
+}
 })
 
 app.post("/suggestion", (request, response)=>{
@@ -406,7 +575,7 @@ app.post("/suggestion", (request, response)=>{
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${nam}</a>,</p>
     <div style="margin: 0 20px;">
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >a user named <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">${sugname}</span> with an email of <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">${sugemail}</span>.</p>
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Suggested that your company,<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> Fregzy</span>, should:</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Suggested that your company,<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> Fregzy</span>:</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #1C3879;">${sugtext}</p>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
     <hr>
@@ -1105,3 +1274,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit121
 // commit122
 // commit123
+// commit124

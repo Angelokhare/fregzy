@@ -114,7 +114,7 @@
       <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
       <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-user display-ic"></i></button>
       <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-user display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="Enter name"  type="text" required>
+      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="fullname" value="<%= fullname %>" placeholder="Enter name"  type="text" required>
 
   </div>
   <h1  class="user-sign first-pass sap oo" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Username</h1>
@@ -124,18 +124,18 @@
       <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
       <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-user-circle-o display-ic"></i></button>
       <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-user-circle-o display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap username-input" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="username"  type="text" required>
+      <input class="profile-inside pass-login pass-input bap input-sign bap username-input" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="username" value="<%= username %>" placeholder="username"  type="text" required>
       <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700;">@</h1></button>
 
   </div>
-  <h5 class="user-sign pock" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"></h5>
+  <h5 class="user-sign pock" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= character %></h5>
 
 
   <h1  class="user-sign first-pass sap jp" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Email</h1>
   <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
       <button  type="button" class="btn key1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-envelope display-ic"></i></button>
       <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-envelope display-ic"></i></button>
-      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="name" value="" placeholder="Enter Email"  type="email" required>
+      <input class="profile-inside pass-login pass-input bap input-sign bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="email" value="<%= email %>" placeholder="Enter Email"  type="email" required>
       <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700;">@</h1></button>
 
   </div>
@@ -173,7 +173,7 @@
     <button  type="button" class="btn custom hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-intersex display-ic"></i></button>
 
     <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-malee display-ic"></i></button>
-    <select class="profile-inside input-sign bap gender_select country-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fbf8f5; border-color: #d4b194; font-weight: 700; border-top: none;" aria-valuetext="Nigeria" name="country" required>
+    <select class="profile-inside input-sign bap gender_select country-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fbf8f5; border-color: #d4b194; font-weight: 700; border-top: none;" aria-valuetext="Nigeria" name="gender" required>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Custom">Custom</option>
@@ -184,6 +184,19 @@
       <!-- <label for="">Full Nmae</label> -->
 </div>
 
+<h1  class="user-sign first-pass sap oo" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Date of birth</h1>
+<div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
+    <!-- <label for="">Full Nmae</label> -->
+    <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
+    <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
+    <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-calendar display-ic"></i></button>
+    <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-calendar display-ic"></i></button>
+    <input class="profile-inside pass-login pass-input bap input-sign bap username-input" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%; text-transform: capitalize;" name="date" value="<%= date %>" placeholder="birth date"  type="date" required>
+    <!-- <button type="button" class="btn user-but" style=" border-radius: 0%; border-right: none; border-left: none; border-top: none; background-color: #fbf8f5; border-color: #d4b194;"><h1 class="display-ic" style="color: #4F0E0E; font-weight: 700;">@</h1></button> -->
+
+</div>
+
+
 <h1  class="user-sign first-pass sap" style=" font-weight: 700; margin-left:19%; margin-bottom: 2%; color: #1d2a35; margin-top: 10%;">Password</h1>
 <div class="profile-group" style="margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
     <!-- <label for="">Full Nmae</label> -->
@@ -191,7 +204,7 @@
     <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
     <button  type="button" class="btn pad1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-lock display-ic"></i></button>
     <button  type="button" class="btn pad2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-lock display-ic"></i></button>
-    <input class="profile-inside input-sign pass-login2 pass-input bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="password" minlength="8" value="" placeholder="New Password"  type="password" required>
+    <input class="profile-inside input-sign pass-login2 pass-input bap" style="border-radius: 0%;  border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="password" minlength="8" value="<%= password %>" placeholder="New Password"  type="password" required>
     <button class="btn vis-white hid eye-log" type="button" style="border-radius: 0%; border-left: none; border-right: none;  border-top: none; background-color: #1d2a35;  border-color: #d4b194;"><img class="img-pass" style="margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
     <button class="btn invis-white hid eye-log" type="button" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none;  border-right: none;  border-top: none; background-color: #1d2a35;  border-color: #d4b194; border-radius: 0%;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button> 
     <!-- <button type="button" class="btn pass-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #D8B6A4;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
@@ -213,7 +226,7 @@
         <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
         <button  type="button" class="btn key1" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fbf8f5; padding-right:2%;"><i style="color: #4F0E0E;" class="fa fa-key display-ic"></i></button>
         <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-key display-ic"></i></button>
-        <input class="profile-inside input-sign pass-login1 pass-input bap" style="border-radius: 0%; border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="Confirmpassword" minlength="8" value="" placeholder="New Password" type="password" required>
+        <input class="profile-inside input-sign pass-login1 pass-input bap" style="border-radius: 0%; border-right: none; border-left: none; border-top: none;  background-color:#fbf8f5; border-color: #d4b194; font-weight: 700; padding-right: 2%;" name="confirm" minlength="8" value="<%= confirm %>" placeholder="New Password" type="password" required>
         <button class="btn vis-white1 hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35; border-color: #d4b194; border-top: none;"><img class="img-pass" style="margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/white/48/ffffff/visible.png"/></button>
     <button class="btn invis-white1 hid eye-log" type="button" style="border-radius: 0%; border-right: none;  border-left: none; background-color: #1d2a35; border-radius: 0%; border-color: #d4b194; border-top: none;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/ffffff/invisible.png"/></button> 
         <!-- <button type="button" class="btn pass-but" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #D8B6A4;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
@@ -221,7 +234,7 @@
         <button type="button" class="btn pass-but invis1" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-left: none;  border-right: none;  border-top: none; background-color: #fbf8f5; border-color: #d4b194; border-radius: 0%;"><img class="img-pass" style=" margin-left:45%;" src="https://img.icons8.com/fluency-systems-regular/48/000000/invisible.png"/></button>
     
         </div>
-        <h5 class="user-sign pack" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"></h5>
+        <h5 class="user-sign pack" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= pas %></h5>
 
         <button class="btn button-signup sap" style="background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Create Account     <i style="color: #fff;" class="fa fa-arrow-right" aria-hidden="true"></i></button>
       <h1 class="please-sign bap already-have" style="text-align: center; font-weight:700; margin-top: -7%; margin-bottom: 10%;">Already have an account? <a style="color: #4F0E0E; text-decoration: none; font-family: 'Cookie', cursive; font-weight: 700; text-align: center;" class="sign-link" href="/login">Login</a></h1>

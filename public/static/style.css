@@ -1105,6 +1105,9 @@ margin-top: 2%;
 .sign-community{
   font-size: 1.5vw; 
 }
+.auth-search-dis{
+  width: 50vw;
+}
 .bap{
   font-family: 'Varela Round', sans-serif;
 }
@@ -1643,9 +1646,9 @@ padding-top: 10%;
 }
 @media only screen and (max-width:1200px) and (min-height: 1000px){
   .sign-dis-girl{
-    width: 30%; 
-    margin-left: 65%;
-     margin-bottom: -116%;
+    width: 36%; 
+    margin-left: 60%;
+     margin-bottom: -137%;
       margin-top: 8%;
   }
 }
@@ -2264,6 +2267,9 @@ border-radius: 10px;
   }
   .auth-icon-dis{
     width: 50vw;
+  }
+  .auth-search-dis{
+    width: 90vw;
   }
 }
 @media only screen and (max-width: 444px){
