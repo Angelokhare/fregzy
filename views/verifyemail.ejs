@@ -54,7 +54,7 @@
         <input class="input-auth bap" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center; font-weight: 700; color: #4F0E0E; border-color: #4F0E0E; background-color: #fff;" type="text" placeholder="Enter Code!" minlength="5" maxlength="5" name="code"  required>
         <button class="btn button-auth sap" style="background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
     </form>
-<h5 class="notcode bap" style="text-align: center;">Didn't get a code? <a class="didn" style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/resend-code" >Click to resend</a></h5>
+<h5 class="notcode bap" style="text-align: center;">Didn't get a code? <a class="didn" style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/push-code" >Click to resend</a></h5>
 
 <div class="auth-height">
   <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">
@@ -149,6 +149,14 @@ document.querySelector(".input-auth").addEventListener("keydown", (e)=>{
   }
 })
 document.querySelector(".input-auth").addEventListener("keyup", (e)=>{
+  document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
+  var userpb= document.querySelector(".tq").innerHTML
+  if(userpb.length==5){
+    document.querySelector(".button-auth").click()
+  }
+
+})
+document.querySelector(".input-auth").addEventListener("change", (e)=>{
   document.querySelector(".tq").innerHTML=document.querySelector(".input-auth").value
   var userpb= document.querySelector(".tq").innerHTML
   if(userpb.length==5){
