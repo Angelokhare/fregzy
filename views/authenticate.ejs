@@ -23,12 +23,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <!-- test -->
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 
 <!-- login -->
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 <title>Fregzy</title>
 </head>
-<body class="sz">
+<body class="sz sap">
     <header class="header-white sep" style="display: flex;">
         <img class="icon-auth icon1" src="static/icon.webp" alt="">
         <img class="icon-auth2 icon2 hid" style="" src="static/footer.webp" alt="">
@@ -41,20 +42,20 @@
           </ul>
         </nav>
     </header>
-    <img class="auth-icon-dis" style="display: block; margin-left:auto; margin-right:auto; margin-top: 10%;" src="static/padlock.png" alt="">
-    <h1 class="auth-head auto-big" style="text-align: center; margin-top: 2%; font-family: 'Varela Round', sans-serif; font-weight: 700;">Enter your</h1>
-    <h1 class="auth-head auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700;">Authentication Code</h1>
+    <img class="auth-icon-dis" style="display: block; margin-left:auto; margin-right:auto;" src="static/padlock.png" alt="">
+    <h1 class="auth-head auto-big" style="text-align: center; margin-top: 2%; font-family: 'Merienda One', cursive; font-weight: 700;">Enter your</h1>
+    <h1 class="auth-head auto-big" style="text-align: center; font-family: 'Merienda One', cursive; font-weight: 700;">Authentication Code</h1>
     <p class="auth-head auto-small" style="margin-left: 7%; margin-top: 7%; font-size: 12vw;  font-family: 'Merienda One', cursive; font-weight: 700;">Enter your</p>
     <p class="auth-head auto-small" style="margin-left: 7%; font-size: 12vw; font-family: 'Merienda One', cursive; font-weight: 700;">Authentication Code</p>
-    <h5 class="auth-sec auto-big" style="text-align: center; font-family: 'Varela Round', sans-serif; margin-top: 5%; padding: 0 2%;">We will text you your verification code, please check your Gmail.</h5>
+    <h5 class="auth-sec auto-big sap" style="text-align: center; margin-top: 5%; padding: 0 2%; font-weight: 700;">We will text you your verification code, please check your Gmail.</h5>
     <p class="auth-sec auto-small sap" style="margin-left: 5%;; margin-top: 5%; padding: 0 2%; font-weight: 700;">We will text you your verification code, please check your Gmail.</p>
     <h5 class="invalide-code" style="color: red; text-align:center; font-weight: 700; margin-top: 2%; margin-bottom: 2%;"><%= global %> </h5>
 
     <form action="/authenticate" method="post">
-        <input class="input-auth" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center;  font-family: 'Varela Round', sans-serif; font-weight: 700; color: #4F0E0E; border-color: #4F0E0E; background-color: #fff;" type="text" placeholder="Enter Code!" minlength="5" maxlength="5" name="code"  required>
-        <button class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
+        <input class="input-auth bap" style="display: block; margin-left: auto; margin-right: auto; border-radius: 20px; text-align: center; font-weight: 700; color: #4F0E0E; border-color: #4F0E0E; background-color: #fff;" type="text" placeholder="Enter Code!" minlength="5" maxlength="5" name="code"  required>
+        <button class="btn button-auth sap" style=" background-color: #4F0E0E; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" type="submit">Continue</button>
     </form>
-<h5 class="notcode" style="text-align: center; font-family: 'Varela Round', sans-serif;">Didn't get a code? <a class="didn" style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/resend-code" >Click to resend</a></h5>
+<h5 class="notcode sap" style="text-align: center; font-weight: 700;">Didn't get a code? <a class="didn" style="color: #4F0E0E; font-weight: 700; font-family: 'Cookie', cursive; text-decoration: underline;" href="/resend-code" >Click to resend</a></h5>
 
 <div class="auth-height">
   <div class="hid bw vain ki body-color body-color-white" style="margin-bottom: 0%;">

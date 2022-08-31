@@ -2,9 +2,11 @@ require("dotenv").config()
 var express= require("express")
 var body= require("body-parser")
 var ejs = require("ejs")
+var mongoose= require("mongoose")
 const path= require("path")
 const cropper= require("cropperjs")
 const croppie= require("croppie")
+const bcrypt= require("bcrypt")
 const jwt= require("jsonwebtoken")
 const nmail= require("nodemailer")
 const userip= require("request-ip")
@@ -22,8 +24,60 @@ let State = require('country-state-city').State;
 app.use(body.urlencoded({extended:true}))
 app.set("view engine", "ejs")
 app.use(express.static("public"))
-
-
+// mongo "mongodb+srv://fregzy.3ki58ak.mongodb.net/myFirstDatabase" --username angelokhare
+// mongodb+srv://angelokhare:${process.env.MONGODBDATABASE}@fregzy.3ki58ak.mongodb.net/fregzy
+// mongodb://localhost:27017/fregzy
+mongoose.connect("mongodb+srv://angelokhare:" + process.env.MONGODBDATABASE + "@fregzy.3ki58ak.mongodb.net/fregzy")
+var newuser= new mongoose.Schema({
+  fullname: {
+    type: String,
+    required: true
+  },
+  username: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  dateBirth: {
+    type: String,
+    required: true
+  },
+  gender: {
+    type: String,
+    required: true
+  },
+  country: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  fullname: {
+    type: String,
+    required: true
+  },
+  verifiedemail: {
+    type: String,
+    required: true
+  },
+  codeauto:{
+    type: String,
+    required: true
+  }
+})
+var newletter= new mongoose.Schema({
+  email: {
+    type: String,
+    required: true
+  },
+})
+var User= new mongoose.model("User", newuser)
+var Letter= new mongoose.model("Letter", newletter)
 
 
 // ART
@@ -238,18 +292,31 @@ console.log(userprof)
 console.log(user_route)
     if(request.params.jbk.toLowerCase()=="login"){
         day=new Date().getFullYear()
-        response.render("login", {fan:day})
+        var usern=""
+        var passloginpost=""
+        var userres=""
+        var userpasscheck=""
+        response.render("login", {fan:day, user:usern, pass:passloginpost, usernotfound:userres, passnotfound:userpasscheck})
     }
     else if(request.params.jbk.toLowerCase()=="signup"){
+      var signusernamelist=[]
+      var signemaillist=[]
+    User.find({}, function(err, users) {
+      for (let x in users) {
+       var combinename=users[x].username
+       signusernamelist.push(combinename)
+       var combineemail=users[x].email
+       signemaillist.push(combineemail)
+      }
+    
       var edit_country=Country.getAllCountries()
         day=new Date().getFullYear()
         var bn=""
-  response.render("signup", {fullname:bn, username:bn, date:bn, gender:bn, email:bn, country:bn, password: bn, confirm:bn, character:bn, fan:day, country:edit_country, pas:bn})
+  response.render("signup", {fullname:bn, username:bn, date:bn, gender:bn, email:bn, country:bn, password: bn, confirm:bn, character:bn, fan:day, country:edit_country, pas:bn, signemaillist:signemaillist, signusernamelist:signusernamelist, chock:bn})
+
+    })
     }
-    else if(request.params.jbk.toLowerCase()=="confirm"){
-        day=new Date().getFullYear()
-    response.render("confirm", {fan:day})
-    }
+
     else if(request.params.jbk.toLowerCase()=="password-recovery"){
       day=new Date().getFullYear()
   response.render("passwordrecovery", {fan:day})
@@ -330,20 +397,23 @@ list-style: none;
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<img style="width:70px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="fregzy icon">
-<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fregzy.png" alt="fregzy name">
-<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${globalsignusername}</span>,</p>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/celebrate.png" alt="celebration">
+<div style="background-color: #fff;">
+<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
+<img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
-<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
-<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
+
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
-<img style="width:25%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/iphone.png" alt="fregzy display">
+<div style="display:block; margin-left:auto; margin-right:auto;">
+<img class="" style="width: 74%; margin-left: 14%;" src=" https://fregzyapp.herokuapp.com/static/pc.png" alt="">
+</div>
+
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
-<p style="font-family: Roboto, sans-serif; font-size:14px; color: #000; font-wieght:700;"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p>
+<p style="font-family: Roboto, sans-serif; font-size:14px; color: #000; font-weight:700;"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p>
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
 <ul style=" list-style: none; ">
 <li style="display: inline-block; padding: 2px 1px;">
@@ -361,6 +431,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
+</div>
 </div>
 `,// plain text body
 
@@ -470,22 +541,72 @@ app.post("/verifyemail", (request, response)=>{
     response.redirect("/verify-email")
   }
   else{
-    emailsigncode=""
+    var conditions = { username: globalsignusername,};
+    var update = { verifiedemail: "yes" };
+  User.findOneAndUpdate(conditions, update, function (err){
+  if (err){
+      response.json('nope');
+  }
+  else{
+     emailsigncode=""
     day=new Date().getFullYear()
     response.render("signemailver", {fan:day})
   }
 })
+}
+})
+
+// If the filter condition is empty, it means all
+// User.remove({}, function ( err ) { 
+//   console .log( "success" );
+// });
+
+// const adduser= new User({
+//   fullname:"fullname",
+//   username: "signusername",
+//   dateBirth: "signdate",
+//   country: "signcountry",
+//   gender: "signgender",
+//   email: "signemail",
+//   password: "hash",
+//   verifiedemail: "no",
+//   codeauto: "no"
+// })
+
+// adduser.save(function(err){
+//   if(err){
+//     console.log(err)
+//   }
+//   else{
+//   }
+// })
+
+
+
 
 app.post("/signup", (request, response)=>{
-  var signfullname= request.body.fullname
-  var signusername= request.body.username
+  var signfullname= request.body.fullname.toLowerCase().trim()
+  var signusername= request.body.username.toLowerCase().trim()
   console.log(signusername)
-  var signdate= request.body.date
-  var signgender= request.body.gender
-  var signemail= request.body.email
-  var signcountry= request.body.country
+  var signdate= request.body.date.toLowerCase().trim()
+  var signgender= request.body.gender.toLowerCase().trim()
+  var signemail= request.body.email.toLowerCase().trim()
+  console.log(signemail + "tt")
+  var signcountry= request.body.country.toLowerCase()
   var signpassword= request.body.password
   var signconfirm= request.body.confirm
+
+
+  var signusernamelist=[]
+  var signemaillist=[]
+User.find({}, function(err, users) {
+  for (let x in users) {
+   var combinename=users[x].username
+   signusernamelist.push(combinename)
+   var combineemail=users[x].email
+   signemaillist.push(combineemail)
+  }
+
 
   if(signusername.includes(" ") && signpassword != signconfirm){
     day=new Date().getFullYear()
@@ -500,8 +621,9 @@ app.post("/signup", (request, response)=>{
     var newsignconfirm= signconfirm
     var chs="Space and Special characters not allowed!"
     var fh="Password doesn't match!"
+    var sd=""
   
-    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:sd, signemaillist:signemaillist, signusernamelist:signusernamelist})
   }
 
 
@@ -519,7 +641,7 @@ else if(signusername.includes(" ")){
   var chs="Space and Special characters not allowed!"
   var fh=""
 
-  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist})
 }
 else if(signpassword != signconfirm){
  var day=new Date().getFullYear()
@@ -535,7 +657,72 @@ else if(signpassword != signconfirm){
   var chs=""
   var fh="Password doesn't match!"
 
-  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh})
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist})
+}
+
+else{
+  var usernamelist=[]
+  var emaillist=[]
+User.find({}, function(err, users) {
+  for (let x in users) {
+   var combinename=users[x].username
+   usernamelist.push(combinename)
+   var combineemail=users[x].email
+   emaillist.push(combineemail)
+  }
+  console.log(usernamelist)
+  console.log(emaillist)
+
+  if(usernamelist.includes(signusername) && emaillist.includes(signemail)){
+    day=new Date().getFullYear()
+    var edit_country=Country.getAllCountries()
+    var newsignfullname= signfullname
+    var newsignusername= signusername
+    var newsigndate= signdate
+    var newsigngender= signgender
+    var newsignemail= signemail
+    var newsigncountry= signcountry
+    var newsignpassword= signpassword
+    var newsignconfirm= signconfirm
+    var chs="Username is already taken!"
+    var echs="Email is already taken!"
+    var fh=""
+  
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:echs, signemaillist:signemaillist, signusernamelist:signusernamelist})
+}
+
+
+  else if(usernamelist.includes(signusername)){
+    day=new Date().getFullYear()
+    var edit_country=Country.getAllCountries()
+    var newsignfullname= signfullname
+    var newsignusername= signusername
+    var newsigndate= signdate
+    var newsigngender= signgender
+    var newsignemail= signemail
+    var newsigncountry= signcountry
+    var newsignpassword= signpassword
+    var newsignconfirm= signconfirm
+    var chs="Username is already taken!"
+    var fh=""
+  
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist})
+}
+  else if(emaillist.includes(signemail)){
+    day=new Date().getFullYear()
+    var edit_country=Country.getAllCountries()
+    var newsignfullname= signfullname
+    var newsignusername= signusername
+    var newsigndate= signdate
+    var newsigngender= signgender
+    var newsignemail= signemail
+    var newsigncountry= signcountry
+    var newsignpassword= signpassword
+    var newsignconfirm= signconfirm
+    var chs="Email is already taken!"
+    var fh=""
+  
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, country:newsigncountry, password: newsignpassword, confirm:newsignconfirm, character:fh, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist})
 }
 else{
   globalsignemail=signemail
@@ -546,6 +733,56 @@ else{
   globalsignpassword= signpassword
   globalsignconfirm= signconfirm
   globalsigngender= signgender
+
+
+  var newslist=[]
+  Letter.find({}, function(err, users) {
+    for (let x in users) {
+     var newemail=users[x].email
+     newslist.push(newemail)
+    }
+    console.log(newslist)
+    var newreq= request.body.email.toLowerCase().trim()
+    if(newslist.includes(newreq)){
+      console.log("top")
+    }
+    else{
+  const addnewsletter= new Letter({
+    email:signemail
+  })
+  addnewsletter.save(function(err){
+    if(err){
+      console.log(err)
+    }
+    else{
+      console.log("sure")
+    }
+  })
+}
+  })
+  const saltRounds = 10;
+  bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(signpassword, salt, function(err, hash) {
+    // Store hash in database here
+  console.log(hash)
+const adduser= new User({
+  fullname:signfullname,
+  username: signusername,
+  dateBirth: signdate,
+  country: signcountry,
+  gender: signgender,
+  email: signemail,
+  password: hash,
+  verifiedemail: "no",
+  codeauto: "no"
+})
+
+adduser.save(function(err){
+  if(err){
+    console.log(err)
+  }
+  else{
+
   // var day=new Date().getFullYear()
   day=new Date().getFullYear()
   
@@ -582,18 +819,19 @@ list-style: none;
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<img style="width:70px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="fregzy icon">
-<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fregzy.png" alt="fregzy name">
+<div style="background-color: #fff;">
+<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/celebrate.png" alt="celebration">
+<img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
-<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
-<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
+<h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
 
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
-<img style="width:25%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/iphone.png" alt="fregzy display">
+<div style="display:block; margin-left:auto; margin-right:auto;">
+<img class="" style="width: 74%; margin-left: 14%;" src=" https://fregzyapp.herokuapp.com/static/pc.png" alt="">
+</div>
 
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
@@ -616,6 +854,7 @@ list-style: none;
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
 </div>
+</div>
 `,// plain text body
 
 
@@ -630,8 +869,16 @@ console.log(info);
 
 
   response.redirect("/verify-email")
-
 }
+}
+)
+});
+});
+}
+
+})
+}
+})
 })
 
 app.post("/suggestion", (request, response)=>{
@@ -651,7 +898,7 @@ app.post("/suggestion", (request, response)=>{
     
     const mailOptions = {
     from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+    bcc: "angelobeckan794@gmail.com", // list of receivers
     subject: 'User Suggestion!', // Subject line
     html: `
     <style>
@@ -1003,7 +1250,36 @@ else{
 
 
 app.post("/home", (request, response)=>{
-    response.redirect("/confirm")
+  var newslist=[]
+  Letter.find({}, function(err, users) {
+    for (let x in users) {
+     var newemail=users[x].email
+     newslist.push(newemail)
+    }
+    console.log(newslist)
+    var newreq= request.body.current.toLowerCase().trim()
+    if(newslist.includes(newreq)){
+      console.log("top")
+      day=new Date().getFullYear()
+      response.render("alreadyconfirm", {fan:day})
+    }
+    else{
+  const addnewsletter= new Letter({
+    email: newreq
+  })
+  addnewsletter.save(function(err){
+    if(err){
+      console.log(err)
+    }
+    else{
+      console.log("sure")
+    }
+  })
+    day=new Date().getFullYear()
+response.render("confirm", {fan:day})
+
+}
+  })
 })
 
 
@@ -1020,7 +1296,30 @@ app.get("/signup/:hgy", (request, response)=>{
 
 
 app.post("/login", (request, response)=>{
-    var usern= request.body.username.toLowerCase()
+    var usern= request.body.username.toLowerCase().trim()
+    var passloginpost= request.body.password
+
+
+
+
+
+
+    var loginusernamelist=[]
+    var loginemaillist=[]
+  User.find({}, function(err, users) {
+    for (let x in users) {
+     var combinename=users[x].username
+     loginusernamelist.push(combinename)
+     var combineemail=users[x].email
+     loginemaillist.push(combineemail)
+    }
+
+    if(loginusernamelist.includes(usern)){
+      User.findOne({username:usern}, (err, found)=>{
+      bcrypt.compare(passloginpost, found.password, (err, got)=>{
+        if(got){
+          response.redirect("/")
+   
      userprof=usern
     //  console.log(userprof)
     var user_route= userprof +"-profile"
@@ -1061,7 +1360,7 @@ var transporter = nmail.createTransport({
 
  const mailOptions = {
   from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-  bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+  bcc: found.email, // list of receivers
   subject: 'New Login detect!', // Subject line
   html: `
   <style>
@@ -1145,7 +1444,7 @@ auth: {
 
 const mailOptions = {
 from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+bcc: found.email, // list of receivers
 subject: 'Your Authentication Code!', // Subject line
 html: `
 <style>
@@ -1204,18 +1503,54 @@ console.log(info);
 }); 
 
 
-const namein={
-  name: usern,
-  gmail:"angelobeckan794@gmail.com",
-  job: "engineer"
-}
-jwt.sign({namein}, "angelo" , {expiresIn: "5m"},(err, tokeni)=>{
-  tokeni
-  console.log(tokeni)
-})
-console.log(jwtcode)
+// const namein={
+//   name: usern,
+//   gmail:"angelobeckan794@gmail.com",
+//   job: "engineer"
+// }
+// jwt.sign({namein}, "angelo" , {expiresIn: "5m"},(err, tokeni)=>{
+//   tokeni
+//   console.log(tokeni)
+// })
+// console.log(jwtcode)
+
+
+
     // response.redirect("/"+user_route)
-    response.redirect("/user-authenticate")
+    
+  }
+  else{
+   var day=new Date().getFullYear()
+    var userres=""
+    var userpasscheck="Password doesn't match"
+    response.render("login", {fan:day, user:usern, pass:passloginpost, usernotfound:userres, passnotfound:userpasscheck})
+  }
+})
+})
+}
+
+else if(loginemaillist.includes(usern)){
+User.findOne({email:usern}, (err, found)=>{
+bcrypt.compare(passloginpost, found.password, (err, got)=>{
+  if(got){
+    response.redirect("/")
+  }
+  else{
+   var day=new Date().getFullYear()
+    var userres=""
+    var userpasscheck="Password doesn't match"
+    response.render("login", {fan:day, user:usern, pass:passloginpost, usernotfound:userres, passnotfound:userpasscheck})
+  }
+})
+})
+}
+else{
+var day=new Date().getFullYear()
+ var userres="Username not found!"
+ var userpasscheck=""
+ response.render("login", {fan:day, user:usern, pass:passloginpost, usernotfound:userres, passnotfound:userpasscheck})
+}
+})
  })
       
 function vetty(request, response, next){
@@ -1375,3 +1710,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit123
 // commit124
 // commit125
+// commit126

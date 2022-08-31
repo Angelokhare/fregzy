@@ -58,6 +58,12 @@ header {
     background: linear-gradient(90deg, #fbf8f5 50%, #d6e6d5 50%);
     color: #000;
   }
+  .sign-sf{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #131313 50%, #172228 50%);
+    color: #fff;
+  }
+
   .sz{
     background-color: #fbf8f5;
     color: #000;
@@ -1052,6 +1058,7 @@ margin-top: 2%;
   font-size: 1vw;
 }
 .auto-big{
+  margin-top: 3%;
   display: block;
 }
 .auto-small{
@@ -1068,7 +1075,14 @@ margin-top: 2%;
   margin-top: 8%;
 }
 .auth-icon-dis{
+  margin-top: 3%;
   width: 20vw;
+}
+.auth-email-dis{
+  width: 40vw;
+}
+.auth-subscribe{
+width: 30vw;
 }
 .input-sign{
   font-size: 1.2vw;
@@ -1107,6 +1121,33 @@ margin-top: 2%;
 }
 .auth-search-dis{
   width: 50vw;
+}
+.question{
+  color: #fff; 
+  background-color:#4F0E0E;
+   font-size:2.5vw; 
+   padding: 1.5%; 
+   margin-left: 90vw; 
+   border-radius: 100%; 
+   margin-bottom: 4%;
+}
+
+
+
+
+
+input:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;}
+select:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;}
+
+
+
+
+select{
+	/* background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%; */
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjEuNDEgNC42NyAyLjQ4IDMuMTggMy41NCA0LjY3IDEuNDEgNC42NyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIzLjU0IDUuMzMgMi40OCA2LjgyIDEuNDEgNS4zMyAzLjU0IDUuMzMiLz48L3N2Zz4=) no-repeat 95% 50%;
+  -moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
 }
 .bap{
   font-family: 'Varela Round', sans-serif;
@@ -1433,6 +1474,9 @@ padding: 5% 5%;
     padding: 1rem 30%;
     font-size: 2vw;
   }
+  .question{
+    font-size:3vw;   
+ }
 }
 
 @media only screen and (max-width:895px){
@@ -1526,6 +1570,7 @@ padding: 5% 5%;
           .display-ic{
             font-size: 2.5vw;
           }           
+        
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -1552,6 +1597,9 @@ padding: 5% 5%;
     .login-profile{
       margin-left: 55%;
     }
+    .auth-subscribe{
+      width: 40vw;
+      }
 }
 /* heightjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
 @media only screen and (min-height:900px){
@@ -1686,6 +1734,10 @@ padding-right: 40px;
    .first-pass{
     margin-top: 12%;
   } 
+  .question{
+    font-size:4vw; 
+    padding: 2%; 
+ } 
 }
 @media only screen and (max-width:735px){
 .footer-heading{
@@ -1755,6 +1807,7 @@ font-size: 3vw;
 .create-sign{
   font-size: 7vw;
 }
+
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -1938,6 +1991,11 @@ font-size: 5vw;
     background: linear-gradient(90deg, #fbf8f5 50%, #fbf8f5 50%);    
     display: block;
   }
+  .sign-sf{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #131313 50%, #131313 50%);
+    color: #fff;
+  }
   .create-sign{
     font-size: 11vw;
   }
@@ -1972,6 +2030,11 @@ font-size: 5vw;
     .invalide-code{
       font-size: 4vw;
     }
+    .question{
+      font-size:5vw; 
+      padding: 2.5%; 
+      margin-left: 88vw;
+   } 
 }
 @media only screen and (max-width: 539px){
 .enter-display{
@@ -2099,6 +2162,25 @@ font-size: 4.5vw;
   font-size: 3vw;
   padding: 1rem 24%;
 }
+.auto-big{
+  display: none;
+}
+.auto-small{
+  display: block;
+}
+.auth-icon-dis{
+  width: 50vw;
+}
+.auth-search-dis{
+  width: 90vw;
+}
+.auth-email-dis{
+  margin-top: -3%;
+  width: 80vw;
+}
+.auth-subscribe{
+  width: 65vw;
+  }
 }
 @media only screen and (max-width: 492px){
   .ve{
@@ -2259,18 +2341,7 @@ border-radius: 10px;
     margin-bottom: 40%;
   }
 
-  .auto-big{
-    display: none;
-  }
-  .auto-small{
-    display: block;
-  }
-  .auth-icon-dis{
-    width: 50vw;
-  }
-  .auth-search-dis{
-    width: 90vw;
-  }
+  
 }
 @media only screen and (max-width: 444px){
   .bottom-noti{
@@ -2390,6 +2461,11 @@ margin-top: 2%;
   .input-ver{
     width: 80%;
     }
+    .question{
+      font-size:7vw; 
+      padding: 3%; 
+      margin-left: 85vw;
+   } 
 }
 
 

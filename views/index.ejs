@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name= "viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JavaScript Bundle with Popper -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -23,6 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <!-- test -->
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
 <title>Fregzy</title>
 </head>
 <body class="sz sap">
@@ -115,7 +118,9 @@
         <li class="pri" style="padding-right: 3%;"><button class="btn button1" style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2vw; font-weight: 700;" type="submit"><a class="link-line started sap" href="/Signup">Get Started</a></button></li>
         <li class="pri"><button class="btn button2" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700; border: 2px solid;" type="submit"><a class="link-line learn sap" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
       </ul>
-
+      <div style="position: fixed; bottom: 0;"> 
+        <i style="" class='question fas fa-comment-alt'></i>
+      </div>
 
       <div class="body-color body-color-white" style=" border-top-right-radius: 50%; border-bottom-left-radius: 50px;">
       <!-- <img class="rotate" style="width: 10%; margin-left: 65%; margin-bottom: -14%;" src="static/award0.png" alt=""> -->
@@ -130,7 +135,7 @@
       </div>
       <img style="width: 10%; margin-left: 65%; margin-top: -15.5%; display: block; padding-bottom: 7%;" src="static/udemy.png" alt="">
       </div>
-
+     
       <div  class="second-par" style=" margin-top: 10%;">
         <img style="width: 6.5%;" class="cancel-icon" src="static/cancel.png" alt="">
         <img style="width: 8%;" class="check-icon1" src="static/check.png" alt="">
@@ -148,7 +153,7 @@
         </div>
         <!-- <img style="width: 10%; margin-left: 65%; margin-top: -15.5%; display: block; padding-bottom: 7%;" src="static/udemy.png" alt=""> -->
         </div>
-
+       
 <div class="body-color body-color-white" style=" border-top-left-radius: 50%; border-bottom-right-radius: 50px; border-top-style: none;">
       <img class="" style="width: 34%; margin-left: 56%; margin-bottom: -26%;" src="static/pc.png" alt="">
       <img class="" style="width: 11%; margin-left: 77%; margin-bottom: -27%;" src="static/iphone.png" alt="">
@@ -310,6 +315,8 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector(".navbar").classList.remove("header-white")
   document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
   document.querySelector(".button1").style.backgroundColor="#fff"
+  document.querySelector(".question").style.backgroundColor="#fff"
+  document.querySelector(".question").style.color="#4f0e0e"
   document.querySelector(".button2").style.borderColor= "#FFF"
   document.querySelector(".learn").style.color="#FFF";
   document.querySelector(".started").style.color="#1d2a35";
@@ -376,6 +383,8 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".bar-black").classList.remove("hid")
   document.querySelector("header").classList.remove("header-black")
   document.querySelector("header").classList.add("header-white")
+  document.querySelector(".question").style.backgroundColor="#4f0e0e"
+  document.querySelector(".question").style.color="#fff"
   document.querySelector(".navbar").classList.remove("header-black")
   document.querySelector(".navbar").classList.add("header-white")
   document.querySelector(".navbar").style.borderColor= "#4F0E0E"
