@@ -1212,7 +1212,9 @@ lame.push(gmailowner)
     <img style="display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/security.png" alt="fregzy name">
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align: center; margin-top:40px;" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</h1>
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:18px; color: #000; text-align: center; margin-top:40px; margin-bottom:20px;" >You can reset your password by clicking the link below:</h1>
+   </div>
     <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}">Reset your password </a></button>
+    <div style="margin: 0 20px;">
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000;  margin-top:20px;" > OR use copy the link bellow:</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000";> http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
