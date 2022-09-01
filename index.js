@@ -68,6 +68,14 @@ var newuser= new mongoose.Schema({
   codeauto:{
     type: String,
     required: true
+  },
+  linkweb: {
+    type: String,
+    required: true
+  },
+  forgotpass: {
+    type: String,
+    required: true
   }
 })
 var newletter= new mongoose.Schema({
@@ -227,7 +235,7 @@ var social_ondo=[67.275, 58.025, 65.5, 59.2, 60.375, "NIL", 56.175]
 var social_osun=[64.1, 57.125, 70.8, 57.5, 66.225, 56.475, 64.3]
 var social_oyo=[67.65, 53.825, 70.025, 65.35, 66.025, 67.575, 66.925]
 // dataffffffffffffffffffffffffffffffffffffffff
-
+var lame=[]
 var country_data=[]
 var country_code=[]
 var edit_country=Country.getAllCountries()
@@ -273,6 +281,45 @@ else{
   }
   })
 })
+
+
+app.get("/password-recovery",(request, response)=>{
+  day=new Date().getFullYear()
+  var linkquery= request.query.check_password
+console.log(linkquery)
+if(linkquery==undefined){
+  response.redirect("/login")
+}
+else{
+  var forgotpasslist=[]
+User.find({}, function(err, users) {
+  for (let x in users){
+   var combineemail=users[x].forgotpass
+   forgotpasslist.push(combineemail)
+  }
+  console.log(forgotpasslist)
+
+if(forgotpasslist.includes(linkquery)){
+  User.findOne({forgotpass:linkquery}, (err, found)=>{
+    response.render("passwordrecovery", {fan:day})
+  })
+}
+else{
+  day=new Date().getFullYear()
+    // day= new Date().toLocaleDateString()
+    // console.log(day)
+    response.render("error", {fan:day})
+}
+}
+)
+}
+
+})
+
+
+
+
+
 var siginverify=""
 var emailsigncode=""
    var day=new Date().getFullYear()
@@ -317,15 +364,15 @@ console.log(user_route)
     })
     }
 
-    else if(request.params.jbk.toLowerCase()=="password-recovery"){
-      day=new Date().getFullYear()
-  response.render("passwordrecovery", {fan:day})
-
-  }
   else if(request.params.jbk.toLowerCase()=="suggestion"){
     day=new Date().getFullYear()
 response.render("suggestion", {fan:day})
 
+}
+
+else if(request.params.jbk.toLowerCase()=="account-recovery"){
+  day=new Date().getFullYear()
+  response.render("accountrecovery", {fan:day, det:emailcheck})
 }
 else if(request.params.jbk.toLowerCase()=="verify-email"){
   day=new Date().getFullYear()
@@ -398,7 +445,7 @@ list-style: none;
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: #fff;">
-<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+<img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
 <img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
@@ -408,7 +455,7 @@ list-style: none;
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
 <div style="display:block; margin-left:auto; margin-right:auto;">
-<img class="" style="width: 74%; margin-left: 14%;" src=" https://fregzyapp.herokuapp.com/static/pc.png" alt="">
+<img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
 </div>
 
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
@@ -525,9 +572,6 @@ transporter.sendMail(mailOptions, function (err, info) {
 
 }
 
-else if(request.params.jbk.toLowerCase()=="account-recovery"){
-  response.render("accountrecovery", {fan:day, det:emailcheck})
-}
     else{
 response.redirect("/")
     }
@@ -570,7 +614,9 @@ app.post("/verifyemail", (request, response)=>{
 //   email: "signemail",
 //   password: "hash",
 //   verifiedemail: "no",
-//   codeauto: "no"
+//   codeauto: "no",
+//   forgotpass: "yuu",
+//   linkweb:"jhug"
 // })
 
 // adduser.save(function(err){
@@ -580,6 +626,8 @@ app.post("/verifyemail", (request, response)=>{
 //   else{
 //   }
 // })
+
+
 
 
 
@@ -763,8 +811,19 @@ else{
   const saltRounds = 10;
   bcrypt.genSalt(saltRounds, function(err, salt) {
     bcrypt.hash(signpassword, salt, function(err, hash) {
+      const saltRounds2 = 12;
+      bcrypt.genSalt(saltRounds2, function(err, solt) {
+        bcrypt.hash(signemail, solt, function(err, hash2) {
+          bcrypt.genSalt(saltRounds2, function(err, selt) {
+            bcrypt.hash(signusername, selt, function(err, hash3) {
     // Store hash in database here
-  console.log(hash)
+  console.log(hash2)
+  var ur= uuid()
+  var sed= ur.slice(0, 14)
+  var std= ur.slice(14, 28)
+  var swr= sed + hash2 + hash + std
+  var sor= std + hash3 + sed + hash2
+
 const adduser= new User({
   fullname:signfullname,
   username: signusername,
@@ -774,7 +833,9 @@ const adduser= new User({
   email: signemail,
   password: hash,
   verifiedemail: "no",
-  codeauto: "no"
+  codeauto: "no",
+  forgotpass: swr,
+  linkweb: sor
 })
 
 adduser.save(function(err){
@@ -820,7 +881,7 @@ list-style: none;
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: #fff;">
-<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+<img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
 <img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
@@ -830,7 +891,7 @@ list-style: none;
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
 <div style="display:block; margin-left:auto; margin-right:auto;">
-<img class="" style="width: 74%; margin-left: 14%;" src=" https://fregzyapp.herokuapp.com/static/pc.png" alt="">
+<img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
 </div>
 
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
@@ -872,6 +933,11 @@ console.log(info);
 }
 }
 )
+//  llllllllllllllllllllllllllllllllllllllllllllllllllll
+})
+})
+  })
+ })
 });
 });
 }
@@ -962,7 +1028,7 @@ app.post("/suggestion", (request, response)=>{
 
 
 app.post("/passwordrecovery", (request, response)=>{
-  var nam= "Angelokhare"
+  var nam= lame[0]
   var transporter = nmail.createTransport({
     service: 'gmail',
     auth: {
@@ -1037,15 +1103,23 @@ app.post("/passwordrecovery", (request, response)=>{
 
 
 app.post("/accountrecovery", (request, response)=>{
-var checkgmail= request.body.auth_gmail
-if(checkgmail !="angela@example.com"){
-  emailcheck="Sorry, this email is not available in our database!"
-  response.redirect("/account-recovery")
-}
-else if(checkgmail =="angela@example.com"){
+
+
+
+var emaillist=[]
+User.find({}, function(err, users) {
+  for (let x in users) {
+   var newemail=users[x].email
+   emaillist.push(newemail)
+  }
+  var checkgmail= request.body.auth_gmail.toLowerCase().trim()
+
+  if(emaillist.includes(checkgmail)){
+    User.findOne({email:checkgmail}, (err, found)=>{
   emailcheck=""
-var searchedemail= "angela@example.com"
-var gmailowner= "Angelokhare"
+var searchedemail= checkgmail
+var gmailowner= found.username
+lame.push(gmailowner)
   var transporter = nmail.createTransport({
     service: 'gmail',
     auth: {
@@ -1056,7 +1130,7 @@ var gmailowner= "Angelokhare"
     
     const mailOptions = {
     from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+    bcc: checkgmail, // list of receivers
     subject: 'Password Recovery!', // Subject line
     html: `
     <style>
@@ -1080,7 +1154,7 @@ var gmailowner= "Angelokhare"
     <div style="margin: 0 20px;">
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >You can reset your password by clicking the link below:</p>
-    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery">Reset your password </a></button>
+    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}">Reset your password </a></button>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
@@ -1115,7 +1189,13 @@ var gmailowner= "Angelokhare"
 
 
 response.render("emailreceived", {fan:day})
+  })
 }
+else{
+  emailcheck="Sorry, this email is not found!"
+  response.redirect("/account-recovery")
+}
+})
 })
 
 
@@ -1293,7 +1373,7 @@ app.get("/signup/:hgy", (request, response)=>{
     response.redirect("/signup")
 })
 
-
+// kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 app.post("/login", (request, response)=>{
     var usern= request.body.username.toLowerCase().trim()
@@ -1318,7 +1398,7 @@ app.post("/login", (request, response)=>{
       User.findOne({username:usern}, (err, found)=>{
       bcrypt.compare(passloginpost, found.password, (err, got)=>{
         if(got){
-          response.redirect("/")
+         
    
      userprof=usern
     //  console.log(userprof)
@@ -1427,7 +1507,7 @@ var transporter = nmail.createTransport({
 });
 
 
-
+if(found.codeauto=="yes"){
 var ty= uuid()
 var ui=ty.replaceAll("-", "e")
 var bt= ui.slice(15, 20)
@@ -1517,7 +1597,11 @@ console.log(info);
 
 
     // response.redirect("/"+user_route)
-    
+    response.redirect("/signup")
+}
+else{
+response.redirect("/")
+}
   }
   else{
    var day=new Date().getFullYear()

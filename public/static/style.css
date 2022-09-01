@@ -673,7 +673,7 @@ footer {
 .login-profile{
   margin-top: -65%;
    margin-left:60%; 
-   margin-bottom: 26%; 
+   margin-bottom: 10%; 
 }
 .enter-details{
   font-size: 1.5vw;;
@@ -1112,6 +1112,7 @@ width: 30vw;
 }
 .create-sign{
   font-size: 5vw;
+  padding-top: 15%;
 }
 .sign-body{
   width: 50%;
@@ -1307,7 +1308,7 @@ margin-top: -24%;
 .login-profile{
   margin-top: -65%;
    margin-left:60%; 
-   margin-bottom: 26%; 
+   margin-bottom: 10%; 
 }
 .input-auth{
   font-size: 3vw;
@@ -2016,6 +2017,9 @@ font-size: 5vw;
     font-size: 2.5vw;
     padding: 1rem 27%;
   }
+  .top-div{
+    padding-top:10%;
+   }
     }
 @media only screen and (max-width: 550px){
   .ve{
@@ -2035,6 +2039,7 @@ font-size: 5vw;
       padding: 2.5%; 
       margin-left: 88vw;
    } 
+ 
 }
 @media only screen and (max-width: 539px){
 .enter-display{
