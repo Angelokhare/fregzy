@@ -253,7 +253,7 @@ for(let i=0; i<250; i++){
 console.log(country_data)
 console.log(new_code)
 console.log(country_code)
-
+var globallinkquery=""
 
 globalsignemail=""
 globalsignfullname=""
@@ -287,6 +287,7 @@ app.get("/password-recovery",(request, response)=>{
   day=new Date().getFullYear()
   var linkquery= request.query.check_password
 console.log(linkquery)
+
 if(linkquery==undefined){
   response.redirect("/login")
 }
@@ -303,6 +304,7 @@ if(forgotpasslist.includes(linkquery)){
   User.findOne({forgotpass:linkquery}, (err, found)=>{
     response.render("passwordrecovery", {fan:day})
   })
+  globallinkquery= linkquery
 }
 else{
   day=new Date().getFullYear()
@@ -317,9 +319,9 @@ else{
 })
 
 
-
-
-
+var globalview=""
+var userprof=""
+var globaluser_route=""
 var siginverify=""
 var emailsigncode=""
    var day=new Date().getFullYear()
@@ -330,7 +332,7 @@ app.get("/", (request, response)=>{
     response.render("index", {fan:day})
 })
 var emailcheck=""
-var user_profile= userprof +"-profile"
+var user_profile= globaluser_route
 app.get("/:jbk", (request, response)=>{
   var day=new Date().getFullYear()
     var user_route= userprof +"-dashboard"
@@ -403,10 +405,34 @@ else if(request.params.jbk.toLowerCase()=="verify-email"){
 console.log(greet)
     response.render("dashboard", {fan:day, username: userprof, greet:greet})
 }
-else if (request.params.jbk.toLowerCase()==user_profile){
+else if (request.params.jbk.toLowerCase()==globaluser_route){
     var edit_country=Country.getAllCountries()
-    // console.log(edit_country)
-response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
+    console.log(globalview)
+    var proflink= request.query.user_authenticate
+    if(proflink==undefined){
+      response.redirect("/login")
+    }
+    else{
+    var viewlist=[]
+    User.find({}, function(err, users) {
+      for (let x in users){
+       var combineemail=users[x].linkweb
+       viewlist.push(combineemail)
+      }
+   if(viewlist.includes(proflink)){
+
+      User.findOne({linkweb:proflink}, (err, found)=>{
+        response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
+        })
+      }
+   else{
+        day=new Date().getFullYear()
+          // day= new Date().toLocaleDateString()
+          // console.log(day)
+          response.render("error", {fan:day})
+      }
+      })
+}
 }
 else if (request.params.jbk.toLowerCase()=="push-code"){
 
@@ -1025,10 +1051,13 @@ app.post("/suggestion", (request, response)=>{
 
 
 
-
+var lame=[]
 
 app.post("/passwordrecovery", (request, response)=>{
   var nam= lame[0]
+  User.findOne({linkweb:globallinkquery}, (err, found)=>{
+
+
   var transporter = nmail.createTransport({
     service: 'gmail',
     auth: {
@@ -1059,7 +1088,7 @@ app.post("/passwordrecovery", (request, response)=>{
     <div style="width:100%; background-color: #fff;">
     <img style="width:70px; margin-left:auto; margin-right:auto; display:block;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
     </div>
-    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${nam}</a>, We are confirming that...</p>
+    <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${found.username}</a>, We are confirming that...</p>
     <div style="margin: 0 20px;">
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Password</span> has been updated on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span>.</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We'll always let you know when there is any activity on your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account. This helps keep your account safe.</p>
@@ -1097,13 +1126,13 @@ app.post("/passwordrecovery", (request, response)=>{
 
   response.redirect("/login")
 })
+})
 
 
 
 
 
 app.post("/accountrecovery", (request, response)=>{
-
 
 
 var emaillist=[]
@@ -1197,7 +1226,6 @@ else{
 }
 })
 })
-
 
 
 
@@ -1403,6 +1431,8 @@ app.post("/login", (request, response)=>{
      userprof=usern
     //  console.log(userprof)
     var user_route= userprof +"-profile"
+    globaluser_route= user_route
+    globalview= found.linkweb
 // console.log(    request.headers['x-forwarded-for'].split(',').shift() || request.socket.remoteAddress)
 var usert = userip.getClientIp(request); // on localhost > 127.0.0.1
 console.log(usert)
@@ -1600,7 +1630,7 @@ console.log(info);
     response.redirect("/signup")
 }
 else{
-response.redirect("/")
+response.redirect("/"+ globaluser_route + "?user_authenticate=" + found.linkweb)
 }
   }
   else{
@@ -1795,3 +1825,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit124
 // commit125
 // commit126
+// commit127
