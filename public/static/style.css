@@ -1667,9 +1667,9 @@ padding: 5% 5%;
     bottom: 0;
   }
 }
-@media only screen and (min-height:600px){
+@media only screen and (min-height:650px){
 .question{
-margin-bottom: 30%;
+margin-bottom: 40%;
 }
 }
 @media only screen and (max-width:791px){
