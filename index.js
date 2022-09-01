@@ -1014,7 +1014,7 @@ app.post("/suggestion", (request, response)=>{
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div style="width:100%; background-color: #fff;">
-    <img style="width:70px; margin-left:auto; margin-right:auto; display:block;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+    <img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
     </div>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${nam}</a>,</p>
     <div style="margin: 0 20px;">
@@ -1205,12 +1205,13 @@ lame.push(gmailowner)
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div style="width:100%; background-color: #fff;">
-    <img style="width:70px; margin-left:auto; margin-right:auto; display:block;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+    <img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
     </div>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${gmailowner}</a>,</p>
     <div style="margin: 0 20px;">
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</p>
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >You can reset your password by clicking the link below:</p>
+    <img style="width:90%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/security.png" alt="fregzy name">
+    <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align: center; margin-top:40px;" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</h1>
+    <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align: center; margin-top:40px" >You can reset your password by clicking the link below:</h1>
     <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}">Reset your password </a></button>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>

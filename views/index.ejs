@@ -118,8 +118,8 @@
         <li class="pri"><button class="btn button2" style="border-radius: 10px; padding: 0.5rem 1rem; border-color: #4F0E0E; color: #4F0E0E; text-decoration: none; font-size: 2vw; font-weight: 700; border: 2px solid;" type="submit"><a class="link-line learn sap" style="color: #4F0E0E;" href="/">Learn More</a></button></li>
       </ul>
       <div style="position: fixed; bottom: 0;"> 
-<!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
-        <i style="" class='question fas fa-comment-alt'></i>
+        <img class="question chatting1" style="" src="https://img.icons8.com/sf-regular-filled/240/ffffff/chat.png"/>
+        <img class="question chatting2 hid" style="background-color: #fff;" src="https://img.icons8.com/sf-regular-filled/240/4F0E0E/chat.png"/>
       </div>
 
       <div class="body-color body-color-white" style=" border-top-right-radius: 50%; border-bottom-left-radius: 50px;">
@@ -315,8 +315,8 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector(".navbar").classList.remove("header-white")
   document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
   document.querySelector(".button1").style.backgroundColor="#fff"
-  document.querySelector(".question").style.backgroundColor="#fff"
-  document.querySelector(".question").style.color="#4f0e0e"
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".chatting1").classList.add("hid")
   document.querySelector(".button2").style.borderColor= "#FFF"
   document.querySelector(".learn").style.color="#FFF";
   document.querySelector(".started").style.color="#1d2a35";
@@ -383,13 +383,13 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".bar-black").classList.remove("hid")
   document.querySelector("header").classList.remove("header-black")
   document.querySelector("header").classList.add("header-white")
-  document.querySelector(".question").style.backgroundColor="#4f0e0e"
-  document.querySelector(".question").style.color="#fff"
   document.querySelector(".navbar").classList.remove("header-black")
   document.querySelector(".navbar").classList.add("header-white")
   document.querySelector(".navbar").style.borderColor= "#4F0E0E"
   document.querySelector(".button1").style.backgroundColor="#4F0E0E"
   document.querySelector(".button2").style.borderColor= "#4F0E0E"
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".chatting1").classList.remove("hid")
   document.querySelector(".learn").style.color="#4F0E0E";
   document.querySelector(".started").style.color="#FFF";
   document.querySelector(".checks").style.color="#395B64"

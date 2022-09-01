@@ -1126,8 +1126,8 @@ width: 30vw;
 .question{
   color: #fff; 
   background-color:#4F0E0E;
-   font-size:2.5vw; 
-   padding: 1.5%; 
+  width: 6vw;
+   padding: 0.4%; 
    margin-left: 90vw; 
    border-radius: 100%; 
    margin-bottom: 4%;
@@ -1779,9 +1779,11 @@ padding-right: 40px;
     margin-top: 12%;
   } 
   .question{
-    font-size:4vw; 
-    padding: 2%; 
- } 
+    color: #fff; 
+    background-color:#4F0E0E;
+    width: 7vw;
+     /* padding: 1%;  */
+  }
 }
 @media only screen and (max-width:735px){
 .footer-heading{
@@ -2078,8 +2080,8 @@ font-size: 5vw;
       font-size: 4vw;
     }
     .question{
-      font-size:5vw; 
-      padding: 2.5%; 
+      width:9vw; 
+      padding: 0.5%; 
       margin-left: 88vw;
    } 
  
@@ -2510,8 +2512,8 @@ margin-top: 2%;
     width: 80%;
     }
     .question{
-      font-size:7vw; 
-      padding: 3%; 
+      width:10vw; 
+      padding: 0.8%; 
       margin-left: 85vw;
    } 
 }
