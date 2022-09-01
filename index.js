@@ -304,7 +304,7 @@ User.find({}, function(err, users) {
 if(forgotpasslist.includes(linkquery)){
   User.findOne({forgotpass:linkquery}, (err, found)=>{
     var checkpassing=""
-    response.render("passwordrecovery", {fan:day, pad:checkpassing})
+    response.render("passwordrecovery", {fan:day, pad:checkpassing, pass1:checkpassing, pass2:checkpassing})
   })
   globallinkquery= linkquery
 }
@@ -1150,7 +1150,7 @@ User.findOneAndUpdate(conditions, update, function (err){
 }
 else{
 var choking="Password doesn't match"
-  response.render("passwordrecovery", {pad:choking})
+  response.render("passwordrecovery", {pad:choking, pass1:pass1, pass2:pass2})
 }
 })
 
@@ -1213,6 +1213,8 @@ lame.push(gmailowner)
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align: center; margin-top:40px;" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</h1>
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:18px; color: #000; text-align: center; margin-top:40px; margin-bottom:20px;" >You can reset your password by clicking the link below:</h1>
     <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}">Reset your password </a></button>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000;  margin-top:20px;" > OR use copy the link bellow:</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000";> http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
