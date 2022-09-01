@@ -35,7 +35,8 @@ var newuser= new mongoose.Schema({
   },
   username: {
     type: String,
-    required: true
+    required: true,
+    maxLength: 25
   },
   email: {
     type: String,
@@ -302,7 +303,8 @@ User.find({}, function(err, users) {
 
 if(forgotpasslist.includes(linkquery)){
   User.findOne({forgotpass:linkquery}, (err, found)=>{
-    response.render("passwordrecovery", {fan:day})
+    var checkpassing=""
+    response.render("passwordrecovery", {fan:day, pad:checkpassing})
   })
   globallinkquery= linkquery
 }
@@ -847,8 +849,12 @@ else{
   var ur= uuid()
   var sed= ur.slice(0, 14)
   var std= ur.slice(14, 28)
-  var swr= sed + hash2 + hash + std
-  var sor= std + hash3 + sed + hash2
+  var splithash21= hash2.slice(0, 10)
+  var splithash22= hash2.slice(10, 20)
+  var splithash23= hash2.slice(20, 30)
+
+  var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
+  var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
 
 const adduser= new User({
   fullname:signfullname,
@@ -1054,9 +1060,22 @@ app.post("/suggestion", (request, response)=>{
 var lame=[]
 
 app.post("/passwordrecovery", (request, response)=>{
+  var pass1= request.body.password
+  var pass2= request.body.Confirmpassword
   var nam= lame[0]
-  User.findOne({linkweb:globallinkquery}, (err, found)=>{
+  console.log(globallinkquery)
+  User.findOne({forgotpass:globallinkquery}, (err, found)=>{
+  
+  
 
+if(pass1==pass2){
+  const saltRounds2 = 10;
+  bcrypt.genSalt(saltRounds2, function(err, solt) {
+    bcrypt.hash(pass1, solt, function(err, hash2) {
+ 
+  var conditions = {forgotpass:globallinkquery};
+  var update = { password: hash2 };
+User.findOneAndUpdate(conditions, update, function (err){
 
   var transporter = nmail.createTransport({
     service: 'gmail',
@@ -1068,7 +1087,7 @@ app.post("/passwordrecovery", (request, response)=>{
     
     const mailOptions = {
     from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
-    bcc: "edmundobiegue@gmail.com, pinocchio794@gmail.com", // list of receivers
+    bcc: found.email, // list of receivers
     subject: 'Change of Password!', // Subject line
     html: `
     <style>
@@ -1126,6 +1145,15 @@ app.post("/passwordrecovery", (request, response)=>{
 
   response.redirect("/login")
 })
+})
+})
+}
+else{
+var choking="Password doesn't match"
+  response.render("passwordrecovery", {pad:choking})
+}
+})
+
 })
 
 
