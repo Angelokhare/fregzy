@@ -1126,13 +1126,15 @@ width: 30vw;
 .question{
   color: #fff; 
   background-color:#4F0E0E;
-  width: 6vw;
+  width: 5vw;
    padding: 0.4%; 
    margin-left: 90vw; 
    border-radius: 100%; 
    margin-bottom: 4%;
 }
-
+.bw{
+  display:none
+}
 
 
 
@@ -1667,9 +1669,9 @@ padding: 5% 5%;
     bottom: 0;
   }
 }
-@media only screen and (min-height:650px){
+@media only screen and (min-height:500px) and (max-width:650px){
 .question{
-margin-bottom: 40%;
+margin-bottom: 20%;
 }
 }
 @media only screen and (max-width:791px){
@@ -2234,6 +2236,9 @@ font-size: 4.5vw;
 }
 .auth-subscribe{
   width: 65vw;
+  }
+  .bw{
+    display:flex;
   }
 }
 @media only screen and (max-width: 492px){
