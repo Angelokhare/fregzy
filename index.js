@@ -85,8 +85,16 @@ var newletter= new mongoose.Schema({
     required: true
   },
 })
+var detail= new mongoose.Schema({
+  username: {
+    type: String,
+    required: true
+  },
+})
 var User= new mongoose.model("User", newuser)
 var Letter= new mongoose.model("Letter", newletter)
+var Follower= new mongoose.model("Follower", detail)
+var Following= new mongoose.model("Following", detail)
 
 
 // ART
@@ -475,7 +483,7 @@ list-style: none;
 <div style="background-color: #fff;">
 <img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto; border-radius:50px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
@@ -506,6 +514,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 </div>
 </div>
 `,// plain text body
@@ -585,7 +594,7 @@ html: `
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 </div>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto; border-radius:50px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 `,// plain text body
 
 
@@ -916,7 +925,7 @@ list-style: none;
 <div style="background-color: #fff;">
 <img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto; border-radius:50px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
@@ -947,7 +956,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
-<img style="width:90%; display:block; margin-left:auto; margin-right:auto; border-radius:50px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 </div>
 </div>
 `,// plain text body
