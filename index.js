@@ -555,7 +555,7 @@ list-style: none;
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: #fff;">
-<img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
 <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
@@ -1001,7 +1001,7 @@ list-style: none;
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: #fff;">
-<img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+<img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
 <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
@@ -1194,11 +1194,15 @@ User.findOneAndUpdate(conditions, update, function (err){
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div style="width:100%; background-color: #fff;">
-    <img style="width:70px; margin-left:auto; margin-right:auto; display:block;" src=" https://fregzyapp.herokuapp.com/static/icon1.webp" alt="">
+    <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
     </div>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${found.username}</a>, We are confirming that...</p>
+    <img style="width:70px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/organizer.png" alt="celebration">
     <div style="margin: 0 20px;">
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Password</span> has been updated on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span>.</p>
+    <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Password</span> has been updated on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span>.</h1>
+    </div>
+    <video style="width:70px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://cdn.dribbble.com/users/1573866/screenshots/6791067/first-screen.gif"></video>
+    <div style="margin: 0 20px;">
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >We'll always let you know when there is any activity on your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account. This helps keep your account safe.</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
@@ -1220,6 +1224,7 @@ User.findOneAndUpdate(conditions, update, function (err){
     </ul><br>
     <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
     </div>
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/elders.png" alt="groupy">
     `,// plain text body
     
     
@@ -1245,15 +1250,17 @@ var choking="Password doesn't match"
 
 })
 
-
-// let i = 0;
-// while (i < 10) {
+// console.log(new Date().getMinutes())
+// let i = 1;
+// var b=47
+// while (i < 2) {
 //   console.log(i);
-//   if(i==3){
-//     i=10
+//   if(b ==new Date().getMinutes()){
+//     i=1
 //   }
 //   else{
-//     i++;
+//     i=2;
+//   console.log("here");
 //   }
 // }
 
@@ -1272,6 +1279,8 @@ User.find({}, function(err, users) {
   if(emaillist.includes(checkgmail)){
     User.findOne({email:checkgmail}, (err, found)=>{
 
+ 
+var ted=""
 
   var forgotlist=[]
   User.find({}, function(err, users) {
@@ -1279,18 +1288,18 @@ User.find({}, function(err, users) {
      var neweforgot=users[x].forgotpass
      forgotlist.push(neweforgot)
     }
-    let w = 1;
-  //  while (w < 2){
 
-  const saltRounds = 10;
-  bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(found.password, salt, function(err, hash) {
-      const saltRounds2 = 12;
-      bcrypt.genSalt(saltRounds2, function(err, solt) {
-        bcrypt.hash(found.email, solt, function(err, hash2) {
-          bcrypt.genSalt(saltRounds2, function(err, selt) {
-            bcrypt.hash(found.username, selt, function(err, hash3) {
-    // Store hash in database here
+
+
+let w = 1;
+while (w < 2){
+
+  const saltRounds = 12;
+  var hash=  bcrypt.hashSync(found.password, saltRounds);
+  var hash2=  bcrypt.hashSync(found.email, saltRounds);
+  var hash3=  bcrypt.hashSync(found.username, saltRounds);
+
+
   console.log(hash2)
   var ur= uuid()
   var sed= ur.slice(0, 14)
@@ -1302,11 +1311,16 @@ User.find({}, function(err, users) {
   var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
   var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
 
-// w++
+
+
+
 if(forgotlist.includes(swr)){
-    w = 1
+  w=1
 }
+
+// }
 else{
+  w=2
       var conditions = {email:checkgmail};
       var update = { forgotpass: swr, dateforgot: new Date().getTime() };
     User.findOneAndUpdate(conditions, update, function (err){
@@ -1346,7 +1360,7 @@ lame.push(gmailowner)
       } 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <img style="width:200px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+    <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${gmailowner}</a>,</p>
     <img style="display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/security.png" alt="fregzy name">
     <div style="margin: 0 20px;">
@@ -1387,21 +1401,22 @@ lame.push(gmailowner)
       }
     }); 
 
-
 response.render("emailreceived", {fan:day})
 
 
 
 })
-w=2
+
 }
-})
-})
-      })
-    })
-  })
-})
-// }
+  }
+// })
+// })
+      // })
+    // })
+  // })
+// })
+
+
 })
   })
 }
