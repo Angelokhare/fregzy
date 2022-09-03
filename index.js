@@ -455,7 +455,10 @@ console.log(user_route)
 response.render("suggestion", {fan:day})
 
 }
-
+else if(request.params.jbk.toLowerCase()=="careers"){
+  day=new Date().getFullYear()
+  response.render("job", {fan:day})
+}
 else if(request.params.jbk.toLowerCase()=="account-recovery"){
   day=new Date().getFullYear()
   response.render("accountrecovery", {fan:day, det:emailcheck})
@@ -687,6 +690,11 @@ transporter.sendMail(mailOptions, function (err, info) {
     else{
 response.redirect("/")
     }
+})
+
+
+app.post("/jobs", (request, response)=>{
+  response.redirect("/careers")
 })
 
 

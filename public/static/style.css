@@ -1171,10 +1171,30 @@ input[type="date"]::-webkit-datetime-edit-day-field{
   
 } */
 
-
-
-
-
+/* job tag */
+.job-tag{
+  font-size: 8vw;
+  padding-top:8%;
+}
+.job-sec{
+  font-size: 1.5vw;
+  padding: 0 5%;
+}
+.job-pic{
+  width: 35vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.job-down{
+  font-size: 12vw;
+  margin-top: 2%;
+  margin-bottom: 20%;
+}
+.job-div{
+  margin-left: 20%;
+   margin-right: 20%;
+}
 
 
 
@@ -1309,6 +1329,9 @@ font-size: 3.5vw;
 .tablet{
   margin-bottom: -27%;
  } 
+ .job-tag{
+  font-size: 12vw;
+ }
 }
 
 @media only screen and (max-width:1010px){
@@ -1523,6 +1546,16 @@ padding: 5% 5%;
   .question{
     font-size:3vw;   
  }
+ .job-pic{
+  width: 50vw;
+ }
+ .job-down{
+  font-size: 20vw;
+ }
+ .job-div{
+  margin-left: 15%;
+   margin-right: 15%;
+}
 }
 
 @media only screen and (max-width:895px){
@@ -1616,7 +1649,9 @@ padding: 5% 5%;
           .display-ic{
             font-size: 2.5vw;
           }           
-        
+        .job-tag{
+          margin-bottom: 5%;
+        }
   }
 @media only screen and (max-width:850px){
   .pro {
@@ -1741,6 +1776,9 @@ padding-top: 10%;
   font-size: 2vw;
   padding: 1rem 22%;
 }
+.job-tag{
+  padding-top:15%;
+}
 }
 @media only screen and (max-width:1200px) and (min-height: 1000px){
   .sign-dis-girl{
@@ -1789,6 +1827,9 @@ padding-right: 40px;
     background-color:#4F0E0E;
     width: 7vw;
      /* padding: 1%;  */
+  }
+  .job-sec{
+    font-size: 1.8vw;
   }
 }
 @media only screen and (max-width:735px){
@@ -1859,7 +1900,10 @@ font-size: 3vw;
 .create-sign{
   font-size: 7vw;
 }
-
+.job-sec{
+  font-size: 2vw;
+  /* padding-top:15%; */
+}
 }
 @media only screen and (max-width:700px){
 .header-bw{
@@ -1962,7 +2006,10 @@ margin-left: 10.6%;
 .input-sign{
   font-size: 2.5vw;
 }
-
+.job-div{
+  margin-left: 10%;
+   margin-right: 10%;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -2239,6 +2286,19 @@ font-size: 4.5vw;
   }
   .bw{
     display:flex;
+  }
+  .job-pic{
+    width: 65vw;
+  }
+  .job-down{
+    font-size: 26vw;
+  }
+  .job-tag{
+    padding-top: 20%;
+    font-size: 16vw;
+  }
+  .job-sec{
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 492px){
@@ -2524,7 +2584,13 @@ margin-top: 2%;
       width:10vw; 
       padding: 0.8%; 
       margin-left: 85vw;
-   } 
+   }
+   .job-tag{
+    padding-top: 25%;
+  }   
+  .job-sec{
+    margin-bottom: 2%;
+  }
 }
 
 

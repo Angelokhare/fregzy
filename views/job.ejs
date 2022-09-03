@@ -22,6 +22,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <!-- test -->
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 <title>Fregzy</title>
 </head>
 <body class="sz sap">
@@ -87,12 +89,29 @@
           </div>
       </div>
 
-<img class="see" src="static/404.png" alt="">
-<h1 class="rew" style="text-align: center; color: #4F0E0E; font-weight: 700;">Page Not Found!</h1>
+<h1 class="job-tag" style="font-family: 'Bebas Neue', cursive; text-align: center; font-weight: 700;">Job <span style=" color: #4F0E0E; text-decoration: line-through;"> Hunt</span></h1>
+<h1 class="job-sec bap" style="text-align: center; font-weight: 700;">Finding jobs is like drinking water from a glass, no obstacle, just follow your guts feeling!</h1>
+
+<form action="/jobs" method="post">
+    <div class="profile-group job-div" style=" margin-bottom: 4%;">
+        <button  type="button" class="btn btn-success sign-icon-1" style="border-radius: 15px; border-right: none; border-top-right-radius: 0%; border-bottom-right-radius: 0%;"><i style="color: #fff;" class="fa fa-envelope display-ic"></i></button>
+        <button  type="button" class="btn btn-success sign-icon-2 hid" style="border-radius: 0%;  background-color: #131313; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-envelope display-ic"></i></button>
+        <input class="profile-inside pass-login pass-input bap input-sign bap email-input" style="border-radius: 0%;  border-right: none; border-left: none;  background-color:#fbf8f5; border-color: green; font-weight: 700; padding-right: 2%; text-transform: capitalize; line-height: 3;" name="job" value="" placeholder="Search job"  type="text" required>
+        <button type="submit" class="btn btn-success user-but at-sign at2" style=" border-radius: 15px; border-left: none; border-top-left-radius: 0%; border-bottom-left-radius: 0%;"><i style="color: #fff;" class="fa fa-hand-pointer-o"></i></button>
+        <!-- <button  type="button" class="btn btn-success sign-icon-1" style="border-radius: 15px; border-right: none; border-top-right-radius: 0%; border-bottom-right-radius: 0%;"><i style="color: #fff;" class="fa fa-envelope display-ic"></i></button> -->
+
+    </div>
+</form>
+
+
+
+<img class="job-pic" src="static/job.png" alt="">
+<!-- #dfe2e8 -->
+<h1 class="job-down" style="text-align: center; color: red; font-weight: 700; font-family: 'Bebas Neue', cursive;">No Jobs!</h1>
       
 
 
-<div class="error-footer">
+<!-- <div class="error-footer"> -->
   <div class="hid bw vain ki" style="margin-bottom: 0%; background-color: #EEEEEE;">
     <img class="rap" src="static/connection.png" alt="">
     <h1 class="wer">No Network</h1>
@@ -120,9 +139,6 @@
        </div>
      </form>
      <ul class="social">
-      <li class="ve">
-        <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
-    </li>
     <li class="ve">
       <i class="wr fa fa-instagram insta" style="padding: 15%; font-size: 18px; border-radius: 3px;"></i>
   </li>
@@ -146,7 +162,7 @@
 </div>
 <h5 style="color: #fff; margin-top: -1%; font-family: 'Varela Round', sans-serif;" class="copyright">Copyright © 2022-<%= fan%> <span style="font-weight: 700;">Fregzy</span> </h5>
   </footer>
-</div>
+<!-- </div> -->
        <script>
         var li_main=document.querySelector(".li_main");
     
