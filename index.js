@@ -7,10 +7,13 @@ const path= require("path")
 const cropper= require("cropperjs")
 const croppie= require("croppie")
 const bcrypt= require("bcrypt")
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 const jwt= require("jsonwebtoken")
 const nmail= require("nodemailer")
 const userip= require("request-ip")
 const axios = require("axios");
+const session= require("express-session");
+const passport= require("passport")
 const {v4:uuid}=require("uuid")
 const { request, response } = require("express")
 const { verify } = require("crypto")
@@ -19,7 +22,14 @@ var app = express()
 let Country = require('country-state-city').Country;
 let State = require('country-state-city').State;
 
+app.use(session({
+  secret: "yes secret",
+  resave: false,
+  saveUninitialized: false
+}))
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(body.urlencoded({extended:true}))
 app.set("view engine", "ejs")
@@ -63,11 +73,11 @@ var newuser= new mongoose.Schema({
     required: true
   },
   verifiedemail: {
-    type: String,
+    type: Boolean,
     required: true
   },
   codeauto:{
-    type: String,
+    type: Boolean,
     required: true
   },
   linkweb: {
@@ -77,6 +87,17 @@ var newuser= new mongoose.Schema({
   forgotpass: {
     type: String,
     required: true
+  },
+  dateforgot:{
+    type: Number,
+    required: true
+  },
+  datelink:{
+    type: Number,
+    required: true
+  },
+  image:{
+    type: String,
   }
 })
 var newletter= new mongoose.Schema({
@@ -95,6 +116,49 @@ var User= new mongoose.model("User", newuser)
 var Letter= new mongoose.model("Letter", newletter)
 var Follower= new mongoose.model("Follower", detail)
 var Following= new mongoose.model("Following", detail)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+passport.use(new GoogleStrategy({
+  clientID: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  callbackURL: "http://localhost:3000/auth/google/secret",
+  userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+},
+function( accessToken, refreshToken, profile, cb){
+ User.findOrCreate({googleId: profile.id}, function(err, user){
+  return cb(err, user)
+ });
+}
+))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ART
@@ -311,8 +375,18 @@ User.find({}, function(err, users) {
 
 if(forgotpasslist.includes(linkquery)){
   User.findOne({forgotpass:linkquery}, (err, found)=>{
+
+    var checkingForgetTime= new Date().getTime() - found.dateforgot
+if(checkingForgetTime > 300000){
+  day=new Date().getFullYear()
+  // day= new Date().toLocaleDateString()
+  // console.log(day)
+  response.render("error", {fan:day})
+}
+else{
     var checkpassing=""
     response.render("passwordrecovery", {fan:day, pad:checkpassing, pass1:checkpassing, pass2:checkpassing})
+}
   })
   globallinkquery= linkquery
 }
@@ -624,7 +698,7 @@ app.post("/verifyemail", (request, response)=>{
   }
   else{
     var conditions = { username: globalsignusername,};
-    var update = { verifiedemail: "yes" };
+    var update = { verifiedemail: true };
   User.findOneAndUpdate(conditions, update, function (err){
   if (err){
       response.json('nope');
@@ -654,7 +728,9 @@ app.post("/verifyemail", (request, response)=>{
 //   verifiedemail: "no",
 //   codeauto: "no",
 //   forgotpass: "yuu",
-//   linkweb:"jhug"
+//   linkweb:"jhug",
+//   dateforgot: new Date().getTime(),
+//   datelink: new Date().getTime()
 // })
 
 // adduser.save(function(err){
@@ -874,10 +950,12 @@ const adduser= new User({
   gender: signgender,
   email: signemail,
   password: hash,
-  verifiedemail: "no",
-  codeauto: "no",
+  verifiedemail: false,
+  codeauto: false,
   forgotpass: swr,
-  linkweb: sor
+  linkweb: sor,
+  dateforgot:new Date().getTime(),
+  datelink:new Date().getTime()
 })
 
 adduser.save(function(err){
@@ -1168,7 +1246,16 @@ var choking="Password doesn't match"
 })
 
 
-
+// let i = 0;
+// while (i < 10) {
+//   console.log(i);
+//   if(i==3){
+//     i=10
+//   }
+//   else{
+//     i++;
+//   }
+// }
 
 
 app.post("/accountrecovery", (request, response)=>{
@@ -1184,6 +1271,50 @@ User.find({}, function(err, users) {
 
   if(emaillist.includes(checkgmail)){
     User.findOne({email:checkgmail}, (err, found)=>{
+
+
+  var forgotlist=[]
+  User.find({}, function(err, users) {
+    for (let x in users) {
+     var neweforgot=users[x].forgotpass
+     forgotlist.push(neweforgot)
+    }
+    let w = 1;
+  //  while (w < 2){
+
+  const saltRounds = 10;
+  bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(found.password, salt, function(err, hash) {
+      const saltRounds2 = 12;
+      bcrypt.genSalt(saltRounds2, function(err, solt) {
+        bcrypt.hash(found.email, solt, function(err, hash2) {
+          bcrypt.genSalt(saltRounds2, function(err, selt) {
+            bcrypt.hash(found.username, selt, function(err, hash3) {
+    // Store hash in database here
+  console.log(hash2)
+  var ur= uuid()
+  var sed= ur.slice(0, 14)
+  var std= ur.slice(14, 28)
+  var splithash21= hash2.slice(0, 10)
+  var splithash22= hash2.slice(10, 20)
+  var splithash23= hash2.slice(20, 30)
+
+  var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
+  var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
+
+// w++
+if(forgotlist.includes(swr)){
+    w = 1
+}
+else{
+      var conditions = {email:checkgmail};
+      var update = { forgotpass: swr, dateforgot: new Date().getTime() };
+    User.findOneAndUpdate(conditions, update, function (err){
+
+
+
+
+
   emailcheck=""
 var searchedemail= checkgmail
 var gmailowner= found.username
@@ -1221,9 +1352,9 @@ lame.push(gmailowner)
     <div style="margin: 0 20px;">
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align: center; margin-top:40px;" >We've received a request to reset the password for the <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> account associated with ${searchedemail}. No changes have been made to your account yet.</h1>
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:18px; color: #000; text-align: center; margin-top:40px; margin-bottom:20px;" >You can reset your password by clicking the link below:</h1>
-    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}">Reset your password </a></button>
+    <button href="www.fregzyapp.herokuapp.com"  class="btn button-auth" style="font-family: 'Varela Round', sans-serif; background-color: #1C3879; color: #fff; text-decoration: none; font-weight: 700; display: block; margin-left: auto; margin-right: auto; padding: 1rem 20%; border-radius: 15px" ><a style="text-decoration: none; font-family: Roboto, sans-serif; font-size:16px; color:#fff" href="http://fregzyapp.herokuapp.com/password-recovery?check_password=${swr}">Reset your password </a></button>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000;  margin-top:20px;" > OR use copy the link bellow:</p>
-    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000";> http://fregzyapp.herokuapp.com/password-recovery?check_password=${found.forgotpass}</p>
+    <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000";> http://fregzyapp.herokuapp.com/password-recovery?check_password=${swr}</p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000" >If you did not request a new password, <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700;">Please let us know.</a></p>
     <p style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p><br><br>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
@@ -1258,6 +1389,20 @@ lame.push(gmailowner)
 
 
 response.render("emailreceived", {fan:day})
+
+
+
+})
+w=2
+}
+})
+})
+      })
+    })
+  })
+})
+// }
+})
   })
 }
 else{
@@ -1577,7 +1722,7 @@ var transporter = nmail.createTransport({
 });
 
 
-if(found.codeauto=="yes"){
+if(found.codeauto==true){
 var ty= uuid()
 var ui=ty.replaceAll("-", "e")
 var bt= ui.slice(15, 20)
@@ -1867,3 +2012,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit126
 // commit127
 // commit128
+// commit129
