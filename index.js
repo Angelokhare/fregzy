@@ -1197,7 +1197,7 @@ User.findOneAndUpdate(conditions, update, function (err){
     <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
     </div>
     <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <a style="color: #1C3879; text-transform: capitalize; text-decoration: none;">${found.username}</a>, We are confirming that...</p>
-    <img style="width:70px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/organizer.png" alt="celebration">
+    <img style="width:200px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/organizer.png" alt="celebration">
     <div style="margin: 0 20px;">
     <h1 style="font-weight: 600;  font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Your <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Password</span> has been updated on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span>.</h1>
     </div>
