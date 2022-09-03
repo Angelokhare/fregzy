@@ -1132,7 +1132,7 @@ width: 30vw;
    border-radius: 100%; 
    margin-bottom: 4%;
 }
-.bw{
+.no-div{
   display:none
 }
 
@@ -2284,8 +2284,8 @@ font-size: 4.5vw;
 .auth-subscribe{
   width: 65vw;
   }
-  .bw{
-    display:flex;
+  .no-div{
+    display:block;
   }
   .job-pic{
     width: 65vw;
