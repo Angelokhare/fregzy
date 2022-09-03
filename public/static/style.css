@@ -1709,6 +1709,11 @@ padding: 5% 5%;
 margin-bottom: 20%;
 }
 }
+@media only screen and (min-height:700px) and (max-width:650px){
+  .question{
+  margin-bottom: 40%;
+  }
+  }
 @media only screen and (max-width:791px){
   .pride{
     padding-right: 50px;
