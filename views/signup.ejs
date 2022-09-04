@@ -267,6 +267,8 @@
 <div style="position: fixed; bottom: 0;"> 
   <img class="question chatting1" style="" src="https://img.icons8.com/sf-regular-filled/240/ffffff/chat.png"/>
   <img class="question chatting2 hid" style="background-color: #fff;" src="https://img.icons8.com/sf-regular-filled/240/4F0E0E/chat.png"/>
+  <img class="question x1 hid" src="https://img.icons8.com/tiny-glyph/240/ffffff/delete-sign.png"/>
+  <img class="question x2 hid" style="background-color: #fff;" src="https://img.icons8.com/tiny-glyph/240/4F0E0E/delete-sign.png"/>
 </div>
 
 <div class="no-div">
@@ -331,6 +333,27 @@
               document.querySelector(".pass-login2").setAttribute("type", "text");
             })
 
+            document.querySelector(".chatting1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+
+})
+document.querySelector(".x1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+
+})
+document.querySelector(".chatting2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+
+})
+document.querySelector(".x2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+
+})
+
     for(let i=0; i<2; i++){
     var li_icon=document.querySelectorAll(".light");
 li_icon[i].addEventListener("click", ()=>{
@@ -377,6 +400,19 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelector(".sign-button").classList.remove("white")
   document.querySelector(".sr").classList.remove("red")
   document.querySelector(".sr").classList.add("white")
+
+  if(document.querySelector(".x1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+}
+if(document.querySelector(".chatting1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
 
 
   if(document.querySelector(".vis").classList.contains("hid")!=true){
@@ -500,6 +536,19 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelector(".sign-button").classList.add("white")
   document.querySelector(".sr").classList.add("red")
   document.querySelector(".sr").classList.remove("white")
+
+  if(document.querySelector(".x2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
+if(document.querySelector(".chatting2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
 
   for(let r=0; r<3; r++){
   document.querySelectorAll(".heading-left")[r].classList.remove("white")
@@ -2562,6 +2611,7 @@ var ho= document.querySelector(".erase")
                 document.querySelector(".button-signup").setAttribute("type", "submit");
               }
               var ti= '<%- signusernamelist %>'
+              console.log(ti)
             for (let x in ti) {
               var du= document.querySelector(".datausername")
               var su = du.options[x].value;

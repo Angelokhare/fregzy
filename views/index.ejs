@@ -120,6 +120,8 @@
       <div style="position: fixed; bottom: 0;"> 
         <img class="question chatting1" style="" src="https://img.icons8.com/sf-regular-filled/240/ffffff/chat.png"/>
         <img class="question chatting2 hid" style="background-color: #fff;" src="https://img.icons8.com/sf-regular-filled/240/4F0E0E/chat.png"/>
+        <img class="question x1 hid" src="https://img.icons8.com/tiny-glyph/240/ffffff/delete-sign.png"/>
+        <img class="question x2 hid" style="background-color: #fff;" src="https://img.icons8.com/tiny-glyph/240/4F0E0E/delete-sign.png"/>
       </div>
 
       <div class="body-color body-color-white" style=" border-top-right-radius: 50%; border-bottom-left-radius: 50px;">
@@ -234,7 +236,7 @@
    <nav>
      <ul class="docking">
        
-       <li class="pride sap"><a class="pic">Company <br class="bid"> <br> Vision<span style="visibility:hidden;">hh</span><br class="bid"> <br> Mission<span style="visibility:hidden;">h</span><br class="bid"> <br> Focus<span style="visibility:hidden;">hhii</span></a></li>
+       <li class="pride sap"><a class="pic">Company <br class="bid"> <br> Vision<span style="visibility:hidden;">hh</span><br class="bid"> <br> Mission<span style="visibility:hidden;">h</span><br class="bid"> <br> <a style="text-decoration: none; color:#fff; font-weight:700;" class="pic" href="/careers">Careers</a><span style="visibility:hidden;">h</span></a></li>
        <li class="pride"><a class="pic">Blogs<span style="visibility:hidden;">hhyuii</span> <br class="bid"> <br> FAQ<span style="visibility:hidden;">hoooiih</span> <br class="bid"> <br> <a style="text-decoration: none; color:#fff; font-weight:700;" class="pic" href="/suggestion">Suggestions</a><span style="visibility:hidden;">h</span> <br class="bid"> <br> <a style="text-decoration: none; color:#fff; font-weight:700;" class="pic" href=""> Privacy Policy</a></a></li>    
           <li class="pru" style="padding-bottom: -2%;"> 
          <h1 class="suggest sap" style="color: #fff;">Subscribe to our Newsletter for Daily updates.</h1>
@@ -370,6 +372,18 @@ li_icon[i].addEventListener("click", ()=>{
 //   document.querySelectorAll(".heading-left")[r].classList.add("white")
 //   document.querySelectorAll(".heading-left")[r].classList.remove("tic")
 // }
+if(document.querySelector(".x1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+}
+if(document.querySelector(".chatting1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
 
 })
 var lo_icon=document.querySelectorAll(".dark");
@@ -431,6 +445,18 @@ for(let j=0; j<2; j++){
   document.querySelectorAll(".header-other")[j].classList.remove("other-blue")
   document.querySelectorAll(".header-other")[j].classList.add("other-red")
   }
+  if(document.querySelector(".x2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
+if(document.querySelector(".chatting2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
 })
     }
 //     var cod= document.querySelector(".omg");
@@ -446,6 +472,27 @@ for(let j=0; j<2; j++){
 //   cod.style.backgroundColor="#FDFFF0";
 // }
 //     })
+
+document.querySelector(".chatting1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+
+})
+document.querySelector(".x1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+
+})
+document.querySelector(".chatting2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+
+})
+document.querySelector(".x2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+
+})
 
 var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{

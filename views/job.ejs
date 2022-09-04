@@ -112,6 +112,8 @@
 <div style="position: fixed; bottom: 0;"> 
     <img class="question chatting1" style="" src="https://img.icons8.com/sf-regular-filled/240/ffffff/chat.png"/>
     <img class="question chatting2 hid" style="background-color: #fff;" src="https://img.icons8.com/sf-regular-filled/240/4F0E0E/chat.png"/>
+    <img class="question x1 hid" src="https://img.icons8.com/tiny-glyph/240/ffffff/delete-sign.png"/>
+    <img class="question x2 hid" style="background-color: #fff;" src="https://img.icons8.com/tiny-glyph/240/4F0E0E/delete-sign.png"/>
   </div>
 
 <!-- <div class="error-footer"> -->
@@ -177,13 +179,62 @@
         document.querySelector(".oy").classList.remove("seen")
         document.querySelector(".oy").classList.add("first-top")
         document.querySelector(".oy").classList.remove("second-top")
+
+        if(document.querySelector(".x1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+}
+if(document.querySelector(".chatting1").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
       }
       else{
       document.querySelector(".oy").classList.add("seen")
       document.querySelector(".oy").classList.add("second-top")
       document.querySelector(".oy").classList.remove("first-top")
+
+      if(document.querySelector(".x2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
+if(document.querySelector(".chatting2").classList.contains("hid")==false){
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x1").classList.add("hid")
+  document.querySelector(".x2").classList.add("hid")
+}
+
       }
     })
+
+    document.querySelector(".chatting1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.add("hid")
+  document.querySelector(".x1").classList.remove("hid")
+
+})
+document.querySelector(".x1").addEventListener("click", ()=>{
+  document.querySelector(".chatting1").classList.remove("hid")
+  document.querySelector(".x1").classList.add("hid")
+
+})
+document.querySelector(".chatting2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.add("hid")
+  document.querySelector(".x2").classList.remove("hid")
+
+})
+document.querySelector(".x2").addEventListener("click", ()=>{
+  document.querySelector(".chatting2").classList.remove("hid")
+  document.querySelector(".x2").classList.add("hid")
+
+})
+
 
     for(let i=0; i<2; i++){
     var li_icon=document.querySelectorAll(".light");
