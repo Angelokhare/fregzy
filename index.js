@@ -48,7 +48,7 @@ var newuser= new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    // maxLength: 25
+    maxLength: 25
   },
   email: {
     type: String,
@@ -563,7 +563,7 @@ list-style: none;
 <div style="background-color: #fff;">
 <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
 <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
-<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
+<img style="width:100px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
@@ -571,7 +571,7 @@ list-style: none;
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
 <div style="display:block; margin-left:auto; margin-right:auto;">
-<img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
+<img class="" style="width: 350px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
 </div>
 
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
@@ -594,7 +594,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
-<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 </div>
 </div>
 `,// plain text body
@@ -674,7 +674,7 @@ html: `
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 </div>
-<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 `,// plain text body
 
 
@@ -717,7 +717,8 @@ app.post("/verifyemail", (request, response)=>{
   else{
      emailsigncode=""
     day=new Date().getFullYear()
-    response.render("signemailver", {fan:day})
+    response.render("summary", {fan:day})
+    // response.render("signemailver", {fan:day})
   }
 })
 }
@@ -735,7 +736,7 @@ app.post("/verifyemail", (request, response)=>{
 //   country: "signcountry",
 //   gender: "signgender",
 //   email: "signemail",
-//   password: "hash",
+//   password: "hashsssssssssssssssssssssssssssssssss",
 //   verifiedemail: "no",
 //   codeauto: "no",
 //   forgotpass: "yuu",
@@ -1019,13 +1020,11 @@ list-style: none;
 <div style="margin: 0 20px;">
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Fregzy is an application that provides educational services and helps you enhance your academic skills and<span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700"> assessment flexibility</span>.</h1>
-
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
 <div style="display:block; margin-left:auto; margin-right:auto;">
-<img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
+<img class="" style="width: 70%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
 </div>
-
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
 <p style="font-family: Roboto, sans-serif; font-size:14px; color: #000; font-weight:700;"  >We also strongly recommend you <a href="www.fregzyapp.herokuapp.com" style="color: #4f0e0e; font-family: Roboto, sans-serif; font-width: 700">turn on two-factor authentication for your account</a>. It only takes a few minutes and dramatically improves your account security.</p>
@@ -1046,7 +1045,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
-<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 </div>
 </div>
 `,// plain text body
@@ -1580,7 +1579,7 @@ console.log(new Date().getDate())
       }
       console.log(datelist)
       var latestmonthlenght= new Date().getMonth().toString().length
-      var latestmonth= new Date().getMonth().toString()
+      var latestmonth= (new Date().getMonth() + 1).toString()
       if(latestmonthlenght==1){
        var glatestmonth= "0" + latestmonth
       }
@@ -1600,7 +1599,76 @@ console.log(new Date().getDate())
       for( let ty in datelist){
       if(datelist[ty][5] + datelist[ty][6]==glatestmonth){
         if(datelist[ty][8] + datelist[ty][9]== glatestday){
-
+          console.log("happy birthday")
+          // var transporter = nmail.createTransport({
+          //   service: 'gmail',
+          //   auth: {
+          //      user: process.env.USER_GMAIL,
+          //      pass: process.env.GMAIL_PASSWORD
+          //   }
+          //   });
+            
+          //   const mailOptions = {
+          //   from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+          //   bcc: newreq, // list of receivers
+          //   subject: 'Newsletter subscription', // Subject line
+          //   html: `
+          //   <style>
+          //   @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+          //   @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+          //   @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+          //   @import url('https://fonts.googleapis.com/css?family=Roboto');
+          //   .ve{
+          //   display: inline-block;
+          //   padding: 2px 25px;
+          //   }
+          //   .docking {
+          //   list-style: none;
+          //   } 
+          //   </style>
+          //   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          //   <div style="background-color: #fff;">
+          //   <img style="width:150px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+          //   <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">dear</span>,</p>
+          //   <img style="width:350px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/joy.png" alt="celebration">
+          //   <div style="margin: 0 20px;">
+          //   <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Thank you for subscribing to <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy!</span> We're so excited to welcome you. The fregzy newsletter is the best way to find out about our current updates, and product developments.</h1>
+          //   <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Once or Twice a month, you will receive a newsletter with information about our products major updates, special offers, great services on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> apps, and much more.</h1>
+          //   <div style="display:block; margin-left:auto; margin-right:auto;">
+          //   <img class="" style="width: 220px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/thank-you.png" alt="">
+          //   </div>
+          //   <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
+          //   <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+          //   <ul style=" list-style: none; ">
+          //   <li style="display: inline-block; padding: 2px 1px;">
+          //   <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+          //   </li>
+          //   <li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+          //   <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+          //   </li>
+          //   <li style="display: inline-block; margin-left:-10px">
+          //   <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+          //   </li>
+          //   <li style="display: inline-block; margin-left:-10px">
+          //   <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+          //   </li>
+          //   </ul><br>
+          //   <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+          //   <hr>
+          //   <img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+          //   </div>
+          //   </div>
+          //   `,// plain text body
+            
+            
+            // }
+            // transporter.sendMail(mailOptions, function (err, info) {
+            // if(err)
+            // console.log(err)
+            // else{
+            // console.log(info);
+            // }
+            // }); 
         }
         else{
           console.log(datelist[ty][5] + datelist[ty][6])
@@ -1653,7 +1721,7 @@ app.post("/home", (request, response)=>{
       const mailOptions = {
       from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
       bcc: newreq, // list of receivers
-      subject: 'Email verification', // Subject line
+      subject: 'Newsletter subscription', // Subject line
       html: `
       <style>
       @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
@@ -1670,14 +1738,14 @@ app.post("/home", (request, response)=>{
       </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div style="background-color: #fff;">
-      <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+      <img style="width:150px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
       <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">dear</span>,</p>
-      <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/joy.png" alt="celebration">
+      <img style="width:350px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/joy.png" alt="celebration">
       <div style="margin: 0 20px;">
       <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Thank you for subscribing to <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy!</span> We're so excited to welcome you. The fregzy newsletter is the best way to find out about our current updates, and product developments.</h1>
       <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Once or Twice a month, you will receive a newsletter with information about our products major updates, special offers, great services on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> apps, and much more.</h1>
       <div style="display:block; margin-left:auto; margin-right:auto;">
-      <img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/thank-you.png" alt="">
+      <img class="" style="width: 220px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/thank-you.png" alt="">
       </div>
       <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
       <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
@@ -1697,7 +1765,7 @@ app.post("/home", (request, response)=>{
       </ul><br>
       <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
       <hr>
-      <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+      <img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
       </div>
       </div>
       `,// plain text body
@@ -2155,3 +2223,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit127
 // commit128
 // commit129
+// commit130
