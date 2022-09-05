@@ -22,6 +22,8 @@ var app = express()
 let Country = require('country-state-city').Country;
 let State = require('country-state-city').State;
 
+
+
 app.use(session({
   secret: "yes secret",
   resave: false,
@@ -46,7 +48,7 @@ var newuser= new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    maxLength: 25
+    // maxLength: 25
   },
   email: {
     type: String,
@@ -66,7 +68,8 @@ var newuser= new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true
+    required: true,
+    minLength: 8
   },
   fullname: {
     type: String,
@@ -950,11 +953,12 @@ else{
   var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
   var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
 
+
 const adduser= new User({
   fullname:signfullname,
-  username: signusername,
+  username:signusername,
   dateBirth: signdate,
-  country: signcountry,
+  country: signgender,
   gender: signgender,
   email: signemail,
   password: hash,
@@ -1562,6 +1566,52 @@ else{
 }
     })
 
+    // Letter.findOneAndRemove({email: 'angelobeckan794@gmail.com'}, function(err){console.log("the work is done!")});
+
+
+var tu= "28-04-2022"
+console.log(new Date().getDate())
+
+    var datelist=[]
+    User.find({}, function(err, users) {
+      for (let x in users) {
+       var newdate=users[x].dateBirth
+       datelist.push(newdate)
+      }
+      console.log(datelist)
+      var latestmonthlenght= new Date().getMonth().toString().length
+      var latestmonth= new Date().getMonth().toString()
+      if(latestmonthlenght==1){
+       var glatestmonth= "0" + latestmonth
+      }
+      else{
+        var glatestmonth= latestmonth
+       }
+      console.log(glatestmonth)
+      var latestdaylenght= new Date().getDate().toString().length
+      var latestday=new Date().getDate().toString()
+      if(latestdaylenght==1){
+       var glatestday= "0" + latestday
+      }
+      else{
+        var glatestday= latestday
+       }
+      console.log(glatestday)
+      for( let ty in datelist){
+      if(datelist[ty][5] + datelist[ty][6]==glatestmonth){
+        if(datelist[ty][8] + datelist[ty][9]== glatestday){
+
+        }
+        else{
+          console.log(datelist[ty][5] + datelist[ty][6])
+        }
+      }
+      else{
+        console.log(datelist[ty][5] + datelist[ty][6])
+      }
+    }
+    })
+
 
 
 
@@ -1592,6 +1642,75 @@ app.post("/home", (request, response)=>{
     }
   })
     day=new Date().getFullYear()
+    var transporter = nmail.createTransport({
+      service: 'gmail',
+      auth: {
+         user: process.env.USER_GMAIL,
+         pass: process.env.GMAIL_PASSWORD
+      }
+      });
+      
+      const mailOptions = {
+      from:' "Fregzyapp 🌳" <angelobeckan794@gmail.com>', // sender address
+      bcc: newreq, // list of receivers
+      subject: 'Email verification', // Subject line
+      html: `
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+      .ve{
+      display: inline-block;
+      padding: 2px 25px;
+      }
+      .docking {
+      list-style: none;
+      } 
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div style="background-color: #fff;">
+      <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
+      <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">dear</span>,</p>
+      <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/joy.png" alt="celebration">
+      <div style="margin: 0 20px;">
+      <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Thank you for subscribing to <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy!</span> We're so excited to welcome you. The fregzy newsletter is the best way to find out about our current updates, and product developments.</h1>
+      <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Once or Twice a month, you will receive a newsletter with information about our products major updates, special offers, great services on <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">Fregzy</span> apps, and much more.</h1>
+      <div style="display:block; margin-left:auto; margin-right:auto;">
+      <img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/thank-you.png" alt="">
+      </div>
+      <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
+      <p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:14px; color: #4f0e0e"> Fregzy <span style="color: #000">cares</span></p>
+      <ul style=" list-style: none; ">
+      <li style="display: inline-block; padding: 2px 1px;">
+      <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/twitter.png"/>
+      </li>
+      <li style="display: inline-block; padding: 2px 1px; margin-left:-10%">
+      <img style="width:15%" src="https://img.icons8.com/fluency/240/000000/instagram-new.png"/>
+      </li>
+      <li style="display: inline-block; margin-left:-10px">
+      <img style="width:15%" src="https://img.icons8.com/color/240/000000/linkedin-circled--v1.png"/>
+      </li>
+      <li style="display: inline-block; margin-left:-10px">
+      <img style="width:15%" src="https://img.icons8.com/windows/240/000000/github.png"/>
+      </li>
+      </ul><br>
+      <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
+      <hr>
+      <img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+      </div>
+      </div>
+      `,// plain text body
+      
+      
+      }
+      transporter.sendMail(mailOptions, function (err, info) {
+      if(err)
+      console.log(err)
+      else{
+      console.log(info);
+      }
+      }); 
 response.render("confirm", {fan:day})
 
 }
