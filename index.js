@@ -562,7 +562,7 @@ list-style: none;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="background-color: #fff;">
 <img style="width:100px; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/fullfregzy.png" alt="fregzy name">
-<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${signusername}</span>,</p>
+<p style="font-weight: 700; font-family: Roboto, sans-serif; font-size:16px; color: #000" >Hello <span style="color: #1C3879; text-transform: capitalize;">${globalsignusername}</span>,</p>
 <img style="width:100px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/chill.png" alt="celebration">
 <div style="margin: 0 20px;">
 <h1 style=" text-align:center; font-family: Roboto, sans-serif; font-size:14px; color: #000; margin-bottom:40px;" >Welcome to Fregzy -we are excited you are <span style="color: #1C3879; font-family: Roboto, sans-serif; font-width: 700">here!</span>.</h1>
@@ -701,7 +701,7 @@ app.post("/jobs", (request, response)=>{
 })
 
 
-app.post("/verifyemail", (request, response)=>{
+app.post("/get-started", (request, response)=>{
 
   if(siginverify != request.body.code){
     emailsigncode="Invalide code"
@@ -1023,7 +1023,7 @@ list-style: none;
 <h1 style="font-family: Roboto, sans-serif; font-size:14px; color: #000; text-align:center;" >Please verify your email address to finish setting up your <span style="color: #1C3879;">Fregzy</span> account, in other to have full access to all services. Use the code below:</h1>
 <h1 style="font-weight:700; font-family: Roboto, sans-serif; font-size:25px; color: #1C3879; text-align:center;" >${siginverify}</h1>
 <div style="display:block; margin-left:auto; margin-right:auto;">
-<img class="" style="width: 70%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
+<img class="" style="width: 74%; display:block; margin-left:auto; margin-right:auto;" src=" https://fregzyapp.herokuapp.com/static/together.png" alt="">
 </div>
 <h1 style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:30px; color: #1C3879; text-align:center;" >Thank you for signing up</h1>
 <p style="font-weight: 700;  font-family: Roboto, sans-serif; font-size:14px; color: #000;" >Don't forget to rate us.</p>
@@ -1045,7 +1045,7 @@ list-style: none;
 </ul><br>
 <h5 style="color: #000; margin-top: -1%; font-family: 'Varela Round', sans-serif; text-align:center;" class="copyright">Copyright © 2022- ${new Date().getFullYear()} <span style="font-weight: 700;">Fregzy</span> </h5>
 <hr>
-<img style="width:550px; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
+<img style="width:100%; display:block; margin-left:auto; margin-right:auto; border-radius:15px;" src="https://fregzyapp.herokuapp.com/static/castle.png" alt="celebration">
 </div>
 </div>
 `,// plain text body
@@ -2224,3 +2224,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit128
 // commit129
 // commit130
+// commit131
