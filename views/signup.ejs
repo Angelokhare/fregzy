@@ -28,7 +28,12 @@
 
 <title>Fregzy</title>
 </head>
-<body class="sign-sz sign-sa sap">
+<body class=""  onload="myFunctionf()">
+  <div class="load2">
+    <!-- <img class="dis-image" src="https://im2.ezgif.com/tmp/ezgif-2-af4280621a.gif" style="margin-left: auto; margin-right:auto; display:block; background-color:#fff; margin-top:auto; margin-bottom:auto" alt=""> -->
+    <img class="dis-image" src="https://cdn.dribbble.com/users/722246/screenshots/9714311/media/1714775b3deacede41aef42533ada46c.gif" style="margin-left: auto; margin-right:auto; display:block; background-color:#fff; margin-top:auto; margin-bottom:auto" alt="">
+  </div>
+  <div class="load1 hid">
     <header class="header-white">
         <img class="icon-home icon1" src="static/icon.webp" alt="">
         <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
@@ -282,7 +287,7 @@
 </ul>
 </div>
 </div>     
-
+  </div>
   <script src="../ejs.min.js"></script>
        <script>
    var li_main=document.querySelector(".li_main");
@@ -310,6 +315,17 @@
       document.querySelector(".bar-white").classList.remove("first-top")
       }
     })       
+
+    function myFunctionf() {
+      setTimeout(()=>{
+  document.querySelector(".load1").classList.remove("hid")
+  document.querySelector(".load2").classList.add("hid")
+  document.querySelector("body").classList.add("sign-sz")
+  document.querySelector("body").classList.add("sign-sa")
+  document.querySelector("body").classList.add("sap") 
+      }, 3000)
+}
+
 
     document.querySelector(".vis").addEventListener("click", function(){
               document.querySelector(".vis").classList.add("hid")   
