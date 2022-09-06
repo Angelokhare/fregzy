@@ -311,6 +311,10 @@ var social_ondo=[67.275, 58.025, 65.5, 59.2, 60.375, "NIL", 56.175]
 var social_osun=[64.1, 57.125, 70.8, 57.5, 66.225, 56.475, 64.3]
 var social_oyo=[67.65, 53.825, 70.025, 65.35, 66.025, 67.575, 66.925]
 // dataffffffffffffffffffffffffffffffffffffffff
+
+
+
+
 var lame=[]
 var country_data=[]
 var country_code=[]
@@ -357,6 +361,13 @@ else{
   }
   })
 })
+
+
+
+app.get("/su", (request, response)=>{
+  response.render("summary")
+})
+
 
 
 app.get("/password-recovery",(request, response)=>{
