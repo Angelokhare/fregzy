@@ -671,8 +671,8 @@ footer {
   margin-left: 1%;
 }
 .login-profile{
-  margin-top: -65%;
-   margin-left:60%; 
+  margin-top: -75%;
+   margin-left:55%; 
    margin-bottom: 10%; 
 }
 .enter-details{
@@ -1804,7 +1804,9 @@ padding-top: 10%;
   bottom: 0;
   width: 100%;
 }
-
+.dis-image{
+  margin-top: 30%;
+  } 
 }
 
 @media only screen and (max-width:769px){
@@ -2404,7 +2406,21 @@ display: none;
 
   }  
 
+
 }
+
+
+@media only screen and (max-width:500px) and (min-height: 600px){
+  .dis-image{
+    margin-top: 30%;
+    } 
+}
+@media only screen and (max-width: 350px) and (min-height: 600px){
+  .dis-image{
+    margin-top: 50%;
+    } 
+}
+
 @media only screen and (max-width: 464px){
 .bottom-noti{
   /* display: inline-block; */
@@ -2613,7 +2629,7 @@ margin-top: 2%;
   }
   .login-profile{
     margin-top: 0%;
-    margin-left: 22%;
+    margin-left: 0%;
   }
   .login-icon{
     /* display: block; */
@@ -2851,4 +2867,7 @@ bottom: 0;
 .login-profile{
   margin-bottom: 130%;
 }
+.dis-image{
+  margin-top: 80%;
+  } 
 }
