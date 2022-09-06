@@ -1197,7 +1197,9 @@ input[type="date"]::-webkit-datetime-edit-day-field{
 }
 
 
-
+.dis-image{
+  width: 70vw;;
+}
 
 
 
@@ -1680,6 +1682,9 @@ padding: 5% 5%;
     }
     .auth-subscribe{
       width: 40vw;
+      }
+      .dis-image{
+        width: 100vw;;
       }
 }
 /* heightjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */

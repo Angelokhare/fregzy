@@ -30,7 +30,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 <title>Fregzy</title>
 </head>
-<body class="sz sap">
+<body class=""  onload="myFunctionf()">
+  <div class="load2">
+    <!-- <img class="dis-image" src="https://im2.ezgif.com/tmp/ezgif-2-af4280621a.gif" style="margin-left: auto; margin-right:auto; display:block; background-color:#fff; margin-top:auto; margin-bottom:auto" alt=""> -->
+    <img class="dis-image" src="https://cdn.dribbble.com/users/722246/screenshots/9714311/media/1714775b3deacede41aef42533ada46c.gif" style="margin-left: auto; margin-right:auto; display:block; background-color:#fff; margin-top:auto; margin-bottom:auto" alt="">
+  </div>
+  <div class="load1 sz sap hid">
     <header class="header-white">
         <img class="icon-home icon1" src="static/icon.webp" alt="">
         <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
@@ -177,6 +182,7 @@
   </div>
      
 </div>
+  </div>
        <script>
    var li_main=document.querySelector(".li_main");
     
@@ -213,8 +219,8 @@ li_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".dark")[0].classList.remove("hid")
   document.querySelector(".bar-white").classList.remove("hid")
   document.querySelector(".bar-black").classList.add("hid")
-  document.querySelector("body").classList.add("fz")
-  document.querySelector("body").classList.remove("sz")
+  document.querySelector(".load1").classList.add("fz")
+  document.querySelector(".load1").classList.remove("sz")
   document.querySelector("header").classList.add("header-black")
   document.querySelector("header").classList.remove("header-white")
   document.querySelector(".log-icon1").classList.add("hid")
@@ -295,8 +301,8 @@ lo_icon[i].addEventListener("click", ()=>{
   document.querySelectorAll(".dark")[1].classList.add("hid")
   document.querySelectorAll(".light")[0].classList.remove("hid")
   document.querySelectorAll(".dark")[0].classList.add("hid")
-  document.querySelector("body").classList.remove("fz")
-  document.querySelector("body").classList.add("sz")
+  document.querySelector(".load1").classList.remove("fz")
+  document.querySelector(".load1").classList.add("sz")
   document.querySelector(".bar-white").classList.add("hid")
   document.querySelector(".bar-black").classList.remove("hid")
   document.querySelector("header").classList.remove("header-black")
@@ -359,6 +365,14 @@ for(let j=0; j<2; j++){
   }
 })
     }
+
+
+    function myFunctionf() {
+      setTimeout(()=>{
+  document.querySelector(".load1").classList.remove("hid")
+  document.querySelector(".load2").classList.add("hid")
+      }, 5000)
+}
 
     var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{

@@ -71,10 +71,6 @@ var newuser= new mongoose.Schema({
     required: true,
     minLength: 8
   },
-  fullname: {
-    type: String,
-    required: true
-  },
   verifiedemail: {
     type: Boolean,
     required: true
@@ -523,7 +519,7 @@ else if (request.params.jbk.toLowerCase()==globaluser_route){
    if(viewlist.includes(proflink)){
 
       User.findOne({linkweb:proflink}, (err, found)=>{
-        response.render("profile", {username: userprof, country:edit_country, countrt_fact:country_data, country_code:country_code})
+        response.render("profile", { username:found.username, fullname:found.fullname, country:found.country, email:found.email, gender:found.gender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
         })
       }
    else{
