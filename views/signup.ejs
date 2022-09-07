@@ -265,7 +265,9 @@
     <option value="<%= signemaillist[x] %>"> <%= signemaillist[x] %></option>
     <% }%>
 </select>  
-   
+<input class="country-special hid" style="text-transform: capitalize;" type="text" value="<%= countryf %>">
+
+  
 <!-- <div style="position: fixed; bottom: 0;"> 
   <i style="" class='question fas fa-comment-alt'></i>
 </div> -->
@@ -677,14 +679,14 @@ var ho= document.querySelector(".erase")
             var select =document.querySelector(".country_select");
             for(let i=0; i<250; i++){
               var option = select.options[i].value;
-              if(option.toLocaleLowerCase()=="nigeria"){
+              if(option.toLocaleLowerCase()==document.querySelector(".country-special").value.toLocaleLowerCase()){
                 var bat = option
                 var checkingname=mycountryname.indexOf(bat)
                 var checkingcode = mycountrycode[checkingname].toLocaleLowerCase()
         document.querySelector(".flag").setAttribute("src", "https://flagcdn.com/24x18/"+checkingcode+".png")
               }
             }
-            document.querySelector(".country_select").value="Nigeria"
+            document.querySelector(".country_select").value=document.querySelector(".country-special").value
            select.addEventListener("change", ()=>{
               var docselect = select.value;
               // document.querySelector(".country_name").innerHTML=docselect

@@ -1899,9 +1899,7 @@ margin-right: -30%;
     .first-param{
       margin-top: -22%; 
       }
-.welcoming{
-  margin-left: 16%;
-}
+
 .login-icon{
   margin-left: 28%;
 }
@@ -2647,9 +2645,6 @@ margin-top: 2%;
     margin-left: 19%;
     margin-right: 25%;
     width: 30%;
-  }
-  .welcoming{
-    margin-left: 6%;
   }
   .names{
     display: block;
