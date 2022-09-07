@@ -679,14 +679,14 @@ var ho= document.querySelector(".erase")
             var select =document.querySelector(".country_select");
             for(let i=0; i<250; i++){
               var option = select.options[i].value;
-              if(option.toLocaleLowerCase()==document.querySelector(".country-special").value.toLocaleLowerCase()){
+              if(option.toLocaleLowerCase()=='<%- countryf %>'.toLocaleLowerCase()){
                 var bat = option
                 var checkingname=mycountryname.indexOf(bat)
                 var checkingcode = mycountrycode[checkingname].toLocaleLowerCase()
         document.querySelector(".flag").setAttribute("src", "https://flagcdn.com/24x18/"+checkingcode+".png")
               }
             }
-            document.querySelector(".country_select").value=document.querySelector(".country-special").value
+            document.querySelector(".country_select").value='<%- countryf %>'
            select.addEventListener("change", ()=>{
               var docselect = select.value;
               // document.querySelector(".country_name").innerHTML=docselect
@@ -694,6 +694,24 @@ var ho= document.querySelector(".erase")
                 var checkingselectcode = mycountrycode[checkingselectname].toLocaleLowerCase()
                 document.querySelector(".flag").setAttribute("src", "https://flagcdn.com/24x18/"+checkingselectcode+".png")
             })
+
+            document.querySelector(".gender_select").value='<%- gender %>'
+           var genderSelect= document.querySelector(".gender_select").value
+           if(genderSelect.toLocaleLowerCase()=="male"){
+                document.querySelector(".boy").classList.remove("hid")
+                document.querySelector(".girl").classList.add("hid")
+                document.querySelector(".custom").classList.add("hid")
+              }
+              else if(genderSelect.toLocaleLowerCase()=="female"){
+                document.querySelector(".boy").classList.add("hid")
+                document.querySelector(".girl").classList.remove("hid")
+                document.querySelector(".custom").classList.add("hid")
+              }
+              else if(genderSelect.toLocaleLowerCase()=="custom"){
+                document.querySelector(".boy").classList.add("hid")
+                document.querySelector(".girl").classList.add("hid")
+                document.querySelector(".custom").classList.remove("hid")
+              }
 
             var selectg =document.querySelector(".gender_select");
              selectg.addEventListener("change", ()=>{

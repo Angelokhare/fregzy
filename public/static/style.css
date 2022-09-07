@@ -935,6 +935,14 @@ footer {
   display: inline-block;
   padding-left: 11%;
 }
+.profile-ontop{
+  margin-left:16%;
+   margin-top: 8%;
+}
+.profile-intop{
+margin-left: 15%;
+margin-right: 15%;
+}
 /* .bottom-noti{
   padding:0 20px;
 } */
@@ -2040,6 +2048,14 @@ margin-left: 10.6%;
   margin-left: 10%;
    margin-right: 10%;
 }
+.profile-ontop{
+  margin-left:18%;
+   margin-top: 8%;
+}
+.profile-intop{
+margin-left: 10%;
+margin-right: 10%;
+}
 }
 @media only screen and (max-width:600px){
   .suggest{
@@ -2863,6 +2879,16 @@ padding: 0 40px;
  .google-log{
   font-size: 4.1vw;
  }
+}
+
+@media only screen and (max-width: 280px){
+  .bottom-noti{
+    /* display: inline-block; */
+    padding:0 21px;
+  }
+  .left-noti{
+    padding-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 350px) and (min-height: 950px){

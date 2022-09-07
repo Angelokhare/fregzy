@@ -455,7 +455,7 @@ console.log(user_route)
       var edit_country=Country.getAllCountries()
         day=new Date().getFullYear()
         var bn=""
-  response.render("signup", {fullname:bn, username:bn, date:bn, gender:bn, email:bn, countryf:"Nigeria", password: bn, confirm:bn, character:bn, fan:day, country:edit_country, pas:bn, signemaillist:signemaillist, signusernamelist:signusernamelist, chock:bn,})
+  response.render("signup", {fullname:bn, username:bn, date:bn, gender:"Male", email:bn, countryf:"Nigeria", password: bn, confirm:bn, character:bn, fan:day, country:edit_country, pas:bn, signemaillist:signemaillist, signusernamelist:signusernamelist, chock:bn,})
 
     })
     }
@@ -522,7 +522,10 @@ else if (request.params.jbk.toLowerCase()==globaluser_route){
         var slicingCountry= found.country.slice(0,1).toUpperCase()
         var checkingSlicedCountry= slicingCountry + (found.country.slice(1, (found.country.length)))
         console.log(checkingSlicedCountry)
-        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:found.gender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
+        var slicingGender= found.gender.slice(0,1).toUpperCase()
+        var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
+        console.log(checkingSlicedGender)
+        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
         })
       }
    else{
@@ -810,8 +813,12 @@ User.find({}, function(err, users) {
     var slicingCountry= newsigncountry.slice(0,1).toUpperCase()
     var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
     console.log(checkingSlicedCountry)
+
+    var slicingGender= newsigngender.slice(0,1).toUpperCase()
+    var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+    console.log(checkingSlicedGender)
   
-    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:sd, signemaillist:signemaillist, signusernamelist:signusernamelist})
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:sd, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
   }
 
 
@@ -833,7 +840,12 @@ else if(signusername.includes(" ")){
   var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
   console.log(checkingSlicedCountry)
 
-  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist})
+  var slicingGender= newsigngender.slice(0,1).toUpperCase()
+  var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+  console.log(checkingSlicedGender)
+
+
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
 }
 else if(signpassword != signconfirm){
  var day=new Date().getFullYear()
@@ -849,11 +861,16 @@ else if(signpassword != signconfirm){
   var chs=""
   var fh="Password doesn't match!"
 
+  var slicingGender= newsigngender.slice(0,1).toUpperCase()
+    var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+    console.log(checkingSlicedGender)
+  
+
   var slicingCountry= newsigncountry.slice(0,1).toUpperCase()
   var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
   console.log(checkingSlicedCountry)
 
-  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist})
+  response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
 }
 
 else{
@@ -888,7 +905,12 @@ User.find({}, function(err, users) {
     var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
     console.log(checkingSlicedCountry)
 
-    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:echs, signemaillist:signemaillist, signusernamelist:signusernamelist})
+    var slicingGender= newsigngender.slice(0,1).toUpperCase()
+    var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+    console.log(checkingSlicedGender)
+  
+
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:echs, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
 }
 
 
@@ -910,7 +932,12 @@ User.find({}, function(err, users) {
     var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
     console.log(checkingSlicedCountry)
   
-    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist})
+    var slicingGender= newsigngender.slice(0,1).toUpperCase()
+    var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+    console.log(checkingSlicedGender)
+  
+
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:chs, fan:day, country:edit_country, pas:fh, chock:fh, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
 }
   else if(emaillist.includes(signemail)){
     day=new Date().getFullYear()
@@ -931,8 +958,12 @@ User.find({}, function(err, users) {
     var checkingSlicedCountry= slicingCountry + (newsigncountry.slice(1, (newsigncountry.length)))
     console.log(checkingSlicedCountry)
 
+    var slicingGender= newsigngender.slice(0,1).toUpperCase()
+    var checkingSlicedGender= slicingGender + (newsigngender.slice(1, (newsigngender.length)))
+    console.log(checkingSlicedGender)
   
-    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, gender:newsigngender, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:fh, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist})
+
+    response.render("signup", {fullname:newsignfullname, username:newsignusername, date:newsigndate, email:newsignemail, countryf:checkingSlicedCountry, password: newsignpassword, confirm:newsignconfirm, character:fh, fan:day, country:edit_country, pas:fh, chock:chs, signemaillist:signemaillist, signusernamelist:signusernamelist, gender:checkingSlicedGender})
 }
 else{
   globalsignemail=signemail
