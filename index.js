@@ -433,6 +433,9 @@ app.get("/:jbk", (request, response)=>{
     var user_profile= userprof +"-profile"
 console.log(userprof)
 console.log(user_route)
+var proflink= request.query.user_authenticate
+    if(proflink==undefined){
+    
     if(request.params.jbk.toLowerCase()=="login"){
         day=new Date().getFullYear()
         var usern=""
@@ -502,41 +505,12 @@ else if(request.params.jbk.toLowerCase()=="verify-email"){
 console.log(greet)
     response.render("dashboard", {fan:day, username: userprof, greet:greet})
 }
-else if (request.params.jbk.toLowerCase()==globaluser_route){
-    var edit_country=Country.getAllCountries()
-    console.log(globalview)
-    var proflink= request.query.user_authenticate
-    if(proflink==undefined){
-      response.redirect("/login")
-    }
-    else{
-    var viewlist=[]
-    User.find({}, function(err, users) {
-      for (let x in users){
-       var combineemail=users[x].linkweb
-       viewlist.push(combineemail)
-      }
-   if(viewlist.includes(proflink)){
+// else if (request.params.jbk.toLowerCase()==globaluser_route){
+//     var edit_country=Country.getAllCountries()
+//     console.log(globalview)
 
-      User.findOne({linkweb:proflink}, (err, found)=>{
-        var slicingCountry= found.country.slice(0,1).toUpperCase()
-        var checkingSlicedCountry= slicingCountry + (found.country.slice(1, (found.country.length)))
-        console.log(checkingSlicedCountry)
-        var slicingGender= found.gender.slice(0,1).toUpperCase()
-        var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
-        console.log(checkingSlicedGender)
-        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
-        })
-      }
-   else{
-        day=new Date().getFullYear()
-          // day= new Date().toLocaleDateString()
-          // console.log(day)
-          response.render("error", {fan:day})
-      }
-      })
-}
-}
+
+// }
 else if (request.params.jbk.toLowerCase()=="push-code"){
 
 
@@ -706,6 +680,78 @@ transporter.sendMail(mailOptions, function (err, info) {
     else{
 response.redirect("/")
     }
+  }
+  else{
+    var viewlist=[]
+    User.find({}, function(err, users) {
+      for (let x in users){
+       var combineemail=users[x].linkweb
+       viewlist.push(combineemail)
+      }
+   if(viewlist.includes(proflink)){
+  
+if(! request.params.jbk.toLowerCase().includes("-")){
+  day=new Date().getFullYear()
+  response.render("error", {fan:day})
+}
+    else{
+      var indexdash= request.params.jbk.toLowerCase().indexOf("-")
+      var checkdash= request.params.jbk.toLowerCase().slice(0, indexdash)
+      User.findOne({linkweb:proflink}, (err, found)=>{
+        if(found.username != checkdash){
+          day=new Date().getFullYear()
+          response.render("error", {fan:day})
+        }
+        else{
+          if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="profile"){
+        var slicingCountry= found.country.slice(0,1).toUpperCase()
+        var checkingSlicedCountry= slicingCountry + (found.country.slice(1, (found.country.length)))
+        console.log(checkingSlicedCountry)
+        var slicingGender= found.gender.slice(0,1).toUpperCase()
+        var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
+        console.log(checkingSlicedGender)
+        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
+          }
+else if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="dashboard"){
+  day=new Date().getFullYear()
+  var greet= ''
+  var time= new Date().getHours()
+  console.log(time)
+  if(time<12){
+      greet="Good Morning"
+      console.log(greet)
+  }
+  else if(time>=12 && time<18){
+      greet="Good Afternoon"
+      console.log(greet)
+  }
+  else if(time>=18 && time<21){
+      greet="Good Evening"
+      console.log(greet)
+  }
+  else{
+      greet="Good Night"
+      console.log(greet)
+  }
+console.log(greet)
+  response.render("dashboard", {fan:day, username: userprof, greet:greet})
+}
+else{
+  day=new Date().getFullYear()
+  response.render("error", {fan:day})
+}
+        }
+        })
+      }
+      }
+   else{
+        day=new Date().getFullYear()
+          // day= new Date().toLocaleDateString()
+          // console.log(day)
+          response.render("error", {fan:day})
+      }
+      })
+  }
 })
 
 
@@ -2092,7 +2138,7 @@ console.log(info);
     response.redirect("/signup")
 }
 else{
-response.redirect("/"+ globaluser_route + "?user_authenticate=" + found.linkweb)
+response.redirect("/"+ found.username + "-profile?user_authenticate=" + found.linkweb)
 }
   }
   else{
@@ -2109,7 +2155,7 @@ else if(loginemaillist.includes(usern)){
 User.findOne({email:usern}, (err, found)=>{
 bcrypt.compare(passloginpost, found.password, (err, got)=>{
   if(got){
-    response.redirect("/")
+    response.redirect("/"+ found.username + "-?profile?user_authenticate=" + found.linkweb)
   }
   else{
    var day=new Date().getFullYear()
