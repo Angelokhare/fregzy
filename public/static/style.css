@@ -1818,6 +1818,14 @@ padding-top: 10%;
   padding-top:15%;
 }
 }
+.second-bulb{
+  margin-top: -72%;
+  margin-bottom: -99%;
+    }
+    .navbar .nav_right ul li.nr_li{
+  margin-top: 18%;
+  margin-bottom: -12%;
+    }
 @media only screen and (max-width:1200px) and (min-height: 1000px){
   .sign-dis-girl{
     width: 36%; 
@@ -2539,7 +2547,12 @@ border-radius: 10px;
     font-size: 10vw;
   }
   .second-bulb{
-margin-top: 2%;
+margin-top: -72%;
+margin-bottom: -99%;
+  }
+  .navbar .nav_right ul li.nr_li{
+margin-top: 18%;
+margin-bottom: -12%;
   }
   .wr{
     font-size: 10px;
