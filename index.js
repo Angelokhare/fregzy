@@ -97,7 +97,11 @@ var newuser= new mongoose.Schema({
   },
   image:{
     type: String,
-  }
+  },
+  verifieduser:{
+    type: Number,
+    required: true
+  },
 })
 var newletter= new mongoose.Schema({
   email: {
@@ -682,6 +686,69 @@ response.redirect("/")
     }
   }
   else{
+
+
+
+    if(request.params.jbk.toLowerCase()=="logout"){
+
+
+      var loglist=[]
+      User.find({}, function(err, users) {
+        for (let x in users){
+         var combineemail=users[x].linkweb
+         loglist.push(combineemail)
+        }
+     if(loglist.includes(proflink)){
+
+      User.findOne({linkweb:proflink}, (err, found)=>{
+
+      let w = 1;
+      while (w < 2){
+      
+        const saltRounds = 12;
+        var hash=  bcrypt.hashSync(found.password, saltRounds);
+        var hash2=  bcrypt.hashSync(found.email, saltRounds);
+        var hash3=  bcrypt.hashSync(found.username, saltRounds);
+      
+      
+        console.log(hash2)
+        var ur= uuid()
+        var sed= ur.slice(0, 14)
+        var std= ur.slice(14, 28)
+        var splithash21= hash2.slice(0, 10)
+        var splithash22= hash2.slice(10, 20)
+        var splithash23= hash2.slice(20, 30)
+      
+        var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
+        var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
+      
+      
+      
+      
+      if(loglist.includes(sor)){
+        w=1
+      }
+      
+      // }
+      else{
+        w=2
+            var conditions = {username: found.username};
+            var update = { linkweb: sor};
+          User.findOneAndUpdate(conditions, update, function (err){
+      response.redirect("/login")
+          })
+        }
+      }
+    })
+          }
+ 
+     else{
+      day=new Date().getFullYear()
+      response.render("error", {fan:day})
+     }
+    })
+    }
+else{
     var viewlist=[]
     User.find({}, function(err, users) {
       for (let x in users){
@@ -703,6 +770,9 @@ if(! request.params.jbk.toLowerCase().includes("-")){
           response.render("error", {fan:day})
         }
         else{
+          // var servtime= new Date().getTime()-259200000
+          console.log(new Date().getTime()-259200000)
+          if(found.datelink < (new Date().getTime()+259200000)){
           if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="profile"){
         var slicingCountry= found.country.slice(0,1).toUpperCase()
         var checkingSlicedCountry= slicingCountry + (found.country.slice(1, (found.country.length)))
@@ -710,7 +780,7 @@ if(! request.params.jbk.toLowerCase().includes("-")){
         var slicingGender= found.gender.slice(0,1).toUpperCase()
         var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
         console.log(checkingSlicedGender)
-        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code})
+        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code, log:found.linkweb})
           }
 else if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="dashboard"){
   day=new Date().getFullYear()
@@ -741,6 +811,11 @@ else{
   response.render("error", {fan:day})
 }
         }
+        else{
+          day=new Date().getFullYear()
+          response.render("error", {fan:day})
+        }
+        }
         })
       }
       }
@@ -751,6 +826,7 @@ else{
           response.render("error", {fan:day})
       }
       })
+    }
   }
 })
 
@@ -2155,7 +2231,7 @@ else if(loginemaillist.includes(usern)){
 User.findOne({email:usern}, (err, found)=>{
 bcrypt.compare(passloginpost, found.password, (err, got)=>{
   if(got){
-    response.redirect("/"+ found.username + "-?profile?user_authenticate=" + found.linkweb)
+    response.redirect("/"+ found.username + "-profile?user_authenticate=" + found.linkweb)
   }
   else{
    var day=new Date().getFullYear()

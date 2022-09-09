@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name= "viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JavaScript Bundle with Popper -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
    <!-- CSS only -->
@@ -82,7 +83,7 @@
     <div style="margin-bottom: 30%;" class="fav2 hid">
       <img style="margin-left: 10%;" src="https://img.icons8.com/ios-glyphs/30/FF869E/ratings.png"/> <span class="changing-button fq" style="font-family: 'Varela Round', sans-serif; font-weight:700; margin-left: 3%; color: #fff">Frequently used: <span>0</span></span>
     </div>
-    <button class="btn button-dis" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%; margin-left: auto; margin-right: auto;"><a style="color: #fff; text-decoration:none; font-size: 1.5vw; margin-bottom: 10%; font-weight: 700;" href="/login">Log out</a></button>
+    <button class="btn button-dis" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%; margin-left: auto; margin-right: auto;"><a style="color: #fff; text-decoration:none; font-size: 1.5vw; margin-bottom: 10%; font-weight: 700;" href="/logout?user_authenticate=<%= log %>">Log out</a></button>
     </div>
     </div>
 
@@ -127,7 +128,7 @@
 
       <i style="font-size: 160%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-comments-o"></i>
     <i style="font-size: 160%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-video-camera"></i>
-     <i style="font-size: 160%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa fa-bell"></i>
+     <i style="font-size: 160%; color: #4F0E0E;  margin-left: 40%; margin-right: 40%; margin-bottom: 30%;" class="fa-regular fa-bell"></i>
       <hr style="width: 75%; margin-left: 10%; margin-right: 10%; border: 1px solid #787A91">
     </div>
       <div class="set1" style="margin-bottom: 60%;">
@@ -147,26 +148,26 @@
         <img class="dp2 hid" style="width: 9.4%; margin-left:2.7%; margin-top: 3%; margin-bottom: 5.7%; margin-right: 3.4%;" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 700; font-size: 7vw; margin-left: -3%;" >Freg<span class="header-other other-red">zy</span></h1>
         <ul class="docking" style="padding-top: 5%;">
-          <li class="pra ho light" style="padding-right: 20px;"><i style="font-size: 4.5vw;" class="fa fa-lightbulb-o"></i></li>
-          <li class="pra ho dark hid" style="padding-right: 20px;"><i style="font-size: 4.5vw; color: #fff;" class="fa fa-moon-o"></i></li>
-          <li class="pra" style="padding-right: 20px;"><i style="font-size: 4.5vw; color: #4F0E0E;" class="fa fa-bell"></i></li>
-          <li class="pra" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; font-size:3vw; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-weight: 700;" href="/login">Log out</a></button></li>
+          <li class="pra ho light" style="padding-right: 20px;"><i style="font-size: 4.5vw;" class="fa-regular fa-sun"></i></li>
+          <li class="pra ho dark hid" style="padding-right: 20px;"><i style="font-size: 4.5vw; color: #fff;" class="fa-regular fa-moon"></i></li>
+          <li class="pra" style="padding-right: 20px;"><i style="font-size: 4.5vw; color: #4F0E0E;" class="fa-regular fa-bell"></i></li>
+          <li class="pra" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; font-size:3vw; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-weight: 700;" href="/logout?user_authenticate=<%= log %>">Log out</a></button></li>
       </ul>
       </div>
       <div class="separating-profile" style="margin-top: 35%;"></div>
       <div class="profile-tog">
         <ul class="docking gather-2size" style="padding-top: 2%;">
-      <li class="pra lightbulb-o" style="padding-right: 10px;"><i style="margin-top: 2%; background-color: #fefbf3; border-radius: 15px;" class="ontop-toggle light fa fa-lightbulb-o"></i></li>
-      <li class="hid moon-o" style="padding-right: 10px;"><i style="color: #fff; margin-top: 2%; background-color: #000; border-radius: 15px;" class="ontop-toggle dark fa fa-moon-o"></i></li>
+      <li class="pra lightbulb-o" style="padding-right: 10px;"><i style="margin-top: 2%; background-color: #fefbf3; border-radius: 15px;" class="ontop-toggle light fa-regular fa-sun"></i></li>
+      <li class="hid moon-o" style="padding-right: 10px;"><i style="color: #fff; margin-top: 2%; background-color: #000; border-radius: 15px;" class="ontop-toggle dark fa-regular fa-moon"></i></li>
       <!-- <li class="pra" style="padding-right: 10px;"><i style="margin-top: 2%; background-color: #000; border-radius: 15px; color: #fff;" class="ontop-toggle light fa fa-moon-o"></i></li> -->
-      <li class="pra button-2size" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-weight: 700;" href="/login">Log out</a></button></li>
+      <li class="pra button-2size" style="padding-right: 10px;"><button class="btn" style="background-color: red; font-weight: 700; border-radius: 15px; padding: 0.3rem 0.7rem; margin-top: -10%;"><a style="color: #fff; text-decoration:none; font-weight: 700;" href="/logout?user_authenticate=<%= log %>">Log out</a></button></li>
         </ul>
     </div>
     <div class="on-mobile">
     <i style=" color: #fff; background-color:#4F0E0E; border-bottom-right-radius: 100%; border-top-right-radius: 100%; position: fixed; font-weight: 700; font-size: 5.5vw; display: none; padding: 2%;" class="right1  fa fa-angle-double-right"> </i>
     <ul class="docking rightr" style=" position: fixed; background-color: #1d2a35; padding-left: 3%; border-bottom-right-radius: 30%; border-top-right-radius: 30%;">
       <li style="padding-right: 10px; display: inline-block;;"><i style="color: #fff;" class=" fa fa-comments-o"></i></li>
-      <li style="padding-right: 10px; display: inline-block;"><i style="color: #fff;" class="fa fa-video-camera"></i></li>
+      <li style="padding-right: 10px; display: inline-block;"><i style="color: #fff;" class="fa-solid fa-video"></i></li>
       <li style=" padding:2% 0px ;padding-right: 10px; display: inline-block; padding: 5px 10px; background-color: #4F0E0E; border-bottom-right-radius: 30%; border-top-right-radius: 30%;"><i style=" color: #fff; font-weight: 700; padding: 2%; font-size: 5.5vw;" class="right2 fa fa-angle-double-left"> </i></li>
     </ul>
   </div>
@@ -2077,10 +2078,10 @@ document.querySelectorAll(".light")[i].addEventListener('click', ()=>{
   document.querySelector(".dp1").classList.add("hid")
   document.querySelector(".dp2").classList.remove("hid")
   document.querySelector(".notification-below").style.backgroundColor="#1b2430"
-  document.querySelector(".lightbulb-o").classList.add("hid")
-  document.querySelector(".lightbulb-o").classList.remove("pra")
-  document.querySelector(".moon-o").classList.add("pra")
-  document.querySelector(".moon-o").classList.remove("hid")
+  // document.querySelector(".lightbulb-o").classList.add("hid")
+  // document.querySelector(".lightbulb-o").classList.remove("pra")
+  // document.querySelector(".moon-o").classList.add("pra")
+  // document.querySelector(".moon-o").classList.remove("hid")
   document.querySelectorAll(".save-profile")[1].style.borderColor="#fff"
   document.querySelector(".profile-top").style.backgroundColor="#1b2430"
   document.querySelector(".below-phone").style.backgroundColor="#000"
@@ -2101,9 +2102,9 @@ document.querySelectorAll(".light")[i].addEventListener('click', ()=>{
   document.querySelectorAll(".fa-bell")[1].style.color="#fff"
   document.querySelectorAll(".fa-bell")[2].style.color="#fff"
   document.querySelectorAll(".fa-comments-o")[0].style.color="#fff"
-  document.querySelectorAll(".fa-video-camera")[0].style.color="#fff"
+  document.querySelectorAll(".fa-video")[0].style.color="#fff"
   document.querySelectorAll(".fa-comments-o")[2].style.color="#fff"
-  document.querySelectorAll(".fa-video-camera")[2].style.color="#fff"
+  document.querySelectorAll(".fa-video-camera")[1].style.color="#fff"
   document.querySelectorAll(".icon2")[0].classList.remove("hid")
   document.querySelectorAll(".icon1")[0].classList.add("hid")
   document.querySelectorAll(".icon2")[1].classList.remove("hid")
