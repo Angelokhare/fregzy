@@ -173,17 +173,17 @@
   </div>
 
       <!-- <div style=" background-color: #fdfeff;"> -->
-<img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-top:5%; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
+<img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
 <input class="hid file-pic" type="file" accept="image/png, image/jpeg, image/webp" onchange="loadFile(event)">
 <i style=" color: #000; text-align: center; border-radius: 100%; background-color: #fff;" class="pencil fa fa-pencil"></i>
-<h1 class="user-nick" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700; margin-top: 3%; text-transform: capitalize;"> <span class="tag" style="color: #4F0E0E;">@</span><%=username%></h1>
+<h1 class="user-nick" style="text-align: center; font-family: 'Varela Round', sans-serif; font-weight: 700; margin-top: 3%; text-transform: capitalize;"> <span class="tag" style="color: #4F0E0E;"><i class="fa-solid fa-at"></i></span><%=username%></h1>
 <form action="/profile-adjestment" method="post">
   <h1  class="user-sign sap profile-ontop" style=" font-weight: 700; margin-top: 15%; color: #1d2a35;">Full Name</h1>
     <div class="profile-group profile-intop" style="">
         <!-- <label for="">Full Nmae</label> -->
         <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
         <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa fa-user"></i></button>
+        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa-solid fa-user"></i></button>
         <input class="profile-inside input-sign full-input bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  border-top: none; background-color: #fdfeff; border-color: #d4b194; font-weight: 700;" name="current" type="text" value="<%= fullname %>" required>
          <button type="button" class="btn full-but but-sik" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #fdfeff; color: #000;"><i class="fa fa-pencil"></i></button>
           <!-- <label for="">Full Nmae</label> -->
@@ -193,7 +193,7 @@
         <!-- <label for="">Full Nmae</label> -->
         <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
         <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa fa-user-circle-o"></i></button>
+        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa-solid fa-user-lock"></i></button>
         <input class="profile-inside input-sign user-input bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; background-color: #fdfeff; border-color: #d4b194; font-weight: 700;" name="current" type="text" value="<%= username %>" required>
          <button type="button" class="btn user-but but-sik" style=" border-top-left-radius: 0%; border-bottom-left-radius: 0%; border-right: none; background-color: #fdfeff; color: #000;"><i class="fa fa-pencil"></i></button>
           <!-- <label for="">Full Nmae</label> -->
@@ -203,7 +203,7 @@
         <!-- <label for="">Full Nmae</label> -->
         <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
         <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
-        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border-right: none;  border-top: none; background-color: #fdfeff; border-left: none; border-bottom: none; color: #4F0E0E;"><i class="fa fa-envelope"></i></button>
+        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border-right: none;  border-top: none; background-color: #fdfeff; border-left: none; border-bottom: none; color: #4F0E0E;"><i class="fa-solid fa-envelope-circle-check"></i></button>
         <input class="profile-inside input-sign email-input bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;   border-top: none; background-color: #fdfeff; border-color: #d4b194; font-weight: 700;" name="current" type="email" value="<%= email %>" required>
          <button type="button" class="btn email-but but-sik" style=" border-radius: 0%; border-right: none;  border-top: none; background-color: #fdfeff; border-left: none; border-bottom: none; color: #000;"><i class="fa fa-pencil"></i></button>
           <!-- <label for="">Full Nmae</label> -->
@@ -212,7 +212,7 @@
 
     <h1  class="user-sign sap profile-ontop" style=" font-weight: 700; color: #1d2a35;">Date of Birth</h1>
     <div class="profile-group profile-intop" style="">
-        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa fa-birthday-cake"></i></button>
+        <button  type="button" class="btn left-profile-button" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #4F0E0E;"><i class="fa-solid fa-cake-candles"></i></button>
         <input class="profile-inside input-sign date-input bap" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none; border-top: none; background-color: #fdfeff; border-color: #d4b194; font-weight: 700; -moz-appearance: none; -webkit-appearance: none; appearance: none;" name="current" value="<%= date %>" type="date" required>
          <button type="button" class="btn date-but but-sik" style=" border-radius: 0%; border: none; background-color: #fdfeff; color: #000;"><i style="" class="fa fa-pencil"></i></button>
           <!-- <label for="">Full Nmae</label> -->
@@ -224,9 +224,9 @@
         <!-- <input class="inside" style=" border-left: none; border-right: none; border-top: none; text-transform: capitalize; background-color: #fdfeff; border-color: #4F0E0E; font-weight: 700; margin-left: 15%; font-size: 1.3vw;" name="current" type="text" size="6" placeholder="Search" value="Enameuehen Nosakhare Angelo">
         <button type="submit" class="btn " style="border-radius: 50px; background-color: #4F0E0E; margin-right: 15%;"><i style="color: #fff;" class="fa fa-pencil"></i></button> -->
         <!-- <button  type="button" class="btn" style=" border-top-right-radius: 0%; border-bottom-right-radius: 0%; border-right: none; border-color: #4F0E0E;  background-color: #fff;"><img class="flag" src="https://flagcdn.com/20x15/<%= country[30].name %>.png"></button> -->
-        <button  type="button" class="btn boy left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa fa-male display-ic"></i></button>
-        <button  type="button" class="btn girl hid left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa fa-female display-ic"></i></button>
-        <button  type="button" class="btn custom hid left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa fa-intersex display-ic"></i></button>
+        <button  type="button" class="btn boy left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa-solid fa-person display-ic"></i></button>
+        <button  type="button" class="btn girl hid left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa-solid fa-person-dress display-ic"></i></button>
+        <button  type="button" class="btn custom hid left-profile-button" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #fdfeff; padding-right:2%; color: #4F0E0E;"><i class="fa-solid fa-venus-mars display-ic"></i></button>
     
         <button  type="button" class="btn key2 hid" style="border-radius: 0%; border-right: none; border-left: none; border-bottom: none; border-top: none;  background-color: #1d2a35; padding-right:2%;"><i style="color: #fd859d;" class="fa fa-malee display-ic"></i></button>
         <select class="profile-inside input-sign bap gender_select country-input" style="border-radius: 0%; text-transform: capitalize; border-right: none; border-left: none;  background-color: #fdfeff; border-color: #d4b194; font-weight: 700; border-top: none;" aria-valuetext="Nigeria" name="gender" required>
@@ -2274,9 +2274,9 @@ document.querySelectorAll(".dark")[i].addEventListener('click', ()=>{
   document.querySelectorAll(".fa-bell")[1].style.color="#4f0e0e"
   document.querySelectorAll(".fa-bell")[2].style.color="#4f0e0e"
   document.querySelectorAll(".fa-comments-o")[0].style.color="#4f0e0e"
-  document.querySelectorAll(".fa-video-camera")[0].style.color="#4f0e0e"
+  document.querySelectorAll(".fa-video")[0].style.color="#4f0e0e"
   document.querySelectorAll(".fa-comments-o")[2].style.color="#4f0e0e"
-  document.querySelectorAll(".fa-video-camera")[2].style.color="#4f0e0e"
+  document.querySelectorAll(".fa-video-camera")[1].style.color="#4f0e0e"
   document.querySelectorAll(".icon2")[0].classList.add("hid")
   document.querySelectorAll(".icon1")[0].classList.remove("hid")
   document.querySelectorAll(".icon2")[1].classList.add("hid")

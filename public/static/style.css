@@ -969,6 +969,7 @@ margin-right: 15%;
 .user-picture{
   width: 13vw;
   height: 13vw;
+  margin-top: 5%;
 }
 .or{
   font-size: 2vw;
@@ -2447,7 +2448,9 @@ display: none;
     padding-top: 80%;
 
   }  
-
+  .user-picture{
+    margin-top: -18%;
+  }
 
 }
 
@@ -2665,6 +2668,7 @@ margin-bottom: -12%;
   .job-pic{
     width: 90vw;
   }
+
 }
 
 

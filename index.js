@@ -771,8 +771,9 @@ if(! request.params.jbk.toLowerCase().includes("-")){
         }
         else{
           // var servtime= new Date().getTime()-259200000
-          console.log(new Date().getTime()-259200000)
-          if(found.datelink < (new Date().getTime()+259200000)){
+            var checkingLinkTime= new Date().getTime() - found.datelink
+          console.log(checkingLinkTime)
+            if(checkingLinkTime < 259200000){
           if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="profile"){
         var slicingCountry= found.country.slice(0,1).toUpperCase()
         var checkingSlicedCountry= slicingCountry + (found.country.slice(1, (found.country.length)))
@@ -1998,12 +1999,15 @@ app.post("/login", (request, response)=>{
 
     var loginusernamelist=[]
     var loginemaillist=[]
+    var loginlinklist=[]
   User.find({}, function(err, users) {
     for (let x in users) {
      var combinename=users[x].username
      loginusernamelist.push(combinename)
      var combineemail=users[x].email
      loginemaillist.push(combineemail)
+     var combinelink=users[x].linkweb
+     loginlinklist.push(combinelink)
     }
 
     if(loginusernamelist.includes(usern)){
@@ -2214,7 +2218,44 @@ console.log(info);
     response.redirect("/signup")
 }
 else{
-response.redirect("/"+ found.username + "-profile?user_authenticate=" + found.linkweb)
+
+  let w = 1;
+  while (w < 2){
+  
+    const saltRounds = 12;
+    var hash=  bcrypt.hashSync(found.password, saltRounds);
+    var hash2=  bcrypt.hashSync(found.email, saltRounds);
+    var hash3=  bcrypt.hashSync(found.username, saltRounds);
+  
+  
+    console.log(hash2)
+    var ur= uuid()
+    var sed= ur.slice(0, 14)
+    var std= ur.slice(14, 28)
+    var splithash21= hash2.slice(0, 10)
+    var splithash22= hash2.slice(10, 20)
+    var splithash23= hash2.slice(20, 30)
+  
+    var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
+    var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
+  
+  
+  
+  
+  if( loginlinklist.includes(sor)){
+    w=1
+  }
+  
+  // }
+  else{
+    w=2
+  var conditions = {username: found.username};
+  var update = { datelink: new Date().getTime(), linkweb: sor}
+User.findOneAndUpdate(conditions, update, function (err){
+
+response.redirect("/"+ found.username + "-profile?user_authenticate=" + sor)
+})
+  }}
 }
   }
   else{
@@ -2231,7 +2272,45 @@ else if(loginemaillist.includes(usern)){
 User.findOne({email:usern}, (err, found)=>{
 bcrypt.compare(passloginpost, found.password, (err, got)=>{
   if(got){
-    response.redirect("/"+ found.username + "-profile?user_authenticate=" + found.linkweb)
+
+
+    let w = 1;
+    while (w < 2){
+    
+      const saltRounds = 12;
+      var hash=  bcrypt.hashSync(found.password, saltRounds);
+      var hash2=  bcrypt.hashSync(found.email, saltRounds);
+      var hash3=  bcrypt.hashSync(found.username, saltRounds);
+    
+    
+      console.log(hash2)
+      var ur= uuid()
+      var sed= ur.slice(0, 14)
+      var std= ur.slice(14, 28)
+      var splithash21= hash2.slice(0, 10)
+      var splithash22= hash2.slice(10, 20)
+      var splithash23= hash2.slice(20, 30)
+    
+      var swr= sed +  splithash23 + hash + std + splithash22 + splithash21
+      var sor= std + splithash21  + splithash23 + hash3 + sed + hash2 + splithash22
+    
+    
+    
+    
+    if( loginlinklist.includes(sor)){
+      w=1
+    }
+    
+    // }
+    else{
+      w=2
+    var conditions = {username: found.username};
+    var update = { datelink: new Date().getTime(), linkweb: sor}
+  User.findOneAndUpdate(conditions, update, function (err){
+    response.redirect("/"+ found.username + "-profile?user_authenticate=" + sor)
+  })
+}
+    }
   }
   else{
    var day=new Date().getFullYear()
