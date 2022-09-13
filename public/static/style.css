@@ -2890,11 +2890,12 @@ margin-bottom: -12%;
   /* margin-left: -15%; */
   padding: 0.6rem 6rem;
 }
-.lop{
-  padding: 0.5rem 1.7rem;
-}
+
 .google-but{
   padding: 0.5rem 2.5rem;
+}
+.lop{
+  padding: 0.5rem 2rem;
 }
 .google-log{
   font-size: 4.1vw;
