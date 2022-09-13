@@ -1212,6 +1212,19 @@ select{
 .bap{
   font-family: 'Varela Round', sans-serif;
 }
+
+.spec{
+  font-family: 'Varela Round', sans-serif;
+
+}
+
+@supports(-webkit-touch-callout: none){
+  .spec{
+    font-family: 'Rubik', sans-serif; font-weight: 700;
+  
+  }
+}
+
 @supports(-webkit-touch-callout: none){
   .bap{
     font-family: 'Comfortaa', cursive;
