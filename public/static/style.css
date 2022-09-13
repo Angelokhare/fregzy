@@ -2723,6 +2723,10 @@ margin-bottom: -12%;
   .login-profile{
     padding-top: 20%;
   }
+  
+  .enter-details{
+    font-size: 3.5vw;
+  }
 }
 
 
@@ -2742,9 +2746,6 @@ margin-bottom: -12%;
   .namef{
     display: none;
   }
-  .enter-details{
-    font-size: 3vw;
-   }
    .google-but{
     padding: 0.6rem 5.5rem;
     margin-left: -7%;
