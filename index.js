@@ -40,6 +40,8 @@ app.use(express.static("public"))
 // mongodb+srv://angelokhare:${process.env.MONGODBDATABASE}@fregzy.3ki58ak.mongodb.net/fregzy
 // mongodb://localhost:27017/fregzy
 mongoose.connect("mongodb+srv://angelokhare:" + process.env.MONGODBDATABASE + "@fregzy.3ki58ak.mongodb.net/fregzy")
+// mongoose.connect("mongodb://localhost:21017/fregzy")
+
 var newuser= new mongoose.Schema({
   fullname: {
     type: String,
@@ -2245,7 +2247,6 @@ else{
   if( loginlinklist.includes(sor)){
     w=1
   }
-  
   // }
   else{
     w=2

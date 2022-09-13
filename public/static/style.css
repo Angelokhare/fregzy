@@ -5,6 +5,12 @@ header {
     align-items: center;
     padding: 0px 4%;
   }
+  .head1{
+    display: flex;
+  }
+  .login-second-head{
+    display: none;
+  }
   .docking {
     list-style: none;
   } 
@@ -52,7 +58,11 @@ header {
     color: #4A403A;
     text-decoration: none;
   }
-
+  .login-sz{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #f5efe8 50%, #fbf8f5 50%);
+    color: #000;
+  }
   .sign-sz{
     /* background-color: #fbf8f5; */
     background: linear-gradient(90deg, #fbf8f5 50%, #d6e6d5 50%);
@@ -658,11 +668,11 @@ footer {
   background-color: #000;
 }
 .google-but{
-  padding: 0.5rem 5.5rem;
+  padding: 0.8rem 6rem;
   margin-left: 1%;
 }
 .lop{
-  padding: 0.5rem 5rem;
+  padding: 0.8rem 5.5rem;
   margin-left: 1%;
 }
 
@@ -670,17 +680,27 @@ footer {
   padding: 1rem 10.5rem;
   margin-left: 1%;
 }
+.namef{
+  margin-top: -5%; 
+  font-size: 6vw; 
+}
 .login-profile{
-  margin-top: -34%;
+  margin-top: -48%;
    margin-left:55%; 
    margin-bottom: 10%; 
+}
+.login-image{
+  width: 60%;
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block; 
+  margin-top: 14%;
 }
 .enter-details{
   font-size: 1.5vw;;
         }
 .please-sign{
    font-size:1.2vw; 
-    margin-left: 5%; 
      /* font-family: 'Varela Round', sans-serif; */
    font-weight: 500; 
      margin-top: 5%;
@@ -716,43 +736,6 @@ footer {
 /* entertainmentfffffffffffffffffffffffff */
 .enter-display{
   width: 50%;
-}
-.vid1{
-  width: 94.5%; 
-  padding-bottom: 29%; 
-  padding-top: 5%;
-   border-top-right-radius: 150px;  
-   border-top-left-radius: 150px;
-    padding-left: 5%; 
-  padding-right: 5;
-}
-.vid2{
-  width: 50%; 
-  padding-bottom: 2%; 
-  margin-top: -30.5%;
-   margin-left: -1%; 
-   padding-right: 5%;
-}
-.img1{
-  width: 50%; 
-  padding-bottom: 2%;
-   margin-top: -141.5%; 
-   padding-left: 5%;
-}
-.img2{
-  width: 50%;
-   padding-bottom: 2%; 
-   margin-top: -59%;
-    padding-left: 5%; 
-    border-bottom-left-radius: 150px;
-}
-.img3{
-  width: 50%;
-   padding-bottom: 2%; 
-   margin-top: -3.5%;
-    margin-left: -1%;
-     padding-right: 5%;
-      border-bottom-right-radius: 150px;
 }
 .img-pass{
   width: 50%;
@@ -1039,10 +1022,10 @@ display: none;
  }
 
 .auth-head{
-  font-size: 5vw;
+  font-size: 3.5vw;
 }
 .auth-sec{
-  font-size: 2.5vw;
+  font-size: 1.5vw;
 }
 
 .button-auth{
@@ -1050,7 +1033,7 @@ font-size: 3vw;
 margin-top: 2%;
   border-radius: 20px;
   margin-top: 5%;
-  padding: 1.5rem 25%;
+  padding: 1rem 25%;
   margin-bottom: 5%;
 }
 .notcode{
@@ -1292,9 +1275,6 @@ select{
   .enter-display{
   padding-top: 5%;
 }
-.login-profile{
-  margin-top: -75%;
-}
 .enter-details{
   font-size: 1.8vw;;
         }
@@ -1375,19 +1355,14 @@ margin-left: 28%;
 margin-top: -24%; 
 }
 .google-but{
-  padding: 0.5rem 4rem;
+  padding: 0.8rem 5rem;
 }
 .lop{
-  padding: 0.5rem 3.5rem;
+  padding: 0.8rem 4.5rem;
 }
 
 .login-user{
   padding: 1rem 9.5rem;
-}
-.login-profile{
-  margin-top: -65%;
-   margin-left:60%; 
-   margin-bottom: 10%; 
 }
 .input-auth{
   font-size: 3vw;
@@ -1451,13 +1426,14 @@ font-size: 4vw;
   padding: 1rem 8.5rem;
 }
 .google-but{
-  padding: 0.5rem 3rem;
+  padding: 0.8rem 4rem;
 }
 .lop{
-  padding: 0.5rem 2.5rem;
+  padding: 0.8rem 3.5rem;
 }
 .enter-details{
-  font-size: 1.8vw;;
+  font-size: 1.8vw;
+  margin-bottom: 15%;
         }
 .third-phone{
       display: none;
@@ -1532,7 +1508,7 @@ font-size: 4vw;
   display: none;
 }
 .button-auth{
-  font-size: 5vw;
+  font-size: 3.5vw;
   }
   .invalide-code{
     font-size: 2.5vw;
@@ -1567,11 +1543,28 @@ padding: 5% 5%;
   margin-left: 15%;
    margin-right: 15%;
 }
+.login-profile{
+  margin-top: -60%;
+}
+.login-image{
+  width: 83%;
+  margin-left: 15%;
+}
+.icon-home{
+  width: 9%;
+}
+.namef{
+  font-size: 8vw;
+}
 }
 
 @media only screen and (max-width:895px){
 .enter-display{
   width: 40%;
+}
+.login-image{
+  width: 100%;
+  margin-left: 15%;
 }
 .vid1{
   width: 100%; 
@@ -1633,13 +1626,13 @@ padding: 5% 5%;
     margin-left: 6.5%;
   }
   .google-but{
-    padding: 0.5rem 2.5rem;
+    padding: 0.8rem 5rem;
   }
   .lop{
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 4.5rem;
   }
   .login-user{
-    padding: 1rem 7.5rem;
+    padding: 1rem 9.5rem;
   }
   .enter-details{
     font-size: 1.8vw;;
@@ -1655,13 +1648,19 @@ padding: 5% 5%;
             margin-left:11.6%;
           }    
           .auth-sec{
-            font-size: 3.5vw;
-          }      
+            font-size: 2vw;
+          }     
+         .auth-head{
+          font-size: 4vw;
+         }  
           .display-ic{
             font-size: 2.5vw;
           }           
         .job-tag{
           margin-bottom: 5%;
+        }
+        .login-profile{
+          margin-left: 46%;
         }
   }
 @media only screen and (max-width:850px){
@@ -1685,9 +1684,6 @@ padding: 5% 5%;
     }
     .img-pass{
       width: 40%;
-    }
-    .login-profile{
-      margin-left: 55%;
     }
     .auth-subscribe{
       width: 40vw;
@@ -1851,20 +1847,14 @@ padding-top: 10%;
 padding-right: 40px;
   }
   .login-user{
-    padding: 1rem 6.5rem;
+    padding: 1rem 8rem;
   }
-  .vid1{
-    width: 101%; 
+  .google-but{
+    padding: 0.8rem 3.5rem;
   }
-  .img1{
-     margin-top: -40.5%; 
-  }
-  .img2{
-     margin-top: -71%;
-  }
-  .img3{ 
-     margin-top: -45.5%;
-  }
+    .lop{
+      padding: 0.8rem 3rem;
+    }
   .save-profile{
     font-size: 2.5vw;
    } 
@@ -2004,23 +1994,27 @@ margin-left: 10.6%;
 .facebook-signup{
   padding: 1rem 19%;
 }
+.login-image{
+  width: 116%;
+  margin-left: 0%;
+}
+.login-profile{
+  margin-top: -65%;
+}
 }
 
 @media only screen and (max-width:670px){
 .login-user{
-  padding: 0.5rem 6.5rem;
-}
-.login-profile {
-  margin-top: -70%;
+  padding: 0.8rem 7.5rem;
 }
 .enter-display{
   padding-top: 9%;
 }
 .google-but{
-  padding: 0.2rem 1.5rem;
+  padding: 0.5rem 3rem;
 }
 .lop{
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 2.5rem;
 }
 .save-profile{
   font-size: 3vw;
@@ -2047,6 +2041,9 @@ margin-left: 10.6%;
 .user-sign{
   font-size: 2vw;
 }
+.login-title-sign{
+  font-size: 1.5vw;
+}
 .display-ic{
   font-size: 3vw;
 }     
@@ -2064,6 +2061,26 @@ margin-left: 10.6%;
 .profile-intop{
 margin-left: 10%;
 margin-right: 10%;
+}
+.log-input{
+  font-size: 2vw;
+}
+.log-display{
+  font-size: 2.3vw;
+}
+/* .head1{
+  display: none;
+} */
+/* .enter-display{
+  display: none;
+}*/
+.login-profile{
+  margin-left: 42%;
+} 
+
+.login-sz{
+  background: linear-gradient(90deg, #f5efe8 47%, #fbf8f5 47%);
+  color: #000;
 }
 }
 @media only screen and (max-width:600px){
@@ -2107,11 +2124,14 @@ margin-right: 10%;
   margin-top: -42.5%;
 }
 .login-user{
-  padding: 0.5rem 5.5rem;
+  padding: 0.6rem 7rem;
 }
-/* .changing-button{
-  font-size: 2vw;
- }   */
+.google-but{
+  padding: 0.5rem 2.5rem;
+}
+.lop{
+  padding: 0.5rem 2rem;
+}
  .user-nick{
   font-size: 5vw;
 }
@@ -2192,36 +2212,51 @@ font-size: 5vw;
       padding: 0.5%; 
       margin-left: 88vw;
    } 
- 
+ .login-profile{
+  margin-top: 0%;
+  margin-left: 0%;
+ }
+ .login-image{
+  display: none;
+ }
+ .login-sz{
+  background: linear-gradient(90deg, #fbf8f5 47%, #fbf8f5 47%);
+  color: #000;
 }
-@media only screen and (max-width: 539px){
-.enter-display{
- width: 35%; 
- padding-top: 18%;
+.enter-details{
+  font-size: 3vw;
+  margin-bottom: 0%;
 }
-.img1{
-   margin-top: -46.5%; 
+.namef{
+  font-size: 14vw;
+  margin-top: 0%;
 }
-.img2{
-   margin-top: -73%;
-}
-.img3{ 
-   margin-top: -51.5%;
-}
-.vid2{
-  margin-top: -45.5%;
-  border-bottom-right-radius: 24px; 
-}
-.login-profile{
-  margin-top: -75%;
-  margin-left: 45%;
+.login-user{
+  padding: 1rem 12rem;
 }
 .google-but{
-  padding: 0.2rem 1.5rem;
+  padding:0.8rem 7.5rem;
 }
-.google-log{
+.lop{
+  padding:0.8rem 7rem;
+}
+.please-sign{
+  font-size: 3vw;
+}
+.sign-link{
+  font-size: 3.5vw;
+}
+.login-title-sign{
+  font-size: 2vw;
+}
+.log-input{
   font-size: 2.5vw;
-} 
+}
+.log-display{
+  font-size: 3vw;
+}
+}
+@media only screen and (max-width: 539px){
 .profile-adjustment2{
   margin-left:19.5%;
   width: 80%;
@@ -2468,6 +2503,18 @@ display: none;
 .input-sign{
   font-size: 3.2vw;
 }
+.head1{
+  display: none;
+}
+.login-second-head{
+  display: block;
+}
+.login-profile{
+  padding-top: 15%;
+}
+.enter-display{
+  display: none;
+}
 }
 @media only screen and (max-width: 450px){
 .see{
@@ -2480,29 +2527,21 @@ display: none;
   margin-bottom: -20%;
  }
  .login-user{
-  padding: 0.5rem 4.5rem;
+  padding: 0.8rem 9.5rem;
  }
  .eye-log{
   margin-left: -12%
  }
  .google-but{
-  padding: 0.2rem 1.5rem;
+  padding: 0.6rem 5rem;
+ }
+ .lop{
+  padding: 0.6rem 4.5rem;
  }
  .enter-details{
   font-size: 2.5vw;
  }
- .img1{
-  margin-top: -56.5%; 
-}
-.img2{
-  margin-top: -78%;
-}
-.img3{ 
-  margin-top: -59.5%;
-}
-.vid2{
- margin-top: -51.5%;
-}
+
 .user-details{
   font-size: 4vw;
 }
@@ -2630,7 +2669,7 @@ margin-bottom: -12%;
     font-size: 2vw;
   }
   .google-but{
-    padding: 0.2rem 1rem;
+    padding: 0.6rem 6.1rem;
    }
    .google-log{
     font-size: 3vw;
@@ -2668,17 +2707,15 @@ margin-bottom: -12%;
   .job-pic{
     width: 90vw;
   }
-
+  .login-profile{
+    padding-top: 20%;
+  }
 }
 
 
 @media only screen and (max-width: 384px){
   .enter-display{
     display: none;
-  }
-  .login-profile{
-    margin-top: 0%;
-    margin-left: 0%;
   }
   .login-icon{
     /* display: block; */
@@ -2696,12 +2733,12 @@ margin-bottom: -12%;
     font-size: 3vw;
    }
    .google-but{
-    padding: 0.3rem 3rem;
+    padding: 0.6rem 5.5rem;
     margin-left: -7%;
     margin-right: 17%;
    }
    .lop{
-    padding: 0.3rem 2.5rem;
+    padding: 0.6rem 5rem;
     margin-left: -7%;
     margin-right: 17%;
    }
@@ -2724,8 +2761,7 @@ margin-bottom: -12%;
     padding-top: 8%;
   }
   .login-user{
-    margin-left: -9%;
-    padding: 0.5rem 6.5rem;
+    padding: 0.8rem 8.5rem;
   }
   .login-word{
     font-size: 5vw;
@@ -2784,6 +2820,9 @@ margin-bottom: -12%;
     font-size: 3.5vw;
     padding: 1rem 20%;
   }
+  .login-profile{
+    padding-top: 30%;
+  }
   }
 
 
@@ -2812,14 +2851,23 @@ margin-bottom: -12%;
       margin-bottom: -16%;
      }
      .google-but{
-      padding: 0.3rem 2.5rem;
+      padding: 0.6rem 4.5rem;
       /* margin-left: -7%;
       margin-right: 21%; */
      }
+     .login-user{
+      padding: 0.8rem 8rem;
+    }
      .lop{
-      padding: 0.3rem 2rem;
+      padding: 0.6rem 4rem;
       /* margin-left: -7%;
       margin-right: 21%; */
+     }
+     .google-log{
+      font-size: 4vw;
+     }
+     .login-profile{
+      padding-top: 40%;
      }
 }
 
@@ -2839,7 +2887,14 @@ margin-bottom: -12%;
 
 @media only screen and (max-width: 320px){
 .login-user{
-  margin-left: -15%;
+  /* margin-left: -15%; */
+  padding: 0.6rem 6rem;
+}
+.lop{
+  padding: 0.5rem 1.7rem;
+}
+.google-but{
+  padding: 0.5rem 2.5rem;
 }
 .google-log{
   font-size: 4.1vw;
@@ -2852,12 +2907,7 @@ margin-bottom: -12%;
 }  
 }
 @media only screen and (max-width: 305px){
-.lop{
-  padding: 0.3rem 1.5rem;
-}
-.google-but{
-  padding: 0.3rem 1.5rem;
-}
+
 }
 @media only screen and (max-width: 300px){
   .bottom-noti{
