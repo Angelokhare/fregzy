@@ -1220,7 +1220,7 @@ select{
 
 @supports(-webkit-touch-callout: none){
   .spec{
-    font-family: 'Rubik', sans-serif; font-weight: 700;
+    font-family: 'Rubik', sans-serif; 
   
   }
 }
