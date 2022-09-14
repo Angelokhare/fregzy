@@ -787,7 +787,7 @@ if(! request.params.jbk.toLowerCase().includes("-")){
         var slicingGender= found.gender.slice(0,1).toUpperCase()
         var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
         console.log(checkingSlicedGender)
-        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code, log:found.linkweb, verifiedemail:found.verifiedemail})
+        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code, log:found.linkweb, verifiedemail:found.verifiedemail, link:found.linkweb})
           }
 else if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="dashboard"){
   day=new Date().getFullYear()
@@ -1278,6 +1278,26 @@ console.log(info);
 }
 })
 })
+
+app.post("/profile", (request, response)=>{
+var link= request.body.link
+var fullname= request.body.fullname.toLowerCase().trim()
+var username= request.body.username.toLowerCase().trim()
+var email= request.body.email.toLowerCase().trim()
+var date= request.body.date.toLowerCase().trim()
+var gender= request.body.gender.toLowerCase().trim()
+var country= request.body.country.toLowerCase().trim()
+
+var conditions = {linkweb:link};
+var update = { fullname:fullname, email:email, username:username, gender:gender, country:country, dateBirth:date};
+User.findOneAndUpdate(conditions, update, function (err){
+
+response.redirect("/" + username +"-profile?user_authenticate=" + link)
+})
+
+})
+// angelokhare-profile?user_authenticate=4417-87d7-86f0$2b$12$u6rzZZlVR0k.1$2b$12$3hxRJ9eeJwbb2zjA/kGBmemDWC0pY1qyCvgV4EN8ZVJEkMSN3lyhSdd0a0a93-4419-$2b$12$u6r78HRjMWG7CzZZlVR0k.1D4OiOInwP2..vVW72dLOlEVOAKPl4278HRjMWG7C
+// angelokhare-profile?user_authenticate=4417-87d7-86f0$2b$12$u6rzzzlvr0k.1$2b$12$3hxrj9eejwbb2zja/kgbmemdwc0py1qycvgv4en8zvjekmsn3lyhsdd0a0a93-4419-$2b$12$u6r78hrjmwg7czzzlvr0k.1d4oioinwp2..vvw72dlolevoakpl4278hrjmwg7c
 
 app.post("/suggestion", (request, response)=>{
 
@@ -2355,12 +2375,6 @@ else{
 }
 }    
 
-
- app.post("/profile-adjestment", (request, response)=>{
-    response.redirect("/"+ userprof + "-profile")
-    console.log(userprof)
-    console.log(user_profile)
-})
 
 
 app.get("*", (request, response)=>{
