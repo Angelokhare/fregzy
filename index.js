@@ -101,9 +101,13 @@ var newuser= new mongoose.Schema({
     type: String,
   },
   verifieduser:{
-    type: Number,
+    type: Boolean,
     required: true
   },
+  dateregister:{
+    type: Number,
+    required: true
+  }
 })
 var newletter= new mongoose.Schema({
   email: {
@@ -783,7 +787,7 @@ if(! request.params.jbk.toLowerCase().includes("-")){
         var slicingGender= found.gender.slice(0,1).toUpperCase()
         var checkingSlicedGender= slicingGender + (found.gender.slice(1, (found.gender.length)))
         console.log(checkingSlicedGender)
-        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code, log:found.linkweb})
+        response.render("profile", { username:found.username, fullname:found.fullname, countryf:checkingSlicedCountry, email:found.email, gender:checkingSlicedGender, date:found.dateBirth, country:edit_country, countrt_fact:country_data, country_code:country_code, log:found.linkweb, verifiedemail:found.verifiedemail})
           }
 else if(request.params.jbk.toLowerCase().slice(indexdash+1, request.params.jbk.toLowerCase().length)=="dashboard"){
   day=new Date().getFullYear()
@@ -880,7 +884,9 @@ app.post("/get-started", (request, response)=>{
 //   forgotpass: "yuu",
 //   linkweb:"jhug",
 //   dateforgot: new Date().getTime(),
-//   datelink: new Date().getTime()
+//   datelink: new Date().getTime(),
+//   verifieduser: false,
+//   dateregister:false
 // })
 
 // adduser.save(function(err){
@@ -1160,7 +1166,9 @@ const adduser= new User({
   forgotpass: swr,
   linkweb: sor,
   dateforgot:new Date().getTime(),
-  datelink:new Date().getTime()
+  datelink:new Date().getTime(),
+  verifieduser: false,
+  dateregister:new Date().getTime()
 })
 
 adduser.save(function(err){
@@ -1253,7 +1261,7 @@ console.log(info);
 }); 
 
 
-  response.redirect("/verify-email")
+  response.redirect("/"+ signusername + "-profile?user_authenticate=" + sor)
 }
 }
 )
@@ -2496,3 +2504,4 @@ app.listen(process.env.PORT || 3000, ()=>{ console.log("ready to launch!")})
 // commit131
 // commit132
 // commit133
+// commmit134

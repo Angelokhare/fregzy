@@ -171,7 +171,9 @@
       <li style=" padding:2% 0px ;padding-right: 10px; display: inline-block; padding: 5px 10px; background-color: #4F0E0E; border-bottom-right-radius: 30%; border-top-right-radius: 30%;"><i style=" color: #fff; font-weight: 700; padding: 2%; font-size: 5.5vw;" class="right2 fa fa-angle-double-left"> </i></li>
     </ul>
   </div>
-
+  <div class="hid" style="color: #fff; background-color: #4e96f3; width:100%; padding: 4px; position: fixed;">
+    <a href="" class="klp sap" style="color: #fff;"></a>
+        </div>
       <!-- <div style=" background-color: #fdfeff;"> -->
 <img class="user-picture" style="border-radius:100%; margin-left:auto; margin-right:auto; display:block; margin-bottom: -5%;" src="static/no-user.gif" alt="no-user"> 
 <input class="hid file-pic" type="file" accept="image/png, image/jpeg, image/webp" onchange="loadFile(event)">
@@ -372,6 +374,11 @@
 
   <script defer src="https://cdn.crop.guide/loader/l.js?c=GCKSFG"></script>
        <script>
+var emailverified= '<%- verifiedemail %>'
+if(emailverified== "false"){
+  document.querySelector(".klp").innerHTML="Please verify your email address"
+}
+
 // if(document.querySelector(".dark").className.contains("hid")){
 // button clicked2
 document.querySelector(".fa-pencil").addEventListener("click", ()=>{
