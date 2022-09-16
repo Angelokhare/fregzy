@@ -35,26 +35,26 @@
     <img class="dis-image" src="https://cdn.dribbble.com/users/722246/screenshots/9714311/media/1714775b3deacede41aef42533ada46c.gif" style="margin-left: auto; margin-right:auto; display:block; background-color:#fff; margin-bottom:auto" alt="">
   </div>
   <div class="load1 hid">
-    <header class="header-white">
+    <header  class="head1">
         <img class="icon-home icon1" src="static/icon.webp" alt="">
         <img class="icon2 hid" style="width: 4.4%; margin-left:1.7%; margin-top: 1.7%; margin-bottom: 1.7%; margin-right: 0.4%;" src="static/footer.webp" alt="">
         <h1 class="heading" style="font-family: 'Cookie', cursive; font-weight: 900;" >Freg<span class="header-other other-red">zy</span></h1>
         <nav>
           <ul class="docking sap">
             
-            <li class="pra ho light"><i style="font-size: 2.5vw;" class="fa-regular fa-sun"></i></li>
-            <li class="pra ho dark hid"><i style="font-size: 2.5vw; color: #fff;" class="fa-regular fa-moon"></i></li>
-            <li class="pra"><a class="heading-left decoration tic ho" style="font-weight: 700;">About</a></li>
-            <li class="pra"><a class="heading-left decoration tic ho " style="font-weight: 700;" href="">Features</a></li>
+            <!-- <li class="pra ho light"><i style="font-size: 2.5vw;" class="fa-regular fa-sun"></i></li> -->
+            <!-- <li class="pra ho dark hid"><i style="font-size: 2.5vw; color: #fff;" class="fa-regular fa-moon"></i></li> -->
+            <!-- <li class="pra"><a class="heading-left decoration tic ho" style="font-weight: 700;">About</a></li> -->
+            <!-- <li class="pra"><a class="heading-left decoration tic ho " style="font-weight: 700;" href="">Features</a></li> -->
             <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
-            <li class="pro"><a class="heading-left decoration tic ho" style="font-weight: 700;" href="">FAQ</a></li>
+            <!-- <li class="pro"><a class="heading-left decoration tic ho" style="font-weight: 700;" href="">FAQ</a></li> -->
             <li class="pre"><a class="red sr" style="font-weight: 700; font-family: 'Varela Round', sans-serif;" href="/">Home</a></li>
             <li class="pre"><button class="btn but1 all-button-red" style="border-radius: 50px; padding: 0.5rem 1rem; text-decoration: none; font-weight: 700; font-family: 'Varela Round', sans-serif;" type="submit"><a style="font-weight: 700;" class="white sign-button" href="/login">Login</a></button></li>
             
           </ul>
         </nav>
       </header>
-      <div class="second-head">
+      <div class="login-second-head">
         <div class="wrapper">
           <div class="navbar header-white">
             <div class="logo">
@@ -63,8 +63,8 @@
               <div class="nav_right">
              <ul>
                <li class="nr_li">
-            <li class="second-bulb light"><i class="fa-regular fa-sun"></i></li>
-            <li class="second-bulb dark hid" style="color: #fff;"><i class="fa-regular fa-moon"></i></li>
+            <!-- <li class="second-bulb light"><i class="fa-regular fa-sun"></i></li> -->
+            <!-- <li class="second-bulb dark hid" style="color: #fff;"><i class="fa-regular fa-moon"></i></li> -->
                <li class="nr_li li_main">
                  <!-- <img style="padding: 3px;"  class="omg og" src="static/menu.png" alt=""> -->
                  <!-- <li class="second-bulb"><i class="oy fa fa-bars"></i></li> -->
@@ -93,23 +93,15 @@
             </div>
           </div>
            </div>
-           <div class=" header-bw vain ki body-color body-color-white" style="margin-bottom: 0%; font-family: 'Varela Round', sans-serif;">
-            <i style="margin-right: 1%; margin-top: -1%;" class=" x erase fa fa-times"></i>
-            <h1 class="header-wer sap"><span class="fregy" style="font-family: 'Cookie', cursive; font-weight: 700; color: #4F0E0E; font-size: 5vw;">Fregzy</span> works best on our app!</h1>
-            <ul class="docking">
-          <li class="">
-          <!-- <h1 style="font-weight:500;" class="clear"> Dismiss</h1> -->
-        <button class="btn sap" style="border-radius: 10px; padding: 0.5rem 1rem; background-color: #4F0E0E; color: #fff; text-decoration: none; font-size: 2w; font-weight: 700;" type="submit"><a class="link-line">Get</a></button>
-          </li>
-          </ul>
-          </div>
           </div>
 
     
-          <img class="sign-dis-girl" style="" src="static/girl-grad.png" alt="">
-          <img class="sign-dis-girl hid" style="" src="static/group-friends.png" alt="">
+          <!-- <img class="sign-dis-girl" style="" src="static/girl-grad.png" alt=""> -->
+          <img class="sign-dis-girl " style="" src="static/walking.png" alt="">
+          <img class="sign-dis-boy " style="" src="static/ui.png" alt="">
+          <!-- <img class="login-image v2" style="display: none; margin-top: 7%;" src="static/ui.png" alt=""> -->
 
-<div class="hid top-div" style="">
+<div class="top-div" style="">
 
 </div>
 <div class="sign-body">
@@ -373,307 +365,6 @@ document.querySelector(".x2").addEventListener("click", ()=>{
 
 })
 
-    for(let i=0; i<2; i++){
-    var li_icon=document.querySelectorAll(".light");
-li_icon[i].addEventListener("click", ()=>{
-  document.querySelectorAll(".light")[1].classList.add("hid")
-  document.querySelectorAll(".dark")[1].classList.remove("hid")
-  document.querySelectorAll(".light")[0].classList.add("hid")
-  document.querySelectorAll(".dark")[0].classList.remove("hid")
-  document.querySelector(".bar-white").classList.remove("hid")
-  document.querySelector(".bar-black").classList.add("hid")
-  document.querySelector(".question").style.backgroundColor="#fff"
-  document.querySelector(".question").style.color="#4f0e0e"
-  document.querySelector("body").classList.add("sign-sf")
-  document.querySelector("body").classList.remove("sign-sz")
-  document.querySelector("header").classList.add("header-black")
-  document.querySelector("header").classList.remove("header-white")
-  document.querySelector(".navbar").classList.add("header-black")
-  document.querySelector(".navbar").classList.remove("header-white")
-  document.querySelector(".chatting2").classList.remove("hid")
-  document.querySelector(".chatting1").classList.add("hid")
-  document.querySelector(".flag-sign").style.backgroundColor="#131313"
-  document.querySelector(".boy").style.backgroundColor="#131313"
-  document.querySelector(".girl").style.backgroundColor="#131313"
-  document.querySelector(".custom").style.backgroundColor="#131313"
-  document.querySelector(".fa-male").style.color="#fd859d"
-  document.querySelector(".fa-female").style.color="#fd859d"
-  document.querySelector(".fa-intersex").style.color="#fd859d"
-  document.querySelector(".flag-sign").style.borderColor="#fff"
-  document.querySelector(".button-signup").style.borderColor="#fff"
-  document.querySelector(".navbar").style.borderBottom= "3px solid #FF869E";
-  document.querySelector(".header-wer").style.color="#FFF"
-  document.querySelector(".wer").style.color="#FFF"
-  document.querySelector(".x").style.color="#990000"
-  document.querySelectorAll(".body-color")[0].classList.add("body-color-black")
-  document.querySelectorAll(".body-color")[0].classList.remove("body-color-white")
-  document.querySelector(".icon1").classList.add("hid")
-  document.querySelector(".icon2").classList.remove("hid")
-  document.querySelectorAll(".heading")[0].classList.add("heading-white")
-  document.querySelectorAll(".heading")[0].classList.remove("heading-black")
-  document.querySelectorAll(".heading")[1].classList.add("heading-white")
-  document.querySelectorAll(".heading")[1].classList.remove("heading-black")
-  document.querySelector(".but1").classList.remove("all-button-red")
-  document.querySelector(".but1").classList.add("all-button-white")
-  document.querySelector(".sign-button").classList.add("red")
-  document.querySelector(".sign-button").classList.remove("white")
-  document.querySelector(".sr").classList.remove("red")
-  document.querySelector(".sr").classList.add("white")
-
-  if(document.querySelector(".x1").classList.contains("hid")==false){
-  document.querySelector(".chatting1").classList.add("hid")
-  document.querySelector(".chatting2").classList.add("hid")
-  document.querySelector(".x1").classList.add("hid")
-  document.querySelector(".x2").classList.remove("hid")
-}
-if(document.querySelector(".chatting1").classList.contains("hid")==false){
-  document.querySelector(".chatting1").classList.add("hid")
-  document.querySelector(".chatting2").classList.remove("hid")
-  document.querySelector(".x1").classList.add("hid")
-  document.querySelector(".x2").classList.add("hid")
-}
-
-
-  if(document.querySelector(".vis").classList.contains("hid")!=true){
-    document.querySelector(".invis-white").classList.add("hid")
-    document.querySelector(".vis").classList.add("hid")
-    document.querySelector(".vis-white").classList.remove("hid")
-    document.querySelector(".invis").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis").classList.contains("hid")==true){
-    document.querySelector(".invis-white").classList.remove("hid")
-    document.querySelector(".vis").classList.add("hid")
-    document.querySelector(".invis").classList.add("hid")
-    document.querySelector(".vis-white").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  if(document.querySelector(".vis1").classList.contains("hid")!=true){
-    document.querySelector(".invis-white1").classList.add("hid")
-    document.querySelector(".vis1").classList.add("hid")
-    document.querySelector(".vis-white1").classList.remove("hid")
-    document.querySelector(".invis1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis1").classList.contains("hid")==true){
-    document.querySelector(".invis-white1").classList.remove("hid")
-    document.querySelector(".vis1").classList.add("hid")
-    document.querySelector(".invis1").classList.add("hid")
-    document.querySelector(".vis-white1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-
-
-  for(let j=0; j<3; j++){
-    document.querySelectorAll(".heading-left")[j].classList.add("white")
-  document.querySelectorAll(".heading-left")[j].classList.remove("tic")
-  document.querySelectorAll(".header-other")[0].classList.add("other-blue")
-  document.querySelectorAll(".header-other")[0].classList.remove("other-red")
-  document.querySelectorAll(".header-other")[1].classList.add("other-blue")
-  document.querySelectorAll(".header-other")[1].classList.remove("other-red")
-  }
-  for( let q=0; q<6; q++){
-    document.querySelectorAll(".sign-icon-1")[q].classList.add("hid")
-    document.querySelectorAll(".sign-icon-2")[q].classList.remove("hid")
-
-  }
-  for( let b=0; b<3; b++){
-    document.querySelectorAll(".extra-word")[b].style.color="#fd859d"
-
-  }
-  for( let z=0; z<2; z++){
-    document.querySelectorAll(".at-sign")[z].style.color="#fd859d"
-    document.querySelectorAll(".at-sign")[z].style.backgroundColor="#131313"
-    document.querySelectorAll(".at-sign")[z].style.borderColor="#fff"
-
-  }
-  for( let a=0; a< 8; a++){
-    document.querySelectorAll(".input-sign")[a].style.backgroundColor="#131313"
-    document.querySelectorAll(".input-sign")[a].style.borderColor="#fff"
-    document.querySelectorAll(".profile-inside")[a].style.color="#fff"
-
-  }
-
-  for( let x=0; x<11; x++){
-    document.querySelectorAll(".user-sign")[x].style.color="#fff"
-    document.querySelectorAll(".user-sign")[2].style.color="red"
-    document.querySelectorAll(".user-sign")[4].style.color="red"
-    document.querySelectorAll(".user-sign")[10].style.color="red"
-
-  }
-
-//   for(let r=0; r<3; r++){
-//   document.querySelectorAll(".heading-left")[r].classList.add("white")
-//   document.querySelectorAll(".heading-left")[r].classList.remove("tic")
-// }
-
-
-})
-
-var lo_icon=document.querySelectorAll(".dark");
-lo_icon[i].addEventListener("click", ()=>{
-  document.querySelectorAll(".light")[1].classList.remove("hid")
-  document.querySelectorAll(".dark")[1].classList.add("hid")
-  document.querySelectorAll(".light")[0].classList.remove("hid")
-  document.querySelectorAll(".dark")[0].classList.add("hid")
-  document.querySelector("body").classList.remove("sign-sf")
-  document.querySelector("body").classList.add("sign-sz")
-  document.querySelector(".bar-white").classList.add("hid")
-  document.querySelector(".bar-black").classList.remove("hid")
-  document.querySelector("header").classList.remove("header-black")
-  document.querySelector("header").classList.add("header-white")
-  document.querySelector(".question").style.backgroundColor="#4f0e0e"
-  document.querySelector(".question").style.color="#fff"
-  document.querySelector(".navbar").classList.remove("header-black")
-  document.querySelector(".navbar").classList.add("header-white")
-  document.querySelector(".navbar").style.borderColor= "#4F0E0E"
-  document.querySelector(".flag-sign").style.backgroundColor="#fbf8f5"
-  document.querySelector(".boy").style.backgroundColor="#fbf8f5"
-  document.querySelector(".girl").style.backgroundColor="#fbf8f5"
-  document.querySelector(".custom").style.backgroundColor="#fbf8f5"
-  document.querySelector(".chatting2").classList.add("hid")
-  document.querySelector(".chatting1").classList.remove("hid")
-  document.querySelector(".fa-male").style.color="#4F0E0E"
-  document.querySelector(".fa-female").style.color="#4F0E0E"
-  document.querySelector(".fa-intersex").style.color="#4F0E0E"
-  document.querySelector(".button-signup").style.borderColor="#4F0E0E"
-  document.querySelector(".flag-sign").style.borderColor="#d4b194"
-  document.querySelector(".wer").style.color="#000"
-  document.querySelector(".header-wer").style.color="#000"
-  document.querySelector(".x").style.color="#000"
-  document.querySelectorAll(".body-color")[0].classList.remove("body-color-black")
-  document.querySelectorAll(".body-color")[0].classList.add("body-color-white")
-  document.querySelector(".icon1").classList.remove("hid")
-  document.querySelector(".icon2").classList.add("hid")
-  document.querySelectorAll(".heading")[0].classList.remove("heading-white")
-  document.querySelectorAll(".heading")[0].classList.add("heading-black")
-  document.querySelectorAll(".heading")[1].classList.remove("heading-white")
-  document.querySelectorAll(".heading")[1].classList.add("heading-black")
-  document.querySelector(".but1").classList.add("all-button-red")
-  document.querySelector(".but1").classList.remove("all-button-white")
-  document.querySelector(".sign-button").classList.remove("red")
-  document.querySelector(".sign-button").classList.add("white")
-  document.querySelector(".sr").classList.add("red")
-  document.querySelector(".sr").classList.remove("white")
-
-  if(document.querySelector(".x2").classList.contains("hid")==false){
-  document.querySelector(".chatting1").classList.add("hid")
-  document.querySelector(".chatting2").classList.add("hid")
-  document.querySelector(".x1").classList.remove("hid")
-  document.querySelector(".x2").classList.add("hid")
-}
-if(document.querySelector(".chatting2").classList.contains("hid")==false){
-  document.querySelector(".chatting1").classList.remove("hid")
-  document.querySelector(".chatting2").classList.add("hid")
-  document.querySelector(".x1").classList.add("hid")
-  document.querySelector(".x2").classList.add("hid")
-}
-
-  for(let r=0; r<3; r++){
-  document.querySelectorAll(".heading-left")[r].classList.remove("white")
-  document.querySelectorAll(".heading-left")[r].classList.add("tic")
-}
-for(let j=0; j<2; j++){
-  document.querySelectorAll(".header-other")[j].classList.remove("other-blue")
-  document.querySelectorAll(".header-other")[j].classList.add("other-red")
-  }
-
-  for( let q=0; q<6; q++){
-    document.querySelectorAll(".sign-icon-1")[q].classList.remove("hid")
-    document.querySelectorAll(".sign-icon-2")[q].classList.add("hid")
-
-  }
-
-  for( let b=0; b<3; b++){
-    document.querySelectorAll(".extra-word")[b].style.color="#4F0E0E"
-
-  }
-  for( let z=0; z<2; z++){
-    document.querySelectorAll(".at-sign")[z].style.color="#4F0E0E"
-    document.querySelectorAll(".at-sign")[z].style.backgroundColor="#fbf8f5"
-    document.querySelectorAll(".at-sign")[z].style.borderColor="#d4b194"    
-  }
-  for( let a=0; a<8; a++){
-    document.querySelectorAll(".input-sign")[a].style.backgroundColor="#fbf8f5"
-    document.querySelectorAll(".input-sign")[a].style.borderColor="#d4b194"
-    document.querySelectorAll(".profile-inside")[a].style.color="#000"
-
-  }
-  for( let x=0; x<11; x++){
-    document.querySelectorAll(".user-sign")[x].style.color="#1d2a35"
-    document.querySelectorAll(".user-sign")[2].style.color="red"
-    document.querySelectorAll(".user-sign")[4].style.color="red"
-    document.querySelectorAll(".user-sign")[10].style.color="red"
-  }
-  if(document.querySelector(".vis-white").classList.contains("hid")!=true){
-    document.querySelector(".invis-white").classList.add("hid")
-    document.querySelector(".vis").classList.remove("hid")
-    document.querySelector(".vis-white").classList.add("hid")
-    document.querySelector(".invis").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis-white").classList.contains("hid")==true){
-    document.querySelector(".invis-white").classList.add("hid")
-    document.querySelector(".vis").classList.add("hid")
-    document.querySelector(".invis").classList.remove("hid")
-    document.querySelector(".vis-white").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-
-  if(document.querySelector(".vis-white1").classList.contains("hid")!=true){
-    document.querySelector(".invis-white1").classList.add("hid")
-    document.querySelector(".vis1").classList.remove("hid")
-    document.querySelector(".vis-white1").classList.add("hid")
-    document.querySelector(".invis1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-  else if(document.querySelector(".vis-white1").classList.contains("hid")==true){
-    document.querySelector(".invis-white1").classList.add("hid")
-    document.querySelector(".vis1").classList.add("hid")
-    document.querySelector(".invis1").classList.remove("hid")
-    document.querySelector(".vis-white1").classList.add("hid")
-    // document.querySelector(".vis-white").classList.remove("hid")
-  }
-})
-    }
-
-    var hi= document.querySelector(".lap")
-            hi.addEventListener("click", ()=>{
-              document.querySelector(".bw").classList.remove("hij")
-              document.querySelector(".bw").classList.add("hid")
-            })
-
-    function hasNetwork(onLine){
-  const vak = document.querySelector(".bw");
-  if (onLine){
-    vak.classList.remove("hij");
-    vak.classList.add("hid");
-  }
-  else {
-    vak.classList.add("hij");
-    vak.classList.remove("hid");
-  }
-}
-window.addEventListener("load", () => {
-  hasNetwork(navigator.onLine);
-
-
-window.addEventListener("online", () => {
-  hasNetwork(true);
-});
-
-window.addEventListener("offline", () => {
-  hasNetwork(false);
-
-});
-
-});
-var ho= document.querySelector(".erase")
-            ho.addEventListener("click", ()=>{
-              document.querySelector(".header-bw").classList.add("hid")
-              // document.querySelector(".setting").classList.add("first-back")
-              document.querySelector(".top-div").classList.remove("hid")
-            })
 
                        var mycountryname= ["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua And Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas The", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo The Democratic Republic Of The", "Cook Islands", "Costa Rica", "Cote D'Ivoire (Ivory Coast)", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji Islands", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia The", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey and Alderney", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Honduras", "Hong Kong S.A.R.", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau S.A.R.", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Man (Isle of)", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Bonaire, Sint Eustatius and Saba", "Netherlands The", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Palestinian Territory Occupied", "Panama", "Papua new Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn Island", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Helena", "Saint Kitts And Nevis", "Saint Lucia", "Saint Pierre and Miquelon", "Saint Vincent And The Grenadines", "Saint-Barthelemy", "Saint-Martin (French part)", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Svalbard And Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks And Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City State (Holy See)", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (US)", "Wallis And Futuna Islands", "Western Sahara", "Yemen", "Zambia", "Zimbabwe", "Kosovo", "Curaçao", "Sint Maarten (Dutch part)"]
             var mycountrycode= ["AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BA", "BW", "BV", "BR", "IO", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "IM", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "BQ", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MP", "NO", "OM", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "SH", "KN", "LC", "PM", "VC", "BL", "MF", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "GB", "US", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "VG", "VI", "WF", "EH", "YE", "ZM", "ZW", "XK", "CW", "SX"]

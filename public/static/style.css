@@ -66,7 +66,7 @@ header {
   }
   .sign-sz{
     /* background-color: #fbf8f5; */
-    background: linear-gradient(90deg, #fbf8f5 50%, #d6e6d5 50%);
+    background: linear-gradient(90deg, #fbf8f5 50%, #92a588 50%);
     color: #000;
   }
   .sign-sf{
@@ -694,7 +694,7 @@ footer {
   width: 60%;
   margin-left:auto; 
   margin-right:auto; 
-  display:block; 
+  /* display:block;  */
   margin-top: 14%;
 }
 .enter-details{
@@ -1098,10 +1098,14 @@ width: 30vw;
    margin-bottom: 10%;
 }
 .sign-dis-girl{
-  width: 20%; 
-  margin-left: 65%;
+  width: 50%; 
+  margin-left: 50%;
    margin-bottom: -80%;
-    margin-top: 8%;
+    margin-top: 0%;
+    position: fixed;
+}
+.sign-dis-boy{
+  display: none;
 }
 .create-sign{
   font-size: 5vw;
@@ -1265,6 +1269,9 @@ select{
   font-size: 1vw;
   margin-left: 80%
 }
+.sign-dis-girl{
+  margin-top: 6%;
+} 
 }
 @media only screen and (max-width:1174px){
 .cancel-icon{margin-bottom: -87%;
@@ -1298,6 +1305,7 @@ select{
         .display-ic{
           font-size: 2vw;
         }     
+     
   }
 
 @media only screen and (max-width:1085px){
@@ -1625,10 +1633,10 @@ padding: 5% 5%;
   font-size: 2.7vw;
 } 
 .sign-dis-girl{
-  width: 27%; 
-  margin-left: 65%;
+  width: 50%; 
+  margin-left: 50%;
    margin-bottom: -116%;
-    margin-top: 8%;
+    margin-top: 13%;
 }
 }
 
@@ -1838,11 +1846,21 @@ padding-top: 10%;
   margin-bottom: -12%;
     }
 @media only screen and (max-width:1200px) and (min-height: 1000px){
+  .sign-dis-boy{
+    display: block;
+    width: 50%; 
+    position: fixed;
+    margin-left: 50%;
+     margin-bottom: -93%;
+      margin-top: 22%;
+  }
+  .sign-sz{
+    /* background-color: #fbf8f5; */
+    background: linear-gradient(90deg, #fbf8f5 50%,  #f5efe8 50% );
+    color: #000;
+  }
   .sign-dis-girl{
-    width: 36%; 
-    margin-left: 60%;
-     margin-bottom: -137%;
-      margin-top: 8%;
+    display: none;
   }
 }
 @media only screen and (max-width:1050px) and (min-height: 1000px){
@@ -1944,9 +1962,10 @@ font-size: 5vw;
 font-size: 3vw;
 }
 .sign-dis-girl{
-  width: 35%;
-  margin-left: 57%;
+  width: 50%;
+  margin-left: 50%;
  margin-bottom: -132%; 
+margin-top: 20%; 
 }
 .create-sign{
   font-size: 7vw;
@@ -2204,9 +2223,6 @@ font-size: 5vw;
     font-size: 2.5vw;
     padding: 1rem 27%;
   }
-  .top-div{
-    padding-top:10%;
-   }
     }
 @media only screen and (max-width: 550px){
   .ve{
@@ -2529,6 +2545,9 @@ display: none;
 .enter-display{
   display: none;
 }
+.top-div{
+  padding-top:10%;
+ }
 }
 @media only screen and (max-width: 450px){
 .see{
